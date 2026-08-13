@@ -19,6 +19,6 @@ Data collection adalah proses mengumpulkan informasi dari berbagai sumber untuk 
 4. Menyimpan data dalam format yang mudah diproses
 
 ## Contoh
-- Mengambil data penjualan dari sistem ERP
+- Mengambil data penjualan dari sistem ERP(Enterprise Resource Planning)
 - Mengumpulkan respon survei pelanggan
 - Mengakses data cuaca melalui API untuk analisis permintaan
