@@ -1,0 +1,16 @@
+Clean_SKU,Product_Name,Category,Sub_Category,Unit_Price,Unit_COGS,Weight_KG
+PRD-ELEC-001,Wireless Noise Cancelling Headphones,Electronics,Audio,1250000,850000,0.8
+PRD-ELEC-002,Smart Watch Fitness Tracker V2,Electronics,Wearables,850000,520000,0.3
+PRD-ELEC-003,Mechanical Gaming Keyboard RGB,Electronics,Computer Accessories,950000,600000,1.2
+PRD-ELEC-004,Ergonomic Wireless Mouse,Electronics,Computer Accessories,350000,200000,0.25
+PRD-ELEC-005,Ultra HD Webcam 4K Pro,Electronics,Computer Accessories,1100000,720000,0.4
+PRD-FASH-001,Men Denim Jacket Vintage Blue,Fashion,Outerwear,450000,260000,0.9
+PRD-FASH-002,Women Floral Summer Dress,Fashion,Dresses,320000,180000,0.35
+PRD-FASH-003,Unisex Canvas Sneakers White,Fashion,Footwear,520000,310000,1.1
+PRD-FASH-004,Leather Minimalist Wallet,Fashion,Accessories,220000,110000,0.15
+PRD-HOME-001,Automatic Coffee Espresso Machine,Home & Living,Kitchen Appliances,2400000,1650000,4.5
+PRD-HOME-002,Air Purifier HEPA Filter H13,Home & Living,Home Appliances,1750000,1150000,3.2
+PRD-HOME-003,Stainless Steel Cookware Set 5pcs,Home & Living,Kitchenware,880000,540000,3.8
+PRD-BEAU-001,Hydrating Serum Vitamin C 50ml,Beauty & Health,Skincare,185000,85000,0.1
+PRD-BEAU-002,Organic Sunscreen SPF 50 PA++++,Beauty & Health,Skincare,145000,65000,0.12
+PRD-BEAU-003,Sonic Electric Toothbrush Pro,Beauty & Health,Personal Care,490000,290000,0.4

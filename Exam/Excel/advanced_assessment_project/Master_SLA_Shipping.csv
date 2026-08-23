@@ -1,0 +1,7 @@
+Service_Key,Courier_Name,Service_Type,SLA_Days,Base_Rate_Per_KG
+JNT-EXP,J&T Express,Express,2,15000
+JNT-REG,J&T Express,Regular,4,10000
+JNE-YES,JNE,Overnight,1,25000
+JNE-REG,JNE,Regular,3,12000
+SISEPAT-BEST,SiCepat,Express,2,16000
+SISEPAT-GOKIL,SiCepat,Cargo,5,8000
