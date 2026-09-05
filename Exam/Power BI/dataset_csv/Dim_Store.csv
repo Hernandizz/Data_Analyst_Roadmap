@@ -1,0 +1,16 @@
+Store_ID,Store_Name,Store_Type,City,Province,Region,Manager_Name
+STR-01,Grand Indonesia Flagship,Flagship Store,Jakarta Pusat,DKI Jakarta,Jawa,Budi Santoso
+STR-02,Pondok Indah Mall Outlet,Mall Outlet,Jakarta Selatan,DKI Jakarta,Jawa,Siti Rahmawati
+STR-03,Mall Kelapa Gading Outlet,Mall Outlet,Jakarta Utara,DKI Jakarta,Jawa,Kevin Pratama
+STR-04,Paris Van Java Hub,Flagship Store,Bandung,Jawa Barat,Jawa,Dewi Lestari
+STR-05,Summarecon Bekasi Store,Mall Outlet,Bekasi,Jawa Barat,Jawa,Ahmad Fauzi
+STR-06,Tunjungan Plaza Flagship,Flagship Store,Surabaya,Jawa Timur,Jawa,Rian Hidayat
+STR-07,Galaxy Mall Surabaya,Mall Outlet,Surabaya,Jawa Timur,Jawa,Maya Indah
+STR-08,Malang Town Square,Mall Outlet,Malang,Jawa Timur,Jawa,Bayu Wicaksono
+STR-09,Pakuan Semarang Outlet,Standalone,Semarang,Jawa Tengah,Jawa,Endah Purnamasari
+STR-10,Ambarrukmo Plaza Yogya,Mall Outlet,Yogyakarta,DI Yogyakarta,Jawa,Fajar Nugraha
+STR-11,Sun Plaza Medan Hub,Flagship Store,Medan,Sumatera Utara,Luar Jawa,Hendra Gunawan
+STR-12,Palembang Icon Mall,Mall Outlet,Palembang,Sumatera Selatan,Luar Jawa,Dina Anggraini
+STR-13,Trans Studio Mall Makassar,Flagship Store,Makassar,Sulawesi Selatan,Luar Jawa,Andi Wijaya
+STR-14,Beachwalk Bali Store,Mall Outlet,Kuta,Bali,Luar Jawa,Made Suardika
+STR-15,E-Commerce Fulfillment Central,E-Commerce Hub,Tangerang,Banten,Jawa,Rizky Ramadhan

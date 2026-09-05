@@ -1,0 +1,31 @@
+Product_ID,Product_Name,Category,Sub_Category,Unit_Cost,Base_Price
+PRD-ELEC-001,Wireless Noise-Canceling Headphones,Electronics,Audio,450000,750000
+PRD-ELEC-002,Mechanical Gaming Keyboard RGB,Electronics,Accessories,320000,550000
+PRD-ELEC-003,Ergonomic Wireless Mouse,Electronics,Accessories,150000,280000
+PRD-ELEC-004,Smartwatch Fitness Tracker Pro,Electronics,Wearables,600000,1100000
+PRD-ELEC-005,Fast Charging Powerbank 20000mAh,Electronics,Accessories,180000,320000
+PRD-ELEC-006,Portable Bluetooth Speaker Waterproof,Electronics,Audio,280000,490000
+PRD-FASH-001,Kemeja Flannel Slim Fit Premium,Fashion,Men Apparel,120000,240000
+PRD-FASH-002,Celana Chino Stretch Pants,Fashion,Men Apparel,140000,270000
+PRD-FASH-003,Oversized Cotton T-Shirt,Fashion,Unisex,55000,120000
+PRD-FASH-004,Tote Bag Kanvas Waterproof,Fashion,Bags,70000,160000
+PRD-FASH-005,Hoodie Fleece Minimalist,Fashion,Outerwear,160000,320000
+PRD-FASH-006,Sepatu Sneakers Low-Top Canvas,Fashion,Footwear,220000,450000
+PRD-HOME-001,Diffuser Aromaterapi Ultrasonik 500ml,Home & Living,Decor,110000,220000
+PRD-HOME-002,Lampu Meja LED Dimmable Minimalis,Home & Living,Lighting,95000,195000
+PRD-HOME-003,Set Pisau Dapur Stainless Steel 6-in-1,Home & Living,Kitchen,130000,260000
+PRD-HOME-004,Wajan Penggorengan Granit Anti-Lengket,Home & Living,Kitchen,175000,350000
+PRD-HOME-005,Bantal Memory Foam Ortopedi,Home & Living,Bedding,140000,290000
+PRD-HOME-006,Rak Penyimpanan Sudut Multifungsi,Home & Living,Storage,85000,175000
+PRD-BEAU-001,Serum Wajah Brightening Niacinamide 10%,Beauty & Care,Skincare,60000,135000
+PRD-BEAU-002,Sunscreen SPF 50 PA++++ UV Shield,Beauty & Care,Skincare,50000,110000
+PRD-BEAU-003,Gentle Low pH Facial Cleanser 100ml,Beauty & Care,Skincare,40000,85000
+PRD-BEAU-004,Moisturizer Gel Ceramide Barrier,Beauty & Care,Skincare,75000,160000
+PRD-BEAU-005,Hair Tonic Anti-Hairfall Ginseng,Beauty & Care,Haircare,55000,125000
+PRD-BEAU-006,Body Scrub Brightening Coffee Extract,Beauty & Care,Bodycare,45000,95000
+PRD-FNB-001,Biji Kopi Arabika Gayo Single Origin 250g,Food & Beverages,Coffee,65000,125000
+PRD-FNB-002,Artisan Green Tea Blend Herbal 100g,Food & Beverages,Tea,45000,90000
+PRD-FNB-003,Granola Cokelat Almond Premium 500g,Food & Beverages,Snacks,55000,115000
+PRD-FNB-004,Madu Hutan Liar Murni Organik 500ml,Food & Beverages,Health,85000,170000
+PRD-FNB-005,Kue Kering Butter Cookies Kaleng,Food & Beverages,Snacks,70000,140000
+PRD-FNB-006,Sirup Jeruk Peras Alami 1 Liter,Food & Beverages,Beverages,40000,80000

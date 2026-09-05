@@ -1,0 +1,101 @@
+Customer_ID,Customer_Name,Customer_Segment,City,Province,Region,Join_Date
+CUST-001,Indra Saputra,Corporate,Sidoarjo,Jawa Timur,Jawa,2021-08-17
+CUST-002,Joko Hidayat,Consumer,Balikpapan,Kalimantan Timur,Luar Jawa,2021-03-31
+CUST-003,Vina Suharto,Consumer,Jakarta Timur,DKI Jakarta,Jawa,2021-08-12
+CUST-004,Reza Halim,Consumer,Balikpapan,Kalimantan Timur,Luar Jawa,2021-07-23
+CUST-005,Sari Suharto,Consumer,Samarinda,Kalimantan Timur,Luar Jawa,2021-10-12
+CUST-006,Aditya Siregar,Consumer,Surakarta,Jawa Tengah,Jawa,2021-10-12
+CUST-007,Kurniawan Nasution,Small Business,Surakarta,Jawa Tengah,Jawa,2021-04-15
+CUST-008,Gilang Nugroho,Consumer,Yogyakarta,DI Yogyakarta,Jawa,2022-09-11
+CUST-009,Taufik Kusuma,Corporate,Balikpapan,Kalimantan Timur,Luar Jawa,2021-05-08
+CUST-010,Fitri Pratama,Consumer,Manado,Sulawesi Utara,Luar Jawa,2023-06-26
+CUST-011,Eka Sutanto,Consumer,Jakarta Timur,DKI Jakarta,Jawa,2021-02-16
+CUST-012,Reza Firmansyah,Small Business,Sidoarjo,Jawa Timur,Jawa,2023-06-07
+CUST-013,Hendra Nugroho,Consumer,Yogyakarta,DI Yogyakarta,Jawa,2021-06-16
+CUST-014,Eka Setiawan,Consumer,Malang,Jawa Timur,Jawa,2022-12-20
+CUST-015,Eko Budiman,Consumer,Balikpapan,Kalimantan Timur,Luar Jawa,2023-01-17
+CUST-016,Surya Siregar,Consumer,Malang,Jawa Timur,Jawa,2023-08-06
+CUST-017,Tiara Wibowo,Consumer,Jakarta Barat,DKI Jakarta,Jawa,2021-08-23
+CUST-018,Bambang Utomo,Consumer,Jakarta Timur,DKI Jakarta,Jawa,2021-08-05
+CUST-019,Utami Utomo,Consumer,Makassar,Sulawesi Selatan,Luar Jawa,2022-02-10
+CUST-020,Lestari Wijaya,Consumer,Sidoarjo,Jawa Timur,Jawa,2023-02-02
+CUST-021,Tiara Tan,Consumer,Samarinda,Kalimantan Timur,Luar Jawa,2022-03-15
+CUST-022,Vina Nugroho,Consumer,Bekasi,Jawa Barat,Jawa,2022-06-06
+CUST-023,Nadia Pratama,Corporate,Bandung,Jawa Barat,Jawa,2021-06-06
+CUST-024,Lukman Suharto,Consumer,Medan,Sumatera Utara,Luar Jawa,2022-01-26
+CUST-025,Wulan Gunawan,Consumer,Balikpapan,Kalimantan Timur,Luar Jawa,2023-06-01
+CUST-026,Aditya Hidayat,Consumer,Balikpapan,Kalimantan Timur,Luar Jawa,2023-02-08
+CUST-027,Wahyu Utomo,Consumer,Palembang,Sumatera Selatan,Luar Jawa,2021-06-11
+CUST-028,Lestari Saputra,Small Business,Malang,Jawa Timur,Jawa,2023-09-23
+CUST-029,Putri Siregar,Consumer,Bandung,Jawa Barat,Jawa,2023-06-11
+CUST-030,Zainal Halim,Consumer,Bekasi,Jawa Barat,Jawa,2022-01-18
+CUST-031,Lukman Tan,Small Business,Denpasar,Bali,Luar Jawa,2023-07-30
+CUST-032,Aditya Budiman,Consumer,Jakarta Selatan,DKI Jakarta,Jawa,2021-04-25
+CUST-033,Eka Firmansyah,Consumer,Sidoarjo,Jawa Timur,Jawa,2023-06-19
+CUST-034,Utami Pratama,Consumer,Makassar,Sulawesi Selatan,Luar Jawa,2023-04-16
+CUST-035,Eko Tan,Corporate,Bekasi,Jawa Barat,Jawa,2022-11-07
+CUST-036,Mega Tan,Consumer,Denpasar,Bali,Luar Jawa,2023-06-13
+CUST-037,Wulan Suharto,Small Business,Balikpapan,Kalimantan Timur,Luar Jawa,2023-02-13
+CUST-038,Naufal Firmansyah,Consumer,Yogyakarta,DI Yogyakarta,Jawa,2022-03-25
+CUST-039,Ratna Gunawan,Consumer,Sidoarjo,Jawa Timur,Jawa,2021-03-07
+CUST-040,Citra Saputra,Consumer,Sidoarjo,Jawa Timur,Jawa,2022-08-26
+CUST-041,Reza Saputra,Consumer,Jakarta Barat,DKI Jakarta,Jawa,2021-08-23
+CUST-042,Eko Kusuma,Small Business,Jakarta Timur,DKI Jakarta,Jawa,2022-06-11
+CUST-043,Surya Santoso,Consumer,Surabaya,Jawa Timur,Jawa,2022-07-07
+CUST-044,Joko Sutanto,Consumer,Sidoarjo,Jawa Timur,Jawa,2023-03-15
+CUST-045,Mega Suharto,Consumer,Bandung,Jawa Barat,Jawa,2022-11-06
+CUST-046,Intan Setiawan,Consumer,Pekanbaru,Riau,Luar Jawa,2023-06-04
+CUST-047,Dimas Hidayat,Consumer,Surakarta,Jawa Tengah,Jawa,2023-03-31
+CUST-048,Hendra Wibowo,Consumer,Balikpapan,Kalimantan Timur,Luar Jawa,2022-04-05
+CUST-049,Joko Suharto,Consumer,Pekanbaru,Riau,Luar Jawa,2021-09-13
+CUST-050,Eko Gunawan,Corporate,Balikpapan,Kalimantan Timur,Luar Jawa,2021-04-11
+CUST-051,Dimas Tan,Corporate,Jakarta Timur,DKI Jakarta,Jawa,2023-08-07
+CUST-052,Surya Siregar,Consumer,Makassar,Sulawesi Selatan,Luar Jawa,2021-08-07
+CUST-053,Gita Kusuma,Consumer,Jakarta Selatan,DKI Jakarta,Jawa,2022-02-04
+CUST-054,Taufik Gunawan,Consumer,Balikpapan,Kalimantan Timur,Luar Jawa,2022-11-09
+CUST-055,Nadia Wijaya,Consumer,Surabaya,Jawa Timur,Jawa,2023-09-19
+CUST-056,Dimas Sutanto,Corporate,Jakarta Barat,DKI Jakarta,Jawa,2023-02-05
+CUST-057,Annisa Kusuma,Consumer,Makassar,Sulawesi Selatan,Luar Jawa,2022-05-30
+CUST-058,Ratna Siregar,Consumer,Denpasar,Bali,Luar Jawa,2021-03-24
+CUST-059,Muhammad Pratama,Consumer,Sidoarjo,Jawa Timur,Jawa,2022-02-18
+CUST-060,Indra Sutanto,Consumer,Manado,Sulawesi Utara,Luar Jawa,2021-02-10
+CUST-061,Yulia Pratama,Consumer,Samarinda,Kalimantan Timur,Luar Jawa,2022-08-02
+CUST-062,Ratna Utomo,Small Business,Surabaya,Jawa Timur,Jawa,2022-11-17
+CUST-063,Annisa Wibowo,Consumer,Bekasi,Jawa Barat,Jawa,2022-11-19
+CUST-064,Zainal Gunawan,Consumer,Jakarta Timur,DKI Jakarta,Jawa,2021-01-10
+CUST-065,Lestari Budiman,Small Business,Bandung,Jawa Barat,Jawa,2021-03-17
+CUST-066,Sari Nasution,Consumer,Bekasi,Jawa Barat,Jawa,2023-08-14
+CUST-067,Dian Pratama,Small Business,Yogyakarta,DI Yogyakarta,Jawa,2021-10-19
+CUST-068,Lukman Gunawan,Corporate,Semarang,Jawa Tengah,Jawa,2022-09-19
+CUST-069,Ratna Saputra,Consumer,Balikpapan,Kalimantan Timur,Luar Jawa,2021-11-03
+CUST-070,Hendra Wijaya,Consumer,Bandung,Jawa Barat,Jawa,2023-01-31
+CUST-071,Tiara Wijaya,Consumer,Manado,Sulawesi Utara,Luar Jawa,2021-08-04
+CUST-072,Citra Nasution,Consumer,Malang,Jawa Timur,Jawa,2022-06-02
+CUST-073,Nadia Santoso,Small Business,Jakarta Barat,DKI Jakarta,Jawa,2021-04-05
+CUST-074,Intan Santoso,Consumer,Surakarta,Jawa Tengah,Jawa,2023-03-01
+CUST-075,Joko Santoso,Consumer,Pekanbaru,Riau,Luar Jawa,2022-07-19
+CUST-076,Intan Tan,Consumer,Jakarta Timur,DKI Jakarta,Jawa,2023-08-26
+CUST-077,Kurniawan Tan,Consumer,Yogyakarta,DI Yogyakarta,Jawa,2022-08-20
+CUST-078,Tiara Wijaya,Consumer,Jakarta Barat,DKI Jakarta,Jawa,2021-11-12
+CUST-079,Eka Kusuma,Small Business,Surabaya,Jawa Timur,Jawa,2022-11-30
+CUST-080,Surya Hidayat,Consumer,Balikpapan,Kalimantan Timur,Luar Jawa,2023-06-25
+CUST-081,Hani Budiman,Corporate,Sidoarjo,Jawa Timur,Jawa,2023-06-05
+CUST-082,Lukman Siregar,Small Business,Jakarta Selatan,DKI Jakarta,Jawa,2021-07-03
+CUST-083,Citra Suharto,Corporate,Sidoarjo,Jawa Timur,Jawa,2021-10-01
+CUST-084,Lukman Hidayat,Consumer,Jakarta Barat,DKI Jakarta,Jawa,2023-05-30
+CUST-085,Mega Wibowo,Consumer,Pekanbaru,Riau,Luar Jawa,2021-12-25
+CUST-086,Zainal Wibowo,Consumer,Surabaya,Jawa Timur,Jawa,2022-02-13
+CUST-087,Citra Santoso,Small Business,Malang,Jawa Timur,Jawa,2021-12-26
+CUST-088,Putri Nugroho,Consumer,Balikpapan,Kalimantan Timur,Luar Jawa,2021-12-06
+CUST-089,Agus Hidayat,Small Business,Malang,Jawa Timur,Jawa,2021-07-02
+CUST-090,Vina Santoso,Consumer,Manado,Sulawesi Utara,Luar Jawa,2022-03-21
+CUST-091,Dian Utomo,Consumer,Denpasar,Bali,Luar Jawa,2021-04-29
+CUST-092,Fitri Sutanto,Consumer,Jakarta Barat,DKI Jakarta,Jawa,2022-12-27
+CUST-093,Intan Saputra,Consumer,Balikpapan,Kalimantan Timur,Luar Jawa,2022-12-05
+CUST-094,Naufal Setiawan,Consumer,Surakarta,Jawa Tengah,Jawa,2022-10-01
+CUST-095,Annisa Hidayat,Corporate,Semarang,Jawa Tengah,Jawa,2022-06-04
+CUST-096,Zainal Suharto,Consumer,Semarang,Jawa Tengah,Jawa,2022-07-22
+CUST-097,Joko Nasution,Consumer,Medan,Sumatera Utara,Luar Jawa,2022-11-25
+CUST-098,Muhammad Budiman,Consumer,Medan,Sumatera Utara,Luar Jawa,2022-07-16
+CUST-099,Aditya Firmansyah,Consumer,Palembang,Sumatera Selatan,Luar Jawa,2023-03-16
+CUST-100,Vina Budiman,Consumer,Pekanbaru,Riau,Luar Jawa,2022-03-29
