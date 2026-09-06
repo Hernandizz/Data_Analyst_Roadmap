@@ -19,12 +19,19 @@ Folder ini berisi file-file yang menjelaskan setiap tahapan utama dalam proses d
 - `Statistical Analysis.md` - analisis statistik dasar
 - `Machine Learning.md` - konsep dasar machine learning
 
+## Folder Pembelajaran & Praktik
+- **[`Power BI/`](file:///c:/Users/Asus/Documents/Project/Data-Analyst/Power%20BI/README.md)** - Kurikulum lengkap bertahap Microsoft Power BI (10 Modul, DAX & M Cheatsheets, Data Modeling, Time Intelligence, Performance Tuning, hingga Deployment & Portofolio).
+- **`SQL Learning/`** - Latihan analisis SQL berbasis skenario ritel omnichannel.
+- **`Analysist or Reporting With Excel/`** - Latihan fungsi dan manipulasi formula Excel data analitik.
+- **[`Exam/Power BI/`](file:///c:/Users/Asus/Documents/Project/Data-Analyst/Exam/Power%20BI/README_INSTRUKSI.md)** - Studi kasus ujian teknis menyeluruh (Technical Assessment) Power BI & Business Intelligence.
+
 ## Cara Menggunakan
-1. Buka setiap file Markdown untuk mempelajari konsep secara terpisah.
-2. Gunakan `Key Concepts of Data/README.md` (jika ditambahkan nanti) sebagai panduan alur kerja data.
-3. Sesuaikan nama file dan konten jika ingin membuat materi presentasi atau laporan.
+1. Buka file konsep dasar data di root atau folder `Key Concepts of Data`.
+2. Masuk ke folder **[`Power BI/`](file:///c:/Users/Asus/Documents/Project/Data-Analyst/Power%20BI/README.md)** untuk mengikuti jalur belajar bertahap Power BI dari tingkat pemula hingga mahir.
+3. Selesaikan studi kasus teknis di folder `Exam/Power BI/` untuk menguji pemahaman Anda.
 
 ## Tips
 - Mulai dari `Collection.md` dan teruskan ke `Cleanup.md`, `Exploration.md`, lalu ke analisis dan visualisasi.
-- Baca file `Descriptive Analytics.md` hingga `Prescriptive Analytics.md` untuk memahami siklus penuh analisis data.
-- Gunakan konten ini sebagai referensi belajar atau bahan presentasi ringan.
+- Ikuti modul **Power BI** secara berurutan mulai dari Modul 01 hingga Modul 10.
+- Gunakan `DAX_Cheatsheet.md` dan `Power_Query_M_Cheatsheet.md` sebagai kamus referensi cepat saat mengerjakan tugas analisis.
+
