@@ -19,19 +19,27 @@ Folder ini berisi file-file yang menjelaskan setiap tahapan utama dalam proses d
 - `Statistical Analysis.md` - analisis statistik dasar
 - `Machine Learning.md` - konsep dasar machine learning
 
+## 🗺️ Roadmap Belajar 30 Hari
+Ikuti kurikulum harian bertahap untuk menjadi Data Analyst siap kerja:
+👉 **[ROADMAP_30_HARI_DATA_ANALYST.md](file:///c:/Users/Asus/Documents/Project/Data-Analyst/ROADMAP_30_HARI_DATA_ANALYST.md)** — Panduan lengkap 30 hari mencakup Excel, SQL, Power BI, Statistika, Capstone Project, dan Persiapan Karir.
+
 ## Folder Pembelajaran & Praktik
+- **[`30 Days of Data Analyst/`](file:///c:/Users/Asus/Documents/Project/Data-Analyst/30%20Days%20of%20Data%20Analyst/README.md)** - Kumpulan 30 file modul harian lengkap (*Day 01 - Day 30*) dari teori, studi kasus, formula, hingga portofolio siap kerja.
+- **[`ROADMAP_30_HARI_DATA_ANALYST.md`](file:///c:/Users/Asus/Documents/Project/Data-Analyst/ROADMAP_30_HARI_DATA_ANALYST.md)** - Ringkasan peta jalan & milestone belajar harian 30 hari.
 - **[`Power BI/`](file:///c:/Users/Asus/Documents/Project/Data-Analyst/Power%20BI/README.md)** - Kurikulum lengkap bertahap Microsoft Power BI (10 Modul, DAX & M Cheatsheets, Data Modeling, Time Intelligence, Performance Tuning, hingga Deployment & Portofolio).
 - **`SQL Learning/`** - Latihan analisis SQL berbasis skenario ritel omnichannel.
 - **`Analysist or Reporting With Excel/`** - Latihan fungsi dan manipulasi formula Excel data analitik.
 - **[`Exam/Power BI/`](file:///c:/Users/Asus/Documents/Project/Data-Analyst/Exam/Power%20BI/README_INSTRUKSI.md)** - Studi kasus ujian teknis menyeluruh (Technical Assessment) Power BI & Business Intelligence.
 
 ## Cara Menggunakan
-1. Buka file konsep dasar data di root atau folder `Key Concepts of Data`.
-2. Masuk ke folder **[`Power BI/`](file:///c:/Users/Asus/Documents/Project/Data-Analyst/Power%20BI/README.md)** untuk mengikuti jalur belajar bertahap Power BI dari tingkat pemula hingga mahir.
-3. Selesaikan studi kasus teknis di folder `Exam/Power BI/` untuk menguji pemahaman Anda.
+1. Buka dan ikuti panduan harian di **[`ROADMAP_30_HARI_DATA_ANALYST.md`](file:///c:/Users/Asus/Documents/Project/Data-Analyst/ROADMAP_30_HARI_DATA_ANALYST.md)**.
+2. Buka file konsep dasar data di root atau folder `Key Concepts of Data`.
+3. Masuk ke folder **[`Power BI/`](file:///c:/Users/Asus/Documents/Project/Data-Analyst/Power%20BI/README.md)** untuk mengikuti jalur belajar bertahap Power BI dari tingkat pemula hingga mahir.
+4. Selesaikan studi kasus teknis di folder `Exam/Power BI/` untuk menguji pemahaman Anda.
 
 ## Tips
 - Mulai dari `Collection.md` dan teruskan ke `Cleanup.md`, `Exploration.md`, lalu ke analisis dan visualisasi.
 - Ikuti modul **Power BI** secara berurutan mulai dari Modul 01 hingga Modul 10.
 - Gunakan `DAX_Cheatsheet.md` dan `Power_Query_M_Cheatsheet.md` sebagai kamus referensi cepat saat mengerjakan tugas analisis.
+
 
