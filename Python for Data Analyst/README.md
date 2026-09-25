@@ -65,6 +65,10 @@ flowchart TD
 - [Pandas Cheatsheet](Pandas_Cheatsheet.md) - Sintaks, metode terpenting, dan pola umum Pandas.
 - [NumPy Cheatsheet](NumPy_Cheatsheet.md) - Operasi array, fungsi matematika, dan teknik broadcasting.
 
+### 📝 Ujian Evaluasi & Test Kemampuan
+- [Ujian Evaluasi Technical Assessment](EXAM_TECHNICAL_ASSESSMENT_PYTHON.md) - 20 Soal PG, 5 Soal Debugging Kode, dan 1 Studi Kasus Coding Hands-on.
+- [Kunci Jawaban & Solusi Skrip Python](KUNCI_JAWABAN_DAN_SOLUSI_TEST.md) - Pembahasan lengkap jawaban bagian A, B, dan script solusi bagian C.
+
 ---
 
 ## 🛠️ Persiapan & Setup Lingkungan Belajar

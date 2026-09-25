@@ -31,6 +31,7 @@ Ikuti kurikulum harian bertahap untuk menjadi Data Analyst siap kerja:
 - **`SQL Learning/`** - Latihan analisis SQL berbasis skenario ritel omnichannel.
 - **`Analysist or Reporting With Excel/`** - Latihan fungsi dan manipulasi formula Excel data analitik.
 - **[`Exam/Power BI/`](file:///c:/Users/Asus/Documents/Project/Data-Analyst/Exam/Power%20BI/README_INSTRUKSI.md)** - Studi kasus ujian teknis menyeluruh (Technical Assessment) Power BI & Business Intelligence.
+- **[`Exam/Python/`](file:///c:/Users/Asus/Documents/Project/Data-Analyst/Exam/Python/README_INSTRUKSI.md)** - Technical assessment & evaluasi pengerjaan studi kasus Python untuk Data Analyst.
 
 ## Cara Menggunakan
 1. Buka dan ikuti panduan harian di **[`ROADMAP_30_HARI_DATA_ANALYST.md`](file:///c:/Users/Asus/Documents/Project/Data-Analyst/ROADMAP_30_HARI_DATA_ANALYST.md)**.
