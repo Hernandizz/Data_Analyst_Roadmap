@@ -49,19 +49,19 @@ BISNIS  ▲
 1. **Descriptive Analytics (Apa yang terjadi?)**
    - Ringkasan data historis.
    - Contoh: Total penjualan bulan lalu sebesar Rp 500 juta, naik 5% dari bulan sebelumnya.
-   - Referensi: [Descriptive Analytics.md](file:///c:/Users/Asus/Documents/Project/Data-Analyst/Descriptive%20Analytics.md)
+   - Referensi: [Descriptive Analytics.md](file:///c:/Users/Asus/Documents/Project/Data-Analyst/00_Fondasi_Data_Analytics/Descriptive%20Analytics.md)
 2. **Diagnostic Analytics (Mengapa itu terjadi?)**
    - Mencari akar masalah (*root cause*) dan korelasi.
    - Contoh: Penjualan kategori Fashion anjlok 30% karena keterlambatan pengiriman dari vendor logistik utama.
-   - Referensi: [Diagostic Analytics.md](file:///c:/Users/Asus/Documents/Project/Data-Analyst/Diagostic%20Analytics.md)
+   - Referensi: [Diagostic Analytics.md](file:///c:/Users/Asus/Documents/Project/Data-Analyst/00_Fondasi_Data_Analytics/Diagostic%20Analytics.md)
 3. **Predictive Analytics (Apa yang mungkin terjadi?)**
    - Proyeksi tren masa depan berdasarkan pola historis.
    - Contoh: Estimasi kenaikan permintaan produk elektronik sebesar 45% menjelang promo tanggal kembar (11.11).
-   - Referensi: [Analytics Predictive.md](file:///c:/Users/Asus/Documents/Project/Data-Analyst/Analytics%20Predictive.md)
+   - Referensi: [Analytics Predictive.md](file:///c:/Users/Asus/Documents/Project/Data-Analyst/00_Fondasi_Data_Analytics/Analytics%20Predictive.md)
 4. **Prescriptive Analytics (Apa yang harus kita lakukan?)**
    - Rekomendasi tindakan optimal berbasis simulasi data.
    - Contoh: Menambah stok produk SKU-104 sebanyak 500 unit di gudang Surabaya untuk meminimalisir *stockout*.
-   - Referensi: [Prescriptive Analytics.md](file:///c:/Users/Asus/Documents/Project/Data-Analyst/Prescriptive%20Analytics.md)
+   - Referensi: [Prescriptive Analytics.md](file:///c:/Users/Asus/Documents/Project/Data-Analyst/00_Fondasi_Data_Analytics/Prescriptive%20Analytics.md)
 
 ---
 

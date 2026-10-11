@@ -3,27 +3,14 @@
 ## Ringkasan Proyek
 Proyek ini berisi kumpulan catatan dan penjelasan tentang konsep utama data analytics, mulai dari descriptive, diagnostic, predictive, hingga prescriptive analytics. Selain itu, terdapat folder `Key Concepts of Data` yang menjelaskan alur kerja data: koleksi, pembersihan, eksplorasi, visualisasi, analisis statistik, dan machine learning.
 
-## Isi Utama
-- `Descriptive Analytics.md` - penjelasan tentang analisis yang menggambarkan apa yang terjadi.
-- `Diagostic Analytics.md` - penjelasan tentang analisis yang mencari penyebab masalah.
-- `Analytics Predictive.md` - penjelasan tentang analisis yang memprediksi apa yang akan terjadi.
-- `Prescriptive Analytics.md` - penjelasan tentang analisis yang memberi rekomendasi tindakan.
-- `Data-Analyst Mean.md` - ringkasan peran dan tugas seorang data analyst.
-
-## Folder `Key Concepts of Data`
-Folder ini berisi file-file yang menjelaskan setiap tahapan utama dalam proses data:
-- `Collection.md` - pengumpulan data
-- `Cleanup.md` - pembersihan dan persiapan data
-- `Exploration.md` - eksplorasi dan pemahaman data
-- `Visualisation.md` - penyajian data secara visual
-- `Statistical Analysis.md` - analisis statistik dasar
-- `Machine Learning.md` - konsep dasar machine learning
-
-## 🗺️ Roadmap Belajar 30 Hari
-Ikuti kurikulum harian bertahap untuk menjadi Data Analyst siap kerja:
-👉 **[ROADMAP_30_HARI_DATA_ANALYST.md](file:///c:/Users/Asus/Documents/Project/Data-Analyst/ROADMAP_30_HARI_DATA_ANALYST.md)** — Panduan lengkap 30 hari mencakup Excel, SQL, Power BI, Statistika, Capstone Project, dan Persiapan Karir.
-
-## Folder Pembelajaran & Praktik
+## Folder Pembelajaran & Modul
+- **[`00_Fondasi_Data_Analytics/`](file:///c:/Users/Asus/Documents/Project/Data-Analyst/00_Fondasi_Data_Analytics/README.md)** - Fondasi peran Data Analyst dan 4 jenis analitik:
+  - [`Descriptive Analytics.md`](file:///c:/Users/Asus/Documents/Project/Data-Analyst/00_Fondasi_Data_Analytics/Descriptive%20Analytics.md)
+  - [`Diagostic Analytics.md`](file:///c:/Users/Asus/Documents/Project/Data-Analyst/00_Fondasi_Data_Analytics/Diagostic%20Analytics.md)
+  - [`Analytics Predictive.md`](file:///c:/Users/Asus/Documents/Project/Data-Analyst/00_Fondasi_Data_Analytics/Analytics%20Predictive.md)
+  - [`Prescriptive Analytics.md`](file:///c:/Users/Asus/Documents/Project/Data-Analyst/00_Fondasi_Data_Analytics/Prescriptive%20Analytics.md)
+  - [`Data-Analyst Mean.md`](file:///c:/Users/Asus/Documents/Project/Data-Analyst/00_Fondasi_Data_Analytics/Data-Analyst%20Mean.md)
+- **[`Key Concepts of Data/`](file:///c:/Users/Asus/Documents/Project/Data-Analyst/Key%20Concepts%20of%20Data/)** - Alur kerja data: Collection, Cleanup, Exploration, Visualisation, Statistical Analysis, dan Machine Learning.
 - **[`30 Days of Data Analyst/`](file:///c:/Users/Asus/Documents/Project/Data-Analyst/30%20Days%20of%20Data%20Analyst/README.md)** - Kumpulan 30 file modul harian lengkap (*Day 01 - Day 30*) dari teori, studi kasus, formula, hingga portofolio siap kerja.
 - **[`ROADMAP_30_HARI_DATA_ANALYST.md`](file:///c:/Users/Asus/Documents/Project/Data-Analyst/ROADMAP_30_HARI_DATA_ANALYST.md)** - Ringkasan peta jalan & milestone belajar harian 30 hari.
 - **[`Power BI/`](file:///c:/Users/Asus/Documents/Project/Data-Analyst/Power%20BI/README.md)** - Kurikulum lengkap bertahap Microsoft Power BI (10 Modul, DAX & M Cheatsheets, Data Modeling, Time Intelligence, Performance Tuning, hingga Deployment & Portofolio).

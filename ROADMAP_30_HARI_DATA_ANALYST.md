@@ -40,11 +40,11 @@ Selamat datang di **Roadmap Intensif 30 Hari Data Analyst**! Dokumen ini diranca
   - 4 Tingkatan Analisis Data: *Descriptive, Diagnostic, Predictive, Prescriptive*.
   - Metrik Bisnis Utama (Revenue, AOV, Churn Rate, CAC, LTV, Margin).
 - **Materi Terkait di Workspace:**
-  - [Data-Analyst Mean.md](file:///c:/Users/Asus/Documents/Project/Data-Analyst/Data-Analyst%20Mean.md)
-  - [Descriptive Analytics.md](file:///c:/Users/Asus/Documents/Project/Data-Analyst/Descriptive%20Analytics.md)
-  - [Diagostic Analytics.md](file:///c:/Users/Asus/Documents/Project/Data-Analyst/Diagostic%20Analytics.md)
-  - [Analytics Predictive.md](file:///c:/Users/Asus/Documents/Project/Data-Analyst/Analytics%20Predictive.md)
-  - [Prescriptive Analytics.md](file:///c:/Users/Asus/Documents/Project/Data-Analyst/Prescriptive%20Analytics.md)
+  - [Data-Analyst Mean.md](file:///c:/Users/Asus/Documents/Project/Data-Analyst/00_Fondasi_Data_Analytics/Data-Analyst%20Mean.md)
+  - [Descriptive Analytics.md](file:///c:/Users/Asus/Documents/Project/Data-Analyst/00_Fondasi_Data_Analytics/Descriptive%20Analytics.md)
+  - [Diagostic Analytics.md](file:///c:/Users/Asus/Documents/Project/Data-Analyst/00_Fondasi_Data_Analytics/Diagostic%20Analytics.md)
+  - [Analytics Predictive.md](file:///c:/Users/Asus/Documents/Project/Data-Analyst/00_Fondasi_Data_Analytics/Analytics%20Predictive.md)
+  - [Prescriptive Analytics.md](file:///c:/Users/Asus/Documents/Project/Data-Analyst/00_Fondasi_Data_Analytics/Prescriptive%20Analytics.md)
 - **Tugas / Latihan Harian:**
   - Buat rangkuman perbedaan 4 tipe analisis beserta contoh studi kasusnya di dunia nyata (misal: Toko Ritel atau FinTech).
 - **Checklist Done:**
@@ -261,7 +261,7 @@ Selamat datang di **Roadmap Intensif 30 Hari Data Analyst**! Dokumen ini diranca
   - Pilihan konektivitas: *Import Mode* vs *DirectQuery* vs *Composite Models*.
 - **Materi Terkait di Workspace:**
   - [01_Pengenalan_dan_Interface.md](file:///c:/Users/Asus/Documents/Project/Data-Analyst/Power%20BI/01_Pengenalan_dan_Interface.md)
-  - [Materi Power BI.md](file:///c:/Users/Asus/Documents/Project/Data-Analyst/Materi%20Power%20BI.md)
+  - [Materi Power BI.md](file:///c:/Users/Asus/Documents/Project/Data-Analyst/Power%20BI/Materi%20Power%20BI.md)
 - **Tugas / Latihan Harian:**
   - Buka Power BI Desktop, muat data transaksi dan eksplorasi antarmuka Report View, Table View, Model View, dan DAX Query View.
 - **Checklist Done:**
