@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kamus &amp; Cheatsheets — DataSchool</title>
+  <meta name="description" content="Repositori sintaksis terverifikasi, formula metrik bisnis, dan fungsi manipulasi data instan untuk praktisi data, BI engineer, dan data scientist.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="main-header">
+    <div class="header__inner">
+      <div class="header__left">
+        <a href="index.html" class="logo">
+          <span class="logo__icon material-symbols-outlined" style="font-size:28px;color:var(--primary)">school</span>
+          <span class="logo__text">DataSchool</span>
+        </a>
+        <nav class="nav-desktop" id="desktop-nav">
+          <a href="sql-tutorial.html" class="nav-link">SQL Tutorial</a>
+          <a href="data-cleaning.html" class="nav-link">Data Cleaning</a>
+          <a href="ecommerce-case-study.html" class="nav-link">Studi Kasus E-Commerce</a>
+          <a href="cheatsheets.html" class="nav-link active">Cheatsheets</a>
+        </nav>
+      </div>
+      <div class="header__right">
+        <div class="search-bar" id="global-search">
+          <span class="material-symbols-outlined search-bar__icon">search</span>
+          <input type="text" placeholder="Cari sintaks atau materi..." class="search-bar__input" id="search-input">
+          <kbd class="search-bar__kbd">/</kbd>
+        </div>
+        <div class="header__actions">
+          <button class="btn-icon" title="Tema Gelap" id="theme-toggle">
+            <span class="material-symbols-outlined">dark_mode</span>
+          </button>
+          <div class="avatar" id="user-avatar">
+            <span class="material-symbols-outlined">person</span>
+          </div>
+        </div>
+      </div>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE NAV DRAWER ===== -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-drawer__overlay" id="drawer-overlay"></div>
+    <div class="mobile-drawer__content">
+      <div class="mobile-drawer__header">
+        <a href="index.html" class="logo">
+          <span class="logo__icon material-symbols-outlined" style="font-size:24px;color:var(--primary)">school</span>
+          <span class="logo__text">DataSchool</span>
+        </a>
+        <button class="btn-icon" id="close-drawer">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <nav class="mobile-drawer__nav">
+        <a href="index.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">home</span>Beranda
+        </a>
+        <a href="sql-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">database</span>SQL Tutorial
+        </a>
+        <a href="data-cleaning.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">cleaning_services</span>Data Cleaning
+        </a>
+        <a href="ecommerce-case-study.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">analytics</span>Studi Kasus E-Commerce
+        </a>
+        <a href="cheatsheets.html" class="mobile-nav-link" style="color:var(--primary);font-weight:700">
+          <span class="material-symbols-outlined">menu_book</span>Cheatsheets
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="cheatsheet-hero">
+    <div class="cheatsheet-hero__inner">
+      <div style="max-width:720px">
+        <div class="hero__badge" style="margin-bottom:0.75rem">
+          <span class="material-symbols-outlined" style="font-size:14px">menu_book</span>
+          <span>DOKUMENTASI CEPAT ANALITIKA</span>
+        </div>
+        <h1 class="headline-lg" style="margin-bottom:0.5rem">Kamus &amp; Cheatsheet Referensi Cepat</h1>
+        <p class="body-md" style="color:var(--text-secondary)">
+          Repositori sintaksis terverifikasi, formula metrik bisnis, dan fungsi manipulasi data instan untuk praktisi data, BI engineer, dan data scientist.
+        </p>
+      </div>
+      <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap">
+        <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.4rem 0.75rem;background:var(--surface-container);border-radius:var(--radius-sm);font-size:0.75rem;font-weight:600;color:var(--text-secondary)">
+          <span style="width:8px;height:8px;border-radius:50%;background:var(--primary);display:inline-block"></span>
+          <span>v2.4.8 Updated</span>
+        </div>
+        <a href="#printable-sheets" class="btn btn--primary btn--sm" style="display:inline-flex;align-items:center;gap:0.35rem">
+          <span class="material-symbols-outlined" style="font-size:16px">print</span>
+          <span>Versi Cetak (A4)</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STICKY FILTER & SEARCH BAR ===== -->
+  <div class="cheatsheet-filter-bar">
+    <div class="cheatsheet-filter-bar__inner">
+      <div class="cheatsheet-search-wrap">
+        <span class="material-symbols-outlined cheatsheet-search-icon">search</span>
+        <input 
+          type="text" 
+          id="cheatsheet-search" 
+          class="cheatsheet-search-input" 
+          placeholder="Cari fungsi (cth: VLOOKUP, GROUP BY, pd.merge, COALESCE, P-value)..."
+        >
+        <button id="clear-search-btn" class="cheatsheet-search-clear" title="Hapus pencarian">
+          <span class="material-symbols-outlined" style="font-size:18px">cancel</span>
+        </button>
+      </div>
+
+      <div class="category-pills" id="filter-pills">
+        <button class="category-pill active" data-filter="all">Semua</button>
+        <button class="category-pill" data-filter="sql">SQL Analytics</button>
+        <button class="category-pill" data-filter="pandas">Pandas &amp; Python</button>
+        <button class="category-pill" data-filter="business">Metrik Bisnis</button>
+        <button class="category-pill" data-filter="stats">Statistika Inferensial</button>
+        <button class="category-pill" data-filter="excel">Fungsi Spreadsheet</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MAIN CHEATSHEET CONTENT ===== -->
+  <main class="cheatsheet-container" id="cheatsheet-content">
+    
+    <!-- 1. SQL ANALYTICS -->
+    <section class="category-section" data-category="sql">
+      <div class="category-header">
+        <div class="category-header__left">
+          <div class="category-header__icon">
+            <span class="material-symbols-outlined" style="font-size:20px">database</span>
+          </div>
+          <div>
+            <h2 class="headline-md">SQL Aggregation &amp; Windowing</h2>
+            <p class="body-sm" style="color:var(--text-secondary)">Operasi partisi, ranking, dan rolling analytics di RDBMS / Cloud Warehouse (BigQuery, Snowflake, PostgreSQL).</p>
+          </div>
+        </div>
+        <span class="category-badge">ANSI SQL / Dialect Agnostic</span>
+      </div>
+
+      <div class="snippet-grid snippet-grid--3col">
+        <!-- Card 1: ROW_NUMBER / DENSE_RANK -->
+        <div class="snippet-card">
+          <div class="snippet-card__top">
+            <div class="snippet-card__header">
+              <span class="snippet-card__title">ROW_NUMBER() / DENSE_RANK()</span>
+              <span class="snippet-card__tag">Windowing</span>
+            </div>
+            <p class="snippet-card__desc">Menghasilkan urutan indeks numerik unik per partisi grup data tanpa lompatan nomor.</p>
+            <div class="snippet-card__code">
+              <pre><code>SELECT user_id, order_date,
+  ROW_NUMBER() OVER(
+    PARTITION BY user_id 
+    ORDER BY order_date DESC
+  ) AS rn_order
+FROM transactions;</code></pre>
+              <button class="snippet-card__copy" data-code="SELECT user_id, order_date,\n  ROW_NUMBER() OVER(\n    PARTITION BY user_id \n    ORDER BY order_date DESC\n  ) AS rn_order\nFROM transactions;" onclick="copySnippet(this)">
+                <span class="material-symbols-outlined" style="font-size:14px">content_copy</span>
+                <span>Salin</span>
+              </button>
+            </div>
+          </div>
+          <div class="snippet-card__footer">
+            <span>Best for: Deduplikasi urutan</span>
+            <span style="font-family:var(--font-mono);color:var(--primary);font-weight:600">O(N log N)</span>
+          </div>
+        </div>
+
+        <!-- Card 2: LEAD & LAG -->
+        <div class="snippet-card">
+          <div class="snippet-card__top">
+            <div class="snippet-card__header">
+              <span class="snippet-card__title">LEAD() &amp; LAG() Offset</span>
+              <span class="snippet-card__tag">Time-Series</span>
+            </div>
+            <p class="snippet-card__desc">Mengambil nilai baris setelahnya (LEAD) atau sebelumnya (LAG) untuk evaluasi MoM growth / selisih waktu.</p>
+            <div class="snippet-card__code">
+              <pre><code>SELECT date, revenue,
+  LAG(revenue, 1) OVER(
+    ORDER BY date ASC
+  ) AS prev_day_rev,
+  revenue - LAG(revenue, 1) OVER(
+    ORDER BY date ASC
+  ) AS delta
+FROM daily_sales;</code></pre>
+              <button class="snippet-card__copy" data-code="SELECT date, revenue,\n  LAG(revenue, 1) OVER(\n    ORDER BY date ASC\n  ) AS prev_day_rev,\n  revenue - LAG(revenue, 1) OVER(\n    ORDER BY date ASC\n  ) AS delta\nFROM daily_sales;" onclick="copySnippet(this)">
+                <span class="material-symbols-outlined" style="font-size:14px">content_copy</span>
+                <span>Salin</span>
+              </button>
+            </div>
+          </div>
+          <div class="snippet-card__footer">
+            <span>Best for: MoM / DoD Delta</span>
+            <span style="font-family:var(--font-mono);color:var(--primary);font-weight:600">No self-join</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Conditional Distinct Count -->
+        <div class="snippet-card">
+          <div class="snippet-card__top">
+            <div class="snippet-card__header">
+              <span class="snippet-card__title">Conditional Distinct Count</span>
+              <span class="snippet-card__tag">Aggregation</span>
+            </div>
+            <p class="snippet-card__desc">Menghitung volume unik hanya jika memenuhi kondisi tertentu tanpa subquery terpisah.</p>
+            <div class="snippet-card__code">
+              <pre><code>SELECT 
+  campaign_id,
+  COUNT(DISTINCT CASE 
+    WHEN status = 'converted' 
+    THEN user_id 
+  END) AS paid_converters,
+  COUNT(DISTINCT user_id) AS total_reach
+FROM ad_logs
+GROUP BY 1;</code></pre>
+              <button class="snippet-card__copy" data-code="SELECT \n  campaign_id,\n  COUNT(DISTINCT CASE \n    WHEN status = 'converted' \n    THEN user_id \n  END) AS paid_converters,\n  COUNT(DISTINCT user_id) AS total_reach\nFROM ad_logs\nGROUP BY 1;" onclick="copySnippet(this)">
+                <span class="material-symbols-outlined" style="font-size:14px">content_copy</span>
+                <span>Salin</span>
+              </button>
+            </div>
+          </div>
+          <div class="snippet-card__footer">
+            <span>Best for: Funnel Ratio</span>
+            <span style="font-family:var(--font-mono);color:var(--primary);font-weight:600">NULL-safe</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. PANDAS & PYTHON -->
+    <section class="category-section" data-category="pandas">
+      <div class="category-header">
+        <div class="category-header__left">
+          <div class="category-header__icon" style="background:var(--secondary-container);color:var(--on-secondary-container)">
+            <span class="material-symbols-outlined" style="font-size:20px">table_rows</span>
+          </div>
+          <div>
+            <h2 class="headline-md">Pandas Quick Wrangling &amp; Reshaping</h2>
+            <p class="body-sm" style="color:var(--text-secondary)">Pola transformasi matriks, agregasi multivalue, dan visualisasi format input-output.</p>
+          </div>
+        </div>
+        <span class="category-badge">Python 3.10+ / Pandas 2.x</span>
+      </div>
+
+      <div class="snippet-grid snippet-grid--3col">
+        <!-- Card 1: groupby agg -->
+        <div class="snippet-card">
+          <div class="snippet-card__top">
+            <div class="snippet-card__header">
+              <span class="snippet-card__title">df.groupby().agg()</span>
+              <span class="snippet-card__tag">Summary</span>
+            </div>
+            <p class="snippet-card__desc">Menerapkan agregasi berbeda ke beberapa kolom secara terarah sekaligus merename output.</p>
+            <div class="snippet-card__code">
+              <pre><code>summary = df.groupby('segment').agg(
+    total_sales=('revenue', 'sum'),
+    avg_ticket=('revenue', 'mean'),
+    active_users=('user_id', 'nunique')
+).reset_index()</code></pre>
+              <button class="snippet-card__copy" data-code="summary = df.groupby('segment').agg(\n    total_sales=('revenue', 'sum'),\n    avg_ticket=('revenue', 'mean'),\n    active_users=('user_id', 'nunique')\n).reset_index()" onclick="copySnippet(this)">
+                <span class="material-symbols-outlined" style="font-size:14px">content_copy</span>
+                <span>Salin</span>
+              </button>
+            </div>
+          </div>
+          <div style="background:var(--surface-container-low);padding:0.75rem;border-radius:var(--radius-sm);margin-top:0.5rem">
+            <div style="font-size:0.6875rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;margin-bottom:0.35rem">Preview Matrix Output:</div>
+            <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:2px;font-family:var(--font-mono);font-size:0.6875rem;text-align:center">
+              <div style="background:var(--surface-container-high);padding:3px;font-weight:700">segment</div>
+              <div style="background:var(--surface-container-high);padding:3px;font-weight:700">total_sales</div>
+              <div style="background:var(--surface-container-high);padding:3px;font-weight:700">active_users</div>
+              <div style="background:var(--surface-container);padding:3px">Enterprise</div>
+              <div style="background:var(--surface-container);padding:3px">Rp 450M</div>
+              <div style="background:var(--surface-container);padding:3px">142</div>
+              <div style="background:var(--surface-container);padding:3px">SMB</div>
+              <div style="background:var(--surface-container);padding:3px">Rp 128M</div>
+              <div style="background:var(--surface-container);padding:3px">890</div>
+            </div>
+          </div>
+          <div class="snippet-card__footer">
+            <span>Best for: Multi-metric Grouping</span>
+            <span style="font-family:var(--font-mono);color:var(--primary);font-weight:600">Vectorized</span>
+          </div>
+        </div>
+
+        <!-- Card 2: pivot_table -->
+        <div class="snippet-card">
+          <div class="snippet-card__top">
+            <div class="snippet-card__header">
+              <span class="snippet-card__title">pd.pivot_table()</span>
+              <span class="snippet-card__tag">Long → Wide</span>
+            </div>
+            <p class="snippet-card__desc">Membuat tabel silang dua dimensi dengan kalkulasi subtotal dan penanganan missing value.</p>
+            <div class="snippet-card__code">
+              <pre><code>pt = pd.pivot_table(
+    df,
+    values='gmv',
+    index='region',
+    columns='quarter',
+    aggfunc='sum',
+    fill_value=0
+)</code></pre>
+              <button class="snippet-card__copy" data-code="pt = pd.pivot_table(\n    df,\n    values='gmv',\n    index='region',\n    columns='quarter',\n    aggfunc='sum',\n    fill_value=0\n)" onclick="copySnippet(this)">
+                <span class="material-symbols-outlined" style="font-size:14px">content_copy</span>
+                <span>Salin</span>
+              </button>
+            </div>
+          </div>
+          <div style="background:var(--surface-container-low);padding:0.75rem;border-radius:var(--radius-sm);margin-top:0.5rem">
+            <div style="font-size:0.6875rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;margin-bottom:0.35rem">Format Transformasi:</div>
+            <div style="display:flex;align-items:center;justify-content:space-between;font-family:var(--font-mono);font-size:0.75rem">
+              <span style="background:var(--surface-container);padding:3px 8px;border-radius:4px">Rows: [Region]</span>
+              <span class="material-symbols-outlined" style="font-size:16px;color:var(--text-secondary)">arrow_forward</span>
+              <span style="background:var(--primary-container);color:var(--on-primary-container);padding:3px 8px;border-radius:4px">Cols: [Q1, Q2, Q3, Q4]</span>
+            </div>
+          </div>
+          <div class="snippet-card__footer">
+            <span>Best for: Tabulasi Silang Matrix</span>
+            <span style="font-family:var(--font-mono);color:var(--primary);font-weight:600">Cross-tab</span>
+          </div>
+        </div>
+
+        <!-- Card 3: melt -->
+        <div class="snippet-card">
+          <div class="snippet-card__top">
+            <div class="snippet-card__header">
+              <span class="snippet-card__title">df.melt()</span>
+              <span class="snippet-card__tag">Wide → Long</span>
+            </div>
+            <p class="snippet-card__desc">Menormalkan kolom metrik ganda menjadi baris pasangan variabel-nilai untuk analisis visualisasi.</p>
+            <div class="snippet-card__code">
+              <pre><code>tidy_df = df.melt(
+    id_vars=['user_id', 'country'],
+    value_vars=['m1_spend', 'm2_spend'],
+    var_name='month_metric',
+    value_name='amount'
+)</code></pre>
+              <button class="snippet-card__copy" data-code="tidy_df = df.melt(\n    id_vars=['user_id', 'country'],\n    value_vars=['m1_spend', 'm2_spend'],\n    var_name='month_metric',\n    value_name='amount'\n)" onclick="copySnippet(this)">
+                <span class="material-symbols-outlined" style="font-size:14px">content_copy</span>
+                <span>Salin</span>
+              </button>
+            </div>
+          </div>
+          <div style="background:var(--surface-container-low);padding:0.75rem;border-radius:var(--radius-sm);margin-top:0.5rem">
+            <div style="font-size:0.6875rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;margin-bottom:0.35rem">Karakteristik Tidy Data:</div>
+            <p style="font-size:0.75rem;color:var(--text-secondary);margin:0">Mempersiapkan data tabular agar kompatibel dengan seaborn, plotly, dan modul Machine Learning.</p>
+          </div>
+          <div class="snippet-card__footer">
+            <span>Best for: Unpivot &amp; Normalization</span>
+            <span style="font-family:var(--font-mono);color:var(--primary);font-weight:600">Tidy</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. METRIK BISNIS -->
+    <section class="category-section" data-category="business">
+      <div class="category-header">
+        <div class="category-header__left">
+          <div class="category-header__icon" style="background:var(--primary-container);color:var(--on-primary-container)">
+            <span class="material-symbols-outlined" style="font-size:20px">query_stats</span>
+          </div>
+          <div>
+            <h2 class="headline-md">Metrik Bisnis Esensial &amp; Formula</h2>
+            <p class="body-sm" style="color:var(--text-secondary)">Definisi matematis standar industri untuk pelaporan executive dashboard dan unit economics.</p>
+          </div>
+        </div>
+        <span class="category-badge">Product &amp; Commercial Analytics</span>
+      </div>
+
+      <div class="snippet-grid">
+        <!-- Churn Rate -->
+        <div class="snippet-card">
+          <div class="snippet-card__top">
+            <div class="snippet-card__header">
+              <div>
+                <span style="font-size:0.6875rem;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:0.04em">Churn &amp; Retention</span>
+                <h3 class="headline-xs" style="margin-top:2px">Churn Rate (Pelanggan Hilang)</h3>
+              </div>
+              <span class="snippet-card__tag">% Rasio</span>
+            </div>
+            <div class="snippet-card__formula">
+              Churn Rate = ( Pelanggan Keluar Periode [t] ) ÷ ( Pelanggan Aktif Awal [t] ) × 100%
+            </div>
+            <div style="font-size:0.8125rem;color:var(--text-secondary);display:flex;flex-direction:column;gap:0.35rem">
+              <div style="display:flex;gap:0.4rem"><span class="material-symbols-outlined" style="font-size:16px;color:var(--primary)">check_circle</span> <span><strong>Aplikasi Praktis:</strong> Jangan masukkan pendaftar baru tengah periode pada penyebut.</span></div>
+              <div style="display:flex;gap:0.4rem"><span class="material-symbols-outlined" style="font-size:16px;color:var(--primary)">check_circle</span> <span><strong>Target Sehat:</strong> B2B SaaS &lt; 1% bulanan; B2C e-commerce di 4-7% bulanan.</span></div>
+            </div>
+          </div>
+          <div class="snippet-card__footer">
+            <span>Interval: Bulanan / Kuartalan</span>
+            <span style="font-weight:600;color:var(--primary)">Vital KPI</span>
+          </div>
+        </div>
+
+        <!-- CLV / LTV -->
+        <div class="snippet-card">
+          <div class="snippet-card__top">
+            <div class="snippet-card__header">
+              <div>
+                <span style="font-size:0.6875rem;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:0.04em">Valuasi Pelanggan</span>
+                <h3 class="headline-xs" style="margin-top:2px">Customer Lifetime Value (CLV / LTV)</h3>
+              </div>
+              <span class="snippet-card__tag">Nominal Monetasi</span>
+            </div>
+            <div class="snippet-card__formula">
+              CLV = ARPU (Rata-rata Pendapatan) × Margin Kotor % ÷ Churn Rate Bulanan
+            </div>
+            <div style="font-size:0.8125rem;color:var(--text-secondary);display:flex;flex-direction:column;gap:0.35rem">
+              <div style="display:flex;gap:0.4rem"><span class="material-symbols-outlined" style="font-size:16px;color:var(--primary)">check_circle</span> <span><strong>Benchmark LTV:CAC:</strong> Rasio ideal minimal 3:1. Di bawah 1:1 membakar modal.</span></div>
+              <div style="display:flex;gap:0.4rem"><span class="material-symbols-outlined" style="font-size:16px;color:var(--primary)">check_circle</span> <span><strong>Variabel Kritis:</strong> Wajib sertakan margin kotor agar tidak melebih-lebihkan proyeksi kas.</span></div>
+            </div>
+          </div>
+          <div class="snippet-card__footer">
+            <span>Tipe: Unit Economics</span>
+            <span style="font-weight:600;color:var(--primary)">Executive Metric</span>
+          </div>
+        </div>
+
+        <!-- Conversion Rate (CR) -->
+        <div class="snippet-card">
+          <div class="snippet-card__top">
+            <div class="snippet-card__header">
+              <div>
+                <span style="font-size:0.6875rem;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:0.04em">Funnel Efisiensi</span>
+                <h3 class="headline-xs" style="margin-top:2px">Conversion Rate (CR) Tahapan</h3>
+              </div>
+              <span class="snippet-card__tag">% Konversi</span>
+            </div>
+            <div class="snippet-card__formula">
+              CR Step = ( Entitas Sukses Tahap [N+1] ) ÷ ( Entitas Masuk Tahap [N] ) × 100%
+            </div>
+            <div style="font-size:0.8125rem;color:var(--text-secondary);display:flex;flex-direction:column;gap:0.35rem">
+              <div style="display:flex;gap:0.4rem"><span class="material-symbols-outlined" style="font-size:16px;color:var(--primary)">check_circle</span> <span><strong>Contoh:</strong> Checkout Success ÷ Payment Visits = Gateway CR.</span></div>
+              <div style="display:flex;gap:0.4rem"><span class="material-symbols-outlined" style="font-size:16px;color:var(--primary)">check_circle</span> <span><strong>Granularitas:</strong> Segmentasikan per tipe perangkat (Mobile vs Desktop).</span></div>
+            </div>
+          </div>
+          <div class="snippet-card__footer">
+            <span>Scope: Product Funnel</span>
+            <span style="font-weight:600;color:var(--primary)">CRO Indicator</span>
+          </div>
+        </div>
+
+        <!-- Retention Rate -->
+        <div class="snippet-card">
+          <div class="snippet-card__top">
+            <div class="snippet-card__header">
+              <div>
+                <span style="font-size:0.6875rem;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:0.04em">Analisis Kohort</span>
+                <h3 class="headline-xs" style="margin-top:2px">Retention Rate (Day N / Month N)</h3>
+              </div>
+              <span class="snippet-card__tag">Cohort Index</span>
+            </div>
+            <div class="snippet-card__formula">
+              Retention (M+n) = ( Pengguna Aktif Bulan [n] dari Kohort K ) ÷ ( Ukuran Awal K ) × 100%
+            </div>
+            <div style="font-size:0.8125rem;color:var(--text-secondary);display:flex;flex-direction:column;gap:0.35rem">
+              <div style="display:flex;gap:0.4rem"><span class="material-symbols-outlined" style="font-size:16px;color:var(--primary)">check_circle</span> <span><strong>Product-Market Fit:</strong> Kurva retensi yang mendatar menandakan baseline produk kuat.</span></div>
+              <div style="display:flex;gap:0.4rem"><span class="material-symbols-outlined" style="font-size:16px;color:var(--primary)">check_circle</span> <span><strong>Interval Standar:</strong> E-commerce memakai M1/M3/M6; Gaming D1/D7/D30.</span></div>
+            </div>
+          </div>
+          <div class="snippet-card__footer">
+            <span>Model: Triangulasi Kohort</span>
+            <span style="font-weight:600;color:var(--primary)">PMF Gauge</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. STATISTIKA INFERENSIAL -->
+    <section class="category-section" data-category="stats">
+      <div class="category-header">
+        <div class="category-header__left">
+          <div class="category-header__icon" style="background:var(--tertiary-container);color:var(--on-tertiary-container)">
+            <span class="material-symbols-outlined" style="font-size:20px">functions</span>
+          </div>
+          <div>
+            <h2 class="headline-md">Statistika Inferensial &amp; Pembersihan Data</h2>
+            <p class="body-sm" style="color:var(--text-secondary)">Kaidah pengambilan keputusan uji hipotesis A/B testing dan pendeteksian data pencilan.</p>
+          </div>
+        </div>
+        <span class="category-badge">Rigorous Methods</span>
+      </div>
+
+      <div class="snippet-grid snippet-grid--3col">
+        <!-- P-Value -->
+        <div class="snippet-card">
+          <div class="snippet-card__top">
+            <div class="snippet-card__header">
+              <span class="snippet-card__title">Interpretasi P-Value</span>
+              <span class="snippet-card__tag">A/B Testing</span>
+            </div>
+            <p class="snippet-card__desc">Probabilitas mengamati perbedaan sebesar hasil observasi jika hipotesis nol (H0) bernilai benar.</p>
+            <div style="display:flex;flex-direction:column;gap:0.35rem;margin:0.5rem 0">
+              <div style="padding:0.4rem 0.6rem;background:var(--surface-container-low);border-radius:var(--radius-sm);display:flex;justify-content:space-between;font-size:0.75rem">
+                <span style="font-family:var(--font-mono);color:var(--primary);font-weight:700">p &lt; 0.01</span>
+                <span>Bukti Sangat Kuat Tolak H0</span>
+              </div>
+              <div style="padding:0.4rem 0.6rem;background:var(--surface-container-low);border-radius:var(--radius-sm);display:flex;justify-content:space-between;font-size:0.75rem">
+                <span style="font-family:var(--font-mono);color:var(--primary);font-weight:700">p &lt; 0.05</span>
+                <span>Signifikan Statistik Standar</span>
+              </div>
+              <div style="padding:0.4rem 0.6rem;background:var(--surface-container-low);border-radius:var(--radius-sm);display:flex;justify-content:space-between;font-size:0.75rem">
+                <span style="font-family:var(--font-mono);color:var(--error);font-weight:700">p ≥ 0.05</span>
+                <span style="color:var(--text-secondary)">Gagal Tolak H0 (Inkonklusif)</span>
+              </div>
+            </div>
+          </div>
+          <div class="snippet-card__footer">
+            <span>Catatan: Tentukan sample size di awal</span>
+            <span style="font-weight:600;color:var(--primary)">α = 0.05</span>
+          </div>
+        </div>
+
+        <!-- Z-Score -->
+        <div class="snippet-card">
+          <div class="snippet-card__top">
+            <div class="snippet-card__header">
+              <span class="snippet-card__title">Standardisasi Z-Score</span>
+              <span class="snippet-card__tag">Normal Dist</span>
+            </div>
+            <p class="snippet-card__desc">Berapa banyak simpangan baku suatu titik data berada dari nilai rata-rata (mean).</p>
+            <div class="snippet-card__formula" style="padding:0.75rem">
+              Z = ( X - μ ) ÷ σ
+              <div style="font-size:0.6875rem;color:var(--text-secondary);font-weight:400;margin-top:2px">X: observasi, μ: mean, σ: standar deviasi</div>
+            </div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);display:flex;flex-direction:column;gap:0.25rem">
+              <div style="display:flex;justify-content:space-between"><span>|Z| &gt; 2.0 :</span> <strong>5% populasi terluar</strong></div>
+              <div style="display:flex;justify-content:space-between"><span>|Z| &gt; 3.0 :</span> <strong style="color:var(--error)">Outlier ekstrem (&lt;0.3% prob)</strong></div>
+            </div>
+          </div>
+          <div class="snippet-card__footer">
+            <span>Syarat: Distribusi normal Gaussian</span>
+            <span style="font-weight:600;color:var(--primary)">Parametrik</span>
+          </div>
+        </div>
+
+        <!-- IQR Tukey -->
+        <div class="snippet-card">
+          <div class="snippet-card__top">
+            <div class="snippet-card__header">
+              <span class="snippet-card__title">Aturan Outlier IQR</span>
+              <span class="snippet-card__tag">Tukey's Rule</span>
+            </div>
+            <p class="snippet-card__desc">Metode pembersihan pencilan yang tangguh (robust) terhadap skewed data distribusi miring.</p>
+            <div class="snippet-card__formula" style="padding:0.75rem">
+              IQR = Q3 (P75) - Q1 (P25)
+            </div>
+            <div style="display:flex;flex-direction:column;gap:0.35rem;font-family:var(--font-mono);font-size:0.75rem">
+              <div style="padding:0.35rem 0.5rem;background:var(--surface-container);border-radius:4px">Batas Bawah = Q1 - (1.5 × IQR)</div>
+              <div style="padding:0.35rem 0.5rem;background:var(--surface-container);border-radius:4px">Batas Atas = Q3 + (1.5 × IQR)</div>
+            </div>
+          </div>
+          <div class="snippet-card__footer">
+            <span>Best for: Income &amp; Basket Value</span>
+            <span style="font-weight:600;color:var(--primary)">Non-Parametrik</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SPREADSHEET FORMULAS -->
+    <section class="category-section" data-category="excel">
+      <div class="category-header">
+        <div class="category-header__left">
+          <div class="category-header__icon" style="background:var(--surface-variant);color:var(--on-surface)">
+            <span class="material-symbols-outlined" style="font-size:20px">grid_on</span>
+          </div>
+          <div>
+            <h2 class="headline-md">Fungsi Spreadsheet Modern (Excel &amp; Google Sheets)</h2>
+            <p class="body-sm" style="color:var(--text-secondary)">Alternatif berperforma tinggi untuk menggantikan fungsi lawas VLOOKUP yang rapuh.</p>
+          </div>
+        </div>
+        <span class="category-badge">Modern Formula Syntax</span>
+      </div>
+
+      <div class="snippet-grid">
+        <!-- XLOOKUP -->
+        <div class="snippet-card">
+          <div class="snippet-card__top">
+            <div class="snippet-card__header">
+              <div>
+                <span class="snippet-card__title">XLOOKUP() Modern Lookup</span>
+                <p class="snippet-card__desc">Pencarian data dua arah tahan-geser kolom dan mendukung default fallback value.</p>
+              </div>
+              <span class="snippet-card__tag" style="background:var(--primary-container);color:var(--on-primary-container)">Rekomendasi</span>
+            </div>
+            <div class="snippet-card__code">
+              <pre><code>=XLOOKUP(A2, Users!A:A, Users!D:D, "Tidak Ditemukan", 0)</code></pre>
+              <button class="snippet-card__copy" data-code='=XLOOKUP(A2, Users!A:A, Users!D:D, "Tidak Ditemukan", 0)' onclick="copySnippet(this)">
+                <span class="material-symbols-outlined" style="font-size:14px">content_copy</span>
+                <span>Salin</span>
+              </button>
+            </div>
+            <div style="font-size:0.8125rem;color:var(--text-secondary);display:flex;flex-direction:column;gap:0.25rem">
+              <div>• <strong>Argumen 4:</strong> Nilai fallback jika tidak ditemukan (mengeliminasi wrapper =IFERROR)</div>
+              <div>• <strong>Keuntungan:</strong> Tidak rusak saat menyisipkan atau memindahkan kolom di sheet referensi.</div>
+            </div>
+          </div>
+          <div class="snippet-card__footer">
+            <span>Kompatibilitas: Excel 365, 2021+, Sheets</span>
+            <span style="font-weight:600;color:var(--primary)">Anti-Breakage</span>
+          </div>
+        </div>
+
+        <!-- FILTER + UNIQUE -->
+        <div class="snippet-card">
+          <div class="snippet-card__top">
+            <div class="snippet-card__header">
+              <div>
+                <span class="snippet-card__title">FILTER() + UNIQUE() Array Formulas</span>
+                <p class="snippet-card__desc">Menghasilkan dynamic spill-down array berdasarkan kriteria kondisional ganda.</p>
+              </div>
+              <span class="snippet-card__tag">Dynamic Array</span>
+            </div>
+            <div class="snippet-card__code">
+              <pre><code>=SORT(UNIQUE(FILTER(Sales!B2:B, Sales!C2:C = "Won")), 1, TRUE)</code></pre>
+              <button class="snippet-card__copy" data-code='=SORT(UNIQUE(FILTER(Sales!B2:B, Sales!C2:C = "Won")), 1, TRUE)' onclick="copySnippet(this)">
+                <span class="material-symbols-outlined" style="font-size:14px">content_copy</span>
+                <span>Salin</span>
+              </button>
+            </div>
+            <div style="font-size:0.8125rem;color:var(--text-secondary);display:flex;flex-direction:column;gap:0.25rem">
+              <div>• <strong>Spill behavior:</strong> Formula hanya ditulis pada sel teratas dan mengisi otomatis sel ke bawah.</div>
+              <div>• <strong>Kombinasi:</strong> Gabungkan dengan SUM() untuk kalkulasi agregat tanpa helper column.</div>
+            </div>
+          </div>
+          <div class="snippet-card__footer">
+            <span>Kompatibilitas: Modern Spreadsheets</span>
+            <span style="font-weight:600;color:var(--primary)">Zero-Helper</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. PRINTABLE PDFS -->
+    <section class="category-section" id="printable-sheets">
+      <div class="category-header">
+        <div class="category-header__left">
+          <div class="category-header__icon" style="background:var(--primary);color:var(--on-primary)">
+            <span class="material-symbols-outlined" style="font-size:20px">picture_as_pdf</span>
+          </div>
+          <div>
+            <h2 class="headline-md">Unduh Versi PDF Siap Cetak (A4 Cheat Sheet)</h2>
+            <p class="body-sm" style="color:var(--text-secondary)">Lembar ringkasan densitas tinggi satu halaman untuk ditempel di meja kerja analisis Anda.</p>
+          </div>
+        </div>
+        <span class="category-badge">High-Resolution PDF (300 DPI)</span>
+      </div>
+
+      <div class="print-grid">
+        <!-- PDF 1 -->
+        <div class="print-card">
+          <div class="print-card__preview">
+            <span class="material-symbols-outlined">dataset</span>
+            <span style="font-size:0.8125rem;font-weight:700">SQL Quick Card</span>
+            <span style="font-size:0.6875rem;color:var(--text-secondary)">1 Lembar A4 Landscape</span>
+          </div>
+          <div>
+            <h3 class="headline-xs" style="margin-bottom:0.25rem">SQL Analytics &amp; Windowing</h3>
+            <p class="body-sm" style="color:var(--text-secondary);font-size:0.75rem">Mencakup urutan eksekusi SQL, klausa QUALIFY, sintaks PIVOT bawaan, dan window frames.</p>
+          </div>
+          <button class="btn btn--secondary btn--sm" style="width:100%;justify-content:center" onclick="triggerDownloadAlert('SQL Analytics Card')">
+            <span class="material-symbols-outlined" style="font-size:16px">download</span>
+            <span>Unduh PDF (1.2 MB)</span>
+          </button>
+        </div>
+
+        <!-- PDF 2 -->
+        <div class="print-card">
+          <div class="print-card__preview">
+            <span class="material-symbols-outlined">terminal</span>
+            <span style="font-size:0.8125rem;font-weight:700">Pandas 2.0 Card</span>
+            <span style="font-size:0.6875rem;color:var(--text-secondary)">1 Lembar A4 Landscape</span>
+          </div>
+          <div>
+            <h3 class="headline-xs" style="margin-bottom:0.25rem">Python Pandas Wrangling</h3>
+            <p class="body-sm" style="color:var(--text-secondary);font-size:0.75rem">Peta manipulasi DateTime, regex replacement, merge strategi join, dan optimasi memori.</p>
+          </div>
+          <button class="btn btn--secondary btn--sm" style="width:100%;justify-content:center" onclick="triggerDownloadAlert('Pandas 2.0 Card')">
+            <span class="material-symbols-outlined" style="font-size:16px">download</span>
+            <span>Unduh PDF (1.8 MB)</span>
+          </button>
+        </div>
+
+        <!-- PDF 3 -->
+        <div class="print-card">
+          <div class="print-card__preview">
+            <span class="material-symbols-outlined">monitoring</span>
+            <span style="font-size:0.8125rem;font-weight:700">Metrics Compendium</span>
+            <span style="font-size:0.6875rem;color:var(--text-secondary)">1 Lembar A4 Landscape</span>
+          </div>
+          <div>
+            <h3 class="headline-xs" style="margin-bottom:0.25rem">Metrik Bisnis &amp; Startup</h3>
+            <p class="body-sm" style="color:var(--text-secondary);font-size:0.75rem">Kamus rumus ARR/MRR, Quick Ratio, Magic Number, Net Revenue Retention, dan Payback Period.</p>
+          </div>
+          <button class="btn btn--secondary btn--sm" style="width:100%;justify-content:center" onclick="triggerDownloadAlert('Metrics Compendium')">
+            <span class="material-symbols-outlined" style="font-size:16px">download</span>
+            <span>Unduh PDF (940 KB)</span>
+          </button>
+        </div>
+
+        <!-- PDF 4 -->
+        <div class="print-card">
+          <div class="print-card__preview">
+            <span class="material-symbols-outlined">calculate</span>
+            <span style="font-size:0.8125rem;font-weight:700">Stats Decision Tree</span>
+            <span style="font-size:0.6875rem;color:var(--text-secondary)">1 Lembar A4 Landscape</span>
+          </div>
+          <div>
+            <h3 class="headline-xs" style="margin-bottom:0.25rem">Pohon Uji Statistik</h3>
+            <p class="body-sm" style="color:var(--text-secondary);font-size:0.75rem">Diagram alur memilih uji: T-Test, Chi-Square, Mann-Whitney, ANOVA, atau Korelasi Pearson.</p>
+          </div>
+          <button class="btn btn--secondary btn--sm" style="width:100%;justify-content:center" onclick="triggerDownloadAlert('Stats Decision Tree')">
+            <span class="material-symbols-outlined" style="font-size:16px">download</span>
+            <span>Unduh PDF (1.5 MB)</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- NO RESULTS BOX -->
+    <div class="no-results-box" id="no-results-state">
+      <span class="material-symbols-outlined" style="font-size:48px;color:var(--outline);margin-bottom:0.5rem">search_off</span>
+      <h3 class="headline-sm">Fungsi atau rumus tidak ditemukan</h3>
+      <p class="body-md" style="color:var(--text-secondary);max-width:420px;margin:0.25rem auto 1rem">
+        Coba gunakan istilah pencarian yang lebih umum seperti <code>SELECT</code>, <code>merge</code>, <code>LTV</code>, atau <code>XLOOKUP</code>.
+      </p>
+      <button class="btn btn--primary btn--sm" onclick="resetFilters()">Reset Pencarian</button>
+    </div>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="logo">
+          <span class="logo__icon material-symbols-outlined" style="font-size:24px;color:var(--primary)">school</span>
+          <span class="logo__text">DataSchool</span>
+        </a>
+        <p class="footer__desc">
+          Platform edukasi data analytics nomor satu di Indonesia. Mengubah pemula menjadi praktisi data yang percaya diri dan siap kerja.
+        </p>
+      </div>
+      <div class="footer__links">
+        <div>
+          <h4 class="footer__col-title">Kurikulum</h4>
+          <a href="sql-tutorial.html" class="footer__link">SQL Tutorial</a>
+          <a href="data-cleaning.html" class="footer__link">Data Cleaning</a>
+          <a href="ecommerce-case-study.html" class="footer__link">Studi Kasus E-Commerce</a>
+          <a href="cheatsheets.html" class="footer__link">Cheatsheets</a>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Komunitas</h4>
+          <a href="https://discord.com" target="_blank" class="footer__link">Discord Komunitas</a>
+          <a href="https://github.com" target="_blank" class="footer__link">GitHub Open Source</a>
+          <a href="https://linkedin.com" target="_blank" class="footer__link">LinkedIn Network</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2026 DataSchool Indonesia. Hak Cipta Dilindungi Undang-Undang.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

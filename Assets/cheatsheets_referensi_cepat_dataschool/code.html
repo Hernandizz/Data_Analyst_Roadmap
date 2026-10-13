@@ -1,0 +1,746 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary-fixed-dim":"#ffb4ac","on-tertiary":"#ffffff","tertiary":"#863933","background":"#faf8ff","outline-variant":"#bdc9c1","secondary-fixed":"#d5e3fd","primary-container":"#047857","secondary":"#515f74","on-tertiary-fixed-variant":"#792f2a","on-tertiary-container":"#ffe4e0","outline":"#6e7a73","on-primary-container":"#9ffdd3","on-secondary":"#ffffff","primary-fixed-dim":"#7bd8b1","on-primary":"#ffffff","secondary-container":"#d5e3fd","surface-container-high":"#e2e7ff","inverse-primary":"#7bd8b1","surface-bright":"#faf8ff","on-secondary-container":"#57657b","primary-fixed":"#97f5cc","on-surface-variant":"#3e4943","on-primary-fixed":"#002115","inverse-on-surface":"#eef0ff","surface-tint":"#006c4e","surface-container":"#eaedff","surface":"#faf8ff","on-error-container":"#93000a","secondary-fixed-dim":"#b9c7e0","on-secondary-fixed-variant":"#3a485c","on-error":"#ffffff","on-background":"#131b2e","on-surface":"#131b2e","surface-variant":"#dae2fd","on-secondary-fixed":"#0d1c2f","surface-container-lowest":"#ffffff","error":"#ba1a1a","error-container":"#ffdad6","on-tertiary-fixed":"#3e0405","on-primary-fixed-variant":"#00513a","surface-container-low":"#f2f3ff","inverse-surface":"#283044","tertiary-container":"#a45049","primary":"#005d42","tertiary-fixed":"#ffdad6","surface-dim":"#d2d9f4","surface-container-highest":"#dae2fd"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"1.5rem","space-md":"1rem","space-lg":"1.5rem","space-xl":"2.5rem","space-sm":"0.5rem","margin":"2rem","space-xs":"0.25rem"},"fontFamily":{"label-md":["Hanken Grotesk"],"headline-xs":["Hanken Grotesk"],"body-lg":["Hanken Grotesk"],"headline-lg":["Hanken Grotesk"],"label-sm":["Hanken Grotesk"],"code-block":["JetBrains Mono"],"body-md":["Hanken Grotesk"],"display":["Hanken Grotesk"],"body-sm":["Hanken Grotesk"],"headline-md":["Hanken Grotesk"],"code-inline":["JetBrains Mono"],"headline-sm":["Hanken Grotesk"],"headline-lg-mobile":["Hanken Grotesk"]},"fontSize":{"label-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"600"}],"headline-xs":["1.125rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.875rem","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["1.875rem",{"lineHeight":"2.25rem","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"600"}],"code-block":["0.875rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"400"}],"body-md":["1rem",{"lineHeight":"1.75rem","letterSpacing":"0em","fontWeight":"400"}],"display":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.025em","fontWeight":"700"}],"body-sm":["0.875rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.015em","fontWeight":"600"}],"code-inline":["0.875em",{"lineHeight":"inherit","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg-mobile":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest border-b border-outline-variant/40"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4"><div class="flex items-center gap-8"><a class="flex items-center gap-2.5" data-path="sql-tutorial" href="#"><img alt="DataSchool Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W9yOXUZVIfySCvME1iPMFs9b7BCNNwb2zv3P4jBlzlHnlPlrErRSdmZVCsUqTFJWIFVrQvs0bMdZ5RqvXiR2VNRtKNXpeF0o7H6tj1BbWGKzsoj6pZAnoJlIM9JosUWFMfmq5peWn2otW29FJg538qAVJQpF6pgsU1bWKIARqa1DdAfoReABTZUmGiPOtjRD5U8E_5Pk4YOvS8n7E1hsV9w-zmJfpnKmO4jpxrjjehZoVqP_jVG-sPKok"><span class="font-headline-sm text-headline-sm font-bold text-primary tracking-tight">DataSchool</span></a><nav class="hidden md:flex items-center gap-2" data-active-classes="bg-surface-container text-primary font-bold"><a class="px-3 py-1.5 rounded text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="sql-tutorial" href="#">Materi &amp; Tutorial</a><a aria-current="page" class="px-3 py-1.5 rounded transition-colors bg-surface-container text-primary font-bold" data-path="cheatsheets" href="#">Cheatsheets</a><a class="px-3 py-1.5 rounded text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="references" href="#">Referensi Sintaks</a><a class="px-3 py-1.5 rounded text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="community-forum" href="#">Forum Komunitas</a></nav></div><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<div class="w-full bg-surface-container-low px-6 lg:px-12 py-10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-2">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-primary-fixed text-on-primary-fixed text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]">menu_book</span>
+<span>DOKUMENTASI CEPAT ANALITIKA</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Kamus &amp; Cheatsheet Referensi Cepat</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Repositori sintaksis terverifikasi, formula metrik bisnis, dan fungsi manipulasi data instan untuk praktisi data, BI engineer, dan data scientist.
+        </p>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded bg-surface-container text-label-sm font-label-sm text-secondary">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>v2.4.8 Updated</span>
+</div>
+<button class="px-3.5 py-1.5 rounded bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors flex items-center gap-1.5 shadow-sm" onclick="document.getElementById('printable-sheets').scrollIntoView({behavior: 'smooth'})">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>Versi Cetak (A4)</span>
+</button>
+</div>
+</div>
+</div>
+<div class="w-full px-6 lg:px-12 py-6 bg-surface sticky top-16 z-30 shadow-sm">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
+<div class="relative flex-1 max-w-xl">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full pl-11 pr-10 py-2.5 rounded bg-surface-container-lowest text-on-surface text-body-md font-body-md focus:bg-surface-container-high outline-none transition-all placeholder:text-outline" id="cheatsheet-search" placeholder="Cari fungsi (cth: VLOOKUP, GROUP BY, pd.merge, COALESCE, P-value)..." type="text">
+<button class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface" id="clear-search-btn">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 lg:pb-0" id="filter-pills">
+<button class="category-pill px-3 py-1.5 rounded bg-primary text-on-primary text-label-sm font-label-sm whitespace-nowrap transition-colors" data-filter="all">
+          Semua
+        </button>
+<button class="category-pill px-3 py-1.5 rounded bg-surface-container-high text-on-surface text-label-sm font-label-sm hover:bg-surface-variant whitespace-nowrap transition-colors" data-filter="sql">
+          SQL Analytics
+        </button>
+<button class="category-pill px-3 py-1.5 rounded bg-surface-container-high text-on-surface text-label-sm font-label-sm hover:bg-surface-variant whitespace-nowrap transition-colors" data-filter="pandas">
+          Pandas &amp; Python
+        </button>
+<button class="category-pill px-3 py-1.5 rounded bg-surface-container-high text-on-surface text-label-sm font-label-sm hover:bg-surface-variant whitespace-nowrap transition-colors" data-filter="business">
+          Metrik Bisnis
+        </button>
+<button class="category-pill px-3 py-1.5 rounded bg-surface-container-high text-on-surface text-label-sm font-label-sm hover:bg-surface-variant whitespace-nowrap transition-colors" data-filter="stats">
+          Statistika Inferensial
+        </button>
+<button class="category-pill px-3 py-1.5 rounded bg-surface-container-high text-on-surface text-label-sm font-label-sm hover:bg-surface-variant whitespace-nowrap transition-colors" data-filter="excel">
+          Fungsi Spreadsheet
+        </button>
+</div>
+</div>
+</div>
+<div class="w-full px-6 lg:px-12 py-8">
+<div class="max-w-7xl mx-auto space-y-12" id="cheatsheet-content">
+<section class="category-section space-y-5" data-category="sql">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-bold">
+<span class="material-symbols-outlined text-[20px]">database</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">SQL Aggregation &amp; Windowing</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Operasi partisi, ranking, dan rolling analytics di RDBMS / Cloud Warehouse (BigQuery, Snowflake, PostgreSQL).</p>
+</div>
+</div>
+<span class="text-label-sm font-label-sm text-secondary bg-surface-container px-2 py-1 rounded">ANSI SQL / Dialect Agnostic</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+<div class="snippet-card bg-surface-container-lowest p-5 rounded flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">ROW_NUMBER() / DENSE_RANK()</span>
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary">Windowing</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Menghasilkan urutan indeks numerik unik per partisi grup data tanpa lompatan nomor.</p>
+<div class="relative bg-inverse-surface rounded p-3 text-on-primary font-code-block text-code-block group">
+<pre class="overflow-x-auto whitespace-pre-wrap"><code>SELECT user_id, order_date,
+  ROW_NUMBER() OVER(
+    PARTITION BY user_id 
+    ORDER BY order_date DESC
+  ) AS rn_order
+FROM transactions;</code></pre>
+<button class="absolute top-2 right-2 px-2 py-1 rounded bg-secondary text-on-secondary text-label-sm font-label-sm opacity-80 hover:opacity-100 flex items-center gap-1 transition-opacity" data-code="SELECT user_id, order_date,\n  ROW_NUMBER() OVER(\n    PARTITION BY user_id \n    ORDER BY order_date DESC\n  ) AS rn_order\nFROM transactions;" onclick="copySnippet(this)">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Salin</span>
+</button>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Best for: Deduplikasi urutan</span>
+<span class="text-primary font-code-inline text-code-inline">O(N log N)</span>
+</div>
+</div>
+<div class="snippet-card bg-surface-container-lowest p-5 rounded flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">LEAD() &amp; LAG() Value Offset</span>
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary">Time-Series</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Mengambil nilai baris setelahnya (LEAD) atau sebelumnya (LAG) untuk evaluasi MoM growth / selisih waktu.</p>
+<div class="relative bg-inverse-surface rounded p-3 text-on-primary font-code-block text-code-block group">
+<pre class="overflow-x-auto whitespace-pre-wrap"><code>SELECT date, revenue,
+  LAG(revenue, 1) OVER(
+    ORDER BY date ASC
+  ) AS prev_day_rev,
+  revenue - LAG(revenue, 1) OVER(
+    ORDER BY date ASC
+  ) AS delta
+FROM daily_sales;</code></pre>
+<button class="absolute top-2 right-2 px-2 py-1 rounded bg-secondary text-on-secondary text-label-sm font-label-sm opacity-80 hover:opacity-100 flex items-center gap-1 transition-opacity" data-code="SELECT date, revenue,\n  LAG(revenue, 1) OVER(\n    ORDER BY date ASC\n  ) AS prev_day_rev,\n  revenue - LAG(revenue, 1) OVER(\n    ORDER BY date ASC\n  ) AS delta\nFROM daily_sales;" onclick="copySnippet(this)">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Salin</span>
+</button>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Best for: MoM / DoD Delta</span>
+<span class="text-primary font-code-inline text-code-inline">No self-join required</span>
+</div>
+</div>
+<div class="snippet-card bg-surface-container-lowest p-5 rounded flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Conditional Distinct Count</span>
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary">Aggregation</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Menghitung volume unik hanya jika memenuhi kondisi tertentu tanpa subquery terpisah.</p>
+<div class="relative bg-inverse-surface rounded p-3 text-on-primary font-code-block text-code-block group">
+<pre class="overflow-x-auto whitespace-pre-wrap"><code>SELECT 
+  campaign_id,
+  COUNT(DISTINCT CASE 
+    WHEN status = 'converted' 
+    THEN user_id 
+  END) AS paid_converters,
+  COUNT(DISTINCT user_id) AS total_reach
+FROM ad_logs
+GROUP BY 1;</code></pre>
+<button class="absolute top-2 right-2 px-2 py-1 rounded bg-secondary text-on-secondary text-label-sm font-label-sm opacity-80 hover:opacity-100 flex items-center gap-1 transition-opacity" data-code="SELECT \n  campaign_id,\n  COUNT(DISTINCT CASE \n    WHEN status = 'converted' \n    THEN user_id \n  END) AS paid_converters,\n  COUNT(DISTINCT user_id) AS total_reach\nFROM ad_logs\nGROUP BY 1;" onclick="copySnippet(this)">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Salin</span>
+</button>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Best for: KPI Funnel Ratio</span>
+<span class="text-primary font-code-inline text-code-inline">NULL-safe</span>
+</div>
+</div>
+</div>
+</section>
+<section class="category-section space-y-5" data-category="pandas">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-bold">
+<span class="material-symbols-outlined text-[20px]">table_rows</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Pandas Quick Wrangling &amp; Reshaping</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pola transformasi matriks, agregasi multivalue, dan visualisasi format input-output.</p>
+</div>
+</div>
+<span class="text-label-sm font-label-sm text-secondary bg-surface-container px-2 py-1 rounded">Python 3.10+ / Pandas 2.x</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+<div class="snippet-card bg-surface-container-lowest p-5 rounded space-y-4 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">df.groupby().agg()</span>
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary">Summary</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Menerapkan agregasi berbeda ke beberapa kolom secara terarah sekaligus merename output.</p>
+<div class="relative bg-inverse-surface rounded p-3 text-on-primary font-code-block text-code-block">
+<pre class="overflow-x-auto whitespace-pre-wrap"><code>summary = df.groupby('segment').agg(
+    total_sales=('revenue', 'sum'),
+    avg_ticket=('revenue', 'mean'),
+    active_users=('user_id', 'nunique')
+).reset_index()</code></pre>
+<button class="absolute top-2 right-2 px-2 py-1 rounded bg-secondary text-on-secondary text-label-sm font-label-sm opacity-80 hover:opacity-100 flex items-center gap-1 transition-opacity" data-code="summary = df.groupby('segment').agg(\n    total_sales=('revenue', 'sum'),\n    avg_ticket=('revenue', 'mean'),\n    active_users=('user_id', 'nunique')\n).reset_index()" onclick="copySnippet(this)">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Salin</span>
+</button>
+</div>
+<div class="bg-surface-container-low p-3 rounded space-y-2">
+<div class="text-label-sm font-label-sm text-secondary uppercase tracking-wider">Visualisasi Hasil Matrix:</div>
+<div class="grid grid-cols-3 gap-1 text-center font-code-inline text-code-inline text-on-surface text-[11px]">
+<div class="bg-surface-container-high py-1 font-bold">segment</div>
+<div class="bg-surface-container-high py-1 font-bold">total_sales</div>
+<div class="bg-surface-container-high py-1 font-bold">active_users</div>
+<div class="bg-surface-container py-1">Enterprise</div>
+<div class="bg-surface-container py-1">$450,200</div>
+<div class="bg-surface-container py-1">142</div>
+<div class="bg-surface-container py-1">SMB</div>
+<div class="bg-surface-container py-1">$128,400</div>
+<div class="bg-surface-container py-1">890</div>
+</div>
+</div>
+</div>
+<div class="snippet-card bg-surface-container-lowest p-5 rounded space-y-4 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">pd.pivot_table()</span>
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary">Reshape (Long → Wide)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Membuat tabel silang dua dimensi dengan kalkulasi subtotal dan penanganan missing value.</p>
+<div class="relative bg-inverse-surface rounded p-3 text-on-primary font-code-block text-code-block">
+<pre class="overflow-x-auto whitespace-pre-wrap"><code>pt = pd.pivot_table(
+    df,
+    values='gmv',
+    index='region',
+    columns='quarter',
+    aggfunc='sum',
+    fill_value=0
+)</code></pre>
+<button class="absolute top-2 right-2 px-2 py-1 rounded bg-secondary text-on-secondary text-label-sm font-label-sm opacity-80 hover:opacity-100 flex items-center gap-1 transition-opacity" data-code="pt = pd.pivot_table(\n    df,\n    values='gmv',\n    index='region',\n    columns='quarter',\n    aggfunc='sum',\n    fill_value=0\n)" onclick="copySnippet(this)">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Salin</span>
+</button>
+</div>
+<div class="bg-surface-container-low p-3 rounded space-y-2">
+<div class="text-label-sm font-label-sm text-secondary uppercase tracking-wider">Format Transformasi:</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface px-2">
+<span class="px-2 py-1 bg-surface-container rounded font-code-inline text-[11px]">Rows: [Region]</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">arrow_forward</span>
+<span class="px-2 py-1 bg-primary-fixed text-on-primary-fixed rounded font-code-inline text-[11px]">Cols: [Q1, Q2, Q3, Q4]</span>
+</div>
+</div>
+</div>
+<div class="snippet-card bg-surface-container-lowest p-5 rounded space-y-4 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">df.melt()</span>
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary">Unpivot (Wide → Long)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Menormalkan kolom metrik ganda menjadi baris pasangan variabel-nilai untuk analisis visualisasi.</p>
+<div class="relative bg-inverse-surface rounded p-3 text-on-primary font-code-block text-code-block">
+<pre class="overflow-x-auto whitespace-pre-wrap"><code>tidy_df = df.melt(
+    id_vars=['user_id', 'country'],
+    value_vars=['m1_spend', 'm2_spend'],
+    var_name='month_metric',
+    value_name='amount'
+)</code></pre>
+<button class="absolute top-2 right-2 px-2 py-1 rounded bg-secondary text-on-secondary text-label-sm font-label-sm opacity-80 hover:opacity-100 flex items-center gap-1 transition-opacity" data-code="tidy_df = df.melt(\n    id_vars=['user_id', 'country'],\n    value_vars=['m1_spend', 'm2_spend'],\n    var_name='month_metric',\n    value_name='amount'\n)" onclick="copySnippet(this)">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Salin</span>
+</button>
+</div>
+<div class="bg-surface-container-low p-3 rounded space-y-2">
+<div class="text-label-sm font-label-sm text-secondary uppercase tracking-wider">Karakteristik Tidy Data:</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Mempersiapkan data tabular agar kompatibel dengan seaborn, plotly, dan modul ML.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="category-section space-y-5" data-category="business">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-bold">
+<span class="material-symbols-outlined text-[20px]">query_stats</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Metrik Bisnis Esensial &amp; Formula</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Definisi matematis standar industri untuk pelaporan executive dashboard dan unit economics.</p>
+</div>
+</div>
+<span class="text-label-sm font-label-sm text-secondary bg-surface-container px-2 py-1 rounded">Product &amp; Commercial Analytics</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<div class="snippet-card bg-surface-container-lowest p-6 rounded space-y-4 shadow-sm">
+<div class="flex items-start justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-primary uppercase font-bold tracking-wider">Churn &amp; Retention</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Churn Rate (Pelanggan Hilang)</h3>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container font-code-inline text-code-inline text-secondary">% Rasio</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded text-center">
+<div class="font-code-block text-code-block text-on-surface font-semibold text-[15px]">
+                Churn Rate = ( Pelanggan Keluar dalam Periode [t] ) ÷ ( Pelanggan Aktif di Awal Periode [t] ) × 100%
+              </div>
+</div>
+<div class="space-y-1.5 text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span><strong>Aplikasi Praktis:</strong> Jangan masukkan pengguna baru yang teregistrasi di tengah periode [t] pada penyebut.</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span><strong>Target Sehat:</strong> B2B SaaS idealnya &lt; 1% bulanan; B2C consumer app berada di 4-7% bulanan.</span>
+</div>
+</div>
+</div>
+<div class="snippet-card bg-surface-container-lowest p-6 rounded space-y-4 shadow-sm">
+<div class="flex items-start justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-primary uppercase font-bold tracking-wider">Valuasi Pelanggan</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Customer Lifetime Value (CLV / LTV)</h3>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container font-code-inline text-code-inline text-secondary">Nominal Monetasi</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded text-center">
+<div class="font-code-block text-code-block text-on-surface font-semibold text-[15px]">
+                CLV = ARPU (Pendapatan Rata-rata) × Margin Kotor % ÷ Churn Rate Bulanan
+              </div>
+</div>
+<div class="space-y-1.5 text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span><strong>Benchmark Rasio LTV:CAC:</strong> Rasio ideal adalah minimal 3:1. Di bawah 1:1 menandakan pembakaran modal tidak sehat.</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span><strong>Variabel Kritis:</strong> Wajib menyertakan margin kotor agar tidak melebih-lebihkan proyeksi kas bersih.</span>
+</div>
+</div>
+</div>
+<div class="snippet-card bg-surface-container-lowest p-6 rounded space-y-4 shadow-sm">
+<div class="flex items-start justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-primary uppercase font-bold tracking-wider">Funnel Efisiensi</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Conversion Rate (CR) Tahapan</h3>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container font-code-inline text-code-inline text-secondary">% Konversi</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded text-center">
+<div class="font-code-block text-code-block text-on-surface font-semibold text-[15px]">
+                CR Step = ( Entitas Sukses di Tahap [N+1] ) ÷ ( Entitas yang Masuk di Tahap [N] ) × 100%
+              </div>
+</div>
+<div class="space-y-1.5 text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span><strong>Contoh:</strong> Checkout Success ÷ Payment Page Visits = Payment Gateway Conversion Rate.</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span><strong>Granularitas:</strong> Hitung per device type (iOS vs Web) untuk isolasi anomali teknis.</span>
+</div>
+</div>
+</div>
+<div class="snippet-card bg-surface-container-lowest p-6 rounded space-y-4 shadow-sm">
+<div class="flex items-start justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-primary uppercase font-bold tracking-wider">Analisis Kohort</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Retention Rate (Day N / Month N)</h3>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container font-code-inline text-code-inline text-secondary">Cohort Index</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded text-center">
+<div class="font-code-block text-code-block text-on-surface font-semibold text-[15px]">
+                Retention (M+n) = ( Pengguna Aktif di Bulan [n] dari Kohort K ) ÷ ( Ukuran Awal Kohort K ) × 100%
+              </div>
+</div>
+<div class="space-y-1.5 text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span><strong>Product Market Fit Indicator:</strong> Kurva retensi yang mendatar (flat curve) menandakan produk memiliki retention baseline kuat.</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span><strong>Interval Standar:</strong> E-commerce memakai M1/M3/M6; Casual gaming memakai D1/D7/D30.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="category-section space-y-5" data-category="stats">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary-container flex items-center justify-center text-on-primary-container font-bold">
+<span class="material-symbols-outlined text-[20px]">functions</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Statistika Inferensial &amp; Pembersihan Data</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kaidah pengambilan keputusan uji hipotesis A/B testing dan pendeteksian data pencilan.</p>
+</div>
+</div>
+<span class="text-label-sm font-label-sm text-secondary bg-surface-container px-2 py-1 rounded">Rigorous Methods</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+<div class="snippet-card bg-surface-container-lowest p-5 rounded space-y-3 shadow-sm flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Panduan Interpretasi P-Value</h3>
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary">A/B Testing</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Probabilitas melihat perbedaan sebesar hasil observasi jika hipotesis nol (H0) bernilai benar.</p>
+<div class="space-y-2 pt-2">
+<div class="p-2.5 rounded bg-surface-container-low flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-code-inline text-code-inline text-primary font-bold">p &lt; 0.01</span>
+<span class="text-on-surface font-medium">Bukti Sangat Kuat Tolak H0</span>
+</div>
+<div class="p-2.5 rounded bg-surface-container-low flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-code-inline text-code-inline text-primary font-bold">p &lt; 0.05</span>
+<span class="text-on-surface font-medium">Signifikan Statistik Standar</span>
+</div>
+<div class="p-2.5 rounded bg-surface-container-low flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-code-inline text-code-inline text-error font-bold">p ≥ 0.05</span>
+<span class="text-on-surface-variant">Gagal Tolak H0 (Inkonklusif)</span>
+</div>
+</div>
+</div>
+<div class="text-label-sm font-label-sm text-secondary pt-3">
+              *Catatan: Selalu tentukan target sample size sebelum tes dimulai (peeking problem).
+            </div>
+</div>
+<div class="snippet-card bg-surface-container-lowest p-5 rounded space-y-3 shadow-sm flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Standardisasi Z-Score</h3>
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary">Normal Dist</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Berapa banyak simpangan baku suatu titik data berada dari nilai rata-rata (mean).</p>
+<div class="bg-surface-container-low p-4 rounded text-center">
+<div class="font-code-block text-code-block text-on-surface font-bold text-[16px]">
+                  Z = ( X - μ ) ÷ σ
+                </div>
+<div class="text-[12px] text-secondary mt-1 font-body-sm">
+                  X = Observasi, μ = Rata-rata sampel, σ = Standar deviasi
+                </div>
+</div>
+<div class="space-y-1.5 text-body-sm font-body-sm text-on-surface-variant pt-2">
+<div class="flex justify-between">
+<span>|Z| &gt; 2.0 :</span>
+<span class="font-medium text-on-surface">5% populasi terluar</span>
+</div>
+<div class="flex justify-between">
+<span>|Z| &gt; 3.0 :</span>
+<span class="font-medium text-error font-semibold">Outlier ekstrem (&lt;0.3% prob)</span>
+</div>
+</div>
+</div>
+<div class="text-label-sm font-label-sm text-secondary pt-3">
+              Gunakan hanya jika sebaran data terbukti berdistribusi normal (Gaussian).
+            </div>
+</div>
+<div class="snippet-card bg-surface-container-lowest p-5 rounded space-y-3 shadow-sm flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Aturan Outlier IQR (Tukey's Rule)</h3>
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary">Non-Parametrik</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Metode pembersihan pencilan yang tangguh (robust) terhadap skewed data distribusi miring.</p>
+<div class="bg-surface-container-low p-4 rounded text-center">
+<div class="font-code-block text-code-block text-on-surface font-bold text-[14px]">
+                  IQR = Q3 (Persentil 75) - Q1 (Persentil 25)
+                </div>
+</div>
+<div class="space-y-2 pt-1 font-code-inline text-code-inline text-body-sm">
+<div class="p-2 rounded bg-surface-container text-on-surface">
+                  Batas Bawah = Q1 - (1.5 × IQR)
+                </div>
+<div class="p-2 rounded bg-surface-container text-on-surface">
+                  Batas Atas = Q3 + (1.5 × IQR)
+                </div>
+</div>
+</div>
+<div class="text-label-sm font-label-sm text-secondary pt-3">
+              Data di luar rentang batas dinyatakan sebagai outlier untuk evaluasi eliminasi.
+            </div>
+</div>
+</div>
+</section>
+<section class="category-section space-y-5" data-category="excel">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-surface-variant flex items-center justify-center text-on-surface font-bold">
+<span class="material-symbols-outlined text-[20px]">grid_on</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Fungsi Spreadsheet Modern (Excel &amp; Google Sheets)</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Alternatif berperforma tinggi untuk menggantikan fungsi lawas VLOOKUP yang rapuh.</p>
+</div>
+</div>
+<span class="text-label-sm font-label-sm text-secondary bg-surface-container px-2 py-1 rounded">Modern Formula Syntax</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<div class="snippet-card bg-surface-container-lowest p-5 rounded space-y-3 shadow-sm">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-md text-label-md text-primary font-bold">XLOOKUP()</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pencarian data dua arah tahan-geser kolom dan mendukung default fallback value.</p>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Rekomendasi</span>
+</div>
+<div class="relative bg-inverse-surface rounded p-3 text-on-primary font-code-block text-code-block group">
+<pre class="overflow-x-auto whitespace-pre-wrap"><code>=XLOOKUP(A2, Users!A:A, Users!D:D, "Tidak Ditemukan", 0)</code></pre>
+<button class="absolute top-2 right-2 px-2 py-1 rounded bg-secondary text-on-secondary text-label-sm font-label-sm opacity-80 hover:opacity-100 flex items-center gap-1 transition-opacity" data-code="=XLOOKUP(A2, Users!A:A, Users!D:D, &quot;Tidak Ditemukan&quot;, 0)" onclick="copySnippet(this)">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Salin</span>
+</button>
+</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant space-y-1">
+<div>• <strong>Argumen 4:</strong> Nilai jika tidak ditemukan (mengeliminasi pembungkus =IFERROR)</div>
+<div>• <strong>Keuntungan:</strong> Tidak rusak saat menyisipkan atau memindahkan kolom di sheet referensi.</div>
+</div>
+</div>
+<div class="snippet-card bg-surface-container-lowest p-5 rounded space-y-3 shadow-sm">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-md text-label-md text-primary font-bold">FILTER() + UNIQUE() Array Formulas</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Menghasilkan dynamic spill-down array berdasarkan kriteria kondisional ganda.</p>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm">Dynamic Array</span>
+</div>
+<div class="relative bg-inverse-surface rounded p-3 text-on-primary font-code-block text-code-block group">
+<pre class="overflow-x-auto whitespace-pre-wrap"><code>=SORT(UNIQUE(FILTER(Sales!B2:B, Sales!C2:C = "Won")), 1, TRUE)</code></pre>
+<button class="absolute top-2 right-2 px-2 py-1 rounded bg-secondary text-on-secondary text-label-sm font-label-sm opacity-80 hover:opacity-100 flex items-center gap-1 transition-opacity" data-code="=SORT(UNIQUE(FILTER(Sales!B2:B, Sales!C2:C = &quot;Won&quot;)), 1, TRUE)" onclick="copySnippet(this)">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Salin</span>
+</button>
+</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant space-y-1">
+<div>• <strong>Spill behavior:</strong> Formula hanya ditulis pada sel teratas dan mengisi sel di bawahnya otomatis.</div>
+<div>• <strong>Kombinasi:</strong> Gabungkan dengan SUM() untuk kalkulasi agregat tanpa helper column.</div>
+</div>
+</div>
+</div>
+</section>
+<section class="category-section space-y-5 pt-4" id="printable-sheets">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary text-on-primary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Unduh Versi PDF Siap Cetak (A4 Cheat Sheet)</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Lembar ringkasan densitas tinggi satu halaman untuk ditempel di meja kerja analisis Anda.</p>
+</div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">High-Resolution PDF (300 DPI)</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+<div class="bg-surface-container-lowest p-5 rounded space-y-4 shadow-sm flex flex-col justify-between">
+<div class="space-y-3">
+<div class="w-full h-32 rounded bg-surface-container flex flex-col items-center justify-center p-3 text-center">
+<span class="material-symbols-outlined text-[36px] text-primary mb-1">dataset</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">SQL Quick Card</span>
+<span class="text-label-sm font-label-sm text-secondary">1 Lembar A4 Landscape</span>
+</div>
+<h3 class="font-headline-xs text-headline-xs text-on-surface font-bold">SQL Analytics &amp; Windowing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Mencakup urutan eksekusi SQL, klausa QUALIFY, sintaks PIVOT bawaan, dan window frames.</p>
+</div>
+<button class="w-full py-2 px-3 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-2 transition-colors" onclick="triggerDownloadAlert('SQL Analytics Card')">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Unduh PDF (1.2 MB)</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded space-y-4 shadow-sm flex flex-col justify-between">
+<div class="space-y-3">
+<div class="w-full h-32 rounded bg-surface-container flex flex-col items-center justify-center p-3 text-center">
+<span class="material-symbols-outlined text-[36px] text-primary mb-1">terminal</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Pandas 2.0 Card</span>
+<span class="text-label-sm font-label-sm text-secondary">1 Lembar A4 Landscape</span>
+</div>
+<h3 class="font-headline-xs text-headline-xs text-on-surface font-bold">Python Pandas Wrangling</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Peta manipulasi DateTime, fungsi replace regexp, merge strategi join, dan memory optimization.</p>
+</div>
+<button class="w-full py-2 px-3 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-2 transition-colors" onclick="triggerDownloadAlert('Pandas 2.0 Card')">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Unduh PDF (1.8 MB)</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded space-y-4 shadow-sm flex flex-col justify-between">
+<div class="space-y-3">
+<div class="w-full h-32 rounded bg-surface-container flex flex-col items-center justify-center p-3 text-center">
+<span class="material-symbols-outlined text-[36px] text-primary mb-1">monitoring</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Metrics Compendium</span>
+<span class="text-label-sm font-label-sm text-secondary">1 Lembar A4 Landscape</span>
+</div>
+<h3 class="font-headline-xs text-headline-xs text-on-surface font-bold">Metrik Bisnis &amp; Startup</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kamus rumus ARR/MRR, Quick Ratio, Magic Number, Net Revenue Retention, dan Payback Period.</p>
+</div>
+<button class="w-full py-2 px-3 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-2 transition-colors" onclick="triggerDownloadAlert('Metrics Compendium')">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Unduh PDF (940 KB)</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded space-y-4 shadow-sm flex flex-col justify-between">
+<div class="space-y-3">
+<div class="w-full h-32 rounded bg-surface-container flex flex-col items-center justify-center p-3 text-center">
+<span class="material-symbols-outlined text-[36px] text-primary mb-1">calculate</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Stats Decision Tree</span>
+<span class="text-label-sm font-label-sm text-secondary">1 Lembar A4 Landscape</span>
+</div>
+<h3 class="font-headline-xs text-headline-xs text-on-surface font-bold">Pohon Uji Statistik</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Diagram pohon memilih uji: T-Test, Chi-Square, Mann-Whitney, ANOVA, atau Korelasi Pearson.</p>
+</div>
+<button class="w-full py-2 px-3 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-2 transition-colors" onclick="triggerDownloadAlert('Stats Decision Tree')">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Unduh PDF (1.5 MB)</span>
+</button>
+</div>
+</div>
+</section>
+<div class="hidden text-center py-16 bg-surface-container-lowest rounded space-y-3" id="no-results-state">
+<span class="material-symbols-outlined text-outline text-[48px]">search_off</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Fungsi atau rumus tidak ditemukan</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto">
+          Coba gunakan istilah pencarian yang lebih umum seperti <span class="font-code-inline text-primary">SELECT</span>, <span class="font-code-inline text-primary">merge</span>, <span class="font-code-inline text-primary">LTV</span>, atau <span class="font-code-inline text-primary">XLOOKUP</span>.
+        </p>
+<button class="mt-2 px-4 py-2 rounded bg-primary text-on-primary font-label-md text-label-md inline-flex items-center gap-2" onclick="resetFilters()">
+<span>Reset Pencarian</span>
+</button>
+</div>
+</div>
+</div>
+<div class="fixed bottom-6 right-6 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded shadow-xl flex items-center gap-3 transform translate-y-24 opacity-0 transition-all duration-200 pointer-events-none" id="toast-notification">
+<span class="material-symbols-outlined text-[20px] text-primary-fixed">check_circle</span>
+<span class="text-body-sm font-body-sm font-medium" id="toast-text">Sintaks berhasil disalin ke clipboard!</span>
+</div>
+<script>
+    function copySnippet(btn) {
+      const code = btn.getAttribute('data-code');
+      if (!code) return;
+      
+      navigator.clipboard.writeText(code).then(() => {
+        showToast('Sintaks berhasil disalin ke clipboard!');
+        const originalText = btn.innerHTML;
+        btn.innerHTML = `<span class="material-symbols-outlined text-[14px]">done</span><span>Tersalin</span>`;
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+        }, 1500);
+      }).catch(() => {
+        showToast('Gagal menyalin sintaks otomatis.');
+      });
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast-notification');
+      const toastText = document.getElementById('toast-text');
+      toastText.innerText = message;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 2500);
+    }
+
+    function triggerDownloadAlert(name) {
+      showToast(`Mengunduh file cetak: ${name}...`);
+    }
+
+    const searchInput = document.getElementById('cheatsheet-search');
+    const clearSearchBtn = document.getElementById('clear-search-btn');
+    const pills = document.querySelectorAll('.category-pill');
+    const sections = document.querySelectorAll('.category-section');
+    const cards = document.querySelectorAll('.snippet-card');
+    const noResults = document.getElementById('no-results-state');
+
+    let currentCategory = 'all';
+
+    function applyFilter() {
+      const query = searchInput.value.toLowerCase().trim();
+      let totalVisibleCards = 0;
+
+      if (query.length > 0) {
+        clearSearchBtn.classList.remove('hidden');
+      } else {
+        clearSearchBtn.classList.add('hidden');
+      }
+
+      sections.forEach(section => {
+        const cat = section.getAttribute('data-category');
+        const matchesCategory = (currentCategory === 'all' || currentCategory === cat || !cat);
+        
+        let sectionVisibleCards = 0;
+        const sectionCards = section.querySelectorAll('.snippet-card');
+
+        if (sectionCards.length > 0) {
+          sectionCards.forEach(card => {
+            const textContent = card.innerText.toLowerCase();
+            const matchesSearch = query === '' || textContent.includes(query);
+
+            if (matchesCategory && matchesSearch) {
+              card.classList.remove('hidden');
+              sectionVisibleCards++;
+              totalVisibleCards++;
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+
+          if (sectionVisibleCards > 0) {
+            section.classList.remove('hidden');
+          } else {
+            section.classList.add('hidden');
+          }
+        } else {
+          if (matchesCategory && (query === '' || section.innerText.toLowerCase().includes(query))) {
+            section.classList.remove('hidden');
+            totalVisibleCards++;
+          } else {
+            section.classList.add('hidden');
+          }
+        }
+      });
+
+      if (totalVisibleCards === 0) {
+        noResults.classList.remove('hidden');
+      } else {
+        noResults.classList.add('hidden');
+      }
+    }
+
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => {
+          p.classList.remove('bg-primary', 'text-on-primary');
+          p.classList.add('bg-surface-container-high', 'text-on-surface');
+        });
+        pill.classList.remove('bg-surface-container-high', 'text-on-surface');
+        pill.classList.add('bg-primary', 'text-on-primary');
+
+        currentCategory = pill.getAttribute('data-filter');
+        applyFilter();
+      });
+    });
+
+    searchInput.addEventListener('input', applyFilter);
+
+    clearSearchBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      applyFilter();
+      searchInput.focus();
+    });
+
+    function resetFilters() {
+      searchInput.value = '';
+      currentCategory = 'all';
+      pills.forEach(p => {
+        if (p.getAttribute('data-filter') === 'all') {
+          p.classList.remove('bg-surface-container-high', 'text-on-surface');
+          p.classList.add('bg-primary', 'text-on-primary');
+        } else {
+          p.classList.remove('bg-primary', 'text-on-primary');
+          p.classList.add('bg-surface-container-high', 'text-on-surface');
+        }
+      });
+      applyFilter();
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/40 py-10"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-4 text-body-sm font-body-sm text-on-surface-variant"><div>© 2025 DataSchool. Dokumentasi analitika data terbuka untuk pembelajar mandiri.</div><div class="flex items-center gap-6"><a class="hover:text-primary transition-colors" data-path="cheatsheets" href="#">Cheatsheets</a><a class="hover:text-primary transition-colors" data-path="references" href="#">Referensi</a><a class="hover:text-primary transition-colors" data-path="community-forum" href="#">Komunitas</a></div></div></footer></body></html>

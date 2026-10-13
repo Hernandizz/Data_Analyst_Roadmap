@@ -1,0 +1,445 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary-fixed-dim":"#ffb4ac","on-tertiary":"#ffffff","tertiary":"#863933","background":"#faf8ff","outline-variant":"#bdc9c1","secondary-fixed":"#d5e3fd","primary-container":"#047857","secondary":"#515f74","on-tertiary-fixed-variant":"#792f2a","on-tertiary-container":"#ffe4e0","outline":"#6e7a73","on-primary-container":"#9ffdd3","on-secondary":"#ffffff","primary-fixed-dim":"#7bd8b1","on-primary":"#ffffff","secondary-container":"#d5e3fd","surface-container-high":"#e2e7ff","inverse-primary":"#7bd8b1","surface-bright":"#faf8ff","on-secondary-container":"#57657b","primary-fixed":"#97f5cc","on-surface-variant":"#3e4943","on-primary-fixed":"#002115","inverse-on-surface":"#eef0ff","surface-tint":"#006c4e","surface-container":"#eaedff","surface":"#faf8ff","on-error-container":"#93000a","secondary-fixed-dim":"#b9c7e0","on-secondary-fixed-variant":"#3a485c","on-error":"#ffffff","on-background":"#131b2e","on-surface":"#131b2e","surface-variant":"#dae2fd","on-secondary-fixed":"#0d1c2f","surface-container-lowest":"#ffffff","error":"#ba1a1a","error-container":"#ffdad6","on-tertiary-fixed":"#3e0405","on-primary-fixed-variant":"#00513a","surface-container-low":"#f2f3ff","inverse-surface":"#283044","tertiary-container":"#a45049","primary":"#005d42","tertiary-fixed":"#ffdad6","surface-dim":"#d2d9f4","surface-container-highest":"#dae2fd"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"1.5rem","space-md":"1rem","space-lg":"1.5rem","space-xl":"2.5rem","space-sm":"0.5rem","margin":"2rem","space-xs":"0.25rem"},"fontFamily":{"label-md":["Hanken Grotesk"],"headline-xs":["Hanken Grotesk"],"body-lg":["Hanken Grotesk"],"headline-lg":["Hanken Grotesk"],"label-sm":["Hanken Grotesk"],"code-block":["JetBrains Mono"],"body-md":["Hanken Grotesk"],"display":["Hanken Grotesk"],"body-sm":["Hanken Grotesk"],"headline-md":["Hanken Grotesk"],"code-inline":["JetBrains Mono"],"headline-sm":["Hanken Grotesk"],"headline-lg-mobile":["Hanken Grotesk"]},"fontSize":{"label-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"600"}],"headline-xs":["1.125rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.875rem","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["1.875rem",{"lineHeight":"2.25rem","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"600"}],"code-block":["0.875rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"400"}],"body-md":["1rem",{"lineHeight":"1.75rem","letterSpacing":"0em","fontWeight":"400"}],"display":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.025em","fontWeight":"700"}],"body-sm":["0.875rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.015em","fontWeight":"600"}],"code-inline":["0.875em",{"lineHeight":"inherit","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg-mobile":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest border-b border-outline-variant/40"><div class="h-14 w-full px-4 flex items-center justify-between gap-4"><div class="flex items-center gap-6 shrink-0"><a class="flex items-center gap-2.5" data-path="sql-tutorial" href="#"><img alt="DataSchool Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W9yOXUZVIfySCvME1iPMFs9b7BCNNwb2zv3P4jBlzlHnlPlrErRSdmZVCsUqTFJWIFVrQvs0bMdZ5RqvXiR2VNRtKNXpeF0o7H6tj1BbWGKzsoj6pZAnoJlIM9JosUWFMfmq5peWn2otW29FJg538qAVJQpF6pgsU1bWKIARqa1DdAfoReABTZUmGiPOtjRD5U8E_5Pk4YOvS8n7E1hsV9w-zmJfpnKmO4jpxrjjehZoVqP_jVG-sPKok"><span class="font-headline-sm text-headline-sm font-bold text-primary tracking-tight">DataSchool</span></a><nav class="hidden xl:flex items-center gap-1" data-active-classes="bg-surface-container text-primary font-bold"><a class="px-3 py-1.5 rounded text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="sql-tutorial" href="#">SQL Tutorial</a><a class="px-3 py-1.5 rounded text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="python-for-data" href="#">Python for Data</a><a class="px-3 py-1.5 rounded text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="pandas-and-numpy" href="#">Pandas &amp; NumPy</a><a class="px-3 py-1.5 rounded text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="data-visualization" href="#">Data Visualization</a><a class="px-3 py-1.5 rounded text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="statistika-dasar" href="#">Statistika Dasar</a><a class="px-3 py-1.5 rounded text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="latihan-dan-kuis" href="#">Latihan &amp; Kuis</a></nav></div><div class="flex items-center gap-3 shrink-0"><div class="relative hidden sm:block w-64 lg:w-72"><span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full pl-8 pr-7 py-1 bg-surface-container-low border border-outline-variant/60 rounded text-body-sm font-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary" placeholder="Cari sintaks atau materi... /" type="text"><kbd class="absolute right-2 top-1/2 -translate-y-1/2 font-code-inline text-code-inline px-1 bg-surface-container border border-outline-variant/40 rounded text-on-surface-variant">/</kbd></div><button class="p-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" title="Ganti Tema" type="button"><span class="material-symbols-outlined text-[20px]">dark_mode</span></button><div class="flex items-center gap-2 pl-2 border-l border-outline-variant/40"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div><div class="h-9 w-full px-4 bg-surface-container-low border-t border-outline-variant/30 flex items-center justify-between"><nav class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant"><span class="text-primary font-bold">Data Analyst Path</span><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><span>SQL Analytics</span><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><span class="text-on-surface font-semibold">SELECT &amp; WHERE</span></nav><div class="hidden md:flex items-center gap-3 text-label-sm font-label-sm text-on-surface-variant"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-[16px]">check_circle</span> Progres: 45%</span><span class="text-outline-variant">|</span><a class="hover:text-primary transition-colors" data-path="sql-tutorial" href="#">Daftar Kurikulum →</a></div></div></header><aside class="fixed left-0 top-[92px] bottom-0 w-[260px] bg-surface-container-lowest border-r border-outline-variant/40 overflow-y-auto z-40"><div class="p-3"><nav class="flex flex-col gap-4" data-active-classes="bg-surface-container text-primary font-bold border-l-2 border-primary"><div class="space-y-1"><div class="px-2.5 py-1 text-label-sm font-label-sm uppercase tracking-wider text-outline font-bold">PENGENALAN DATA ANALYTICS</div><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="apa-itu-data-analyst" href="#"><span>Apa itu Data Analyst</span><span class="material-symbols-outlined text-primary text-[16px]">check</span></a><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="roadmap-belajar" href="#"><span>Roadmap Belajar</span><span class="material-symbols-outlined text-primary text-[16px]">check</span></a><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="setup-tools" href="#"><span>Setup Tools</span><span class="material-symbols-outlined text-primary text-[16px]">check</span></a></div><div class="space-y-1"><div class="px-2.5 py-1 text-label-sm font-label-sm uppercase tracking-wider text-outline font-bold">SQL UNTUK ANALISIS DATA</div><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="sql-sintaks-dasar" href="#"><span>SQL Sintaks Dasar</span><span class="material-symbols-outlined text-primary text-[16px]">check</span></a><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="select-and-where" href="#"><span>SELECT &amp; WHERE</span><span class="text-label-sm font-label-sm text-primary">Aktif</span></a><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="group-by-and-having" href="#"><span>GROUP BY &amp; HAVING</span></a><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="join-masterclass" href="#"><span>JOIN Masterclass</span></a><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="window-functions" href="#"><span>Window Functions</span></a><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="subqueries" href="#"><span>Subqueries</span></a></div><div class="space-y-1"><div class="px-2.5 py-1 text-label-sm font-label-sm uppercase tracking-wider text-outline font-bold">PANDAS &amp; PYTHON</div><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="dataframe-basics" href="#"><span>Dataframe Basics</span></a><a aria-current="page" class="flex items-center justify-between px-2.5 py-1.5 rounded bg-surface-container text-primary font-bold border-l-2 border-primary" data-path="cleaning-data" href="#"><span>Cleaning Data</span></a><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="merging-datasets" href="#"><span>Merging Datasets</span></a></div><div class="space-y-1"><div class="px-2.5 py-1 text-label-sm font-label-sm uppercase tracking-wider text-outline font-bold">STUDI KASUS &amp; DATASET</div><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="e-commerce-analysis" href="#"><span>E-Commerce Analysis</span></a><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="churn-prediction" href="#"><span>Churn Prediction</span></a></div></nav></div></aside><div class="pl-[260px]"><main class="pt-[92px] bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<!-- Article Canvas with Asymmetric Layout & In-Page TOC Rail -->
+<div class="w-full max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_250px] gap-10 items-start">
+<!-- Primary Reading & Workspace Column -->
+<article class="min-w-0 space-y-10">
+<!-- Top Breadcrumb & Chapter Metadata -->
+<header class="space-y-4">
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 font-label-sm text-label-sm text-outline">
+<a class="hover:text-primary transition-colors" href="#">Beranda</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Python &amp; Pandas</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-semibold">Pembersihan Data</span>
+</nav>
+<div class="space-y-2">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+              Modul Pandas 04 • Estimasi Waktu: 18 Menit
+            </div>
+<h1 class="font-display text-display text-on-surface tracking-tight">
+              Data Cleaning: Menangani Nilai Kosong (NaN) dan Duplikasi
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+              80% waktu seorang Data Analyst dihabiskan untuk merapikan dataset mentah sebelum tahap visualisasi atau modeling.
+            </p>
+</div>
+<!-- Editorial Metric Strip -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+<div class="p-3 bg-surface-container-lowest rounded shadow-sm">
+<span class="block font-label-sm text-label-sm text-outline">Metode Utama</span>
+<span class="font-code-inline text-code-inline text-primary font-bold">.isna() / .fillna()</span>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded shadow-sm">
+<span class="block font-label-sm text-label-sm text-outline">Tipe Masalah</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">MCAR &amp; MAR Missingness</span>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded shadow-sm">
+<span class="block font-label-sm text-label-sm text-outline">Efek Samping</span>
+<span class="font-body-sm text-body-sm font-semibold text-tertiary">Distortion &amp; Leakage</span>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded shadow-sm">
+<span class="block font-label-sm text-label-sm text-outline">Dataset Sampel</span>
+<span class="font-code-inline text-code-inline text-on-surface">10,000 customers.csv</span>
+</div>
+</div>
+</header>
+<!-- Section 1: Diagnosa Dataframe -->
+<section class="space-y-4" id="diagnosa-dataset">
+<div class="flex items-center gap-3">
+<span class="w-7 h-7 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold">01</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Diagnosa Dataframe</h2>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">
+            Sebelum memutuskan strategi perbaikan, analisis distribusi nilai kosong secara presisi. Jangan langsung menghapus baris tanpa memetakan volume kerugian data menggunakan <code class="px-1.5 py-0.5 rounded bg-surface-container font-code-inline text-code-inline text-primary">df.info()</code> serta perhitungan total kumulatif null.
+          </p>
+<!-- Terminal Block -->
+<div class="bg-inverse-surface rounded shadow-md overflow-hidden text-inverse-on-surface font-code-block text-code-block">
+<div class="bg-slate-900/90 px-4 py-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-primary-fixed-dim inline-block"></span>
+<span class="ml-2 font-label-sm text-label-sm text-slate-400">bash • IPython Console</span>
+</div>
+<span class="font-label-sm text-label-sm text-slate-400">Python 3.11.4 • Pandas 2.2.0</span>
+</div>
+<div class="p-4 space-y-3 font-code-block text-code-block">
+<div>
+<span class="text-emerald-400 font-bold">In [1]:</span>
+<span class="text-slate-100">import pandas as pd</span><br>
+<span class="text-emerald-400 font-bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="text-slate-100">df = pd.read_csv("telecom_customers.csv")</span><br>
+<span class="text-emerald-400 font-bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="text-cyan-300"># Menampilkan ringkasan tipe data dan jumlah null terdeteksi</span><br>
+<span class="text-emerald-400 font-bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="text-slate-100">df.isnull().sum()</span>
+</div>
+<div class="pt-2 text-slate-300 pl-4 bg-slate-950/60 rounded p-3">
+<span class="text-slate-400">Out [1]:</span><br>
+                customer_id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<br>
+                registered_at&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<br>
+                email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;142&nbsp;&nbsp;<span class="text-amber-400">← Missing identitas primer (1.42%)</span><br>
+                age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;845&nbsp;&nbsp;<span class="text-amber-400">← Missing numerik (8.45%)</span><br>
+                monthly_spend&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32&nbsp;&nbsp;<span class="text-amber-400">← Tipe data float</span><br>
+                payment_method&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<br>
+                dtype: int64
+              </div>
+</div>
+</div>
+</section>
+<!-- Section 2: Metode Penanganan (Comparison Grid) -->
+<section class="space-y-4" id="strategi-imputasi">
+<div class="flex items-center gap-3">
+<span class="w-7 h-7 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold">02</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Metode Penanganan: Drop vs Imputasi</h2>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">
+            Pembersihan bukan hanya soal membuat tabel tampak penuh tanpa <code class="px-1.5 py-0.5 rounded bg-surface-container font-code-inline text-code-inline text-primary">NaN</code>. Setiap keputusan mengubah varians distribusi data Anda:
+          </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
+<!-- Card A: Drop Strategy -->
+<div class="bg-surface-container-lowest rounded p-5 shadow-sm space-y-4 flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-error-container text-on-error-container font-label-sm text-label-sm uppercase tracking-wide">Metode 1: Penghapusan</span>
+<span class="material-symbols-outlined text-error text-[20px]">delete_sweep</span>
+</div>
+<h3 class="font-headline-xs text-headline-xs text-on-surface">Drop Missing Rows / Columns</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Tepat jika identitas baris bergantung mutlak pada kolom tersebut (misal ID pelanggan, email autentikasi) atau jika rasio missing &gt; 65% sehingga kolom tak bermakna secara prediktif.
+                </p>
+<div class="p-3 rounded bg-surface-container font-code-block text-code-block text-on-surface">
+<span class="text-primary font-semibold"># Hapus baris hanya jika email NaN</span><br>
+                  df = df.dropna(subset=[<span class="text-tertiary font-medium">'email'</span>])
+                </div>
+</div>
+<div class="pt-3 font-label-sm text-label-sm text-outline flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">warning</span>
+                Menyebabkan berkurangnya ukuran sampel secara permanen.
+              </div>
+</div>
+<!-- Card B: Imputasi Strategy -->
+<div class="bg-surface-container-lowest rounded p-5 shadow-sm space-y-4 flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase tracking-wide">Metode 2: Imputasi Statistik</span>
+<span class="material-symbols-outlined text-primary text-[20px]">functions</span>
+</div>
+<h3 class="font-headline-xs text-headline-xs text-on-surface">Imputasi Mean / Median / Modus</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Gunakan <span class="font-semibold text-on-surface">Median</span> saat data numerik memiliki pencilan (skewed/miring), seperti kolom usia atau gaji. Gunakan <span class="font-semibold text-on-surface">Modus</span> untuk variabel kategorikal diskrit.
+                </p>
+<div class="p-3 rounded bg-surface-container font-code-block text-code-block text-on-surface">
+<span class="text-primary font-semibold"># Mengisi NaN usia dengan nilai median</span><br>
+                  median_val = df[<span class="text-tertiary font-medium">'age'</span>].median()<br>
+                  df[<span class="text-tertiary font-medium">'age'</span>] = df[<span class="text-tertiary font-medium">'age'</span>].fillna(median_val)
+                </div>
+</div>
+<div class="pt-3 font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                Menjaga ukuran observasi tanpa mengecilkan sample size.
+              </div>
+</div>
+</div>
+</section>
+<!-- Section 3: Interactive Sandbox -->
+<section class="space-y-4" id="sandbox-interaktif">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="w-7 h-7 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold">03</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Fitur Coba Sendiri (Interactive Pandas Sandbox)</h2>
+</div>
+<span class="hidden sm:inline-flex items-center gap-1.5 text-label-sm font-label-sm text-outline">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Virtual Kernel Siap
+            </span>
+</div>
+<div class="bg-surface-container-lowest rounded shadow-md overflow-hidden">
+<!-- IDE Top Bar -->
+<div class="bg-surface-container px-4 py-2 flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest font-code-block text-code-block text-primary font-semibold flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">code</span>
+                  data_cleaner.py
+                </span>
+<span class="text-label-sm font-label-sm text-on-surface-variant hidden md:inline">Memory: 1.2 MB • Engine: Pyodide Micro-Python</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm transition-colors flex items-center gap-1" id="btn-reset" type="button">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span> Reset
+                </button>
+<button class="px-4 py-1.5 rounded bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm transition-colors flex items-center gap-1.5 shadow-sm" id="btn-run" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span> Jalankan Kode (Run Python)
+                </button>
+</div>
+</div>
+<!-- Code Input Editor -->
+<div class="p-4 bg-inverse-surface font-code-block text-code-block text-inverse-on-surface space-y-1 overflow-x-auto">
+<p class="text-slate-500"># 1. Bersihkan email kosong yang tidak valid</p>
+<p><span class="text-rose-300">df_clean</span> = df.<span class="text-emerald-300">dropna</span>(subset=[<span class="text-amber-300">'email'</span>]).copy()</p>
+<p class="text-slate-500 pt-1"># 2. Imputasi usia kosong dengan median (Robust to Outliers)</p>
+<p>median_age = df_clean[<span class="text-amber-300">'age'</span>].<span class="text-emerald-300">median</span>()</p>
+<p>df_clean[<span class="text-amber-300">'age'</span>] = df_clean[<span class="text-amber-300">'age'</span>].<span class="text-emerald-300">fillna</span>(median_age).<span class="text-emerald-300">astype</span>(int)</p>
+<p class="text-slate-500 pt-1"># 3. Format total spending dan hilangkan duplikasi</p>
+<p>df_clean = df_clean.<span class="text-emerald-300">drop_duplicates</span>(subset=[<span class="text-amber-300">'customer_id'</span>])</p>
+<p class="text-cyan-300">print(<span class="text-amber-300">f"Data awal: {len(df)} baris | Data bersih: {len(df_clean)} baris"</span>)</p>
+</div>
+<!-- Dynamic Execution Output Container -->
+<div class="p-4 bg-surface-container-low space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">Dataframe Visual Inspector</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed" id="run-indicator">Status: Menampilkan Data Sebelum Pembersihan</span>
+</div>
+<div class="text-label-sm font-label-sm text-outline">5 baris teratas (Head Preview)</div>
+</div>
+<!-- Data Comparison View -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+<!-- Table Before -->
+<div class="space-y-2">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface font-semibold">
+<span class="flex items-center gap-1.5 text-tertiary">
+<span class="material-symbols-outlined text-[16px]">error_outline</span> Sebelum Pembersihan (Raw Data)
+                    </span>
+<span class="text-outline">NaN terdeteksi</span>
+</div>
+<div class="overflow-x-auto bg-surface-container-lowest rounded shadow-sm">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container text-on-surface font-semibold text-label-sm">
+<tr>
+<th class="p-2.5">ID</th>
+<th class="p-2.5">Nama</th>
+<th class="p-2.5">Email</th>
+<th class="p-2.5 text-right">Age</th>
+<th class="p-2.5 text-right">Spend</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface-variant">
+<tr class="bg-surface-container-lowest">
+<td class="p-2.5 font-code-inline text-code-inline">C101</td>
+<td class="p-2.5">Budi Pratama</td>
+<td class="p-2.5 font-code-inline text-code-inline">budi@work.id</td>
+<td class="p-2.5 text-right font-code-inline text-code-inline">31</td>
+<td class="p-2.5 text-right font-code-inline text-code-inline">850.000</td>
+</tr>
+<tr class="bg-surface-container-low">
+<td class="p-2.5 font-code-inline text-code-inline">C102</td>
+<td class="p-2.5">Siti Rahma</td>
+<td class="p-2.5"><span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-code-inline text-code-inline font-bold">NaN</span></td>
+<td class="p-2.5 text-right font-code-inline text-code-inline">28</td>
+<td class="p-2.5 text-right font-code-inline text-code-inline">1.200.000</td>
+</tr>
+<tr class="bg-surface-container-lowest">
+<td class="p-2.5 font-code-inline text-code-inline">C103</td>
+<td class="p-2.5">Dimas Anggara</td>
+<td class="p-2.5 font-code-inline text-code-inline">dimas@web.id</td>
+<td class="p-2.5 text-right"><span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-code-inline text-code-inline font-bold">NaN</span></td>
+<td class="p-2.5 text-right font-code-inline text-code-inline">450.000</td>
+</tr>
+<tr class="bg-surface-container-low">
+<td class="p-2.5 font-code-inline text-code-inline">C101</td>
+<td class="p-2.5">Budi Pratama</td>
+<td class="p-2.5 font-code-inline text-code-inline">budi@work.id</td>
+<td class="p-2.5 text-right font-code-inline text-code-inline">31</td>
+<td class="p-2.5 text-right font-code-inline text-code-inline">850.000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Table After -->
+<div class="space-y-2">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface font-semibold">
+<span class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[16px]">verified</span> Setelah Pembersihan (Cleaned)
+                    </span>
+<span class="text-outline">Tervalidasi rapi</span>
+</div>
+<div class="overflow-x-auto bg-surface-container-lowest rounded shadow-sm">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container text-on-surface font-semibold text-label-sm">
+<tr>
+<th class="p-2.5">ID</th>
+<th class="p-2.5">Nama</th>
+<th class="p-2.5">Email</th>
+<th class="p-2.5 text-right">Age</th>
+<th class="p-2.5 text-right">Spend</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface-variant" id="table-cleaned-rows">
+<tr class="bg-surface-container-lowest">
+<td class="p-2.5 font-code-inline text-code-inline">C101</td>
+<td class="p-2.5 font-medium text-on-surface">Budi Pratama</td>
+<td class="p-2.5 font-code-inline text-code-inline">budi@work.id</td>
+<td class="p-2.5 text-right font-code-inline text-code-inline">31</td>
+<td class="p-2.5 text-right font-code-inline text-code-inline">Rp 850.000</td>
+</tr>
+<tr class="bg-surface-container-low">
+<td class="p-2.5 font-code-inline text-code-inline">C103</td>
+<td class="p-2.5 font-medium text-on-surface">Dimas Anggara</td>
+<td class="p-2.5 font-code-inline text-code-inline">dimas@web.id</td>
+<td class="p-2.5 text-right font-code-inline text-code-inline text-primary font-bold">29*</td>
+<td class="p-2.5 text-right font-code-inline text-code-inline">Rp 450.000</td>
+</tr>
+<tr class="bg-surface-container-lowest">
+<td class="p-3 text-center text-label-sm font-label-sm text-outline bg-surface-container-low/50" colspan="5">
+                            * Nilai baris C102 dihapus karena ketiadaan email • Duplikasi C101 direduksi • Usia C103 diimputasi median (29)
+                          </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Studi Kasus Kesalahan Umum -->
+<section class="space-y-4">
+<div class="p-5 rounded bg-amber-50 text-amber-950 shadow-sm space-y-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-700 text-[24px]">crisis_alert</span>
+<h3 class="font-headline-xs text-headline-xs text-amber-900 font-bold">Studi Kasus: Bahaya Laten Data Leakage</h3>
+</div>
+<p class="font-body-md text-body-md text-amber-950/90 leading-relaxed">
+              Hati-hati terhadap <strong>Data Leakage</strong> saat melakukan pengisian data agregat sebelum pemisahan data training/testing. Menghitung nilai mean/median di seluruh dataset sebelum pemisahan data akan membocorkan informasi populasi masa depan ke model evaluasi.
+            </p>
+<div class="p-3 bg-amber-100/70 rounded font-code-block text-code-block text-amber-900">
+<span class="text-amber-800"># Pendekatan yang Benar (Best Practice):</span><br>
+              X_train, X_test = train_test_split(df, test_size=0.2)<br>
+              median_age = X_train['age'].median() <span class="text-amber-800"># Hitung hanya dari train set</span><br>
+              X_train['age'].fillna(median_age, inplace=True)<br>
+              X_test['age'].fillna(median_age, inplace=True) <span class="text-amber-800"># Terapkan nilai median train ke test</span>
+</div>
+</div>
+</section>
+<!-- Section 5: Latihan Mandiri -->
+<section class="space-y-4">
+<div class="bg-surface-container-lowest rounded p-6 shadow-sm space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">assignment</span>
+<h3 class="font-headline-xs text-headline-xs text-on-surface">Latihan Mandiri: Tangani Transaksi E-Commerce</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary font-bold">Tingkat: Menengah</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Diberikan dataframe penjualan dengan kolom <code class="px-1 py-0.5 rounded bg-surface-container font-code-inline text-code-inline">transaction_amount</code> yang memiliki 3.5% nilai kosong dan skewness positif yang tinggi (ekstrem kanan). Metode apa yang harus Anda pilih, dan bagaimana sintaks satu barisnya?
+            </p>
+<div class="pt-2 flex flex-col gap-3">
+<button class="self-start px-3 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1.5" id="toggle-hint" type="button">
+<span class="material-symbols-outlined text-[16px]">lightbulb</span>
+<span id="hint-text-label">Buka Petunjuk Solusi</span>
+</button>
+<div class="hidden p-4 rounded bg-surface-container font-code-block text-code-block text-on-surface space-y-2" id="hint-content">
+<div class="text-label-sm font-label-sm text-primary font-bold uppercase tracking-wider">Kunci Analisis:</div>
+<p class="text-body-sm font-body-sm font-sans text-on-surface-variant">Karena skewness ekstrem kanan (adanya nilai transaksi bernilai ratusan juta), Mean akan tertarik ke atas dan membiaskan estimasi. Selalu gunakan <strong>Median</strong>.</p>
+<div class="p-2.5 bg-surface-container-lowest rounded text-primary">
+                  df['transaction_amount'] = df['transaction_amount'].fillna(df['transaction_amount'].median())
+                </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Chapter Navigation Pagination -->
+<footer class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+<a class="w-full sm:w-auto px-5 py-2.5 rounded bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md shadow-sm transition-colors flex items-center justify-center gap-2" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+            Bab Sebelumnya: Dataframe Basics
+          </a>
+<a class="w-full sm:w-auto px-5 py-2.5 rounded bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md shadow-sm transition-colors flex items-center justify-center gap-2" href="#">
+            Bab Selanjutnya: Merging Datasets
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</footer>
+</article>
+<!-- Right-Hand Sticky Table of Contents -->
+<aside class="hidden xl:block sticky top-[108px] space-y-6">
+<div class="bg-surface-container-lowest rounded p-4 shadow-sm space-y-3">
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">
+            Pada Halaman Ini
+          </div>
+<nav class="space-y-1.5 font-label-sm text-label-sm">
+<a class="block py-1 px-2 rounded text-primary font-semibold hover:bg-surface-container transition-colors" href="#diagnosa-dataset">
+              1. Diagnosa Dataset
+            </a>
+<a class="block py-1 px-2 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" href="#strategi-imputasi">
+              2. Strategi Imputasi
+            </a>
+<a class="block py-1 px-2 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" href="#sandbox-interaktif">
+              3. Sandbox Interaktif
+            </a>
+<a class="block py-1 px-2 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" href="#checklist-kualitas">
+              4. Checklist Kualitas Data
+            </a>
+</nav>
+</div>
+<!-- Micro Checklist Widget -->
+<div class="bg-surface-container-lowest rounded p-4 shadow-sm space-y-3" id="checklist-kualitas">
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">fact_check</span>
+            Checklist Praktis
+          </div>
+<ul class="space-y-2 text-label-sm font-label-sm text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[16px] shrink-0">check</span>
+<span>Cek null via <code class="bg-surface-container px-1 py-0.5 rounded text-code-inline font-code-inline">.isnull().sum()</code></span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[16px] shrink-0">check</span>
+<span>Evaluasi persentase missing &lt; 5%</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[16px] shrink-0">check</span>
+<span>Pilih Median jika terdistribusi miring</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[16px] shrink-0">check</span>
+<span>Verifikasi duplikasi index/primary ID</span>
+</li>
+</ul>
+</div>
+</aside>
+</div>
+</div>
+<!-- Interactive Sandbox & Hint Toggle Logic -->
+<script>
+    (function() {
+      const runBtn = document.getElementById('btn-run');
+      const resetBtn = document.getElementById('btn-reset');
+      const indicator = document.getElementById('run-indicator');
+      const hintToggle = document.getElementById('toggle-hint');
+      const hintContent = document.getElementById('hint-content');
+      const hintLabel = document.getElementById('hint-text-label');
+
+      if (runBtn && indicator) {
+        runBtn.addEventListener('click', function() {
+          indicator.className = 'font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary text-on-primary font-semibold';
+          indicator.textContent = 'Eksekusi Sukses (0.012s) - Dataframe Bersih Terbarui!';
+        });
+      }
+
+      if (resetBtn && indicator) {
+        resetBtn.addEventListener('click', function() {
+          indicator.className = 'font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface';
+          indicator.textContent = 'Status: Kembali ke State Awal';
+        });
+      }
+
+      if (hintToggle && hintContent && hintLabel) {
+        hintToggle.addEventListener('click', function() {
+          const isHidden = hintContent.classList.contains('hidden');
+          if (isHidden) {
+            hintContent.classList.remove('hidden');
+            hintLabel.textContent = 'Tutup Petunjuk Solusi';
+          } else {
+            hintContent.classList.add('hidden');
+            hintLabel.textContent = 'Buka Petunjuk Solusi';
+          }
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/40 py-8 px-8"><div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-body-sm font-body-sm text-on-surface-variant"><div>© 2025 DataSchool. Dokumentasi analitika data terbuka untuk pembelajar mandiri.</div><div class="flex items-center gap-6"><a class="hover:text-primary transition-colors" data-path="cheatsheets" href="#">Cheatsheets</a><a class="hover:text-primary transition-colors" data-path="references" href="#">Referensi Sintaks</a><a class="hover:text-primary transition-colors" data-path="community-forum" href="#">Forum Komunitas</a></div></div></footer></div></body></html>

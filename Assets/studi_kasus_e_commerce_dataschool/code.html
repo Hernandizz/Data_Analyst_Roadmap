@@ -1,0 +1,501 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary-fixed-dim":"#ffb4ac","on-tertiary":"#ffffff","tertiary":"#863933","background":"#faf8ff","outline-variant":"#bdc9c1","secondary-fixed":"#d5e3fd","primary-container":"#047857","secondary":"#515f74","on-tertiary-fixed-variant":"#792f2a","on-tertiary-container":"#ffe4e0","outline":"#6e7a73","on-primary-container":"#9ffdd3","on-secondary":"#ffffff","primary-fixed-dim":"#7bd8b1","on-primary":"#ffffff","secondary-container":"#d5e3fd","surface-container-high":"#e2e7ff","inverse-primary":"#7bd8b1","surface-bright":"#faf8ff","on-secondary-container":"#57657b","primary-fixed":"#97f5cc","on-surface-variant":"#3e4943","on-primary-fixed":"#002115","inverse-on-surface":"#eef0ff","surface-tint":"#006c4e","surface-container":"#eaedff","surface":"#faf8ff","on-error-container":"#93000a","secondary-fixed-dim":"#b9c7e0","on-secondary-fixed-variant":"#3a485c","on-error":"#ffffff","on-background":"#131b2e","on-surface":"#131b2e","surface-variant":"#dae2fd","on-secondary-fixed":"#0d1c2f","surface-container-lowest":"#ffffff","error":"#ba1a1a","error-container":"#ffdad6","on-tertiary-fixed":"#3e0405","on-primary-fixed-variant":"#00513a","surface-container-low":"#f2f3ff","inverse-surface":"#283044","tertiary-container":"#a45049","primary":"#005d42","tertiary-fixed":"#ffdad6","surface-dim":"#d2d9f4","surface-container-highest":"#dae2fd"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"1.5rem","space-md":"1rem","space-lg":"1.5rem","space-xl":"2.5rem","space-sm":"0.5rem","margin":"2rem","space-xs":"0.25rem"},"fontFamily":{"label-md":["Hanken Grotesk"],"headline-xs":["Hanken Grotesk"],"body-lg":["Hanken Grotesk"],"headline-lg":["Hanken Grotesk"],"label-sm":["Hanken Grotesk"],"code-block":["JetBrains Mono"],"body-md":["Hanken Grotesk"],"display":["Hanken Grotesk"],"body-sm":["Hanken Grotesk"],"headline-md":["Hanken Grotesk"],"code-inline":["JetBrains Mono"],"headline-sm":["Hanken Grotesk"],"headline-lg-mobile":["Hanken Grotesk"]},"fontSize":{"label-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"600"}],"headline-xs":["1.125rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.875rem","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["1.875rem",{"lineHeight":"2.25rem","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"600"}],"code-block":["0.875rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"400"}],"body-md":["1rem",{"lineHeight":"1.75rem","letterSpacing":"0em","fontWeight":"400"}],"display":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.025em","fontWeight":"700"}],"body-sm":["0.875rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.015em","fontWeight":"600"}],"code-inline":["0.875em",{"lineHeight":"inherit","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg-mobile":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest border-b border-outline-variant/40"><div class="h-14 w-full px-4 flex items-center justify-between gap-4"><div class="flex items-center gap-6 shrink-0"><a class="flex items-center gap-2.5" data-path="sql-tutorial" href="#"><img alt="DataSchool Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W9yOXUZVIfySCvME1iPMFs9b7BCNNwb2zv3P4jBlzlHnlPlrErRSdmZVCsUqTFJWIFVrQvs0bMdZ5RqvXiR2VNRtKNXpeF0o7H6tj1BbWGKzsoj6pZAnoJlIM9JosUWFMfmq5peWn2otW29FJg538qAVJQpF6pgsU1bWKIARqa1DdAfoReABTZUmGiPOtjRD5U8E_5Pk4YOvS8n7E1hsV9w-zmJfpnKmO4jpxrjjehZoVqP_jVG-sPKok"><span class="font-headline-sm text-headline-sm font-bold text-primary tracking-tight">DataSchool</span></a><nav class="hidden xl:flex items-center gap-1" data-active-classes="bg-surface-container text-primary font-bold"><a class="px-3 py-1.5 rounded text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="sql-tutorial" href="#">SQL Tutorial</a><a class="px-3 py-1.5 rounded text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="python-for-data" href="#">Python for Data</a><a class="px-3 py-1.5 rounded text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="pandas-and-numpy" href="#">Pandas &amp; NumPy</a><a class="px-3 py-1.5 rounded text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="data-visualization" href="#">Data Visualization</a><a class="px-3 py-1.5 rounded text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="statistika-dasar" href="#">Statistika Dasar</a><a class="px-3 py-1.5 rounded text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="latihan-dan-kuis" href="#">Latihan &amp; Kuis</a></nav></div><div class="flex items-center gap-3 shrink-0"><div class="relative hidden sm:block w-64 lg:w-72"><span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full pl-8 pr-7 py-1 bg-surface-container-low border border-outline-variant/60 rounded text-body-sm font-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary" placeholder="Cari sintaks atau materi... /" type="text"><kbd class="absolute right-2 top-1/2 -translate-y-1/2 font-code-inline text-code-inline px-1 bg-surface-container border border-outline-variant/40 rounded text-on-surface-variant">/</kbd></div><button class="p-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" title="Ganti Tema" type="button"><span class="material-symbols-outlined text-[20px]">dark_mode</span></button><div class="flex items-center gap-2 pl-2 border-l border-outline-variant/40"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div><div class="h-9 w-full px-4 bg-surface-container-low border-t border-outline-variant/30 flex items-center justify-between"><nav class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant"><span class="text-primary font-bold">Data Analyst Path</span><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><span>SQL Analytics</span><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><span class="text-on-surface font-semibold">SELECT &amp; WHERE</span></nav><div class="hidden md:flex items-center gap-3 text-label-sm font-label-sm text-on-surface-variant"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-[16px]">check_circle</span> Progres: 45%</span><span class="text-outline-variant">|</span><a class="hover:text-primary transition-colors" data-path="sql-tutorial" href="#">Daftar Kurikulum →</a></div></div></header><aside class="fixed left-0 top-[92px] bottom-0 w-[260px] bg-surface-container-lowest border-r border-outline-variant/40 overflow-y-auto z-40"><div class="p-3"><nav class="flex flex-col gap-4" data-active-classes="bg-surface-container text-primary font-bold border-l-2 border-primary"><div class="space-y-1"><div class="px-2.5 py-1 text-label-sm font-label-sm uppercase tracking-wider text-outline font-bold">PENGENALAN DATA ANALYTICS</div><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="apa-itu-data-analyst" href="#"><span>Apa itu Data Analyst</span><span class="material-symbols-outlined text-primary text-[16px]">check</span></a><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="roadmap-belajar" href="#"><span>Roadmap Belajar</span><span class="material-symbols-outlined text-primary text-[16px]">check</span></a><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="setup-tools" href="#"><span>Setup Tools</span><span class="material-symbols-outlined text-primary text-[16px]">check</span></a></div><div class="space-y-1"><div class="px-2.5 py-1 text-label-sm font-label-sm uppercase tracking-wider text-outline font-bold">SQL UNTUK ANALISIS DATA</div><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="sql-sintaks-dasar" href="#"><span>SQL Sintaks Dasar</span><span class="material-symbols-outlined text-primary text-[16px]">check</span></a><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="select-and-where" href="#"><span>SELECT &amp; WHERE</span><span class="text-label-sm font-label-sm text-primary">Aktif</span></a><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="group-by-and-having" href="#"><span>GROUP BY &amp; HAVING</span></a><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="join-masterclass" href="#"><span>JOIN Masterclass</span></a><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="window-functions" href="#"><span>Window Functions</span></a><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="subqueries" href="#"><span>Subqueries</span></a></div><div class="space-y-1"><div class="px-2.5 py-1 text-label-sm font-label-sm uppercase tracking-wider text-outline font-bold">PANDAS &amp; PYTHON</div><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="dataframe-basics" href="#"><span>Dataframe Basics</span></a><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="cleaning-data" href="#"><span>Cleaning Data</span></a><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="merging-datasets" href="#"><span>Merging Datasets</span></a></div><div class="space-y-1"><div class="px-2.5 py-1 text-label-sm font-label-sm uppercase tracking-wider text-outline font-bold">STUDI KASUS &amp; DATASET</div><a aria-current="page" class="flex items-center justify-between px-2.5 py-1.5 rounded bg-surface-container text-primary font-bold border-l-2 border-primary" data-path="e-commerce-analysis" href="#"><span>E-Commerce Analysis</span></a><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-path="churn-prediction" href="#"><span>Churn Prediction</span></a></div></nav></div></aside><div class="pl-[260px]"><main class="pt-[92px] bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<div class="px-6 lg:px-12 py-8 max-w-[1400px] mx-auto w-full">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-2 text-label-sm font-label-sm text-secondary mb-6">
+<a class="hover:text-primary transition-colors" href="#">Beranda</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Studi Kasus &amp; Proyek</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="text-on-surface font-semibold">E-Commerce Sales &amp; Cohort</span>
+</nav>
+<!-- Header & Headline -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8">
+<div class="max-w-3xl space-y-3">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-label-sm font-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          Proyek Terpandu Tingkat Industri
+        </div>
+<h1 class="text-display font-display text-on-surface tracking-tight">
+          Eksplorasi Transaksi E-Commerce &amp; Retensi Pengguna
+        </h1>
+<p class="text-body-lg font-body-lg text-secondary">
+          Bongkar 150.000 data transaksi e-commerce nyata. Identifikasi anomali Average Order Value (AOV), petakan penurunan churn pembeli berulang, dan formulasikan strategi pertumbuhan berbasis bukti metrik.
+        </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-3 shrink-0">
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-[18px]">download</span>
+          Download Dataset (.csv)
+        </button>
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-highest transition-all">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+          Buka Google Colab
+        </button>
+</div>
+</div>
+<!-- Project Metadata Bar -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 rounded-xl bg-surface-container-low shadow-sm mb-12">
+<div class="flex items-center gap-3 p-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">equalizer</span>
+</div>
+<div>
+<div class="text-label-sm font-label-sm text-outline">Tingkat Kesulitan</div>
+<div class="text-label-md font-label-md text-on-surface">Menengah (Intermediate)</div>
+</div>
+</div>
+<div class="flex items-center gap-3 p-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">timer</span>
+</div>
+<div>
+<div class="text-label-sm font-label-sm text-outline">Estimasi Pengerjaan</div>
+<div class="text-label-md font-label-md text-on-surface">45 Menit</div>
+</div>
+</div>
+<div class="flex items-center gap-3 p-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">data_object</span>
+</div>
+<div>
+<div class="text-label-sm font-label-sm text-outline">Perangkat Analisis</div>
+<div class="text-label-md font-label-md text-on-surface">PostgreSQL + Pandas</div>
+</div>
+</div>
+<div class="flex items-center gap-3 p-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div>
+<div class="text-label-sm font-label-sm text-outline">Volume Data</div>
+<div class="text-label-md font-label-md text-on-surface">150.000 Baris (Kaggle)</div>
+</div>
+</div>
+</div>
+<!-- Main Content Layout with 2-Column Split -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-10">
+<!-- Left Column: Step-by-Step Guide -->
+<div class="xl:col-span-9 space-y-16">
+<!-- LANGKAH 1 -->
+<section class="space-y-6" id="langkah-1">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-on-primary font-label-md text-label-md">1</span>
+<h2 class="text-headline-md font-headline-md text-on-surface tracking-tight">Memahami Skema Database &amp; Data Dictionary</h2>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">
+            Sebelum menjalankan kueri agregasi, pahami relasi dan tipe data dari tabel utama <code class="font-code-inline text-code-inline px-2 py-0.5 rounded bg-surface-container text-primary font-bold">fact_orders</code> dan <code class="font-code-inline text-code-inline px-2 py-0.5 rounded bg-surface-container text-primary font-bold">dim_users</code>. Tinjau kamus data terstruktur berikut:
+          </p>
+<!-- Schema Table Card -->
+<div class="rounded-xl overflow-hidden bg-surface-container-lowest shadow-md">
+<div class="px-5 py-3 bg-surface-container flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">table_chart</span>
+                Kamus Data: fact_orders
+              </span>
+<span class="text-label-sm font-label-sm text-secondary">Tabel Transaksi Utama</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left text-body-sm font-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface font-label-md text-label-md">
+<th class="py-3 px-4">Nama Kolom</th>
+<th class="py-3 px-4">Tipe Data</th>
+<th class="py-3 px-4">Deskripsi Bisnis</th>
+<th class="py-3 px-4">Contoh Nilai</th>
+</tr>
+</thead>
+<tbody class="text-on-surface-variant">
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4 font-code-inline text-code-inline font-bold text-on-surface">order_id</td>
+<td class="py-3 px-4 font-code-inline text-code-inline text-secondary">VARCHAR(36)</td>
+<td class="py-3 px-4">Identifikator unik transaksi pembayaran</td>
+<td class="py-3 px-4 font-code-inline text-code-inline">"ord_990234a"</td>
+</tr>
+<tr class="bg-surface-container-low/20 hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4 font-code-inline text-code-inline font-bold text-on-surface">user_id</td>
+<td class="py-3 px-4 font-code-inline text-code-inline text-secondary">VARCHAR(36)</td>
+<td class="py-3 px-4">Foreign key ke tabel profil pengguna</td>
+<td class="py-3 px-4 font-code-inline text-code-inline">"usr_88120"</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4 font-code-inline text-code-inline font-bold text-on-surface">order_timestamp</td>
+<td class="py-3 px-4 font-code-inline text-code-inline text-secondary">TIMESTAMP</td>
+<td class="py-3 px-4">Waktu transaksi tervalidasi oleh payment gateway</td>
+<td class="py-3 px-4 font-code-inline text-code-inline">2024-03-12 14:20:00</td>
+</tr>
+<tr class="bg-surface-container-low/20 hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4 font-code-inline text-code-inline font-bold text-on-surface">gross_amount</td>
+<td class="py-3 px-4 font-code-inline text-code-inline text-secondary">DECIMAL(12,2)</td>
+<td class="py-3 px-4">Nilai kotor belanja sebelum diskon &amp; voucher</td>
+<td class="py-3 px-4 font-code-inline text-code-inline">Rp 480.000,00</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4 font-code-inline text-code-inline font-bold text-on-surface">status</td>
+<td class="py-3 px-4 font-code-inline text-code-inline text-secondary">VARCHAR(20)</td>
+<td class="py-3 px-4">Status akhir pesanan ('COMPLETED', 'REFUNDED', 'CANCELLED')</td>
+<td class="py-3 px-4 font-code-inline text-code-inline">"COMPLETED"</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Alert Callout -->
+<div class="p-4 rounded-xl bg-secondary-container text-on-secondary-fixed flex gap-4">
+<span class="material-symbols-outlined text-primary text-[24px] shrink-0 mt-0.5">info</span>
+<div class="text-body-sm font-body-sm space-y-1">
+<span class="font-label-md text-label-md block text-on-secondary-fixed">Catatan Filter Integritas Data</span>
+              Saat menghitung AOV dan GMV, abaikan transaksi dengan status <code class="font-code-inline text-code-inline font-bold">CANCELLED</code> dan <code class="font-code-inline text-code-inline font-bold">REFUNDED</code> karena dapat menggelembungkan estimasi pendapatan riil platform hingga 8.4%.
+            </div>
+</div>
+</section>
+<!-- LANGKAH 2 -->
+<section class="space-y-6" id="langkah-2">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-on-primary font-label-md text-label-md">2</span>
+<h2 class="text-headline-md font-headline-md text-on-surface tracking-tight">Menghitung Metrik Bisnis Utama (AOV &amp; GMV)</h2>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">
+            Gunakan kueri SQL berikut untuk menghitung Gross Merchandise Value (GMV), Total Pesanan Sukses, dan Average Order Value (AOV) per bulan, lengkap dengan selisih pertumbuhan MoM (Month-over-Month) menggunakan window functions.
+          </p>
+<!-- Interactive Code Box -->
+<div class="rounded-xl overflow-hidden bg-inverse-surface shadow-xl">
+<div class="px-5 py-3 bg-inverse-surface/80 flex items-center justify-between text-inverse-on-surface">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-secondary-fixed-dim inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-primary-fixed inline-block"></span>
+<span class="ml-2 font-code-block text-label-sm font-label-sm text-outline-variant">monthly_metrics.sql</span>
+</div>
+<button class="px-3 py-1 rounded bg-surface-container-high/20 hover:bg-surface-container-high/40 text-inverse-on-surface text-label-sm font-label-sm flex items-center gap-1.5 transition-colors" onclick="navigator.clipboard.writeText(document.getElementById('sql-code-block').innerText)">
+<span class="material-symbols-outlined text-[16px]">content_copy</span> Salin Kueri
+              </button>
+</div>
+<pre class="p-5 font-code-block text-code-block text-inverse-on-surface overflow-x-auto leading-relaxed" id="sql-code-block"><code><span class="text-primary-fixed">WITH</span> monthly_summary <span class="text-primary-fixed">AS</span> (
+  <span class="text-primary-fixed">SELECT</span>
+    DATE_TRUNC(<span class="text-tertiary-fixed-dim">'month'</span>, order_timestamp) <span class="text-primary-fixed">AS</span> txn_month,
+    <span class="text-primary-fixed">COUNT</span>(order_id) <span class="text-primary-fixed">AS</span> total_orders,
+    <span class="text-primary-fixed">SUM</span>(gross_amount) <span class="text-primary-fixed">AS</span> gmv,
+    <span class="text-primary-fixed">ROUND</span>(<span class="text-primary-fixed">AVG</span>(gross_amount), <span class="text-secondary-fixed">2</span>) <span class="text-primary-fixed">AS</span> aov
+  <span class="text-primary-fixed">FROM</span> fact_orders
+  <span class="text-primary-fixed">WHERE</span> status = <span class="text-tertiary-fixed-dim">'COMPLETED'</span>
+  <span class="text-primary-fixed">GROUP BY</span> <span class="text-secondary-fixed">1</span>
+)
+<span class="text-primary-fixed">SELECT</span>
+  TO_CHAR(txn_month, <span class="text-tertiary-fixed-dim">'YYYY-MM'</span>) <span class="text-primary-fixed">AS</span> bulan,
+  total_orders,
+  gmv,
+  aov,
+  <span class="text-primary-fixed">ROUND</span>((gmv - <span class="text-primary-fixed">LAG</span>(gmv) <span class="text-primary-fixed">OVER</span> (<span class="text-primary-fixed">ORDER BY</span> txn_month)) / 
+        <span class="text-primary-fixed">NULLIF</span>(<span class="text-primary-fixed">LAG</span>(gmv) <span class="text-primary-fixed">OVER</span> (<span class="text-primary-fixed">ORDER BY</span> txn_month), <span class="text-secondary-fixed">0</span>) * <span class="text-secondary-fixed">100</span>, <span class="text-secondary-fixed">2</span>) <span class="text-primary-fixed">AS</span> gmv_growth_pct
+<span class="text-primary-fixed">FROM</span> monthly_summary
+<span class="text-primary-fixed">ORDER BY</span> txn_month;</code></pre>
+</div>
+<!-- Business Interpretation Card -->
+<div class="p-6 rounded-xl bg-surface-container shadow-sm space-y-4">
+<h3 class="text-headline-xs font-headline-xs text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">psychology</span>
+              Interpretasi Bisnis &amp; Temuan Analitis
+            </h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+              Berdasarkan eksekusi kueri di atas pada dataset, terlihat lonjakan signifikan pada nilai <strong class="text-on-surface">Average Order Value (AOV)</strong> sebesar <strong>+24.6% pada periode Q4 (November - Desember)</strong>. Namun, jumlah pesanan absolut (<code class="font-code-inline text-code-inline">total_orders</code>) justru mengalami penurunan 4.2%.
+            </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+<div class="p-4 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="font-label-md text-label-md text-primary block mb-1">Penyebab Kenaikan AOV</span>
+<span class="text-body-sm font-body-sm text-secondary">Konsumen memanfaatkan bundling musiman (Holiday bundle) untuk barang bernilai tinggi (elektronik &amp; fesyen premium), bukan karena peningkatan volume pembeli baru.</span>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="font-label-md text-label-md text-tertiary block mb-1">Peringatan Red-Flag Churn</span>
+<span class="text-body-sm font-body-sm text-secondary">Penurunan order volume diiringi anomali AOV adalah sinyal bahwa basis pelanggan bertransaksi lebih jarang, rentan bergeser ke platform pesaing saat masa promo selesai.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- LANGKAH 3 -->
+<section class="space-y-6" id="langkah-3">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-on-primary font-label-md text-label-md">3</span>
+<h2 class="text-headline-md font-headline-md text-on-surface tracking-tight">Visualisasi Distribusi Pembelian &amp; Tren Retensi</h2>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">
+            Gunakan cuplikan Python Pandas &amp; Seaborn untuk memvisualisasikan bagaimana nilai transaksi didistribusikan per kelompok pelanggan dan mengukur kurva retensi mingguan.
+          </p>
+<!-- Python Code -->
+<div class="rounded-xl overflow-hidden bg-inverse-surface shadow-xl">
+<div class="px-5 py-3 bg-inverse-surface/80 flex items-center justify-between text-inverse-on-surface">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-secondary-fixed-dim inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-primary-fixed inline-block"></span>
+<span class="ml-2 font-code-block text-label-sm font-label-sm text-outline-variant">plot_distribution.py</span>
+</div>
+<span class="text-label-sm font-label-sm text-outline-variant">Python 3.10</span>
+</div>
+<pre class="p-5 font-code-block text-code-block text-inverse-on-surface overflow-x-auto leading-relaxed"><code><span class="text-primary-fixed">import</span> pandas <span class="text-primary-fixed">as</span> pd
+<span class="text-primary-fixed">import</span> matplotlib.pyplot <span class="text-primary-fixed">as</span> plt
+<span class="text-primary-fixed">import</span> seaborn <span class="text-primary-fixed">as</span> sns
+
+<span class="text-secondary-fixed-dim"># 1. Load data transaksi</span>
+df = pd.read_csv(<span class="text-tertiary-fixed-dim">'fact_orders.csv'</span>)
+df[<span class="text-tertiary-fixed-dim">'order_timestamp'</span>] = pd.to_datetime(df[<span class="text-tertiary-fixed-dim">'order_timestamp'</span>])
+
+<span class="text-secondary-fixed-dim"># 2. Plot distribusi GMV bulanan</span>
+plt.figure(figsize=(10, 4.5))
+ax = sns.barplot(data=monthly_df, x=<span class="text-tertiary-fixed-dim">'bulan'</span>, y=<span class="text-tertiary-fixed-dim">'gmv'</span>, color=<span class="text-tertiary-fixed-dim">'#005d42'</span>)
+plt.title(<span class="text-tertiary-fixed-dim">'Pertumbuhan GMV &amp; Tren AOV 2024'</span>, fontsize=14, fontweight=<span class="text-tertiary-fixed-dim">'bold'</span>)
+plt.show()</code></pre>
+</div>
+<!-- Clean Minimal Rendered Chart Preview -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-md space-y-4">
+<div class="flex items-center justify-between">
+<div>
+<h4 class="text-headline-xs font-headline-xs text-on-surface">Distribusi GMV vs Rata-rata Keranjang (AOV)</h4>
+<p class="text-body-sm font-body-sm text-secondary">Periode Analisis Januari - Desember 2024 (Skala: Miliar IDR)</p>
+</div>
+<div class="flex items-center gap-4 text-label-sm font-label-sm">
+<span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-primary"></span> GMV (Miliar)</span>
+<span class="flex items-center gap-1.5"><span class="w-3 h-1 bg-tertiary"></span> Tren Retensi (%)</span>
+</div>
+</div>
+<!-- SVG Data Chart -->
+<div class="w-full h-64 relative pt-4">
+<svg class="w-full h-full overflow-visible" viewBox="0 0 700 220">
+<!-- Grid Lines -->
+<line class="text-surface-container" stroke="currentColor" stroke-width="1" x1="40" x2="680" y1="20" y2="20"></line>
+<line class="text-surface-container" stroke="currentColor" stroke-width="1" x1="40" x2="680" y1="70" y2="70"></line>
+<line class="text-surface-container" stroke="currentColor" stroke-width="1" x1="40" x2="680" y1="120" y2="120"></line>
+<line class="text-surface-container" stroke="currentColor" stroke-width="1" x1="40" x2="680" y1="170" y2="170"></line>
+<!-- Y-Axis Values -->
+<text class="text-[10px] fill-secondary font-code-inline" text-anchor="end" x="30" y="24">Rp 2.4M</text>
+<text class="text-[10px] fill-secondary font-code-inline" text-anchor="end" x="30" y="74">Rp 1.8M</text>
+<text class="text-[10px] fill-secondary font-code-inline" text-anchor="end" x="30" y="124">Rp 1.2M</text>
+<text class="text-[10px] fill-secondary font-code-inline" text-anchor="end" x="30" y="174">Rp 0.6M</text>
+<!-- Bars (Months Jan to Jun) -->
+<!-- Jan -->
+<rect fill="#005d42" height="75" rx="3" width="40" x="70" y="105"></rect>
+<!-- Feb -->
+<rect fill="#005d42" height="85" rx="3" width="40" x="145" y="95"></rect>
+<!-- Mar -->
+<rect fill="#005d42" height="100" rx="3" width="40" x="220" y="80"></rect>
+<!-- Apr -->
+<rect fill="#005d42" height="92" rx="3" width="40" x="295" y="88"></rect>
+<!-- May -->
+<rect fill="#005d42" height="115" rx="3" width="40" x="370" y="65"></rect>
+<!-- Jun -->
+<rect fill="#005d42" height="125" rx="3" width="40" x="445" y="55"></rect>
+<!-- Jul -->
+<rect fill="#005d42" height="140" rx="3" width="40" x="520" y="40"></rect>
+<!-- Aug Peak -->
+<rect fill="#047857" height="150" rx="3" width="40" x="595" y="30"></rect>
+<!-- Trend Line overlay for Retention Rate -->
+<path d="M 90 80 Q 165 95 240 100 T 390 120 T 540 135 T 615 145" fill="none" stroke="#863933" stroke-linecap="round" stroke-width="3"></path>
+<!-- Retention data dots -->
+<circle cx="90" cy="80" fill="#863933" r="4"></circle>
+<circle cx="240" cy="100" fill="#863933" r="4"></circle>
+<circle cx="390" cy="120" fill="#863933" r="4"></circle>
+<circle cx="615" cy="145" fill="#863933" r="4"></circle>
+<!-- X-Axis Labels -->
+<text class="text-[11px] fill-on-surface-variant font-label-sm" text-anchor="middle" x="90" y="200">Jan</text>
+<text class="text-[11px] fill-on-surface-variant font-label-sm" text-anchor="middle" x="165" y="200">Feb</text>
+<text class="text-[11px] fill-on-surface-variant font-label-sm" text-anchor="middle" x="240" y="200">Mar</text>
+<text class="text-[11px] fill-on-surface-variant font-label-sm" text-anchor="middle" x="315" y="200">Apr</text>
+<text class="text-[11px] fill-on-surface-variant font-label-sm" text-anchor="middle" x="390" y="200">Mei</text>
+<text class="text-[11px] fill-on-surface-variant font-label-sm" text-anchor="middle" x="465" y="200">Jun</text>
+<text class="text-[11px] fill-on-surface-variant font-label-sm" text-anchor="middle" x="540" y="200">Jul</text>
+<text class="text-[11px] fill-on-surface-variant font-label-sm" text-anchor="middle" x="615" y="200">Agu</text>
+</svg>
+</div>
+<div class="text-body-sm font-body-sm text-secondary bg-surface-container-low p-3 rounded-lg flex items-center justify-between">
+<span>Kurva merah menunjukkan penurunan drastis retensi pembeli bulan ke-2 (Cohort Churn) dari 38% turun hingga 19%.</span>
+<span class="text-tertiary font-bold text-label-sm font-label-sm">Kritis: -19% Retensi</span>
+</div>
+</div>
+</section>
+<!-- LANGKAH 4 -->
+<section class="space-y-6" id="langkah-4">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-on-primary font-label-md text-label-md">4</span>
+<h2 class="text-headline-md font-headline-md text-on-surface tracking-tight">Rekomendasi Aksi Bisnis untuk Tim Manajemen</h2>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">
+            Data analitika tidak memiliki nilai tanpa arahan aksi nyata. Terjemahkan grafik dan kueri di atas ke dalam rekomendasi strategis bagi tim Product, Marketing, dan Commercial:
+          </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Action 1 -->
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-md space-y-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">notification_important</span>
+</div>
+<h3 class="text-headline-xs font-headline-xs text-on-surface">Automasi Push Re-Engagement di Hari ke-14</h3>
+<p class="text-body-sm font-body-sm text-secondary">
+                Data membuktikan 72% pengguna churn terjadi setelah 14 hari transaksi perdana tanpa kunjungan kembali. Terapkan trigger email/push promo otomatis di hari ke-10 dengan diskon ongkos kirim bersyarat.
+              </p>
+</div>
+<!-- Action 2 -->
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-md space-y-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">category</span>
+</div>
+<h3 class="text-headline-xs font-headline-xs text-on-surface">Redesain Strategi Cross-Selling Checkout</h3>
+<p class="text-body-sm font-body-sm text-secondary">
+                Pertahankan kenaikan AOV tanpa membebani pembeli dengan meluncurkan modul rekomendasi produk pelengkap (add-on bundle) di halaman keranjang bernilai di bawah Rp 250.000.
+              </p>
+</div>
+<!-- Action 3 -->
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-md space-y-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">loyalty</span>
+</div>
+<h3 class="text-headline-xs font-headline-xs text-on-surface">Loyalty Tiering untuk Top 10% Belanja</h3>
+<p class="text-body-sm font-body-sm text-secondary">
+                Karena kontribusi GMV sangat terkonsentrasi pada kuartal akhir oleh kelompok pembeli bernilai tinggi, buat program loyalitas VIP khusus untuk mengunci retensi tanpa ketergantungan flash sale.
+              </p>
+</div>
+</div>
+</section>
+<!-- TUGAS MANDIRI LANJUTAN -->
+<section class="space-y-6 pt-6" id="tugas-mandiri">
+<div class="flex items-center justify-between pb-2">
+<div>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-primary font-bold">Uji Pemahaman</span>
+<h2 class="text-headline-md font-headline-md text-on-surface tracking-tight">Tugas Mandiri Lanjutan</h2>
+</div>
+<span class="px-3 py-1 rounded bg-surface-container text-secondary text-label-sm font-label-sm font-semibold">3 Tantangan Mandiri</span>
+</div>
+<div class="space-y-4">
+<!-- Challenge 1 -->
+<div class="p-5 rounded-xl bg-surface-container-low shadow-sm space-y-3">
+<div class="flex items-start justify-between gap-4">
+<div class="space-y-1">
+<div class="text-label-sm font-label-sm text-primary font-bold">Tantangan 1: Analisis Frekuensi Pembeli (RFM - Frequency)</div>
+<h3 class="text-headline-xs font-headline-xs text-on-surface">Kueri Pengguna dengan Transaksi &gt; 3 Kali dalam 30 Hari</h3>
+<p class="text-body-sm font-body-sm text-secondary">
+                    Tulis kueri SQL untuk memfilter seluruh <code class="font-code-inline text-code-inline">user_id</code> yang memiliki setidaknya 3 pesanan berstatus 'COMPLETED' dalam jendela 30 hari pertama sejak registrasi mereka.
+                  </p>
+</div>
+</div>
+<div>
+<button class="inline-flex items-center gap-1.5 text-label-md font-label-md text-primary hover:text-primary-container transition-colors" onclick="document.getElementById('solusi-1').classList.toggle('hidden')">
+<span class="material-symbols-outlined text-[18px]">code</span> Tampilkan Solusi Kueri
+                </button>
+<div class="hidden mt-3 p-4 rounded-lg bg-inverse-surface text-inverse-on-surface font-code-block text-code-block overflow-x-auto" id="solusi-1">
+<code><span class="text-primary-fixed">SELECT</span> user_id, <span class="text-primary-fixed">COUNT</span>(order_id) <span class="text-primary-fixed">AS</span> order_count
+<span class="text-primary-fixed">FROM</span> fact_orders
+<span class="text-primary-fixed">WHERE</span> status = <span class="text-tertiary-fixed-dim">'COMPLETED'</span>
+<span class="text-primary-fixed">GROUP BY</span> user_id
+<span class="text-primary-fixed">HAVING COUNT</span>(order_id) &gt;= <span class="text-secondary-fixed">3</span>;</code>
+</div>
+</div>
+</div>
+<!-- Challenge 2 -->
+<div class="p-5 rounded-xl bg-surface-container-low shadow-sm space-y-3">
+<div class="flex items-start justify-between gap-4">
+<div class="space-y-1">
+<div class="text-label-sm font-label-sm text-primary font-bold">Tantangan 2: Deteksi Kategori Produk Paling Rentan Batal</div>
+<h3 class="text-headline-xs font-headline-xs text-on-surface">Hitung Rasio Pembatalan (Cancellation Rate) per Kategori</h3>
+<p class="text-body-sm font-body-sm text-secondary">
+                    Lakukan JOIN antara <code class="font-code-inline text-code-inline">fact_orders</code> dan <code class="font-code-inline text-code-inline">dim_products</code> untuk menemukan kategori dengan rasio pembatalan pesanan di atas 15%.
+                  </p>
+</div>
+</div>
+<div>
+<button class="inline-flex items-center gap-1.5 text-label-md font-label-md text-primary hover:text-primary-container transition-colors" onclick="document.getElementById('solusi-2').classList.toggle('hidden')">
+<span class="material-symbols-outlined text-[18px]">code</span> Tampilkan Solusi Kueri
+                </button>
+<div class="hidden mt-3 p-4 rounded-lg bg-inverse-surface text-inverse-on-surface font-code-block text-code-block overflow-x-auto" id="solusi-2">
+<code><span class="text-primary-fixed">SELECT</span> 
+  p.category_name,
+  <span class="text-primary-fixed">COUNT</span>(o.order_id) <span class="text-primary-fixed">AS</span> total_orders,
+  <span class="text-primary-fixed">ROUND</span>(<span class="text-primary-fixed">AVG</span>(<span class="text-primary-fixed">CASE WHEN</span> o.status = <span class="text-tertiary-fixed-dim">'CANCELLED'</span> <span class="text-primary-fixed">THEN</span> <span class="text-secondary-fixed">1.0</span> <span class="text-primary-fixed">ELSE</span> <span class="text-secondary-fixed">0.0</span> <span class="text-primary-fixed">END</span>) * <span class="text-secondary-fixed">100</span>, <span class="text-secondary-fixed">2</span>) <span class="text-primary-fixed">AS</span> cancel_pct
+<span class="text-primary-fixed">FROM</span> fact_orders o
+<span class="text-primary-fixed">JOIN</span> dim_products p <span class="text-primary-fixed">ON</span> o.product_id = p.product_id
+<span class="text-primary-fixed">GROUP BY</span> <span class="text-secondary-fixed">1</span>
+<span class="text-primary-fixed">HAVING AVG</span>(<span class="text-primary-fixed">CASE WHEN</span> o.status = <span class="text-tertiary-fixed-dim">'CANCELLED'</span> <span class="text-primary-fixed">THEN</span> <span class="text-secondary-fixed">1.0</span> <span class="text-primary-fixed">ELSE</span> <span class="text-secondary-fixed">0.0</span> <span class="text-primary-fixed">END</span>) &gt; <span class="text-secondary-fixed">0.15</span>;</code>
+</div>
+</div>
+</div>
+<!-- Challenge 3 -->
+<div class="p-5 rounded-xl bg-surface-container-low shadow-sm space-y-3">
+<div class="flex items-start justify-between gap-4">
+<div class="space-y-1">
+<div class="text-label-sm font-label-sm text-primary font-bold">Tantangan 3: Heatmap Matriks Retensi Bulanan di Seaborn</div>
+<h3 class="text-headline-xs font-headline-xs text-on-surface">Buat Tabel Kohort Triangular</h3>
+<p class="text-body-sm font-body-sm text-secondary">
+                    Gunakan method <code class="font-code-inline text-code-inline">df.pivot_table()</code> di pandas untuk menghasilkan matriks persentase retensi pengguna bulan ke-0 hingga bulan ke-6.
+                  </p>
+</div>
+</div>
+<div>
+<button class="inline-flex items-center gap-1.5 text-label-md font-label-md text-primary hover:text-primary-container transition-colors" onclick="document.getElementById('solusi-3').classList.toggle('hidden')">
+<span class="material-symbols-outlined text-[18px]">code</span> Tampilkan Solusi Python
+                </button>
+<div class="hidden mt-3 p-4 rounded-lg bg-inverse-surface text-inverse-on-surface font-code-block text-code-block overflow-x-auto" id="solusi-3">
+<code>cohort_matrix = df.pivot_table(index=<span class="text-tertiary-fixed-dim">'cohort_month'</span>, columns=<span class="text-tertiary-fixed-dim">'cohort_index'</span>, values=<span class="text-tertiary-fixed-dim">'user_id'</span>, aggfunc=<span class="text-tertiary-fixed-dim">'nunique'</span>)
+retention_matrix = cohort_matrix.divide(cohort_matrix.iloc[:, <span class="text-secondary-fixed">0</span>], axis=<span class="text-secondary-fixed">0</span>) * <span class="text-secondary-fixed">100</span>
+sns.heatmap(retention_matrix, annot=<span class="text-primary-fixed">True</span>, fmt=<span class="text-tertiary-fixed-dim">'.1f'</span>, cmap=<span class="text-tertiary-fixed-dim">'YlGnBu'</span>)</code>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Sticky Table of Contents & Quick Resources -->
+<div class="hidden xl:block xl:col-span-3">
+<div class="sticky top-28 space-y-6">
+<!-- In-Page Jump Links -->
+<div class="p-5 rounded-xl bg-surface-container-low shadow-sm space-y-3">
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-outline font-bold">Daftar Langkah Proyek</span>
+<nav class="flex flex-col space-y-2 text-body-sm font-body-sm">
+<a class="text-secondary hover:text-primary transition-colors flex items-center gap-2" href="#langkah-1">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Langkah 1: Skema &amp; Dictionary
+              </a>
+<a class="text-secondary hover:text-primary transition-colors flex items-center gap-2" href="#langkah-2">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Langkah 2: Hitung AOV &amp; GMV
+              </a>
+<a class="text-secondary hover:text-primary transition-colors flex items-center gap-2" href="#langkah-3">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Langkah 3: Visualisasi Distribusi
+              </a>
+<a class="text-secondary hover:text-primary transition-colors flex items-center gap-2" href="#langkah-4">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Langkah 4: Rekomendasi Bisnis
+              </a>
+<a class="text-secondary hover:text-primary transition-colors flex items-center gap-2" href="#tugas-mandiri">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Tugas Mandiri Lanjutan
+              </a>
+</nav>
+</div>
+<!-- Dataset Snapshot Card -->
+<div class="p-5 rounded-xl bg-surface-container shadow-sm space-y-3">
+<div class="flex items-center gap-2 text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-primary text-[20px]">database</span>
+              Spesifikasi File CSV
+            </div>
+<ul class="text-body-sm font-body-sm text-secondary space-y-1.5">
+<li class="flex justify-between"><span>Format:</span> <span class="font-code-inline text-code-inline text-on-surface">UTF-8 CSV</span></li>
+<li class="flex justify-between"><span>Ukuran Berkas:</span> <span class="font-code-inline text-code-inline text-on-surface">18.4 MB</span></li>
+<li class="flex justify-between"><span>Lisensi:</span> <span class="font-code-inline text-code-inline text-on-surface">CC-BY 4.0</span></li>
+<li class="flex justify-between"><span>Versi:</span> <span class="font-code-inline text-code-inline text-on-surface">v2.4 (2024 Verified)</span></li>
+</ul>
+</div>
+<!-- Completion Progress Card -->
+<div class="p-5 rounded-xl bg-primary text-on-primary shadow-sm space-y-3">
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-on-primary-container font-bold">Status Pengerjaan</span>
+<div class="space-y-1">
+<div class="flex justify-between text-body-sm font-body-sm">
+<span>Kelengkapan Panduan</span>
+<span class="font-bold">4 / 4 Langkah</span>
+</div>
+<div class="w-full h-2 rounded-full bg-primary-container overflow-hidden">
+<div class="w-full h-full bg-primary-fixed"></div>
+</div>
+</div>
+<p class="text-label-sm font-label-sm text-on-primary-container">
+              Selesaikan ketiga tugas mandiri untuk mencantumkan studi kasus ini pada portofolio Anda.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/40 py-8 px-8"><div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-body-sm font-body-sm text-on-surface-variant"><div>© 2025 DataSchool. Dokumentasi analitika data terbuka untuk pembelajar mandiri.</div><div class="flex items-center gap-6"><a class="hover:text-primary transition-colors" data-path="cheatsheets" href="#">Cheatsheets</a><a class="hover:text-primary transition-colors" data-path="references" href="#">Referensi Sintaks</a><a class="hover:text-primary transition-colors" data-path="community-forum" href="#">Forum Komunitas</a></div></div></footer></div></body></html>

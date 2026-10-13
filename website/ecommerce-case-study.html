@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studi Kasus E-Commerce &amp; Cohort Retention — DataSchool</title>
+  <meta name="description" content="Proyek terpandu tingkat industri: Eksplorasi 150.000 data transaksi e-commerce, hitung AOV dan GMV, analisis cohort churn, dan formulasikan rekomendasi strategis.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="main-header">
+    <div class="header__inner">
+      <div class="header__left">
+        <a href="index.html" class="logo">
+          <span class="logo__icon material-symbols-outlined" style="font-size:28px;color:var(--primary)">school</span>
+          <span class="logo__text">DataSchool</span>
+        </a>
+        <nav class="nav-desktop" id="desktop-nav">
+          <a href="sql-tutorial.html" class="nav-link">SQL Tutorial</a>
+          <a href="data-cleaning.html" class="nav-link">Data Cleaning</a>
+          <a href="ecommerce-case-study.html" class="nav-link active">Studi Kasus E-Commerce</a>
+          <a href="cheatsheets.html" class="nav-link">Cheatsheets</a>
+        </nav>
+      </div>
+      <div class="header__right">
+        <div class="search-bar" id="global-search">
+          <span class="material-symbols-outlined search-bar__icon">search</span>
+          <input type="text" placeholder="Cari sintaks atau materi..." class="search-bar__input" id="search-input">
+          <kbd class="search-bar__kbd">/</kbd>
+        </div>
+        <div class="header__actions">
+          <button class="btn-icon" title="Tema Gelap" id="theme-toggle">
+            <span class="material-symbols-outlined">dark_mode</span>
+          </button>
+          <div class="avatar" id="user-avatar">
+            <span class="material-symbols-outlined">person</span>
+          </div>
+        </div>
+      </div>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE NAV DRAWER ===== -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-drawer__overlay" id="drawer-overlay"></div>
+    <div class="mobile-drawer__content">
+      <div class="mobile-drawer__header">
+        <a href="index.html" class="logo">
+          <span class="logo__icon material-symbols-outlined" style="font-size:24px;color:var(--primary)">school</span>
+          <span class="logo__text">DataSchool</span>
+        </a>
+        <button class="btn-icon" id="close-drawer">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <nav class="mobile-drawer__nav">
+        <a href="index.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">home</span>Beranda
+        </a>
+        <a href="sql-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">database</span>SQL Tutorial
+        </a>
+        <a href="data-cleaning.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">cleaning_services</span>Data Cleaning
+        </a>
+        <a href="ecommerce-case-study.html" class="mobile-nav-link" style="color:var(--primary);font-weight:700">
+          <span class="material-symbols-outlined">analytics</span>Studi Kasus E-Commerce
+        </a>
+        <a href="cheatsheets.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">menu_book</span>Cheatsheets
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ===== CASE STUDY HERO ===== -->
+  <section class="case-study-hero">
+    <div class="case-study-hero__inner">
+      <!-- Breadcrumb -->
+      <nav style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;font-weight:600;color:var(--text-secondary);margin-bottom:1rem">
+        <a href="index.html" style="color:inherit;text-decoration:none">Beranda</a>
+        <span class="material-symbols-outlined" style="font-size:14px">chevron_right</span>
+        <span>Studi Kasus &amp; Proyek</span>
+        <span class="material-symbols-outlined" style="font-size:14px">chevron_right</span>
+        <span style="color:var(--on-surface)">E-Commerce Sales &amp; Cohort</span>
+      </nav>
+
+      <div style="display:flex;flex-direction:column;gap:1.5rem">
+        <div style="display:flex;flex-direction:column;gap:0.75rem;max-width:840px">
+          <div class="hero__badge" style="align-self:flex-start">
+            <span style="width:8px;height:8px;border-radius:50%;background:var(--primary);display:inline-block"></span>
+            <span>Proyek Terpandu Tingkat Industri</span>
+          </div>
+          <h1 class="headline-lg" style="letter-spacing:-0.025em">
+            Eksplorasi Transaksi E-Commerce &amp; Retensi Pengguna
+          </h1>
+          <p class="body-md" style="color:var(--text-secondary);font-size:1.0625rem">
+            Bongkar 150.000 data transaksi e-commerce nyata. Identifikasi anomali Average Order Value (AOV), petakan penurunan churn pembeli berulang, dan formulasikan strategi pertumbuhan berbasis bukti metrik.
+          </p>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap">
+          <button class="btn btn--primary" onclick="triggerDownloadAlert('dataset_ecommerce_150k.csv')">
+            <span class="material-symbols-outlined" style="font-size:18px">download</span>
+            <span>Download Dataset (.csv)</span>
+          </button>
+          <a href="https://colab.research.google.com" target="_blank" class="btn btn--secondary">
+            <span class="material-symbols-outlined" style="font-size:18px">terminal</span>
+            <span>Buka Google Colab</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project Metadata Bar -->
+      <div class="project-meta-grid">
+        <div class="project-meta-item">
+          <div class="project-meta-icon">
+            <span class="material-symbols-outlined" style="font-size:20px">equalizer</span>
+          </div>
+          <div>
+            <div class="project-meta-label">Tingkat Kesulitan</div>
+            <div class="project-meta-val">Menengah (Intermediate)</div>
+          </div>
+        </div>
+
+        <div class="project-meta-item">
+          <div class="project-meta-icon">
+            <span class="material-symbols-outlined" style="font-size:20px">timer</span>
+          </div>
+          <div>
+            <div class="project-meta-label">Estimasi Pengerjaan</div>
+            <div class="project-meta-val">45 Menit</div>
+          </div>
+        </div>
+
+        <div class="project-meta-item">
+          <div class="project-meta-icon">
+            <span class="material-symbols-outlined" style="font-size:20px">data_object</span>
+          </div>
+          <div>
+            <div class="project-meta-label">Perangkat Analisis</div>
+            <div class="project-meta-val">PostgreSQL + Pandas</div>
+          </div>
+        </div>
+
+        <div class="project-meta-item">
+          <div class="project-meta-icon">
+            <span class="material-symbols-outlined" style="font-size:20px">verified</span>
+          </div>
+          <div>
+            <div class="project-meta-label">Volume Data</div>
+            <div class="project-meta-val">150.000 Baris (Kaggle)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAIN CONTENT LAYOUT ===== -->
+  <div class="case-study-layout">
+    <main class="case-study-main">
+
+      <!-- LANGKAH 1 -->
+      <section id="langkah-1" style="display:flex;flex-direction:column;gap:1.25rem">
+        <div class="step-header">
+          <span class="step-badge">1</span>
+          <h2 class="headline-md">Memahami Skema Database &amp; Data Dictionary</h2>
+        </div>
+        <p class="body-md" style="color:var(--text-secondary)">
+          Sebelum menjalankan kueri agregasi, pahami relasi dan tipe data dari tabel utama <code>fact_orders</code> dan <code>dim_users</code>. Tinjau kamus data terstruktur berikut:
+        </p>
+
+        <!-- Schema Table Card -->
+        <div class="data-dict-card">
+          <div class="data-dict-card__header">
+            <span style="font-weight:700;display:flex;align-items:center;gap:0.5rem;font-size:0.875rem">
+              <span class="material-symbols-outlined" style="font-size:18px;color:var(--primary)">table_chart</span>
+              Kamus Data: fact_orders
+            </span>
+            <span style="font-size:0.75rem;color:var(--text-secondary)">Tabel Transaksi Utama</span>
+          </div>
+          <div class="data-table-wrap" style="margin:0;border:none;border-radius:0">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>NAMA KOLOM</th>
+                  <th>TIPE DATA</th>
+                  <th>DESKRIPSI BISNIS</th>
+                  <th>CONTOH NILAI</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="font-weight:700">order_id</td>
+                  <td style="font-family:var(--font-mono);color:var(--text-secondary)">VARCHAR(36)</td>
+                  <td>Identifikator unik transaksi pembayaran</td>
+                  <td style="font-family:var(--font-mono)">"ord_990234a"</td>
+                </tr>
+                <tr>
+                  <td style="font-weight:700">user_id</td>
+                  <td style="font-family:var(--font-mono);color:var(--text-secondary)">VARCHAR(36)</td>
+                  <td>Foreign key ke tabel profil pengguna</td>
+                  <td style="font-family:var(--font-mono)">"usr_88120"</td>
+                </tr>
+                <tr>
+                  <td style="font-weight:700">order_timestamp</td>
+                  <td style="font-family:var(--font-mono);color:var(--text-secondary)">TIMESTAMP</td>
+                  <td>Waktu transaksi tervalidasi payment gateway</td>
+                  <td style="font-family:var(--font-mono)">2024-03-12 14:20:00</td>
+                </tr>
+                <tr>
+                  <td style="font-weight:700">gross_amount</td>
+                  <td style="font-family:var(--font-mono);color:var(--text-secondary)">DECIMAL(12,2)</td>
+                  <td>Nilai kotor belanja sebelum diskon &amp; voucher</td>
+                  <td style="font-family:var(--font-mono);color:var(--primary);font-weight:600">Rp 480.000,00</td>
+                </tr>
+                <tr>
+                  <td style="font-weight:700">status</td>
+                  <td style="font-family:var(--font-mono);color:var(--text-secondary)">VARCHAR(20)</td>
+                  <td>Status akhir pesanan ('COMPLETED', 'REFUNDED', 'CANCELLED')</td>
+                  <td style="font-family:var(--font-mono)"><span class="badge badge--completed">COMPLETED</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Alert Callout -->
+        <div class="callout callout--warning" style="margin:0">
+          <span class="material-symbols-outlined callout__icon">info</span>
+          <div class="callout__content">
+            <div class="callout__title">Catatan Filter Integritas Data</div>
+            <p>
+              Saat menghitung AOV dan GMV, abaikan transaksi dengan status <code>CANCELLED</code> dan <code>REFUNDED</code> karena dapat menggelembungkan estimasi pendapatan riil platform hingga 8.4%.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LANGKAH 2 -->
+      <section id="langkah-2" style="display:flex;flex-direction:column;gap:1.25rem">
+        <div class="step-header">
+          <span class="step-badge">2</span>
+          <h2 class="headline-md">Menghitung Metrik Bisnis Utama (AOV &amp; GMV)</h2>
+        </div>
+        <p class="body-md" style="color:var(--text-secondary)">
+          Gunakan kueri SQL berikut untuk menghitung Gross Merchandise Value (GMV), Total Pesanan Sukses, dan Average Order Value (AOV) per bulan, lengkap dengan selisih pertumbuhan MoM (Month-over-Month) menggunakan window functions.
+        </p>
+
+        <!-- SQL Code Block -->
+        <div class="snippet-card__code" style="margin:0;padding:1.25rem;border-radius:var(--radius-lg)">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:1px solid rgba(255,255,255,0.1)">
+            <span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--primary-light);font-weight:600">monthly_metrics.sql</span>
+            <button class="snippet-card__copy" style="position:static" data-code="WITH monthly_summary AS (
+  SELECT
+    DATE_TRUNC('month', order_timestamp) AS txn_month,
+    COUNT(order_id) AS total_orders,
+    SUM(gross_amount) AS gmv,
+    ROUND(AVG(gross_amount), 2) AS aov
+  FROM fact_orders
+  WHERE status = 'COMPLETED'
+  GROUP BY 1
+)
+SELECT
+  TO_CHAR(txn_month, 'YYYY-MM') AS bulan,
+  total_orders,
+  gmv,
+  aov,
+  ROUND((gmv - LAG(gmv) OVER (ORDER BY txn_month)) / 
+        NULLIF(LAG(gmv) OVER (ORDER BY txn_month), 0) * 100, 2) AS gmv_growth_pct
+FROM monthly_summary
+ORDER BY txn_month;" onclick="copySnippet(this)">
+              <span class="material-symbols-outlined" style="font-size:14px">content_copy</span>
+              <span>Salin Kueri</span>
+            </button>
+          </div>
+          <pre><code><span style="color:#7bd8b1">WITH</span> monthly_summary <span style="color:#7bd8b1">AS</span> (
+  <span style="color:#7bd8b1">SELECT</span>
+    DATE_TRUNC(<span style="color:#ffb4ac">'month'</span>, order_timestamp) <span style="color:#7bd8b1">AS</span> txn_month,
+    <span style="color:#7bd8b1">COUNT</span>(order_id) <span style="color:#7bd8b1">AS</span> total_orders,
+    <span style="color:#7bd8b1">SUM</span>(gross_amount) <span style="color:#7bd8b1">AS</span> gmv,
+    <span style="color:#7bd8b1">ROUND</span>(<span style="color:#7bd8b1">AVG</span>(gross_amount), <span style="color:#d5e3fd">2</span>) <span style="color:#7bd8b1">AS</span> aov
+  <span style="color:#7bd8b1">FROM</span> fact_orders
+  <span style="color:#7bd8b1">WHERE</span> status = <span style="color:#ffb4ac">'COMPLETED'</span>
+  <span style="color:#7bd8b1">GROUP BY</span> <span style="color:#d5e3fd">1</span>
+)
+<span style="color:#7bd8b1">SELECT</span>
+  TO_CHAR(txn_month, <span style="color:#ffb4ac">'YYYY-MM'</span>) <span style="color:#7bd8b1">AS</span> bulan,
+  total_orders,
+  gmv,
+  aov,
+  <span style="color:#7bd8b1">ROUND</span>((gmv - <span style="color:#7bd8b1">LAG</span>(gmv) <span style="color:#7bd8b1">OVER</span> (<span style="color:#7bd8b1">ORDER BY</span> txn_month)) / 
+        <span style="color:#7bd8b1">NULLIF</span>(<span style="color:#7bd8b1">LAG</span>(gmv) <span style="color:#7bd8b1">OVER</span> (<span style="color:#7bd8b1">ORDER BY</span> txn_month), <span style="color:#d5e3fd">0</span>) * <span style="color:#d5e3fd">100</span>, <span style="color:#d5e3fd">2</span>) <span style="color:#7bd8b1">AS</span> gmv_growth_pct
+<span style="color:#7bd8b1">FROM</span> monthly_summary
+<span style="color:#7bd8b1">ORDER BY</span> txn_month;</code></pre>
+        </div>
+
+        <!-- Business Interpretation Card -->
+        <div class="insight-card">
+          <h3 class="headline-xs" style="display:flex;align-items:center;gap:0.5rem">
+            <span class="material-symbols-outlined" style="color:var(--primary)">psychology</span>
+            Interpretasi Bisnis &amp; Temuan Analitis
+          </h3>
+          <p class="body-md" style="color:var(--text-secondary)">
+            Berdasarkan eksekusi kueri di atas pada dataset, terlihat lonjakan signifikan pada nilai <strong style="color:var(--on-surface)">Average Order Value (AOV) sebesar +24.6% pada periode Q4 (November - Desember)</strong>. Namun, jumlah pesanan absolut (<code>total_orders</code>) justru mengalami penurunan 4.2%.
+          </p>
+
+          <div class="insight-grid">
+            <div class="insight-box">
+              <span style="font-size:0.8125rem;font-weight:700;color:var(--primary);display:block;margin-bottom:0.25rem">Penyebab Kenaikan AOV</span>
+              <span class="body-sm" style="color:var(--text-secondary)">Konsumen memanfaatkan bundling musiman (Holiday bundle) untuk barang bernilai tinggi (elektronik &amp; fesyen premium), bukan karena peningkatan volume pembeli baru.</span>
+            </div>
+            <div class="insight-box">
+              <span style="font-size:0.8125rem;font-weight:700;color:var(--tertiary);display:block;margin-bottom:0.25rem">Peringatan Red-Flag Churn</span>
+              <span class="body-sm" style="color:var(--text-secondary)">Penurunan order volume diiringi anomali AOV adalah sinyal bahwa basis pelanggan bertransaksi lebih jarang, rentan bergeser ke kompetitor saat promo habis.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LANGKAH 3 -->
+      <section id="langkah-3" style="display:flex;flex-direction:column;gap:1.25rem">
+        <div class="step-header">
+          <span class="step-badge">3</span>
+          <h2 class="headline-md">Visualisasi Distribusi Pembelian &amp; Tren Retensi</h2>
+        </div>
+        <p class="body-md" style="color:var(--text-secondary)">
+          Gunakan cuplikan Python Pandas &amp; Seaborn untuk memvisualisasikan bagaimana nilai transaksi didistribusikan per kelompok pelanggan dan mengukur kurva retensi bulanan.
+        </p>
+
+        <!-- Python Code Block -->
+        <div class="snippet-card__code" style="margin:0;padding:1.25rem;border-radius:var(--radius-lg)">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:1px solid rgba(255,255,255,0.1)">
+            <span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--primary-light);font-weight:600">plot_distribution.py</span>
+            <button class="snippet-card__copy" style="position:static" data-code="import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+df = pd.read_csv('fact_orders.csv')
+df['order_timestamp'] = pd.to_datetime(df['order_timestamp'])
+
+# Plot distribusi GMV bulanan
+plt.figure(figsize=(10, 4.5))
+ax = sns.barplot(data=monthly_df, x='bulan', y='gmv', color='#005d42')
+plt.title('Pertumbuhan GMV & Tren AOV 2024', fontsize=14, fontweight='bold')
+plt.show()" onclick="copySnippet(this)">
+              <span class="material-symbols-outlined" style="font-size:14px">content_copy</span>
+              <span>Salin Kode</span>
+            </button>
+          </div>
+          <pre><code><span style="color:#7bd8b1">import</span> pandas <span style="color:#7bd8b1">as</span> pd
+<span style="color:#7bd8b1">import</span> matplotlib.pyplot <span style="color:#7bd8b1">as</span> plt
+<span style="color:#7bd8b1">import</span> seaborn <span style="color:#7bd8b1">as</span> sns
+
+<span style="color:#b9c7e0"># 1. Load data transaksi</span>
+df = pd.read_csv(<span style="color:#ffb4ac">'fact_orders.csv'</span>)
+df[<span style="color:#ffb4ac">'order_timestamp'</span>] = pd.to_datetime(df[<span style="color:#ffb4ac">'order_timestamp'</span>])
+
+<span style="color:#b9c7e0"># 2. Plot distribusi GMV bulanan</span>
+plt.figure(figsize=(10, 4.5))
+ax = sns.barplot(data=monthly_df, x=<span style="color:#ffb4ac">'bulan'</span>, y=<span style="color:#ffb4ac">'gmv'</span>, color=<span style="color:#ffb4ac">'#005d42'</span>)
+plt.title(<span style="color:#ffb4ac">'Pertumbuhan GMV &amp; Tren AOV 2024'</span>, fontsize=14, fontweight=<span style="color:#ffb4ac">'bold'</span>)
+plt.show()</code></pre>
+        </div>
+
+        <!-- Rendered SVG Chart Box -->
+        <div class="chart-box">
+          <div class="chart-box__header">
+            <div>
+              <h4 class="headline-xs">Distribusi GMV vs Rata-rata Keranjang (AOV)</h4>
+              <p class="body-sm" style="color:var(--text-secondary)">Periode Analisis Januari - Agustus 2024 (Skala: Miliar IDR)</p>
+            </div>
+            <div style="display:flex;align-items:center;gap:1rem;font-size:0.75rem;font-weight:600">
+              <span style="display:flex;align-items:center;gap:0.35rem">
+                <span style="width:12px;height:12px;background:var(--primary);border-radius:2px;display:inline-block"></span> GMV (Miliar)
+              </span>
+              <span style="display:flex;align-items:center;gap:0.35rem">
+                <span style="width:12px;height:3px;background:var(--tertiary);border-radius:2px;display:inline-block"></span> Tren Retensi (%)
+              </span>
+            </div>
+          </div>
+
+          <div class="chart-svg-wrap">
+            <svg class="w-full h-full" viewBox="0 0 700 220" style="width:100%;height:100%">
+              <!-- Grid Lines -->
+              <line stroke="var(--border-light)" stroke-width="1" x1="40" x2="680" y1="20" y2="20"></line>
+              <line stroke="var(--border-light)" stroke-width="1" x1="40" x2="680" y1="70" y2="70"></line>
+              <line stroke="var(--border-light)" stroke-width="1" x1="40" x2="680" y1="120" y2="120"></line>
+              <line stroke="var(--border-light)" stroke-width="1" x1="40" x2="680" y1="170" y2="170"></line>
+
+              <!-- Y-Axis Values -->
+              <text font-size="10" fill="var(--text-secondary)" font-family="var(--font-mono)" text-anchor="end" x="32" y="24">Rp 2.4M</text>
+              <text font-size="10" fill="var(--text-secondary)" font-family="var(--font-mono)" text-anchor="end" x="32" y="74">Rp 1.8M</text>
+              <text font-size="10" fill="var(--text-secondary)" font-family="var(--font-mono)" text-anchor="end" x="32" y="124">Rp 1.2M</text>
+              <text font-size="10" fill="var(--text-secondary)" font-family="var(--font-mono)" text-anchor="end" x="32" y="174">Rp 0.6M</text>
+
+              <!-- GMV Bars -->
+              <rect fill="#005d42" height="75" rx="4" width="40" x="70" y="105"></rect>
+              <rect fill="#005d42" height="85" rx="4" width="40" x="145" y="95"></rect>
+              <rect fill="#005d42" height="100" rx="4" width="40" x="220" y="80"></rect>
+              <rect fill="#005d42" height="92" rx="4" width="40" x="295" y="88"></rect>
+              <rect fill="#005d42" height="115" rx="4" width="40" x="370" y="65"></rect>
+              <rect fill="#005d42" height="125" rx="4" width="40" x="445" y="55"></rect>
+              <rect fill="#005d42" height="140" rx="4" width="40" x="520" y="40"></rect>
+              <rect fill="#047857" height="155" rx="4" width="40" x="595" y="25"></rect>
+
+              <!-- Retention Trend Curve (Red Line) -->
+              <path d="M 90 80 Q 165 95 240 100 T 390 120 T 540 135 T 615 145" fill="none" stroke="#863933" stroke-linecap="round" stroke-width="3"></path>
+              <circle cx="90" cy="80" fill="#863933" r="4"></circle>
+              <circle cx="240" cy="100" fill="#863933" r="4"></circle>
+              <circle cx="390" cy="120" fill="#863933" r="4"></circle>
+              <circle cx="615" cy="145" fill="#863933" r="4"></circle>
+
+              <!-- X-Axis Labels -->
+              <text font-size="11" fill="var(--text-secondary)" font-weight="600" text-anchor="middle" x="90" y="196">Jan</text>
+              <text font-size="11" fill="var(--text-secondary)" font-weight="600" text-anchor="middle" x="165" y="196">Feb</text>
+              <text font-size="11" fill="var(--text-secondary)" font-weight="600" text-anchor="middle" x="240" y="196">Mar</text>
+              <text font-size="11" fill="var(--text-secondary)" font-weight="600" text-anchor="middle" x="315" y="196">Apr</text>
+              <text font-size="11" fill="var(--text-secondary)" font-weight="600" text-anchor="middle" x="390" y="196">Mei</text>
+              <text font-size="11" fill="var(--text-secondary)" font-weight="600" text-anchor="middle" x="465" y="196">Jun</text>
+              <text font-size="11" fill="var(--text-secondary)" font-weight="600" text-anchor="middle" x="540" y="196">Jul</text>
+              <text font-size="11" fill="var(--text-secondary)" font-weight="600" text-anchor="middle" x="615" y="196">Agu</text>
+            </svg>
+          </div>
+
+          <div style="margin-top:1rem;padding:0.75rem 1rem;background:var(--surface-container-low);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;font-size:0.8125rem">
+            <span style="color:var(--text-secondary)">Kurva merah menunjukkan penurunan drastis retensi pembeli bulan ke-2 (Cohort Churn) dari 38% turun hingga 19%.</span>
+            <span style="color:var(--tertiary);font-weight:700">Kritis: -19% Retensi</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- LANGKAH 4 -->
+      <section id="langkah-4" style="display:flex;flex-direction:column;gap:1.25rem">
+        <div class="step-header">
+          <span class="step-badge">4</span>
+          <h2 class="headline-md">Rekomendasi Aksi Bisnis untuk Tim Manajemen</h2>
+        </div>
+        <p class="body-md" style="color:var(--text-secondary)">
+          Data analitika tidak memiliki nilai tanpa arahan aksi nyata. Terjemahkan grafik dan kueri di atas ke dalam rekomendasi strategis bagi tim Product, Marketing, dan Commercial:
+        </p>
+
+        <div class="action-cards-grid">
+          <!-- Action 1 -->
+          <div class="action-card">
+            <div class="action-card__icon">
+              <span class="material-symbols-outlined" style="font-size:22px">notification_important</span>
+            </div>
+            <h3 class="headline-xs">Automasi Push Re-Engagement di Hari ke-14</h3>
+            <p class="body-sm" style="color:var(--text-secondary)">
+              Data membuktikan 72% pengguna churn terjadi setelah 14 hari transaksi perdana tanpa kunjungan kembali. Terapkan trigger push promo otomatis di hari ke-10 dengan diskon ongkir bersyarat.
+            </p>
+          </div>
+
+          <!-- Action 2 -->
+          <div class="action-card">
+            <div class="action-card__icon">
+              <span class="material-symbols-outlined" style="font-size:22px">category</span>
+            </div>
+            <h3 class="headline-xs">Redesain Strategi Cross-Selling Checkout</h3>
+            <p class="body-sm" style="color:var(--text-secondary)">
+              Pertahankan kenaikan AOV tanpa membebani pembeli dengan meluncurkan modul rekomendasi produk pelengkap (add-on bundle) di halaman keranjang bernilai di bawah Rp 250.000.
+            </p>
+          </div>
+
+          <!-- Action 3 -->
+          <div class="action-card">
+            <div class="action-card__icon">
+              <span class="material-symbols-outlined" style="font-size:22px">loyalty</span>
+            </div>
+            <h3 class="headline-xs">Loyalty Tiering untuk Top 10% Belanja</h3>
+            <p class="body-sm" style="color:var(--text-secondary)">
+              Karena kontribusi GMV sangat terkonsentrasi pada kuartal akhir oleh kelompok bernilai tinggi, buat program loyalitas VIP khusus untuk mengunci retensi tanpa ketergantungan flash sale.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TUGAS MANDIRI -->
+      <section id="tugas-mandiri" style="display:flex;flex-direction:column;gap:1.25rem;padding-top:1rem;border-top:1px solid var(--border-light)">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <div>
+            <span style="font-size:0.6875rem;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:0.04em">Uji Pemahaman</span>
+            <h2 class="headline-md">Tugas Mandiri Lanjutan</h2>
+          </div>
+          <span class="category-badge">3 Tantangan Praktik</span>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:1rem">
+          <!-- Challenge 1 -->
+          <div class="challenge-card">
+            <div>
+              <span style="font-size:0.6875rem;font-weight:700;color:var(--primary);display:block;margin-bottom:0.25rem">Tantangan 1: Analisis Frekuensi Pembeli (RFM - Frequency)</span>
+              <h3 class="headline-xs" style="margin-bottom:0.25rem">Kueri Pengguna dengan Transaksi &gt; 3 Kali dalam 30 Hari</h3>
+              <p class="body-sm" style="color:var(--text-secondary)">
+                Tulis kueri SQL untuk memfilter seluruh <code>user_id</code> yang memiliki setidaknya 3 pesanan berstatus 'COMPLETED' dalam dataset.
+              </p>
+            </div>
+            <div>
+              <button class="solution-toggle-btn" onclick="toggleSolution('solusi-1')">
+                <span class="material-symbols-outlined" style="font-size:18px">code</span>
+                <span>Tampilkan Solusi Kueri</span>
+              </button>
+              <div class="solution-code-box" id="solusi-1">
+                <pre><code><span style="color:#7bd8b1">SELECT</span> user_id, <span style="color:#7bd8b1">COUNT</span>(order_id) <span style="color:#7bd8b1">AS</span> order_count
+<span style="color:#7bd8b1">FROM</span> fact_orders
+<span style="color:#7bd8b1">WHERE</span> status = <span style="color:#ffb4ac">'COMPLETED'</span>
+<span style="color:#7bd8b1">GROUP BY</span> user_id
+<span style="color:#7bd8b1">HAVING COUNT</span>(order_id) &gt;= <span style="color:#d5e3fd">3</span>;</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- Challenge 2 -->
+          <div class="challenge-card">
+            <div>
+              <span style="font-size:0.6875rem;font-weight:700;color:var(--primary);display:block;margin-bottom:0.25rem">Tantangan 2: Deteksi Kategori Produk Paling Rentan Batal</span>
+              <h3 class="headline-xs" style="margin-bottom:0.25rem">Hitung Rasio Pembatalan (Cancellation Rate) per Kategori</h3>
+              <p class="body-sm" style="color:var(--text-secondary)">
+                Lakukan JOIN antara <code>fact_orders</code> dan <code>dim_products</code> untuk menemukan kategori dengan rasio pembatalan pesanan di atas 15%.
+              </p>
+            </div>
+            <div>
+              <button class="solution-toggle-btn" onclick="toggleSolution('solusi-2')">
+                <span class="material-symbols-outlined" style="font-size:18px">code</span>
+                <span>Tampilkan Solusi Kueri</span>
+              </button>
+              <div class="solution-code-box" id="solusi-2">
+                <pre><code><span style="color:#7bd8b1">SELECT</span> 
+  p.category_name,
+  <span style="color:#7bd8b1">COUNT</span>(o.order_id) <span style="color:#7bd8b1">AS</span> total_orders,
+  <span style="color:#7bd8b1">ROUND</span>(<span style="color:#7bd8b1">AVG</span>(<span style="color:#7bd8b1">CASE WHEN</span> o.status = <span style="color:#ffb4ac">'CANCELLED'</span> <span style="color:#7bd8b1">THEN</span> <span style="color:#d5e3fd">1.0</span> <span style="color:#7bd8b1">ELSE</span> <span style="color:#d5e3fd">0.0</span> <span style="color:#7bd8b1">END</span>) * <span style="color:#d5e3fd">100</span>, <span style="color:#d5e3fd">2</span>) <span style="color:#7bd8b1">AS</span> cancel_pct
+<span style="color:#7bd8b1">FROM</span> fact_orders o
+<span style="color:#7bd8b1">JOIN</span> dim_products p <span style="color:#7bd8b1">ON</span> o.product_id = p.product_id
+<span style="color:#7bd8b1">GROUP BY</span> <span style="color:#d5e3fd">1</span>
+<span style="color:#7bd8b1">HAVING AVG</span>(<span style="color:#7bd8b1">CASE WHEN</span> o.status = <span style="color:#ffb4ac">'CANCELLED'</span> <span style="color:#7bd8b1">THEN</span> <span style="color:#d5e3fd">1.0</span> <span style="color:#7bd8b1">ELSE</span> <span style="color:#d5e3fd">0.0</span> <span style="color:#7bd8b1">END</span>) &gt; <span style="color:#d5e3fd">0.15</span>;</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- Challenge 3 -->
+          <div class="challenge-card">
+            <div>
+              <span style="font-size:0.6875rem;font-weight:700;color:var(--primary);display:block;margin-bottom:0.25rem">Tantangan 3: Heatmap Matriks Retensi Bulanan di Seaborn</span>
+              <h3 class="headline-xs" style="margin-bottom:0.25rem">Buat Tabel Kohort Triangular</h3>
+              <p class="body-sm" style="color:var(--text-secondary)">
+                Gunakan method <code>df.pivot_table()</code> di pandas untuk menghasilkan matriks persentase retensi pengguna bulan ke-0 hingga bulan ke-6.
+              </p>
+            </div>
+            <div>
+              <button class="solution-toggle-btn" onclick="toggleSolution('solusi-3')">
+                <span class="material-symbols-outlined" style="font-size:18px">code</span>
+                <span>Tampilkan Solusi Python</span>
+              </button>
+              <div class="solution-code-box" id="solusi-3">
+                <pre><code>cohort_matrix = df.pivot_table(index=<span style="color:#ffb4ac">'cohort_month'</span>, columns=<span style="color:#ffb4ac">'cohort_index'</span>, values=<span style="color:#ffb4ac">'user_id'</span>, aggfunc=<span style="color:#ffb4ac">'nunique'</span>)
+retention_matrix = cohort_matrix.divide(cohort_matrix.iloc[:, <span style="color:#d5e3fd">0</span>], axis=<span style="color:#d5e3fd">0</span>) * <span style="color:#d5e3fd">100</span>
+sns.heatmap(retention_matrix, annot=<span style="color:#7bd8b1">True</span>, fmt=<span style="color:#ffb4ac">'.1f'</span>, cmap=<span style="color:#ffb4ac">'YlGnBu'</span>)</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- RIGHT RAIL / STICKY TOC -->
+    <aside class="toc-rail" style="display:block">
+      <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:1.5rem">
+        <div>
+          <div class="toc-rail__title">Daftar Langkah Proyek</div>
+          <nav>
+            <a href="#langkah-1" class="toc-rail__item active">1. Skema Database &amp; Data Dict</a>
+            <a href="#langkah-2" class="toc-rail__item">2. Hitung Metrik Bisnis (AOV)</a>
+            <a href="#langkah-3" class="toc-rail__item">3. Distribusi GMV &amp; Retensi</a>
+            <a href="#langkah-4" class="toc-rail__item">4. Rekomendasi Aksi Bisnis</a>
+            <a href="#tugas-mandiri" class="toc-rail__item">5. Tugas Mandiri Lanjutan</a>
+          </nav>
+        </div>
+
+        <div style="background:var(--surface-container-low);padding:1rem;border-radius:var(--radius-lg);border:1px solid var(--border-light)">
+          <div style="font-size:0.75rem;font-weight:700;color:var(--on-surface);margin-bottom:0.25rem">Dataset Kaggle E-Commerce</div>
+          <p style="font-size:0.6875rem;color:var(--text-secondary);margin-bottom:0.75rem">File CSV berisi 150.000 transaksi anonymized dengan fact &amp; dim tabel.</p>
+          <button class="btn btn--primary btn--sm" style="width:100%;justify-content:center" onclick="triggerDownloadAlert('dataset_ecommerce_150k.csv')">
+            <span class="material-symbols-outlined" style="font-size:16px">download</span>
+            <span>Unduh CSV (12 MB)</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="logo">
+          <span class="logo__icon material-symbols-outlined" style="font-size:24px;color:var(--primary)">school</span>
+          <span class="logo__text">DataSchool</span>
+        </a>
+        <p class="footer__desc">
+          Platform edukasi data analytics nomor satu di Indonesia. Mengubah pemula menjadi praktisi data yang percaya diri dan siap kerja.
+        </p>
+      </div>
+      <div class="footer__links">
+        <div>
+          <h4 class="footer__col-title">Kurikulum</h4>
+          <a href="sql-tutorial.html" class="footer__link">SQL Tutorial</a>
+          <a href="data-cleaning.html" class="footer__link">Data Cleaning</a>
+          <a href="ecommerce-case-study.html" class="footer__link">Studi Kasus E-Commerce</a>
+          <a href="cheatsheets.html" class="footer__link">Cheatsheets</a>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Komunitas</h4>
+          <a href="https://discord.com" target="_blank" class="footer__link">Discord Komunitas</a>
+          <a href="https://github.com" target="_blank" class="footer__link">GitHub Open Source</a>
+          <a href="https://linkedin.com" target="_blank" class="footer__link">LinkedIn Network</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2026 DataSchool Indonesia. Hak Cipta Dilindungi Undang-Undang.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    function toggleSolution(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.toggle('show');
+      }
+    }
+  </script>
+</body>
+</html>

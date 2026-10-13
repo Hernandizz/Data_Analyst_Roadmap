@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SQL: SELECT & WHERE — DataSchool</title>
+  <meta name="description" content="Pelajari klausa SELECT dan WHERE untuk memfilter baris data secara presisi. Dilengkapi sandbox SQLite interaktif dan latihan mandiri.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="main-header">
+    <div class="header__inner">
+      <div class="header__left">
+        <a href="index.html" class="logo">
+          <span class="logo__icon material-symbols-outlined" style="font-size:28px;color:var(--primary)">school</span>
+          <span class="logo__text">DataSchool</span>
+        </a>
+        <nav class="nav-desktop" id="desktop-nav">
+          <a href="sql-tutorial.html" class="nav-link active">SQL Tutorial</a>
+          <a href="data-cleaning.html" class="nav-link">Data Cleaning</a>
+          <a href="ecommerce-case-study.html" class="nav-link">Studi Kasus E-Commerce</a>
+          <a href="cheatsheets.html" class="nav-link">Cheatsheets</a>
+        </nav>
+      </div>
+      <div class="header__right">
+        <div class="search-bar" id="global-search">
+          <span class="material-symbols-outlined search-bar__icon">search</span>
+          <input type="text" placeholder="Cari materi data..." class="search-bar__input" id="search-input">
+          <kbd class="search-bar__kbd">/</kbd>
+        </div>
+        <div class="header__actions">
+          <div class="progress-bar-header">
+            <span style="font-size:0.75rem;font-weight:600;color:var(--text-secondary)">Progress: 45%</span>
+          </div>
+          <a href="cheatsheets.html" class="btn btn--ghost btn--sm">Daftar Kurikulum →</a>
+          <div class="avatar">
+            <span class="material-symbols-outlined">person</span>
+          </div>
+        </div>
+      </div>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE DRAWER ===== -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-drawer__overlay" id="drawer-overlay"></div>
+    <div class="mobile-drawer__content">
+      <div class="mobile-drawer__header">
+        <a href="index.html" class="logo">
+          <span class="logo__icon material-symbols-outlined" style="font-size:24px;color:var(--primary)">school</span>
+          <span class="logo__text">DataSchool</span>
+        </a>
+        <button class="btn-icon" id="close-drawer">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <nav class="mobile-drawer__nav">
+        <a href="index.html" class="mobile-nav-link"><span class="material-symbols-outlined">home</span>Beranda</a>
+        <a href="sql-tutorial.html" class="mobile-nav-link" style="color:var(--primary);font-weight:700"><span class="material-symbols-outlined">database</span>SQL Tutorial</a>
+        <a href="data-cleaning.html" class="mobile-nav-link"><span class="material-symbols-outlined">cleaning_services</span>Data Cleaning</a>
+        <a href="ecommerce-case-study.html" class="mobile-nav-link"><span class="material-symbols-outlined">analytics</span>Studi Kasus E-Commerce</a>
+        <a href="cheatsheets.html" class="mobile-nav-link"><span class="material-symbols-outlined">menu_book</span>Cheatsheets</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ===== MAIN LAYOUT ===== -->
+  <main class="main">
+    <div class="layout-docs">
+      <!-- Left Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar__breadcrumb" style="padding:0 1.5rem 1rem;font-size:0.75rem;color:var(--text-secondary)">
+          Data Analyst Path → SQL Analytics → SELECT & WHERE
+        </div>
+
+        <div class="sidebar__section-title">Pengenalan Data Analytics</div>
+        <a href="index.html" class="sidebar__item completed">
+          <span class="material-symbols-outlined" style="font-size:16px">check_circle</span> Apa itu Data Analyst
+        </a>
+        <a href="index.html#roadmap" class="sidebar__item completed">
+          <span class="material-symbols-outlined" style="font-size:16px">check_circle</span> Roadmap Belajar
+        </a>
+        <a href="index.html#tools" class="sidebar__item completed">
+          <span class="material-symbols-outlined" style="font-size:16px">check_circle</span> Setup Tools
+        </a>
+
+        <div class="sidebar__section-title">SQL untuk Analisis Data</div>
+        <a href="sql-tutorial.html" class="sidebar__item completed">
+          <span class="material-symbols-outlined" style="font-size:16px">check_circle</span> SQL Sintaks Dasar
+        </a>
+        <a href="sql-tutorial.html" class="sidebar__item active">
+          <span class="material-symbols-outlined" style="font-size:16px;font-variation-settings:'FILL' 1">play_circle</span> SELECT & WHERE
+          <span class="badge badge--info" style="margin-left:auto;font-size:0.625rem">AKTIF</span>
+        </a>
+        <a href="cheatsheets.html#sql" class="sidebar__item">GROUP BY & HAVING</a>
+        <a href="cheatsheets.html#sql" class="sidebar__item">JOIN Masterclass</a>
+        <a href="cheatsheets.html#sql" class="sidebar__item">Window Functions</a>
+        <a href="cheatsheets.html#sql" class="sidebar__item">Subqueries</a>
+
+        <div class="sidebar__section-title">Pandas & Python</div>
+        <a href="data-cleaning.html" class="sidebar__item">Dataframe Basics</a>
+        <a href="data-cleaning.html" class="sidebar__item">Cleaning Data</a>
+        <a href="ecommerce-case-study.html" class="sidebar__item">Merging Datasets</a>
+
+        <div class="sidebar__section-title">Studi Kasus & Dataset</div>
+        <a href="ecommerce-case-study.html" class="sidebar__item">E-Commerce Analysis</a>
+        <a href="ecommerce-case-study.html" class="sidebar__item">Churn Prediction</a>
+      </aside>
+
+      <!-- Content Area -->
+      <div class="content-area">
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+          <a href="index.html">Beranda</a>
+          <span class="breadcrumbs__sep">›</span>
+          <a href="#">SQL untuk Data Analyst</a>
+          <span class="breadcrumbs__sep">›</span>
+          <span>Klausa SELECT & WHERE</span>
+        </div>
+
+        <!-- Module tag -->
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:0.75rem">
+          <a href="#" class="btn btn--secondary btn--sm" style="font-size:0.75rem">
+            <span class="material-symbols-outlined" style="font-size:14px">arrow_back</span>
+            Bab Sebelumnya: Sintaks Dasar
+          </a>
+          <a href="#" class="btn btn--primary btn--sm" style="font-size:0.75rem">
+            Bab Selanjutnya: GROUP BY
+            <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span>
+          </a>
+        </div>
+
+        <div style="margin-bottom:0.75rem">
+          <span class="badge badge--info">
+            <span class="material-symbols-outlined" style="font-size:12px">menu_book</span>
+            Modul 02 • Dasar SQL
+          </span>
+        </div>
+
+        <h1 style="font-size:1.875rem;font-weight:700;line-height:2.25rem;letter-spacing:-0.02em;color:var(--on-surface);margin-bottom:1rem">
+          SQL: Memilih dan Memfilter Baris Data (SELECT & WHERE)
+        </h1>
+
+        <p style="font-size:1rem;line-height:1.75;color:var(--text-secondary);margin-bottom:2rem;max-width:56rem">
+          Dalam pekerjaan harian data analyst, Anda jarang membutuhkan keseluruhan tabel database. Klausa <code class="code-inline">SELECT</code> mendefinisikan kolom metrik yang ingin Anda evaluasi, sedangkan klausa <code class="code-inline">WHERE</code> menyaring baris berdasarkan kriteria bisnis spesifik dari jutaan rekaman mentah dalam hitungan detik.
+        </p>
+
+        <!-- Benefit Cards -->
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:3rem">
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.25rem;background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md)">
+            <span class="material-symbols-outlined" style="font-size:28px;color:var(--text-secondary);margin-bottom:0.5rem">filter_alt</span>
+            <strong style="font-size:0.8125rem;color:var(--on-surface)">Filter Presisi</strong>
+            <span style="font-size:0.75rem;color:var(--text-secondary)">Hanya baris dengan kondisi TRUE yang dikembalikan mesin SQL.</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.25rem;background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md)">
+            <span class="material-symbols-outlined" style="font-size:28px;color:var(--text-secondary);margin-bottom:0.5rem">speed</span>
+            <strong style="font-size:0.8125rem;color:var(--on-surface)">Hemat Bandwidth & Biaya</strong>
+            <span style="font-size:0.75rem;color:var(--text-secondary)">Memangkas beban komputasi di cloud warehouse seperti BigQuery.</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.25rem;background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md)">
+            <span class="material-symbols-outlined" style="font-size:28px;color:var(--text-secondary);margin-bottom:0.5rem">grid_view</span>
+            <strong style="font-size:0.8125rem;color:var(--on-surface)">Ekstraksi Bersih</strong>
+            <span style="font-size:0.75rem;color:var(--text-secondary)">Output siap langsung dikonversi ke format DataFrame Pandas.</span>
+          </div>
+        </div>
+
+        <!-- Sintaks Dasar -->
+        <h2 id="sintaks" style="font-size:1.5rem;font-weight:600;line-height:2rem;letter-spacing:-0.015em;margin-bottom:1rem;display:flex;align-items:center;justify-content:space-between">
+          Sintaks Dasar
+          <span style="font-size:0.6875rem;font-weight:600;color:var(--text-secondary);background:var(--surface-container);padding:0.25rem 0.5rem;border-radius:var(--radius-sm)">Standar ANSI SQL</span>
+        </h2>
+
+        <p style="font-size:0.9375rem;line-height:1.75;color:var(--text-secondary);margin-bottom:1rem">
+          Struktur penulisan query filter mengikuti urutan logis: pilih kolom yang dibutuhkan, sebutkan tabel sumber, lalu tentukan kondisi filter pada baris data.
+        </p>
+
+        <!-- Code block: syntax pattern -->
+        <div class="code-sandbox" style="margin-bottom:2.5rem">
+          <div class="code-sandbox__header">
+            <span class="code-sandbox__filename">
+              <span class="dot dot--red" style="width:8px;height:8px"></span>
+              <span class="dot dot--yellow" style="width:8px;height:8px"></span>
+              <span class="dot dot--green" style="width:8px;height:8px"></span>
+              <span style="margin-left:0.5rem">syntax_pattern.sql</span>
+            </span>
+            <button class="btn btn--ghost btn--sm" onclick="copySnippet(this)" data-code="SELECT customer_name, city, total_spent&#10;FROM orders&#10;WHERE status = 'Completed' AND total_spent >= 500000">
+              <span class="material-symbols-outlined" style="font-size:14px">content_copy</span>
+              Salin Sintaks
+            </button>
+          </div>
+          <div class="code-sandbox__editor">
+<pre style="margin:0"><code><span class="kw">SELECT</span> customer_name, city, total_spent
+<span class="kw">FROM</span> orders
+<span class="kw">WHERE</span> status = <span class="str">'Completed'</span> <span class="kw">AND</span> total_spent >= <span class="num">500000</span></code></pre>
+          </div>
+        </div>
+
+        <!-- Contoh Interaktif -->
+        <h2 id="coba-sendiri" style="font-size:1.5rem;font-weight:600;line-height:2rem;letter-spacing:-0.015em;margin-bottom:0.5rem">
+          Contoh Interaktif (Coba Sendiri)
+        </h2>
+        <p style="font-size:0.9375rem;line-height:1.75;color:var(--text-secondary);margin-bottom:1rem">
+          Ubah ekspresi SQL di bawah ini dan perhatikan perubahan hasil baris data secara langsung.
+        </p>
+        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem">
+          <span class="badge badge--success">
+            <span class="material-symbols-outlined" style="font-size:12px">cloud</span>
+            Live SQLite Sandbox
+          </span>
+        </div>
+
+        <div class="code-sandbox" id="sandbox-sql-1">
+          <div class="code-sandbox__header">
+            <span class="code-sandbox__filename">
+              <span class="material-symbols-outlined" style="font-size:16px;color:var(--primary)">edit</span>
+              Editor SQL Interaktif • orders_database.db
+            </span>
+            <span style="font-size:0.6875rem;color:var(--text-secondary)">Latensi: 0.04s</span>
+          </div>
+          <div class="code-sandbox__editor">
+<pre style="margin:0"><code><span class="kw">SELECT</span> order_id, customer_name, city, total_spent, status
+<span class="kw">FROM</span> orders
+<span class="kw">WHERE</span> status = <span class="str">'Completed'</span> <span class="kw">AND</span> total_spent >= <span class="num">500000</span>;</code></pre>
+          </div>
+          <div style="padding:0.75rem 1rem;background:var(--secondary-surface);border-top:1px solid var(--border-default);display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap">
+            <button class="btn btn--primary btn--sm" onclick="runSandboxCode('sandbox-sql-1')">
+              <span class="material-symbols-outlined" style="font-size:16px">play_arrow</span>
+              Jalankan Query (Run SQL)
+            </button>
+            <button class="btn btn--secondary btn--sm">
+              <span class="material-symbols-outlined" style="font-size:14px">restart_alt</span>
+              Reset Default
+            </button>
+            <span style="font-size:0.75rem;color:var(--primary);display:flex;align-items:center;gap:0.25rem;margin-left:auto">
+              <span class="material-symbols-outlined" style="font-size:14px">check_circle</span>
+              5 baris dieksekusi dengan sukses
+            </span>
+          </div>
+          <div class="code-sandbox__output">
+            <div style="margin-bottom:0.75rem;display:flex;align-items:center;justify-content:space-between">
+              <span style="font-size:0.75rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.06em">HASIL EKSEKUSI (QUERY OUTPUT VIEW)</span>
+              <span style="font-size:0.6875rem;color:var(--text-secondary)">Format Data: Table View</span>
+            </div>
+            <div class="data-table-wrap" style="margin:0">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>ORDER ID</th>
+                    <th>PELANGGAN</th>
+                    <th>KOTA</th>
+                    <th>NILAI TRANSAKSI (IDR)</th>
+                    <th>STATUS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>XORD-9032</td><td>Budi Santosa</td><td>Surabaya</td><td class="numeric">Rp 750.000</td><td><span class="badge badge--completed">Completed</span></td></tr>
+                  <tr><td>XORD-9034</td><td>Siti Rahmawati</td><td>Jakarta</td><td class="numeric">Rp 1.250.000</td><td><span class="badge badge--completed">Completed</span></td></tr>
+                  <tr><td>XORD-9035</td><td>Ahmad Pratama</td><td>Bandung</td><td class="numeric">Rp 520.000</td><td><span class="badge badge--completed">Completed</span></td></tr>
+                  <tr><td>XORD-9038</td><td>Dewi Lestari</td><td>Surabaya</td><td class="numeric">Rp 890.000</td><td><span class="badge badge--completed">Completed</span></td></tr>
+                  <tr><td>XORD-9041</td><td>Farhan Siregar</td><td>Medan</td><td class="numeric">Rp 640.000</td><td><span class="badge badge--completed">Completed</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Operator Table -->
+        <h2 id="operator" style="font-size:1.5rem;font-weight:600;line-height:2rem;letter-spacing:-0.015em;margin-top:3rem;margin-bottom:1rem">
+          Tabel Operator Logika & Perbandingan
+        </h2>
+        <p style="font-size:0.9375rem;line-height:1.75;color:var(--text-secondary);margin-bottom:1rem">
+          Gunakan operator komparasi berikut di dalam klausa <code class="code-inline">WHERE</code> untuk mengisolasi baris data yang relevan:
+        </p>
+
+        <div class="data-table-wrap" style="margin-bottom:2.5rem">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>OPERATOR</th>
+                <th>CONTOH PENGGUNAAN</th>
+                <th>DESKRIPSI & LOGIKA BISNIS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="code-inline">=</code></td>
+                <td><code style="font-family:'JetBrains Mono',monospace;font-size:0.8125rem">country = 'Indonesia'</code></td>
+                <td>Pencocokan persis (exact match). Mengambil nilai yang sama identik.</td>
+              </tr>
+              <tr>
+                <td><code class="code-inline">!= atau <></code></td>
+                <td><code style="font-family:'JetBrains Mono',monospace;font-size:0.8125rem">status != 'Cancelled'</code></td>
+                <td>Tidak sama dengan. Menolak baris transaksi yang dibatalkan pengguna.</td>
+              </tr>
+              <tr>
+                <td><code class="code-inline">>, <, >=, <=</code></td>
+                <td><code style="font-family:'JetBrains Mono',monospace;font-size:0.8125rem">age >= 21 AND score < 80</code></td>
+                <td>Perbandingan numerik atau rentang tanggal kronologis.</td>
+              </tr>
+              <tr>
+                <td><code class="code-inline">BETWEEN</code></td>
+                <td><code style="font-family:'JetBrains Mono',monospace;font-size:0.8125rem">price BETWEEN 100 AND 500</code></td>
+                <td>Termasuk nilai batas atas dan batas bawah (inklusif ranges).</td>
+              </tr>
+              <tr>
+                <td><code class="code-inline">IN (...)</code></td>
+                <td><code style="font-family:'JetBrains Mono',monospace;font-size:0.8125rem">city IN ('Jakarta', 'Bandung')</code></td>
+                <td>Mengevaluasi keanggotaan terhadap daftar nilai kategori jamak.</td>
+              </tr>
+              <tr>
+                <td><code class="code-inline">LIKE</code></td>
+                <td><code style="font-family:'JetBrains Mono',monospace;font-size:0.8125rem">email LIKE '%@gmail.com'</code></td>
+                <td>Pencocokan pola string (wildcard). Simbol % mewakili 0 atau banyak karakter.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Callout: Best Practice -->
+        <div id="tips-bigquery" class="callout callout--warning" style="margin-bottom:2.5rem">
+          <div style="display:flex;align-items:flex-start;gap:0.75rem">
+            <span class="material-symbols-outlined" style="font-size:20px;color:var(--warning);flex-shrink:0;margin-top:2px">warning</span>
+            <div>
+              <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.375rem">
+                <strong style="font-size:0.9375rem;color:var(--on-surface)">Catatan Praktik Lapangan (Analyst Tip: Sargability & Biaya Query)</strong>
+                <span class="badge badge--info" style="background:var(--warning-bg);color:var(--warning)">Best Practice</span>
+              </div>
+              <p style="font-size:0.875rem;line-height:1.5;color:var(--text-secondary);margin-bottom:0.75rem">
+                Hindari membungkus kolom dalam fungsi matematis atau string di klausal <code class="code-inline">WHERE</code> jika tidak mendesak. Contoh: Jangan gunakan <code class="code-inline">WHERE YEAR(order_date) = 2024</code> karena indeks database menjadi tidak aktif ("non-sargable query"), sehingga database harus memindai ("full-table scan") seluruh miliaran baris.
+              </p>
+              <div class="callout callout--tip" style="margin:0">
+                <p style="font-size:0.8125rem;line-height:1.5;color:var(--text-secondary)">
+                  <strong>Alternatif Lebih Cepat:</strong> Gunakan <code class="code-inline">WHERE order_date >= '2024-01-01' AND order_date < '2025-01-01'</code>. Pada platform BigQuery atau Snowflake, kebijakan ini dapat menghemat anggaran komputasi hingga 80%.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quiz Section -->
+        <h2 id="kuis" style="font-size:1.5rem;font-weight:600;line-height:2rem;letter-spacing:-0.015em;margin-bottom:0.5rem">
+          Uji Pemahaman (Mini Latihan Interaktif)
+        </h2>
+        <p style="font-size:0.875rem;color:var(--text-secondary);margin-bottom:1rem">
+          Jawab tantangan analisis data singkat ini untuk membuka materi bab berikutnya.
+        </p>
+        <span class="badge badge--info" style="margin-bottom:1rem;display:inline-flex">Tantangan #02.A</span>
+
+        <div id="quiz-1" style="background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md);padding:1.5rem;margin-bottom:2.5rem">
+          <div style="display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:1.25rem">
+            <span style="width:28px;height:28px;border-radius:var(--radius-full);background:var(--primary);color:var(--on-primary);display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">?</span>
+            <div>
+              <p style="font-size:0.9375rem;font-weight:600;color:var(--on-surface);margin-bottom:0.25rem">
+                Tuliskan klausal WHERE yang tepat untuk menyaring: "Semua transaksi dari kota 'Surabaya' yang bernilai di atas Rp 250.000."
+              </p>
+              <p style="font-size:0.8125rem;color:var(--text-secondary)">
+                Pilih satu opsi query yang paling efisien dan sintaksis benar.
+              </p>
+            </div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:0.5rem">
+            <label class="quiz-option" style="display:flex;align-items:center;gap:0.75rem;padding:0.75rem 1rem;border:1px solid var(--border-default);border-radius:var(--radius-sm)">
+              <input type="radio" name="quiz1" style="accent-color:var(--primary)">
+              <code style="font-family:'JetBrains Mono',monospace;font-size:0.8125rem">WHERE city = 'Surabaya' OR total_spent > 250000;</code>
+            </label>
+            <label class="quiz-option" style="display:flex;align-items:center;gap:0.75rem;padding:0.75rem 1rem;border:1px solid var(--border-default);border-radius:var(--radius-sm)">
+              <input type="radio" name="quiz1" style="accent-color:var(--primary)">
+              <code style="font-family:'JetBrains Mono',monospace;font-size:0.8125rem">WHERE city = 'Surabaya' AND total_spent > 250000;</code>
+            </label>
+            <label class="quiz-option" style="display:flex;align-items:center;gap:0.75rem;padding:0.75rem 1rem;border:1px solid var(--border-default);border-radius:var(--radius-sm)">
+              <input type="radio" name="quiz1" style="accent-color:var(--primary)">
+              <code style="font-family:'JetBrains Mono',monospace;font-size:0.8125rem">WHERE city LIKE '%Surabaya%' AND total_spent == 250000;</code>
+            </label>
+            <label class="quiz-option" style="display:flex;align-items:center;gap:0.75rem;padding:0.75rem 1rem;border:1px solid var(--border-default);border-radius:var(--radius-sm)">
+              <input type="radio" name="quiz1" style="accent-color:var(--primary)">
+              <code style="font-family:'JetBrains Mono',monospace;font-size:0.8125rem">WHERE city IN ('Surabaya') AND total_spent BETWEEN 0 AND 250000;</code>
+            </label>
+          </div>
+
+          <div class="quiz-feedback"></div>
+
+          <button class="btn btn--primary" style="margin-top:1rem" onclick="checkQuizAnswer('quiz-1', 1)">
+            <span class="material-symbols-outlined" style="font-size:16px">check</span>
+            Periksa Jawaban Saya
+          </button>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-prev-next">
+          <a href="#" class="nav-prev-next__link">
+            <span class="material-symbols-outlined" style="font-size:16px">arrow_back</span>
+            <div>
+              <div style="font-size:0.6875rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.04em">BAB SEBELUMNYA</div>
+              <div>SQL Sintaks Dasar</div>
+            </div>
+          </a>
+          <a href="#" class="nav-prev-next__link nav-prev-next__link--next">
+            <div style="text-align:right">
+              <div style="font-size:0.6875rem;text-transform:uppercase;letter-spacing:0.04em;opacity:0.8">BAB SELANJUTNYA</div>
+              <div>Agregasi Data: GROUP BY & HAVING</div>
+            </div>
+            <span class="material-symbols-outlined" style="font-size:16px">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Table of Contents -->
+      <aside class="toc-rail" id="toc-rail">
+        <div class="toc-rail__title">DI HALAMAN INI</div>
+        <a href="#" class="toc-rail__item active">Pengantar</a>
+        <a href="#sintaks" class="toc-rail__item">Sintaks Dasar</a>
+        <a href="#coba-sendiri" class="toc-rail__item">Contoh Coba Sendiri</a>
+        <a href="#operator" class="toc-rail__item">Operator Perbandingan</a>
+        <a href="#tips-bigquery" class="toc-rail__item">Tips Efisiensi BigQuery</a>
+        <a href="#kuis" class="toc-rail__item">Latihan Mandiri</a>
+
+        <div style="margin-top:1.5rem;padding:1rem;background:var(--primary-light);border:1px solid var(--border-default);border-radius:var(--radius-md)">
+          <div style="font-size:0.6875rem;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.5rem">Target Pembelajaran</div>
+          <ul style="font-size:0.75rem;color:var(--text-secondary);list-style:none;display:flex;flex-direction:column;gap:0.375rem">
+            <li style="display:flex;align-items:flex-start;gap:0.375rem">
+              <span class="material-symbols-outlined" style="font-size:14px;color:var(--primary);flex-shrink:0;margin-top:1px">check_circle</span>
+              Memahami eksekusi logis WHERE sebelum SELECT.
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:0.375rem">
+              <span class="material-symbols-outlined" style="font-size:14px;color:var(--primary);flex-shrink:0;margin-top:1px">check_circle</span>
+              Mampu memfilter data string & numerik gabungan.
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="main-footer">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <p class="footer__copyright">&copy; 2026 DataSchool Indonesia. Dokumentasi analitika data terbuka untuk pembelajar mandiri.</p>
+      </div>
+      <div class="footer__links">
+        <a href="cheatsheets.html" class="footer__link">Cheatsheets</a>
+        <a href="#" class="footer__link">Referensi Sintaks</a>
+        <a href="#" class="footer__link">Forum Komunitas</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
