@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microsoft Power BI — DataSchool</title>
+  <meta name="description" content="Kurikulum lengkap Power BI: dari antarmuka, Power Query ETL, Data Modeling, DAX, Time Intelligence, Dashboard Design, hingga Deployment & Portofolio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="main-header">
+    <div class="header__inner">
+      <div class="header__left">
+        <a href="index.html" class="logo">
+          <span class="logo__icon material-symbols-outlined">school</span>
+          <span class="logo__text">DataSchool</span>
+        </a>
+        <nav class="nav-desktop" id="desktop-nav">
+          <a href="fundamental.html" class="nav-link">Fondasi</a>
+          <a href="sql-tutorial.html" class="nav-link">SQL</a>
+          <a href="python-tutorial.html" class="nav-link">Python</a>
+          <a href="powerbi-tutorial.html" class="nav-link active">Power BI</a>
+          <a href="excel-tutorial.html" class="nav-link">Excel</a>
+          <a href="ecommerce-case-study.html" class="nav-link">Studi Kasus</a>
+          <a href="cheatsheets.html" class="nav-link">Cheatsheets</a>
+        </nav>
+      </div>
+      <div class="header__right">
+        <div class="search-bar" id="global-search">
+          <span class="material-symbols-outlined search-bar__icon">search</span>
+          <input type="text" placeholder="Cari materi data..." class="search-bar__input" id="search-input">
+          <kbd class="search-bar__kbd">/</kbd>
+        </div>
+        <div class="header__actions">
+          <button class="btn-icon" title="Ganti tema terang / gelap" id="theme-toggle">
+            <span class="material-symbols-outlined">dark_mode</span>
+          </button>
+        </div>
+      </div>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Buka menu navigasi">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE NAV DRAWER ===== -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-drawer__overlay" id="drawer-overlay"></div>
+    <div class="mobile-drawer__content">
+      <div class="mobile-drawer__header">
+        <a href="index.html" class="logo">
+          <span class="logo__icon material-symbols-outlined">school</span>
+          <span class="logo__text">DataSchool</span>
+        </a>
+        <button class="btn-icon" id="close-drawer" aria-label="Tutup menu navigasi">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <nav class="mobile-drawer__nav">
+        <a href="index.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">home</span>Beranda
+        </a>
+        <a href="fundamental.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">auto_stories</span>Fondasi
+        </a>
+        <a href="sql-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">database</span>SQL
+        </a>
+        <a href="python-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">code</span>Python
+        </a>
+        <a href="powerbi-tutorial.html" class="mobile-nav-link mobile-nav-link--active">
+          <span class="material-symbols-outlined">monitoring</span>Power BI
+        </a>
+        <a href="excel-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">grid_on</span>Excel
+        </a>
+        <a href="data-cleaning.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">cleaning_services</span>Data Cleaning
+        </a>
+        <a href="ecommerce-case-study.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">analytics</span>Studi Kasus
+        </a>
+        <a href="cheatsheets.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">menu_book</span>Cheatsheets
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="main">
+    <!-- Hero -->
+    <section class="content-hero" id="powerbi-hero">
+      <div class="content-hero__container">
+        <div class="content-hero__breadcrumb">
+          <a href="index.html">Beranda</a>
+          <span class="material-symbols-outlined" style="font-size:16px">chevron_right</span>
+          <span>Microsoft Power BI</span>
+        </div>
+        <div class="content-hero__badge">
+          <span class="material-symbols-outlined" style="font-size:14px">monitoring</span>
+          <span>BUSINESS INTELLIGENCE</span>
+        </div>
+        <h1 class="content-hero__title">Microsoft Power BI</h1>
+        <p class="content-hero__subtitle">
+          Kurikulum lengkap 10 modul: dari pengenalan antarmuka, Power Query ETL, Data Modeling, DAX, Time Intelligence, Dashboard Design, AI Features, hingga Deployment & Portofolio.
+        </p>
+        <div class="content-hero__meta">
+          <span class="content-hero__meta-item">
+            <span class="material-symbols-outlined" style="font-size:18px">menu_book</span>
+            10 Modul
+          </span>
+          <span class="content-hero__meta-item">
+            <span class="material-symbols-outlined" style="font-size:18px">signal_cellular_alt</span>
+            Pemula → Enterprise
+          </span>
+          <span class="content-hero__meta-item">
+            <span class="material-symbols-outlined" style="font-size:18px">schedule</span>
+            ~35 Jam
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Body -->
+    <section class="section" id="powerbi-content">
+      <div class="section__container">
+        <div class="content-layout content-layout--toc">
+          <!-- Sidebar -->
+          <aside class="content-sidebar" id="kurikulum-sidebar">
+            <div class="sidebar__section-title">Fundamental</div>
+            <a href="fundamental.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">auto_stories</span>Fondasi Data Analytics</a>
+            <a href="sql-tutorial.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">database</span>SQL Analytics</a>
+            <a href="python-tutorial.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">code</span>Python & Pandas</a>
+            <div class="sidebar__section-title">Alat & Pelaporan</div>
+            <a href="data-cleaning.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">cleaning_services</span>Data Cleaning</a>
+            <a href="powerbi-tutorial.html" class="sidebar__item active"><span class="material-symbols-outlined" style="font-size:16px">monitoring</span>Power BI</a>
+            <a href="excel-tutorial.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">grid_on</span>Excel & Reporting</a>
+            <div class="sidebar__section-title">Praktik & Referensi</div>
+            <a href="ecommerce-case-study.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">analytics</span>Studi Kasus E-Commerce</a>
+            <a href="cheatsheets.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">menu_book</span>Cheatsheets</a>
+          </aside>
+
+          <!-- Main Content -->
+          <div class="content-body">
+            <!-- Level 1 -->
+            <div class="content-divider">
+              <span class="material-symbols-outlined">foundation</span>
+              <h2>Level 1: Fondasi & Ingestion</h2>
+              <p>Mengenal Power BI dan menyiapkan data</p>
+            </div>
+
+            <article class="content-article" id="pbi01">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#047857,#10B981)">
+                  <span class="material-symbols-outlined">desktop_windows</span>
+                </div>
+                <div>
+                  <h2>01. Pengenalan & Antarmuka Power BI</h2>
+                  <p class="article-header__sub">Ekosistem BI, arsitektur Power BI Desktop, 4 view utama, panel navigasi, BI lifecycle</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Memahami ekosistem Business Intelligence, arsitektur <strong>Power BI Desktop</strong>, empat view utama (Report, Data, Model, DAX Query), panel navigasi, dan siklus hidup BI.</p>
+                <div class="featured-card__chips" style="margin-top:1rem">
+                  <span class="chip">Pemula</span>
+                  <span class="chip">Interface</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="pbi02">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#047857,#10B981)">
+                  <span class="material-symbols-outlined">transform</span>
+                </div>
+                <div>
+                  <h2>02. Data Preparation & Power Query</h2>
+                  <p class="article-header__sub">ETL, data cleaning, data typing, Pivot/Unpivot, Merge, Append, M basics</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Konsep ETL (Extract, Transform, Load) menggunakan <strong>Power Query</strong>: data cleaning, data typing, Pivot vs Unpivot, Merge (JOIN), Append (UNION), dan pengenalan bahasa M.</p>
+                <div class="featured-card__chips" style="margin-top:1rem">
+                  <span class="chip">Pemula - Menengah</span>
+                  <span class="chip">Power Query</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Level 2 -->
+            <div class="content-divider">
+              <span class="material-symbols-outlined">schema</span>
+              <h2>Level 2: Modeling & Core DAX</h2>
+              <p>Merancang model data dan menulis formula DAX</p>
+            </div>
+
+            <article class="content-article" id="pbi03">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#D97706,#FBBF24)">
+                  <span class="material-symbols-outlined">hub</span>
+                </div>
+                <div>
+                  <h2>03. Data Modeling & Star Schema</h2>
+                  <p class="article-header__sub">Fact vs Dimension table, Star Schema, kardinalitas, filter direction, Dim_Date</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Merancang model data profesional: memahami <strong>Fact vs Dimension table</strong>, Star Schema, kardinalitas relasi, filter direction, dan membangun tabel Dim_Date.</p>
+                <div class="featured-card__chips" style="margin-top:1rem">
+                  <span class="chip">Menengah</span>
+                  <span class="chip">Star Schema</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="pbi04">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#D97706,#FBBF24)">
+                  <span class="material-symbols-outlined">calculate</span>
+                </div>
+                <div>
+                  <h2>04. Fondasi DAX</h2>
+                  <p class="article-header__sub">Calculated Column vs Measure, Row Context vs Filter Context, SUMX, VAR/RETURN</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Fondasi <strong>DAX (Data Analysis Expressions)</strong>: perbedaan Calculated Column vs Measure, Row Context vs Filter Context, fungsi agregasi, Iterator (SUMX), dan pola VAR/RETURN.</p>
+                <div class="featured-card__chips" style="margin-top:1rem">
+                  <span class="chip">Menengah</span>
+                  <span class="chip">DAX</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Level 3 -->
+            <div class="content-divider">
+              <span class="material-symbols-outlined">rocket_launch</span>
+              <h2>Level 3: Advanced Analytics & Design</h2>
+              <p>DAX lanjutan, visualisasi, dan optimasi</p>
+            </div>
+
+            <article class="content-article" id="pbi05">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#EA580C,#FB923C)">
+                  <span class="material-symbols-outlined">timeline</span>
+                </div>
+                <div>
+                  <h2>05. Advanced DAX & Time Intelligence</h2>
+                  <p class="article-header__sub">CALCULATE(), ALL(), FILTER(), YoY, MoM, YTD, Moving Average, DIVIDE()</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Teknik DAX lanjutan: <code>CALCULATE()</code>, <code>ALL()</code>, <code>FILTER()</code>, Time Intelligence (YoY, MoM, YTD), Moving Average, dan <code>DIVIDE()</code> untuk analisis waktu.</p>
+                <div class="featured-card__chips" style="margin-top:1rem">
+                  <span class="chip">Menengah - Mahir</span>
+                  <span class="chip">Time Intelligence</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="pbi06">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#EA580C,#FB923C)">
+                  <span class="material-symbols-outlined">dashboard</span>
+                </div>
+                <div>
+                  <h2>06. Visualisasi & Desain Dashboard</h2>
+                  <p class="article-header__sub">Pemilihan chart, UI/UX grid, color palette, slicers, drill-down, bookmarks</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Merancang dashboard interaktif: pemilihan jenis chart yang tepat, prinsip UI/UX grid, color palette, slicers, drill-down, drill-through, dan bookmarks.</p>
+                <div class="featured-card__chips" style="margin-top:1rem">
+                  <span class="chip">Menengah - Mahir</span>
+                  <span class="chip">Dashboard Design</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="pbi07">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#EA580C,#FB923C)">
+                  <span class="material-symbols-outlined">smart_toy</span>
+                </div>
+                <div>
+                  <h2>07. Analisis Lanjutan & Fitur AI</h2>
+                  <p class="article-header__sub">Key Influencers, Decomposition Tree, Smart Narrative, Q&A, What-If Parameters</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Memanfaatkan fitur AI Power BI: Key Influencers, Decomposition Tree, Smart Narrative, Q&A natural language, What-If Parameters, dan Field Parameters.</p>
+                <div class="featured-card__chips" style="margin-top:1rem">
+                  <span class="chip">Mahir</span>
+                  <span class="chip">AI Features</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="pbi08">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#EA580C,#FB923C)">
+                  <span class="material-symbols-outlined">speed</span>
+                </div>
+                <div>
+                  <h2>08. Optimasi Performa</h2>
+                  <p class="article-header__sub">VertiPaq engine, Performance Analyzer, reduksi file .pbix, DAX Studio</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Mengoptimalkan performa Power BI: memahami VertiPaq engine, menggunakan Performance Analyzer, teknik reduksi ukuran file .pbix, optimasi DAX query, dan DAX Studio.</p>
+                <div class="featured-card__chips" style="margin-top:1rem">
+                  <span class="chip">Mahir</span>
+                  <span class="chip">Performance</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Level 4 -->
+            <div class="content-divider">
+              <span class="material-symbols-outlined">cloud</span>
+              <h2>Level 4: Cloud, Governance & Portofolio</h2>
+              <p>Deployment ke cloud dan persiapan karir</p>
+            </div>
+
+            <article class="content-article" id="pbi09">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#DC2626,#F87171)">
+                  <span class="material-symbols-outlined">security</span>
+                </div>
+                <div>
+                  <h2>09. Power BI Service & Keamanan</h2>
+                  <p class="article-header__sub">Cloud Service, Workspaces, Apps, Scheduled Refresh, Data Gateway, RLS</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Deployment ke <strong>Power BI Service</strong>: Workspaces, Apps, Scheduled Refresh, Data Gateway, dan Row-Level Security (RLS) untuk keamanan data enterprise.</p>
+                <div class="featured-card__chips" style="margin-top:1rem">
+                  <span class="chip">Mahir / Enterprise</span>
+                  <span class="chip">Cloud</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="pbi10">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#7C3AED,#A78BFA)">
+                  <span class="material-symbols-outlined">work</span>
+                </div>
+                <div>
+                  <h2>10. Proyek Portofolio End-to-End</h2>
+                  <p class="article-header__sub">Panduan portofolio industri, business storytelling, 3 skenario proyek, interview prep</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Membangun portofolio Power BI profesional: business storytelling, tiga skenario proyek nyata (retail, HR, finance), dan panduan interview untuk posisi BI Analyst.</p>
+                <div class="featured-card__chips" style="margin-top:1rem">
+                  <span class="chip">Siap Kerja</span>
+                  <span class="chip">Portfolio</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Referensi -->
+            <div class="content-divider" id="ref-dax">
+              <span class="material-symbols-outlined">menu_book</span>
+              <h2>Referensi Cepat</h2>
+              <p>Cheatsheet DAX dan Power Query M</p>
+            </div>
+
+            <div class="info-card info-card--primary" id="ref-pq" style="margin-bottom:2rem">
+              <h4><span class="material-symbols-outlined" style="font-size:18px">menu_book</span> DAX Cheatsheet</h4>
+              <p>Sintaks, contoh formula, dan fungsi terpenting DAX untuk referensi cepat saat membangun measures dan calculated columns.</p>
+              <h4 style="margin-top:1rem"><span class="material-symbols-outlined" style="font-size:18px">menu_book</span> Power Query M Cheatsheet</h4>
+              <p>Panduan manipulasi data dan formula M di Power Query untuk proses ETL yang efisien.</p>
+            </div>
+
+            <!-- Nav Footer -->
+            <div class="content-nav-footer">
+              <a href="data-cleaning.html" class="content-nav-footer__link content-nav-footer__link--prev">
+                <span class="material-symbols-outlined">arrow_back</span>
+                <div>
+                  <span class="content-nav-footer__label">Sebelumnya</span>
+                  <span class="content-nav-footer__title">Data Cleaning</span>
+                </div>
+              </a>
+              <a href="excel-tutorial.html" class="content-nav-footer__link content-nav-footer__link--next">
+                <div>
+                  <span class="content-nav-footer__label">Selanjutnya</span>
+                  <span class="content-nav-footer__title">Excel</span>
+                </div>
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+          <aside class="toc-rail" id="toc-rail">
+            <div class="toc-rail__title">DI HALAMAN INI</div>
+            <a href="#pbi01" class="toc-rail__item active">01. Pengenalan &amp; Antarmuka Power BI</a>
+            <a href="#pbi02" class="toc-rail__item">02. Data Preparation &amp; Power Query</a>
+            <a href="#pbi03" class="toc-rail__item">03. Data Modeling &amp; Star Schema</a>
+            <a href="#pbi04" class="toc-rail__item">04. Fondasi DAX</a>
+            <a href="#pbi05" class="toc-rail__item">05. Advanced DAX &amp; Time Intelligence</a>
+            <a href="#pbi06" class="toc-rail__item">06. Visualisasi &amp; Desain Dashboard</a>
+            <a href="#pbi07" class="toc-rail__item">07. Analisis Lanjutan &amp; Fitur AI</a>
+            <a href="#pbi08" class="toc-rail__item">08. Optimasi Performa</a>
+            <a href="#pbi09" class="toc-rail__item">09. Power BI Service &amp; Keamanan</a>
+            <a href="#pbi10" class="toc-rail__item">10. Proyek Portofolio End-to-End</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="main-footer">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <p class="footer__copyright">&copy; 2026 DataSchool Indonesia. Dokumentasi analitika data terbuka untuk pembelajar mandiri.</p>
+      </div>
+      <div class="footer__links">
+        <a href="fundamental.html" class="footer__link">Fondasi</a>
+        <a href="sql-tutorial.html" class="footer__link">SQL</a>
+        <a href="python-tutorial.html" class="footer__link">Python</a>
+        <a href="cheatsheets.html" class="footer__link">Cheatsheets</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

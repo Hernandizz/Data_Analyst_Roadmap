@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SQL: SELECT & WHERE — DataSchool</title>
-  <meta name="description" content="Pelajari klausa SELECT dan WHERE untuk memfilter baris data secara presisi. Dilengkapi sandbox SQLite interaktif dan latihan mandiri.">
+  <meta name="description" content="Pelajari klausa SELECT dan WHERE untuk memfilter baris data secara presisi. Dilengkapi contoh kueri SQL dan latihan mandiri.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
@@ -17,13 +17,16 @@
     <div class="header__inner">
       <div class="header__left">
         <a href="index.html" class="logo">
-          <span class="logo__icon material-symbols-outlined" style="font-size:28px;color:var(--primary)">school</span>
+          <span class="logo__icon material-symbols-outlined">school</span>
           <span class="logo__text">DataSchool</span>
         </a>
         <nav class="nav-desktop" id="desktop-nav">
-          <a href="sql-tutorial.html" class="nav-link active">SQL Tutorial</a>
-          <a href="data-cleaning.html" class="nav-link">Data Cleaning</a>
-          <a href="ecommerce-case-study.html" class="nav-link">Studi Kasus E-Commerce</a>
+          <a href="fundamental.html" class="nav-link">Fondasi</a>
+          <a href="sql-tutorial.html" class="nav-link active">SQL</a>
+          <a href="python-tutorial.html" class="nav-link">Python</a>
+          <a href="powerbi-tutorial.html" class="nav-link">Power BI</a>
+          <a href="excel-tutorial.html" class="nav-link">Excel</a>
+          <a href="ecommerce-case-study.html" class="nav-link">Studi Kasus</a>
           <a href="cheatsheets.html" class="nav-link">Cheatsheets</a>
         </nav>
       </div>
@@ -34,16 +37,12 @@
           <kbd class="search-bar__kbd">/</kbd>
         </div>
         <div class="header__actions">
-          <div class="progress-bar-header">
-            <span style="font-size:0.75rem;font-weight:600;color:var(--text-secondary)">Progress: 45%</span>
-          </div>
-          <a href="cheatsheets.html" class="btn btn--ghost btn--sm">Daftar Kurikulum →</a>
-          <div class="avatar">
-            <span class="material-symbols-outlined">person</span>
-          </div>
+          <button class="btn-icon" title="Ganti tema terang / gelap" id="theme-toggle">
+            <span class="material-symbols-outlined">dark_mode</span>
+          </button>
         </div>
       </div>
-      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Buka menu navigasi">
         <span class="material-symbols-outlined">menu</span>
       </button>
     </div>
@@ -55,127 +54,122 @@
     <div class="mobile-drawer__content">
       <div class="mobile-drawer__header">
         <a href="index.html" class="logo">
-          <span class="logo__icon material-symbols-outlined" style="font-size:24px;color:var(--primary)">school</span>
+          <span class="logo__icon material-symbols-outlined">school</span>
           <span class="logo__text">DataSchool</span>
         </a>
-        <button class="btn-icon" id="close-drawer">
+        <button class="btn-icon" id="close-drawer" aria-label="Tutup menu navigasi">
           <span class="material-symbols-outlined">close</span>
         </button>
       </div>
       <nav class="mobile-drawer__nav">
-        <a href="index.html" class="mobile-nav-link"><span class="material-symbols-outlined">home</span>Beranda</a>
-        <a href="sql-tutorial.html" class="mobile-nav-link" style="color:var(--primary);font-weight:700"><span class="material-symbols-outlined">database</span>SQL Tutorial</a>
-        <a href="data-cleaning.html" class="mobile-nav-link"><span class="material-symbols-outlined">cleaning_services</span>Data Cleaning</a>
-        <a href="ecommerce-case-study.html" class="mobile-nav-link"><span class="material-symbols-outlined">analytics</span>Studi Kasus E-Commerce</a>
-        <a href="cheatsheets.html" class="mobile-nav-link"><span class="material-symbols-outlined">menu_book</span>Cheatsheets</a>
+        <a href="index.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">home</span>Beranda
+        </a>
+        <a href="fundamental.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">auto_stories</span>Fondasi
+        </a>
+        <a href="sql-tutorial.html" class="mobile-nav-link mobile-nav-link--active">
+          <span class="material-symbols-outlined">database</span>SQL
+        </a>
+        <a href="python-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">code</span>Python
+        </a>
+        <a href="powerbi-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">monitoring</span>Power BI
+        </a>
+        <a href="excel-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">grid_on</span>Excel
+        </a>
+        <a href="data-cleaning.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">cleaning_services</span>Data Cleaning
+        </a>
+        <a href="ecommerce-case-study.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">analytics</span>Studi Kasus
+        </a>
+        <a href="cheatsheets.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">menu_book</span>Cheatsheets
+        </a>
       </nav>
     </div>
   </div>
 
   <!-- ===== MAIN LAYOUT ===== -->
   <main class="main">
+    <section class="content-hero">
+      <div class="content-hero__container">
+        <div class="content-hero__breadcrumb">
+          <a href="index.html">Beranda</a>
+          <span>›</span>
+          <a href="sql-tutorial.html">SQL untuk Data Analyst</a>
+          <span>›</span>
+          <span>Klausa SELECT &amp; WHERE</span>
+        </div>
+        <div class="content-hero__badge">
+          <span class="material-symbols-outlined" style="font-size:14px">menu_book</span>
+          <span>Modul 02 • Dasar SQL</span>
+        </div>
+        <h1 class="content-hero__title">SQL: Memilih dan Memfilter Baris Data (SELECT &amp; WHERE)</h1>
+        <p class="content-hero__subtitle">
+          Dalam pekerjaan harian data analyst, Anda jarang membutuhkan keseluruhan tabel database. Klausa <code class="code-inline">SELECT</code> mendefinisikan kolom metrik yang ingin Anda evaluasi, sedangkan klausa <code class="code-inline">WHERE</code> menyaring baris berdasarkan kriteria bisnis spesifik dari jutaan rekaman mentah dalam hitungan detik.
+        </p>
+        <div class="content-hero__meta">
+          <span class="content-hero__meta-item">
+            <span class="material-symbols-outlined" style="font-size:18px">signal_cellular_alt</span>
+            Pemula
+          </span>
+          <span class="content-hero__meta-item">
+            <span class="material-symbols-outlined" style="font-size:18px">quiz</span>
+            1 Kuis Mandiri
+          </span>
+          <span class="content-hero__meta-item">
+            <span class="material-symbols-outlined" style="font-size:18px">terminal</span>
+            Contoh Kueri SQL
+          </span>
+        </div>
+      </div>
+    </section>
+
     <div class="layout-docs">
       <!-- Left Sidebar -->
       <aside class="sidebar" id="sidebar">
-        <div class="sidebar__breadcrumb" style="padding:0 1.5rem 1rem;font-size:0.75rem;color:var(--text-secondary)">
-          Data Analyst Path → SQL Analytics → SELECT & WHERE
-        </div>
-
-        <div class="sidebar__section-title">Pengenalan Data Analytics</div>
-        <a href="index.html" class="sidebar__item completed">
-          <span class="material-symbols-outlined" style="font-size:16px">check_circle</span> Apa itu Data Analyst
-        </a>
-        <a href="index.html#roadmap" class="sidebar__item completed">
-          <span class="material-symbols-outlined" style="font-size:16px">check_circle</span> Roadmap Belajar
-        </a>
-        <a href="index.html#tools" class="sidebar__item completed">
-          <span class="material-symbols-outlined" style="font-size:16px">check_circle</span> Setup Tools
-        </a>
-
-        <div class="sidebar__section-title">SQL untuk Analisis Data</div>
-        <a href="sql-tutorial.html" class="sidebar__item completed">
-          <span class="material-symbols-outlined" style="font-size:16px">check_circle</span> SQL Sintaks Dasar
-        </a>
-        <a href="sql-tutorial.html" class="sidebar__item active">
-          <span class="material-symbols-outlined" style="font-size:16px;font-variation-settings:'FILL' 1">play_circle</span> SELECT & WHERE
-          <span class="badge badge--info" style="margin-left:auto;font-size:0.625rem">AKTIF</span>
-        </a>
-        <a href="cheatsheets.html#sql" class="sidebar__item">GROUP BY & HAVING</a>
-        <a href="cheatsheets.html#sql" class="sidebar__item">JOIN Masterclass</a>
-        <a href="cheatsheets.html#sql" class="sidebar__item">Window Functions</a>
-        <a href="cheatsheets.html#sql" class="sidebar__item">Subqueries</a>
-
-        <div class="sidebar__section-title">Pandas & Python</div>
-        <a href="data-cleaning.html" class="sidebar__item">Dataframe Basics</a>
-        <a href="data-cleaning.html" class="sidebar__item">Cleaning Data</a>
-        <a href="ecommerce-case-study.html" class="sidebar__item">Merging Datasets</a>
-
-        <div class="sidebar__section-title">Studi Kasus & Dataset</div>
-        <a href="ecommerce-case-study.html" class="sidebar__item">E-Commerce Analysis</a>
-        <a href="ecommerce-case-study.html" class="sidebar__item">Churn Prediction</a>
+        <div class="sidebar__section-title">Fundamental</div>
+        <a href="fundamental.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">auto_stories</span>Fondasi Data Analytics</a>
+        <a href="sql-tutorial.html" class="sidebar__item active"><span class="material-symbols-outlined" style="font-size:16px">database</span>SQL Analytics</a>
+        <a href="python-tutorial.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">code</span>Python & Pandas</a>
+        <div class="sidebar__section-title">Alat & Pelaporan</div>
+        <a href="data-cleaning.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">cleaning_services</span>Data Cleaning</a>
+        <a href="powerbi-tutorial.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">monitoring</span>Power BI</a>
+        <a href="excel-tutorial.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">grid_on</span>Excel & Reporting</a>
+        <div class="sidebar__section-title">Praktik & Referensi</div>
+        <a href="ecommerce-case-study.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">analytics</span>Studi Kasus E-Commerce</a>
+        <a href="cheatsheets.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">menu_book</span>Cheatsheets</a>
       </aside>
 
       <!-- Content Area -->
       <div class="content-area">
-        <!-- Breadcrumbs -->
-        <div class="breadcrumbs">
-          <a href="index.html">Beranda</a>
-          <span class="breadcrumbs__sep">›</span>
-          <a href="#">SQL untuk Data Analyst</a>
-          <span class="breadcrumbs__sep">›</span>
-          <span>Klausa SELECT & WHERE</span>
-        </div>
-
-        <!-- Module tag -->
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:0.75rem">
-          <a href="#" class="btn btn--secondary btn--sm" style="font-size:0.75rem">
-            <span class="material-symbols-outlined" style="font-size:14px">arrow_back</span>
-            Bab Sebelumnya: Sintaks Dasar
-          </a>
-          <a href="#" class="btn btn--primary btn--sm" style="font-size:0.75rem">
-            Bab Selanjutnya: GROUP BY
-            <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span>
-          </a>
-        </div>
-
-        <div style="margin-bottom:0.75rem">
-          <span class="badge badge--info">
-            <span class="material-symbols-outlined" style="font-size:12px">menu_book</span>
-            Modul 02 • Dasar SQL
-          </span>
-        </div>
-
-        <h1 style="font-size:1.875rem;font-weight:700;line-height:2.25rem;letter-spacing:-0.02em;color:var(--on-surface);margin-bottom:1rem">
-          SQL: Memilih dan Memfilter Baris Data (SELECT & WHERE)
-        </h1>
-
-        <p style="font-size:1rem;line-height:1.75;color:var(--text-secondary);margin-bottom:2rem;max-width:56rem">
-          Dalam pekerjaan harian data analyst, Anda jarang membutuhkan keseluruhan tabel database. Klausa <code class="code-inline">SELECT</code> mendefinisikan kolom metrik yang ingin Anda evaluasi, sedangkan klausa <code class="code-inline">WHERE</code> menyaring baris berdasarkan kriteria bisnis spesifik dari jutaan rekaman mentah dalam hitungan detik.
-        </p>
-
         <!-- Benefit Cards -->
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:3rem">
+        <div id="pengantar" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:3rem">
           <div style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.25rem;background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md)">
             <span class="material-symbols-outlined" style="font-size:28px;color:var(--text-secondary);margin-bottom:0.5rem">filter_alt</span>
             <strong style="font-size:0.8125rem;color:var(--on-surface)">Filter Presisi</strong>
-            <span style="font-size:0.75rem;color:var(--text-secondary)">Hanya baris dengan kondisi TRUE yang dikembalikan mesin SQL.</span>
+            <span style="font-size:0.8125rem;color:var(--text-secondary)">Hanya baris dengan kondisi TRUE yang dikembalikan mesin SQL.</span>
           </div>
           <div style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.25rem;background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md)">
             <span class="material-symbols-outlined" style="font-size:28px;color:var(--text-secondary);margin-bottom:0.5rem">speed</span>
             <strong style="font-size:0.8125rem;color:var(--on-surface)">Hemat Bandwidth & Biaya</strong>
-            <span style="font-size:0.75rem;color:var(--text-secondary)">Memangkas beban komputasi di cloud warehouse seperti BigQuery.</span>
+            <span style="font-size:0.8125rem;color:var(--text-secondary)">Memangkas beban komputasi di cloud warehouse seperti BigQuery.</span>
           </div>
           <div style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.25rem;background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md)">
             <span class="material-symbols-outlined" style="font-size:28px;color:var(--text-secondary);margin-bottom:0.5rem">grid_view</span>
             <strong style="font-size:0.8125rem;color:var(--on-surface)">Ekstraksi Bersih</strong>
-            <span style="font-size:0.75rem;color:var(--text-secondary)">Output siap langsung dikonversi ke format DataFrame Pandas.</span>
+            <span style="font-size:0.8125rem;color:var(--text-secondary)">Output siap langsung dikonversi ke format DataFrame Pandas.</span>
           </div>
         </div>
 
         <!-- Sintaks Dasar -->
         <h2 id="sintaks" style="font-size:1.5rem;font-weight:600;line-height:2rem;letter-spacing:-0.015em;margin-bottom:1rem;display:flex;align-items:center;justify-content:space-between">
           Sintaks Dasar
-          <span style="font-size:0.6875rem;font-weight:600;color:var(--text-secondary);background:var(--surface-container);padding:0.25rem 0.5rem;border-radius:var(--radius-sm)">Standar ANSI SQL</span>
+          <span style="font-size:0.8125rem;font-weight:600;color:var(--text-secondary);background:var(--surface-container);padding:0.25rem 0.5rem;border-radius:var(--radius-sm)">Standar ANSI SQL</span>
         </h2>
 
         <p style="font-size:0.9375rem;line-height:1.75;color:var(--text-secondary);margin-bottom:1rem">
@@ -212,8 +206,8 @@
         </p>
         <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem">
           <span class="badge badge--success">
-            <span class="material-symbols-outlined" style="font-size:12px">cloud</span>
-            Live SQLite Sandbox
+            <span class="material-symbols-outlined" style="font-size:13px">cloud</span>
+            Sandbox Contoh SQL
           </span>
         </div>
 
@@ -221,9 +215,8 @@
           <div class="code-sandbox__header">
             <span class="code-sandbox__filename">
               <span class="material-symbols-outlined" style="font-size:16px;color:var(--primary)">edit</span>
-              Editor SQL Interaktif • orders_database.db
+              Contoh Kueri SQL • tabel latihan orders
             </span>
-            <span style="font-size:0.6875rem;color:var(--text-secondary)">Latensi: 0.04s</span>
           </div>
           <div class="code-sandbox__editor">
 <pre style="margin:0"><code><span class="kw">SELECT</span> order_id, customer_name, city, total_spent, status
@@ -233,21 +226,21 @@
           <div style="padding:0.75rem 1rem;background:var(--secondary-surface);border-top:1px solid var(--border-default);display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap">
             <button class="btn btn--primary btn--sm" onclick="runSandboxCode('sandbox-sql-1')">
               <span class="material-symbols-outlined" style="font-size:16px">play_arrow</span>
-              Jalankan Query (Run SQL)
+              Tampilkan Contoh Hasil
             </button>
-            <button class="btn btn--secondary btn--sm">
+            <button class="btn btn--secondary btn--sm" onclick="resetSandbox('sandbox-sql-1')">
               <span class="material-symbols-outlined" style="font-size:14px">restart_alt</span>
-              Reset Default
+              Reset Hasil
             </button>
-            <span style="font-size:0.75rem;color:var(--primary);display:flex;align-items:center;gap:0.25rem;margin-left:auto">
+            <span style="font-size:0.8125rem;color:var(--primary);display:flex;align-items:center;gap:0.25rem;margin-left:auto">
               <span class="material-symbols-outlined" style="font-size:14px">check_circle</span>
-              5 baris dieksekusi dengan sukses
+              Contoh hasil: 5 baris (data latihan)
             </span>
           </div>
           <div class="code-sandbox__output">
             <div style="margin-bottom:0.75rem;display:flex;align-items:center;justify-content:space-between">
-              <span style="font-size:0.75rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.06em">HASIL EKSEKUSI (QUERY OUTPUT VIEW)</span>
-              <span style="font-size:0.6875rem;color:var(--text-secondary)">Format Data: Table View</span>
+              <span style="font-size:0.8125rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.06em">HASIL EKSEKUSI (QUERY OUTPUT VIEW)</span>
+              <span style="font-size:0.8125rem;color:var(--text-secondary)">Format Data: Table View</span>
             </div>
             <div class="data-table-wrap" style="margin:0">
               <table class="data-table">
@@ -356,7 +349,7 @@
 
         <div id="quiz-1" style="background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md);padding:1.5rem;margin-bottom:2.5rem">
           <div style="display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:1.25rem">
-            <span style="width:28px;height:28px;border-radius:var(--radius-full);background:var(--primary);color:var(--on-primary);display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">?</span>
+            <span style="width:28px;height:28px;border-radius:var(--radius-full);background:var(--primary);color:var(--on-primary);display:flex;align-items:center;justify-content:center;font-size:0.8125rem;font-weight:700;flex-shrink:0">?</span>
             <div>
               <p style="font-size:0.9375rem;font-weight:600;color:var(--on-surface);margin-bottom:0.25rem">
                 Tuliskan klausal WHERE yang tepat untuk menyaring: "Semua transaksi dari kota 'Surabaya' yang bernilai di atas Rp 250.000."
@@ -396,17 +389,17 @@
 
         <!-- Navigation -->
         <div class="nav-prev-next">
-          <a href="#" class="nav-prev-next__link">
+          <a href="fundamental.html" class="nav-prev-next__link">
             <span class="material-symbols-outlined" style="font-size:16px">arrow_back</span>
             <div>
-              <div style="font-size:0.6875rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.04em">BAB SEBELUMNYA</div>
-              <div>SQL Sintaks Dasar</div>
+              <div style="font-size:0.8125rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.04em">MODUL SEBELUMNYA</div>
+              <div>Fondasi Data Analytics</div>
             </div>
           </a>
-          <a href="#" class="nav-prev-next__link nav-prev-next__link--next">
+          <a href="python-tutorial.html" class="nav-prev-next__link nav-prev-next__link--next">
             <div style="text-align:right">
-              <div style="font-size:0.6875rem;text-transform:uppercase;letter-spacing:0.04em;opacity:0.8">BAB SELANJUTNYA</div>
-              <div>Agregasi Data: GROUP BY & HAVING</div>
+              <div style="font-size:0.8125rem;text-transform:uppercase;letter-spacing:0.04em;opacity:0.8">MODUL SELANJUTNYA</div>
+              <div>Python &amp; Pandas</div>
             </div>
             <span class="material-symbols-outlined" style="font-size:16px">arrow_forward</span>
           </a>
@@ -416,7 +409,7 @@
       <!-- Right Table of Contents -->
       <aside class="toc-rail" id="toc-rail">
         <div class="toc-rail__title">DI HALAMAN INI</div>
-        <a href="#" class="toc-rail__item active">Pengantar</a>
+        <a href="#pengantar" class="toc-rail__item active">Pengantar</a>
         <a href="#sintaks" class="toc-rail__item">Sintaks Dasar</a>
         <a href="#coba-sendiri" class="toc-rail__item">Contoh Coba Sendiri</a>
         <a href="#operator" class="toc-rail__item">Operator Perbandingan</a>
@@ -424,8 +417,8 @@
         <a href="#kuis" class="toc-rail__item">Latihan Mandiri</a>
 
         <div style="margin-top:1.5rem;padding:1rem;background:var(--primary-light);border:1px solid var(--border-default);border-radius:var(--radius-md)">
-          <div style="font-size:0.6875rem;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.5rem">Target Pembelajaran</div>
-          <ul style="font-size:0.75rem;color:var(--text-secondary);list-style:none;display:flex;flex-direction:column;gap:0.375rem">
+          <div style="font-size:0.8125rem;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.5rem">Target Pembelajaran</div>
+          <ul style="font-size:0.8125rem;color:var(--text-secondary);list-style:none;display:flex;flex-direction:column;gap:0.375rem">
             <li style="display:flex;align-items:flex-start;gap:0.375rem">
               <span class="material-symbols-outlined" style="font-size:14px;color:var(--primary);flex-shrink:0;margin-top:1px">check_circle</span>
               Memahami eksekusi logis WHERE sebelum SELECT.
@@ -447,9 +440,10 @@
         <p class="footer__copyright">&copy; 2026 DataSchool Indonesia. Dokumentasi analitika data terbuka untuk pembelajar mandiri.</p>
       </div>
       <div class="footer__links">
+        <a href="fundamental.html" class="footer__link">Fondasi</a>
+        <a href="sql-tutorial.html" class="footer__link">SQL</a>
+        <a href="python-tutorial.html" class="footer__link">Python</a>
         <a href="cheatsheets.html" class="footer__link">Cheatsheets</a>
-        <a href="#" class="footer__link">Referensi Sintaks</a>
-        <a href="#" class="footer__link">Forum Komunitas</a>
       </div>
     </div>
   </footer>

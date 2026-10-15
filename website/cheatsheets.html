@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kamus &amp; Cheatsheets — DataSchool</title>
-  <meta name="description" content="Repositori sintaksis terverifikasi, formula metrik bisnis, dan fungsi manipulasi data instan untuk praktisi data, BI engineer, dan data scientist.">
+  <meta name="description" content="Kumpulan sintaks SQL, formula metrik bisnis, dan fungsi Pandas/Excel yang bisa dicetak untuk referensi cepat.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
@@ -17,32 +17,32 @@
     <div class="header__inner">
       <div class="header__left">
         <a href="index.html" class="logo">
-          <span class="logo__icon material-symbols-outlined" style="font-size:28px;color:var(--primary)">school</span>
+          <span class="logo__icon material-symbols-outlined">school</span>
           <span class="logo__text">DataSchool</span>
         </a>
         <nav class="nav-desktop" id="desktop-nav">
-          <a href="sql-tutorial.html" class="nav-link">SQL Tutorial</a>
-          <a href="data-cleaning.html" class="nav-link">Data Cleaning</a>
-          <a href="ecommerce-case-study.html" class="nav-link">Studi Kasus E-Commerce</a>
+          <a href="fundamental.html" class="nav-link">Fondasi</a>
+          <a href="sql-tutorial.html" class="nav-link">SQL</a>
+          <a href="python-tutorial.html" class="nav-link">Python</a>
+          <a href="powerbi-tutorial.html" class="nav-link">Power BI</a>
+          <a href="excel-tutorial.html" class="nav-link">Excel</a>
+          <a href="ecommerce-case-study.html" class="nav-link">Studi Kasus</a>
           <a href="cheatsheets.html" class="nav-link active">Cheatsheets</a>
         </nav>
       </div>
       <div class="header__right">
         <div class="search-bar" id="global-search">
           <span class="material-symbols-outlined search-bar__icon">search</span>
-          <input type="text" placeholder="Cari sintaks atau materi..." class="search-bar__input" id="search-input">
+          <input type="text" placeholder="Cari materi data..." class="search-bar__input" id="search-input">
           <kbd class="search-bar__kbd">/</kbd>
         </div>
         <div class="header__actions">
-          <button class="btn-icon" title="Tema Gelap" id="theme-toggle">
+          <button class="btn-icon" title="Ganti tema terang / gelap" id="theme-toggle">
             <span class="material-symbols-outlined">dark_mode</span>
           </button>
-          <div class="avatar" id="user-avatar">
-            <span class="material-symbols-outlined">person</span>
-          </div>
         </div>
       </div>
-      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Buka menu navigasi">
         <span class="material-symbols-outlined">menu</span>
       </button>
     </div>
@@ -54,10 +54,10 @@
     <div class="mobile-drawer__content">
       <div class="mobile-drawer__header">
         <a href="index.html" class="logo">
-          <span class="logo__icon material-symbols-outlined" style="font-size:24px;color:var(--primary)">school</span>
+          <span class="logo__icon material-symbols-outlined">school</span>
           <span class="logo__text">DataSchool</span>
         </a>
-        <button class="btn-icon" id="close-drawer">
+        <button class="btn-icon" id="close-drawer" aria-label="Tutup menu navigasi">
           <span class="material-symbols-outlined">close</span>
         </button>
       </div>
@@ -65,16 +65,28 @@
         <a href="index.html" class="mobile-nav-link">
           <span class="material-symbols-outlined">home</span>Beranda
         </a>
+        <a href="fundamental.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">auto_stories</span>Fondasi
+        </a>
         <a href="sql-tutorial.html" class="mobile-nav-link">
-          <span class="material-symbols-outlined">database</span>SQL Tutorial
+          <span class="material-symbols-outlined">database</span>SQL
+        </a>
+        <a href="python-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">code</span>Python
+        </a>
+        <a href="powerbi-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">monitoring</span>Power BI
+        </a>
+        <a href="excel-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">grid_on</span>Excel
         </a>
         <a href="data-cleaning.html" class="mobile-nav-link">
           <span class="material-symbols-outlined">cleaning_services</span>Data Cleaning
         </a>
         <a href="ecommerce-case-study.html" class="mobile-nav-link">
-          <span class="material-symbols-outlined">analytics</span>Studi Kasus E-Commerce
+          <span class="material-symbols-outlined">analytics</span>Studi Kasus
         </a>
-        <a href="cheatsheets.html" class="mobile-nav-link" style="color:var(--primary);font-weight:700">
+        <a href="cheatsheets.html" class="mobile-nav-link mobile-nav-link--active">
           <span class="material-symbols-outlined">menu_book</span>Cheatsheets
         </a>
       </nav>
@@ -85,19 +97,26 @@
   <section class="cheatsheet-hero">
     <div class="cheatsheet-hero__inner">
       <div style="max-width:720px">
+        <div class="content-hero__breadcrumb" style="margin-bottom:0.75rem">
+          <a href="index.html">Beranda</a>
+          <span>›</span>
+          <a href="cheatsheets.html">Referensi</a>
+          <span>›</span>
+          <span>Cheatsheets</span>
+        </div>
         <div class="hero__badge" style="margin-bottom:0.75rem">
           <span class="material-symbols-outlined" style="font-size:14px">menu_book</span>
           <span>DOKUMENTASI CEPAT ANALITIKA</span>
         </div>
         <h1 class="headline-lg" style="margin-bottom:0.5rem">Kamus &amp; Cheatsheet Referensi Cepat</h1>
         <p class="body-md" style="color:var(--text-secondary)">
-          Repositori sintaksis terverifikasi, formula metrik bisnis, dan fungsi manipulasi data instan untuk praktisi data, BI engineer, dan data scientist.
+          Kumpulan sintaks SQL, formula metrik bisnis, dan fungsi Pandas/Excel — ringkas, bisa dicetak, dan siap dipakai saat bekerja.
         </p>
       </div>
       <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap">
-        <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.4rem 0.75rem;background:var(--surface-container);border-radius:var(--radius-sm);font-size:0.75rem;font-weight:600;color:var(--text-secondary)">
+        <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.4rem 0.75rem;background:var(--surface-container);border-radius:var(--radius-sm);font-size:0.8125rem;font-weight:600;color:var(--text-secondary)">
           <span style="width:8px;height:8px;border-radius:50%;background:var(--primary);display:inline-block"></span>
-          <span>v2.4.8 Updated</span>
+          <span>5 Kategori</span>
         </div>
         <a href="#printable-sheets" class="btn btn--primary btn--sm" style="display:inline-flex;align-items:center;gap:0.35rem">
           <span class="material-symbols-outlined" style="font-size:16px">print</span>
@@ -138,7 +157,7 @@
   <main class="cheatsheet-container" id="cheatsheet-content">
     
     <!-- 1. SQL ANALYTICS -->
-    <section class="category-section" data-category="sql">
+    <section class="category-section" id="sql" data-category="sql">
       <div class="category-header">
         <div class="category-header__left">
           <div class="category-header__icon">
@@ -242,7 +261,7 @@ GROUP BY 1;</code></pre>
     </section>
 
     <!-- 2. PANDAS & PYTHON -->
-    <section class="category-section" data-category="pandas">
+    <section class="category-section" id="pandas" data-category="pandas">
       <div class="category-header">
         <div class="category-header__left">
           <div class="category-header__icon" style="background:var(--secondary-container);color:var(--on-secondary-container)">
@@ -278,8 +297,8 @@ GROUP BY 1;</code></pre>
             </div>
           </div>
           <div style="background:var(--surface-container-low);padding:0.75rem;border-radius:var(--radius-sm);margin-top:0.5rem">
-            <div style="font-size:0.6875rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;margin-bottom:0.35rem">Preview Matrix Output:</div>
-            <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:2px;font-family:var(--font-mono);font-size:0.6875rem;text-align:center">
+            <div style="font-size:0.8125rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;margin-bottom:0.35rem">Preview Matrix Output:</div>
+            <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:2px;font-family:var(--font-mono);font-size:0.8125rem;text-align:center">
               <div style="background:var(--surface-container-high);padding:3px;font-weight:700">segment</div>
               <div style="background:var(--surface-container-high);padding:3px;font-weight:700">total_sales</div>
               <div style="background:var(--surface-container-high);padding:3px;font-weight:700">active_users</div>
@@ -321,8 +340,8 @@ GROUP BY 1;</code></pre>
             </div>
           </div>
           <div style="background:var(--surface-container-low);padding:0.75rem;border-radius:var(--radius-sm);margin-top:0.5rem">
-            <div style="font-size:0.6875rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;margin-bottom:0.35rem">Format Transformasi:</div>
-            <div style="display:flex;align-items:center;justify-content:space-between;font-family:var(--font-mono);font-size:0.75rem">
+            <div style="font-size:0.8125rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;margin-bottom:0.35rem">Format Transformasi:</div>
+            <div style="display:flex;align-items:center;justify-content:space-between;font-family:var(--font-mono);font-size:0.8125rem">
               <span style="background:var(--surface-container);padding:3px 8px;border-radius:4px">Rows: [Region]</span>
               <span class="material-symbols-outlined" style="font-size:16px;color:var(--text-secondary)">arrow_forward</span>
               <span style="background:var(--primary-container);color:var(--on-primary-container);padding:3px 8px;border-radius:4px">Cols: [Q1, Q2, Q3, Q4]</span>
@@ -356,8 +375,8 @@ GROUP BY 1;</code></pre>
             </div>
           </div>
           <div style="background:var(--surface-container-low);padding:0.75rem;border-radius:var(--radius-sm);margin-top:0.5rem">
-            <div style="font-size:0.6875rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;margin-bottom:0.35rem">Karakteristik Tidy Data:</div>
-            <p style="font-size:0.75rem;color:var(--text-secondary);margin:0">Mempersiapkan data tabular agar kompatibel dengan seaborn, plotly, dan modul Machine Learning.</p>
+            <div style="font-size:0.8125rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;margin-bottom:0.35rem">Karakteristik Tidy Data:</div>
+            <p style="font-size:0.8125rem;color:var(--text-secondary);margin:0">Mempersiapkan data tabular agar kompatibel dengan seaborn, plotly, dan modul Machine Learning.</p>
           </div>
           <div class="snippet-card__footer">
             <span>Best for: Unpivot &amp; Normalization</span>
@@ -368,7 +387,7 @@ GROUP BY 1;</code></pre>
     </section>
 
     <!-- 3. METRIK BISNIS -->
-    <section class="category-section" data-category="business">
+    <section class="category-section" id="business" data-category="business">
       <div class="category-header">
         <div class="category-header__left">
           <div class="category-header__icon" style="background:var(--primary-container);color:var(--on-primary-container)">
@@ -388,7 +407,7 @@ GROUP BY 1;</code></pre>
           <div class="snippet-card__top">
             <div class="snippet-card__header">
               <div>
-                <span style="font-size:0.6875rem;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:0.04em">Churn &amp; Retention</span>
+                <span style="font-size:0.8125rem;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:0.04em">Churn &amp; Retention</span>
                 <h3 class="headline-xs" style="margin-top:2px">Churn Rate (Pelanggan Hilang)</h3>
               </div>
               <span class="snippet-card__tag">% Rasio</span>
@@ -412,7 +431,7 @@ GROUP BY 1;</code></pre>
           <div class="snippet-card__top">
             <div class="snippet-card__header">
               <div>
-                <span style="font-size:0.6875rem;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:0.04em">Valuasi Pelanggan</span>
+                <span style="font-size:0.8125rem;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:0.04em">Valuasi Pelanggan</span>
                 <h3 class="headline-xs" style="margin-top:2px">Customer Lifetime Value (CLV / LTV)</h3>
               </div>
               <span class="snippet-card__tag">Nominal Monetasi</span>
@@ -436,7 +455,7 @@ GROUP BY 1;</code></pre>
           <div class="snippet-card__top">
             <div class="snippet-card__header">
               <div>
-                <span style="font-size:0.6875rem;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:0.04em">Funnel Efisiensi</span>
+                <span style="font-size:0.8125rem;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:0.04em">Funnel Efisiensi</span>
                 <h3 class="headline-xs" style="margin-top:2px">Conversion Rate (CR) Tahapan</h3>
               </div>
               <span class="snippet-card__tag">% Konversi</span>
@@ -460,7 +479,7 @@ GROUP BY 1;</code></pre>
           <div class="snippet-card__top">
             <div class="snippet-card__header">
               <div>
-                <span style="font-size:0.6875rem;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:0.04em">Analisis Kohort</span>
+                <span style="font-size:0.8125rem;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:0.04em">Analisis Kohort</span>
                 <h3 class="headline-xs" style="margin-top:2px">Retention Rate (Day N / Month N)</h3>
               </div>
               <span class="snippet-card__tag">Cohort Index</span>
@@ -482,7 +501,7 @@ GROUP BY 1;</code></pre>
     </section>
 
     <!-- 4. STATISTIKA INFERENSIAL -->
-    <section class="category-section" data-category="stats">
+    <section class="category-section" id="stats" data-category="stats">
       <div class="category-header">
         <div class="category-header__left">
           <div class="category-header__icon" style="background:var(--tertiary-container);color:var(--on-tertiary-container)">
@@ -506,15 +525,15 @@ GROUP BY 1;</code></pre>
             </div>
             <p class="snippet-card__desc">Probabilitas mengamati perbedaan sebesar hasil observasi jika hipotesis nol (H0) bernilai benar.</p>
             <div style="display:flex;flex-direction:column;gap:0.35rem;margin:0.5rem 0">
-              <div style="padding:0.4rem 0.6rem;background:var(--surface-container-low);border-radius:var(--radius-sm);display:flex;justify-content:space-between;font-size:0.75rem">
+              <div style="padding:0.4rem 0.6rem;background:var(--surface-container-low);border-radius:var(--radius-sm);display:flex;justify-content:space-between;font-size:0.8125rem">
                 <span style="font-family:var(--font-mono);color:var(--primary);font-weight:700">p &lt; 0.01</span>
                 <span>Bukti Sangat Kuat Tolak H0</span>
               </div>
-              <div style="padding:0.4rem 0.6rem;background:var(--surface-container-low);border-radius:var(--radius-sm);display:flex;justify-content:space-between;font-size:0.75rem">
+              <div style="padding:0.4rem 0.6rem;background:var(--surface-container-low);border-radius:var(--radius-sm);display:flex;justify-content:space-between;font-size:0.8125rem">
                 <span style="font-family:var(--font-mono);color:var(--primary);font-weight:700">p &lt; 0.05</span>
                 <span>Signifikan Statistik Standar</span>
               </div>
-              <div style="padding:0.4rem 0.6rem;background:var(--surface-container-low);border-radius:var(--radius-sm);display:flex;justify-content:space-between;font-size:0.75rem">
+              <div style="padding:0.4rem 0.6rem;background:var(--surface-container-low);border-radius:var(--radius-sm);display:flex;justify-content:space-between;font-size:0.8125rem">
                 <span style="font-family:var(--font-mono);color:var(--error);font-weight:700">p ≥ 0.05</span>
                 <span style="color:var(--text-secondary)">Gagal Tolak H0 (Inkonklusif)</span>
               </div>
@@ -536,9 +555,9 @@ GROUP BY 1;</code></pre>
             <p class="snippet-card__desc">Berapa banyak simpangan baku suatu titik data berada dari nilai rata-rata (mean).</p>
             <div class="snippet-card__formula" style="padding:0.75rem">
               Z = ( X - μ ) ÷ σ
-              <div style="font-size:0.6875rem;color:var(--text-secondary);font-weight:400;margin-top:2px">X: observasi, μ: mean, σ: standar deviasi</div>
+              <div style="font-size:0.8125rem;color:var(--text-secondary);font-weight:400;margin-top:2px">X: observasi, μ: mean, σ: standar deviasi</div>
             </div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);display:flex;flex-direction:column;gap:0.25rem">
+            <div style="font-size:0.8125rem;color:var(--text-secondary);display:flex;flex-direction:column;gap:0.25rem">
               <div style="display:flex;justify-content:space-between"><span>|Z| &gt; 2.0 :</span> <strong>5% populasi terluar</strong></div>
               <div style="display:flex;justify-content:space-between"><span>|Z| &gt; 3.0 :</span> <strong style="color:var(--error)">Outlier ekstrem (&lt;0.3% prob)</strong></div>
             </div>
@@ -560,7 +579,7 @@ GROUP BY 1;</code></pre>
             <div class="snippet-card__formula" style="padding:0.75rem">
               IQR = Q3 (P75) - Q1 (P25)
             </div>
-            <div style="display:flex;flex-direction:column;gap:0.35rem;font-family:var(--font-mono);font-size:0.75rem">
+            <div style="display:flex;flex-direction:column;gap:0.35rem;font-family:var(--font-mono);font-size:0.8125rem">
               <div style="padding:0.35rem 0.5rem;background:var(--surface-container);border-radius:4px">Batas Bawah = Q1 - (1.5 × IQR)</div>
               <div style="padding:0.35rem 0.5rem;background:var(--surface-container);border-radius:4px">Batas Atas = Q3 + (1.5 × IQR)</div>
             </div>
@@ -574,7 +593,7 @@ GROUP BY 1;</code></pre>
     </section>
 
     <!-- 5. SPREADSHEET FORMULAS -->
-    <section class="category-section" data-category="excel">
+    <section class="category-section" id="excel" data-category="excel">
       <div class="category-header">
         <div class="category-header__left">
           <div class="category-header__icon" style="background:var(--surface-variant);color:var(--on-surface)">
@@ -668,15 +687,15 @@ GROUP BY 1;</code></pre>
           <div class="print-card__preview">
             <span class="material-symbols-outlined">dataset</span>
             <span style="font-size:0.8125rem;font-weight:700">SQL Quick Card</span>
-            <span style="font-size:0.6875rem;color:var(--text-secondary)">1 Lembar A4 Landscape</span>
+            <span style="font-size:0.8125rem;color:var(--text-secondary)">1 Lembar A4 Landscape</span>
           </div>
           <div>
             <h3 class="headline-xs" style="margin-bottom:0.25rem">SQL Analytics &amp; Windowing</h3>
-            <p class="body-sm" style="color:var(--text-secondary);font-size:0.75rem">Mencakup urutan eksekusi SQL, klausa QUALIFY, sintaks PIVOT bawaan, dan window frames.</p>
+            <p class="body-sm" style="color:var(--text-secondary);font-size:0.8125rem">Mencakup urutan eksekusi SQL, klausa QUALIFY, sintaks PIVOT bawaan, dan window frames.</p>
           </div>
-          <button class="btn btn--secondary btn--sm" style="width:100%;justify-content:center" onclick="triggerDownloadAlert('SQL Analytics Card')">
-            <span class="material-symbols-outlined" style="font-size:16px">download</span>
-            <span>Unduh PDF (1.2 MB)</span>
+          <button class="btn btn--secondary btn--sm" style="width:100%;justify-content:center" onclick="printCheatsheet()">
+            <span class="material-symbols-outlined" style="font-size:16px">print</span>
+            <span>Cetak / Simpan PDF</span>
           </button>
         </div>
 
@@ -685,15 +704,15 @@ GROUP BY 1;</code></pre>
           <div class="print-card__preview">
             <span class="material-symbols-outlined">terminal</span>
             <span style="font-size:0.8125rem;font-weight:700">Pandas 2.0 Card</span>
-            <span style="font-size:0.6875rem;color:var(--text-secondary)">1 Lembar A4 Landscape</span>
+            <span style="font-size:0.8125rem;color:var(--text-secondary)">1 Lembar A4 Landscape</span>
           </div>
           <div>
             <h3 class="headline-xs" style="margin-bottom:0.25rem">Python Pandas Wrangling</h3>
-            <p class="body-sm" style="color:var(--text-secondary);font-size:0.75rem">Peta manipulasi DateTime, regex replacement, merge strategi join, dan optimasi memori.</p>
+            <p class="body-sm" style="color:var(--text-secondary);font-size:0.8125rem">Peta manipulasi DateTime, regex replacement, merge strategi join, dan optimasi memori.</p>
           </div>
-          <button class="btn btn--secondary btn--sm" style="width:100%;justify-content:center" onclick="triggerDownloadAlert('Pandas 2.0 Card')">
-            <span class="material-symbols-outlined" style="font-size:16px">download</span>
-            <span>Unduh PDF (1.8 MB)</span>
+          <button class="btn btn--secondary btn--sm" style="width:100%;justify-content:center" onclick="printCheatsheet()">
+            <span class="material-symbols-outlined" style="font-size:16px">print</span>
+            <span>Cetak / Simpan PDF</span>
           </button>
         </div>
 
@@ -702,15 +721,15 @@ GROUP BY 1;</code></pre>
           <div class="print-card__preview">
             <span class="material-symbols-outlined">monitoring</span>
             <span style="font-size:0.8125rem;font-weight:700">Metrics Compendium</span>
-            <span style="font-size:0.6875rem;color:var(--text-secondary)">1 Lembar A4 Landscape</span>
+            <span style="font-size:0.8125rem;color:var(--text-secondary)">1 Lembar A4 Landscape</span>
           </div>
           <div>
             <h3 class="headline-xs" style="margin-bottom:0.25rem">Metrik Bisnis &amp; Startup</h3>
-            <p class="body-sm" style="color:var(--text-secondary);font-size:0.75rem">Kamus rumus ARR/MRR, Quick Ratio, Magic Number, Net Revenue Retention, dan Payback Period.</p>
+            <p class="body-sm" style="color:var(--text-secondary);font-size:0.8125rem">Kamus rumus ARR/MRR, Quick Ratio, Magic Number, Net Revenue Retention, dan Payback Period.</p>
           </div>
-          <button class="btn btn--secondary btn--sm" style="width:100%;justify-content:center" onclick="triggerDownloadAlert('Metrics Compendium')">
-            <span class="material-symbols-outlined" style="font-size:16px">download</span>
-            <span>Unduh PDF (940 KB)</span>
+          <button class="btn btn--secondary btn--sm" style="width:100%;justify-content:center" onclick="printCheatsheet()">
+            <span class="material-symbols-outlined" style="font-size:16px">print</span>
+            <span>Cetak / Simpan PDF</span>
           </button>
         </div>
 
@@ -719,15 +738,15 @@ GROUP BY 1;</code></pre>
           <div class="print-card__preview">
             <span class="material-symbols-outlined">calculate</span>
             <span style="font-size:0.8125rem;font-weight:700">Stats Decision Tree</span>
-            <span style="font-size:0.6875rem;color:var(--text-secondary)">1 Lembar A4 Landscape</span>
+            <span style="font-size:0.8125rem;color:var(--text-secondary)">1 Lembar A4 Landscape</span>
           </div>
           <div>
             <h3 class="headline-xs" style="margin-bottom:0.25rem">Pohon Uji Statistik</h3>
-            <p class="body-sm" style="color:var(--text-secondary);font-size:0.75rem">Diagram alur memilih uji: T-Test, Chi-Square, Mann-Whitney, ANOVA, atau Korelasi Pearson.</p>
+            <p class="body-sm" style="color:var(--text-secondary);font-size:0.8125rem">Diagram alur memilih uji: T-Test, Chi-Square, Mann-Whitney, ANOVA, atau Korelasi Pearson.</p>
           </div>
-          <button class="btn btn--secondary btn--sm" style="width:100%;justify-content:center" onclick="triggerDownloadAlert('Stats Decision Tree')">
-            <span class="material-symbols-outlined" style="font-size:16px">download</span>
-            <span>Unduh PDF (1.5 MB)</span>
+          <button class="btn btn--secondary btn--sm" style="width:100%;justify-content:center" onclick="printCheatsheet()">
+            <span class="material-symbols-outlined" style="font-size:16px">print</span>
+            <span>Cetak / Simpan PDF</span>
           </button>
         </div>
       </div>
@@ -743,38 +762,38 @@ GROUP BY 1;</code></pre>
       <button class="btn btn--primary btn--sm" onclick="resetFilters()">Reset Pencarian</button>
     </div>
 
+    <!-- NAVIGASI -->
+    <nav class="nav-prev-next">
+      <a href="ecommerce-case-study.html" class="nav-prev-next__link">
+        <span class="material-symbols-outlined" style="font-size:16px">arrow_back</span>
+        <div>
+          <div style="font-size:0.8125rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.04em">MODUL SEBELUMNYA</div>
+          <div>Studi Kasus E-Commerce</div>
+        </div>
+      </a>
+      <a href="index.html#roadmap-section" class="nav-prev-next__link nav-prev-next__link--next">
+        <div style="text-align:right">
+          <div style="font-size:0.8125rem;text-transform:uppercase;letter-spacing:0.04em;opacity:0.8">SELESAI</div>
+          <div>Kembali ke Roadmap</div>
+        </div>
+        <span class="material-symbols-outlined" style="font-size:16px">arrow_forward</span>
+      </a>
+    </nav>
+
   </main>
 
   <!-- ===== FOOTER ===== -->
-  <footer class="footer">
+  <footer class="footer" id="main-footer">
     <div class="footer__inner">
-      <div class="footer__brand">
-        <a href="index.html" class="logo">
-          <span class="logo__icon material-symbols-outlined" style="font-size:24px;color:var(--primary)">school</span>
-          <span class="logo__text">DataSchool</span>
-        </a>
-        <p class="footer__desc">
-          Platform edukasi data analytics nomor satu di Indonesia. Mengubah pemula menjadi praktisi data yang percaya diri dan siap kerja.
-        </p>
+      <div class="footer__left">
+        <p class="footer__copyright">&copy; 2026 DataSchool Indonesia. Dokumentasi analitika data terbuka untuk pembelajar mandiri.</p>
       </div>
       <div class="footer__links">
-        <div>
-          <h4 class="footer__col-title">Kurikulum</h4>
-          <a href="sql-tutorial.html" class="footer__link">SQL Tutorial</a>
-          <a href="data-cleaning.html" class="footer__link">Data Cleaning</a>
-          <a href="ecommerce-case-study.html" class="footer__link">Studi Kasus E-Commerce</a>
-          <a href="cheatsheets.html" class="footer__link">Cheatsheets</a>
-        </div>
-        <div>
-          <h4 class="footer__col-title">Komunitas</h4>
-          <a href="https://discord.com" target="_blank" class="footer__link">Discord Komunitas</a>
-          <a href="https://github.com" target="_blank" class="footer__link">GitHub Open Source</a>
-          <a href="https://linkedin.com" target="_blank" class="footer__link">LinkedIn Network</a>
-        </div>
+        <a href="fundamental.html" class="footer__link">Fondasi</a>
+        <a href="sql-tutorial.html" class="footer__link">SQL</a>
+        <a href="python-tutorial.html" class="footer__link">Python</a>
+        <a href="cheatsheets.html" class="footer__link">Cheatsheets</a>
       </div>
-    </div>
-    <div class="footer__bottom">
-      <p class="footer__copy">&copy; 2026 DataSchool Indonesia. Hak Cipta Dilindungi Undang-Undang.</p>
     </div>
   </footer>
 

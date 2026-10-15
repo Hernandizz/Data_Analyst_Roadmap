@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python untuk Data Analyst — DataSchool</title>
+  <meta name="description" content="Kurikulum lengkap Python untuk Data Analyst: dari fundamental Python, NumPy, Pandas, Data Cleaning, Visualisasi, EDA, hingga Statistik dan Portofolio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="main-header">
+    <div class="header__inner">
+      <div class="header__left">
+        <a href="index.html" class="logo">
+          <span class="logo__icon material-symbols-outlined">school</span>
+          <span class="logo__text">DataSchool</span>
+        </a>
+        <nav class="nav-desktop" id="desktop-nav">
+          <a href="fundamental.html" class="nav-link">Fondasi</a>
+          <a href="sql-tutorial.html" class="nav-link">SQL</a>
+          <a href="python-tutorial.html" class="nav-link active">Python</a>
+          <a href="powerbi-tutorial.html" class="nav-link">Power BI</a>
+          <a href="excel-tutorial.html" class="nav-link">Excel</a>
+          <a href="ecommerce-case-study.html" class="nav-link">Studi Kasus</a>
+          <a href="cheatsheets.html" class="nav-link">Cheatsheets</a>
+        </nav>
+      </div>
+      <div class="header__right">
+        <div class="search-bar" id="global-search">
+          <span class="material-symbols-outlined search-bar__icon">search</span>
+          <input type="text" placeholder="Cari materi data..." class="search-bar__input" id="search-input">
+          <kbd class="search-bar__kbd">/</kbd>
+        </div>
+        <div class="header__actions">
+          <button class="btn-icon" title="Ganti tema terang / gelap" id="theme-toggle">
+            <span class="material-symbols-outlined">dark_mode</span>
+          </button>
+        </div>
+      </div>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Buka menu navigasi">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE NAV DRAWER ===== -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-drawer__overlay" id="drawer-overlay"></div>
+    <div class="mobile-drawer__content">
+      <div class="mobile-drawer__header">
+        <a href="index.html" class="logo">
+          <span class="logo__icon material-symbols-outlined">school</span>
+          <span class="logo__text">DataSchool</span>
+        </a>
+        <button class="btn-icon" id="close-drawer" aria-label="Tutup menu navigasi">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <nav class="mobile-drawer__nav">
+        <a href="index.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">home</span>Beranda
+        </a>
+        <a href="fundamental.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">auto_stories</span>Fondasi
+        </a>
+        <a href="sql-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">database</span>SQL
+        </a>
+        <a href="python-tutorial.html" class="mobile-nav-link mobile-nav-link--active">
+          <span class="material-symbols-outlined">code</span>Python
+        </a>
+        <a href="powerbi-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">monitoring</span>Power BI
+        </a>
+        <a href="excel-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">grid_on</span>Excel
+        </a>
+        <a href="data-cleaning.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">cleaning_services</span>Data Cleaning
+        </a>
+        <a href="ecommerce-case-study.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">analytics</span>Studi Kasus
+        </a>
+        <a href="cheatsheets.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">menu_book</span>Cheatsheets
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="main">
+    <!-- Hero -->
+    <section class="content-hero" id="python-hero">
+      <div class="content-hero__container">
+        <div class="content-hero__breadcrumb">
+          <a href="index.html">Beranda</a>
+          <span class="material-symbols-outlined" style="font-size:16px">chevron_right</span>
+          <span>Python untuk Data Analyst</span>
+        </div>
+        <div class="content-hero__badge">
+          <span class="material-symbols-outlined" style="font-size:14px">code</span>
+          <span>PYTHON & DATA SCIENCE</span>
+        </div>
+        <h1 class="content-hero__title">Python untuk Data Analyst</h1>
+        <p class="content-hero__subtitle">
+          Kurikulum lengkap 12 modul: dari fundamental Python, NumPy, Pandas, Data Cleaning & Preprocessing, Visualisasi, EDA, Statistik, hingga Proyek Portofolio.
+        </p>
+        <div class="content-hero__meta">
+          <span class="content-hero__meta-item">
+            <span class="material-symbols-outlined" style="font-size:18px">menu_book</span>
+            12 Modul
+          </span>
+          <span class="content-hero__meta-item">
+            <span class="material-symbols-outlined" style="font-size:18px">signal_cellular_alt</span>
+            Pemula → Mahir
+          </span>
+          <span class="content-hero__meta-item">
+            <span class="material-symbols-outlined" style="font-size:18px">schedule</span>
+            ~40 Jam
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Body -->
+    <section class="section" id="python-content">
+      <div class="section__container">
+        <div class="content-layout content-layout--toc">
+          <!-- Sidebar -->
+          <aside class="content-sidebar" id="kurikulum-sidebar">
+            <div class="sidebar__section-title">Fundamental</div>
+            <a href="fundamental.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">auto_stories</span>Fondasi Data Analytics</a>
+            <a href="sql-tutorial.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">database</span>SQL Analytics</a>
+            <a href="python-tutorial.html" class="sidebar__item active"><span class="material-symbols-outlined" style="font-size:16px">code</span>Python & Pandas</a>
+            <div class="sidebar__section-title">Alat & Pelaporan</div>
+            <a href="data-cleaning.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">cleaning_services</span>Data Cleaning</a>
+            <a href="powerbi-tutorial.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">monitoring</span>Power BI</a>
+            <a href="excel-tutorial.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">grid_on</span>Excel & Reporting</a>
+            <div class="sidebar__section-title">Praktik & Referensi</div>
+            <a href="ecommerce-case-study.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">analytics</span>Studi Kasus E-Commerce</a>
+            <a href="cheatsheets.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">menu_book</span>Cheatsheets</a>
+          </aside>
+
+          <!-- Main Content -->
+          <div class="content-body">
+            <!-- Level 1 -->
+            <div class="content-divider">
+              <span class="material-symbols-outlined">foundation</span>
+              <h2>Level 1: Fondasi Python</h2>
+              <p>Dasar pemrograman Python untuk pemula</p>
+            </div>
+
+            <article class="content-article" id="mod01">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#047857,#10B981)">
+                  <span class="material-symbols-outlined">download</span>
+                </div>
+                <div>
+                  <h2>01. Pengenalan Python & Setup</h2>
+                  <p class="article-header__sub">Mengapa Python untuk DA, instalasi, Jupyter Notebook, pip, virtual environment</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Memahami mengapa Python menjadi bahasa utama untuk Data Analyst. Setup lingkungan kerja dengan <strong>Anaconda</strong> atau <strong>pip</strong>, konfigurasi <strong>Jupyter Notebook</strong>, dan konsep virtual environment.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">school</span> Yang Akan Dipelajari</h4>
+                  <ul>
+                    <li>Instalasi Python via Anaconda atau python.org</li>
+                    <li>Menjalankan Jupyter Notebook dan JupyterLab</li>
+                    <li>Manajemen package dengan pip dan conda</li>
+                    <li>Virtual environment untuk isolasi proyek</li>
+                  </ul>
+                </div>
+                <div class="featured-card__chips" style="margin-top:1rem">
+                  <span class="chip">Pemula</span>
+                  <span class="chip">Setup</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="mod02">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#047857,#10B981)">
+                  <span class="material-symbols-outlined">data_object</span>
+                </div>
+                <div>
+                  <h2>02. Variabel, Tipe Data & Operator</h2>
+                  <p class="article-header__sub">int, float, str, bool, casting, operator aritmatika/logika, f-string</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Mempelajari tipe data primitif Python (<code>int</code>, <code>float</code>, <code>str</code>, <code>bool</code>), type casting, operator aritmatika dan logika, serta format string dengan f-string.</p>
+                <div class="featured-card__chips" style="margin-top:1rem">
+                  <span class="chip">Pemula</span>
+                  <span class="chip">Fundamental</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="mod03">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#047857,#10B981)">
+                  <span class="material-symbols-outlined">view_list</span>
+                </div>
+                <div>
+                  <h2>03. Struktur Data: List, Dict, Tuple, Set</h2>
+                  <p class="article-header__sub">Indexing, slicing, list comprehension, nested structures</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Menguasai empat struktur data inti Python: <strong>List</strong>, <strong>Dictionary</strong>, <strong>Tuple</strong>, dan <strong>Set</strong>. Termasuk indexing, slicing, list comprehension, dan nested structures.</p>
+                <div class="featured-card__chips" style="margin-top:1rem">
+                  <span class="chip">Pemula</span>
+                  <span class="chip">Data Structures</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="mod04">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#047857,#10B981)">
+                  <span class="material-symbols-outlined">account_tree</span>
+                </div>
+                <div>
+                  <h2>04. Control Flow & Fungsi</h2>
+                  <p class="article-header__sub">if/elif/else, for, while, def, lambda, *args/**kwargs, scope</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Kontrol alur program dengan <code>if/elif/else</code>, loop <code>for</code> dan <code>while</code>, serta membuat fungsi dengan <code>def</code>, <code>lambda</code>, <code>*args</code>/<code>**kwargs</code>, dan konsep scope.</p>
+                <div class="featured-card__chips" style="margin-top:1rem">
+                  <span class="chip">Pemula - Menengah</span>
+                  <span class="chip">Logic</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Level 2 -->
+            <div class="content-divider">
+              <span class="material-symbols-outlined">science</span>
+              <h2>Level 2: Library Inti Data Science</h2>
+              <p>NumPy dan Pandas — dua library paling penting</p>
+            </div>
+
+            <article class="content-article" id="mod05">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#D97706,#FBBF24)">
+                  <span class="material-symbols-outlined">grid_4x4</span>
+                </div>
+                <div>
+                  <h2>05. NumPy: Komputasi Numerik</h2>
+                  <p class="article-header__sub">ndarray, broadcasting, vectorization, operasi statistik, reshape, random</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Belajar <strong>NumPy</strong> untuk komputasi numerik: membuat dan memanipulasi array multidimensi, broadcasting, vectorization, operasi statistik, reshape, dan random number generation.</p>
+                <div class="featured-card__chips" style="margin-top:1rem">
+                  <span class="chip">Menengah</span>
+                  <span class="chip">NumPy</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="mod06">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#D97706,#FBBF24)">
+                  <span class="material-symbols-outlined">table_chart</span>
+                </div>
+                <div>
+                  <h2>06. Pandas: Manipulasi Data</h2>
+                  <p class="article-header__sub">Series, DataFrame, read_csv/excel, filtering, loc/iloc, sorting, missing values</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Menguasai <strong>Pandas</strong> untuk manipulasi data tabular: <code>Series</code>, <code>DataFrame</code>, membaca file CSV/Excel, filtering, seleksi data dengan <code>loc/iloc</code>, sorting, dan handling missing values.</p>
+                <div class="featured-card__chips" style="margin-top:1rem">
+                  <span class="chip">Menengah</span>
+                  <span class="chip">Pandas</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="mod07">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#D97706,#FBBF24)">
+                  <span class="material-symbols-outlined">merge</span>
+                </div>
+                <div>
+                  <h2>07. Pandas Lanjutan: GroupBy, Merge, Pivot</h2>
+                  <p class="article-header__sub">groupby(), agg(), merge(), concat(), pivot_table(), melt(), apply()</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Teknik Pandas tingkat lanjut: <code>groupby()</code>, <code>agg()</code>, <code>merge()</code>, <code>concat()</code>, <code>pivot_table()</code>, <code>melt()</code>, <code>apply()</code>, dan <code>map()</code> untuk analisis data kompleks.</p>
+                <div class="featured-card__chips" style="margin-top:1rem">
+                  <span class="chip">Menengah - Mahir</span>
+                  <span class="chip">Pandas Advanced</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Level 3 -->
+            <div class="content-divider">
+              <span class="material-symbols-outlined">auto_fix_high</span>
+              <h2>Level 3: Data Wrangling & Visualisasi</h2>
+              <p>Pembersihan data dan penyajian visual</p>
+            </div>
+
+            <article class="content-article" id="mod08">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#EA580C,#FB923C)">
+                  <span class="material-symbols-outlined">cleaning_services</span>
+                </div>
+                <div>
+                  <h2>08. Data Cleaning & Preprocessing</h2>
+                  <p class="article-header__sub">Nulls, duplikasi, outlier (IQR/Z-score), encoding, normalisasi, regex, pipeline</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Teknik pembersihan data profesional: handling nulls, duplikasi, deteksi outlier (IQR dan Z-score), encoding kategorikal, normalisasi, regex, dan membangun data pipeline.</p>
+                <div class="featured-card__chips" style="margin-top:1rem">
+                  <span class="chip">Menengah - Mahir</span>
+                  <span class="chip">Data Cleaning</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="mod09">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#EA580C,#FB923C)">
+                  <span class="material-symbols-outlined">insert_chart</span>
+                </div>
+                <div>
+                  <h2>09. Visualisasi Data: Matplotlib & Seaborn</h2>
+                  <p class="article-header__sub">figure, axes, subplot, heatmap, pairplot, boxplot, customization & styling</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Membuat visualisasi data profesional dengan <strong>Matplotlib</strong> (figure, axes, subplot) dan <strong>Seaborn</strong> (heatmap, pairplot, boxplot) termasuk customization dan styling.</p>
+                <div class="featured-card__chips" style="margin-top:1rem">
+                  <span class="chip">Menengah - Mahir</span>
+                  <span class="chip">Visualization</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Level 4 -->
+            <div class="content-divider">
+              <span class="material-symbols-outlined">analytics</span>
+              <h2>Level 4: Analisis & Statistik</h2>
+              <p>EDA dan metode statistik untuk mengambil kesimpulan</p>
+            </div>
+
+            <article class="content-article" id="mod10">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#DC2626,#F87171)">
+                  <span class="material-symbols-outlined">query_stats</span>
+                </div>
+                <div>
+                  <h2>10. Exploratory Data Analysis (EDA)</h2>
+                  <p class="article-header__sub">Alur EDA sistematis, univariate/bivariate/multivariate, profiling, storytelling</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Proses EDA sistematis: analisis univariate, bivariate, dan multivariate. Profiling data, identifikasi pola, dan data storytelling untuk komunikasi insight.</p>
+                <div class="featured-card__chips" style="margin-top:1rem">
+                  <span class="chip">Mahir</span>
+                  <span class="chip">EDA</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="mod11">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#DC2626,#F87171)">
+                  <span class="material-symbols-outlined">functions</span>
+                </div>
+                <div>
+                  <h2>11. Statistik Deskriptif & Inferensial</h2>
+                  <p class="article-header__sub">Mean, median, std, distribusi, korelasi, t-test, chi-square, confidence interval</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Statistik deskriptif (mean, median, std) dan inferensial (hypothesis testing, t-test, chi-square, confidence interval) untuk menarik kesimpulan dari data.</p>
+                <div class="featured-card__chips" style="margin-top:1rem">
+                  <span class="chip">Mahir</span>
+                  <span class="chip">Statistics</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Level 5 -->
+            <div class="content-divider">
+              <span class="material-symbols-outlined">emoji_events</span>
+              <h2>Level 5: Proyek & Portofolio</h2>
+              <p>Proyek end-to-end dan persiapan karir</p>
+            </div>
+
+            <article class="content-article" id="mod12">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#7C3AED,#A78BFA)">
+                  <span class="material-symbols-outlined">work</span>
+                </div>
+                <div>
+                  <h2>12. Proyek Portofolio & Best Practices</h2>
+                  <p class="article-header__sub">End-to-end project, Jupyter best practices, Git untuk DA, interview prep</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Membangun proyek portofolio end-to-end, best practices Jupyter Notebook, Git workflow untuk Data Analyst, struktur portofolio GitHub, dan persiapan interview.</p>
+                <div class="featured-card__chips" style="margin-top:1rem">
+                  <span class="chip">Siap Kerja</span>
+                  <span class="chip">Portfolio</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Referensi -->
+            <div class="content-divider" id="cheatsheets-py">
+              <span class="material-symbols-outlined">menu_book</span>
+              <h2>Referensi & Evaluasi</h2>
+              <p>Cheatsheet dan ujian kemampuan</p>
+            </div>
+
+            <div class="info-card info-card--primary" id="exam-py" style="margin-bottom:2rem">
+              <h4><span class="material-symbols-outlined" style="font-size:18px">menu_book</span> Cheatsheets Referensi Cepat</h4>
+              <ul>
+                <li><strong>Pandas Cheatsheet</strong> — Sintaks, metode terpenting, dan pola umum Pandas</li>
+                <li><strong>NumPy Cheatsheet</strong> — Operasi array, fungsi matematika, dan teknik broadcasting</li>
+              </ul>
+              <h4 style="margin-top:1rem"><span class="material-symbols-outlined" style="font-size:18px">edit_note</span> Evaluasi Diri Setelah Modul</h4>
+              <ul>
+                <li>Tulis ulang 5 fungsi Pandas paling sering Anda pakai tanpa melihat catatan</li>
+                <li>Bersihkan satu dataset kecil: missing value, duplikat, dan tipe data</li>
+                <li>Susun laporan EDA singkat berisi 3 insight yang bisa ditindaklanjuti</li>
+              </ul>
+            </div>
+
+            <!-- Nav Footer -->
+            <div class="content-nav-footer">
+              <a href="sql-tutorial.html" class="content-nav-footer__link content-nav-footer__link--prev">
+                <span class="material-symbols-outlined">arrow_back</span>
+                <div>
+                  <span class="content-nav-footer__label">Sebelumnya</span>
+                  <span class="content-nav-footer__title">SQL Tutorial</span>
+                </div>
+              </a>
+              <a href="data-cleaning.html" class="content-nav-footer__link content-nav-footer__link--next">
+                <div>
+                  <span class="content-nav-footer__label">Selanjutnya</span>
+                  <span class="content-nav-footer__title">Data Cleaning</span>
+                </div>
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+          <aside class="toc-rail" id="toc-rail">
+            <div class="toc-rail__title">DI HALAMAN INI</div>
+            <a href="#mod01" class="toc-rail__item active">01. Pengenalan Python &amp; Setup</a>
+            <a href="#mod02" class="toc-rail__item">02. Variabel, Tipe Data &amp; Operator</a>
+            <a href="#mod03" class="toc-rail__item">03. Struktur Data: List, Dict, Tuple, Set</a>
+            <a href="#mod04" class="toc-rail__item">04. Control Flow &amp; Fungsi</a>
+            <a href="#mod05" class="toc-rail__item">05. NumPy: Komputasi Numerik</a>
+            <a href="#mod06" class="toc-rail__item">06. Pandas: Manipulasi Data</a>
+            <a href="#mod07" class="toc-rail__item">07. Pandas Lanjutan: GroupBy, Merge, Pivot</a>
+            <a href="#mod08" class="toc-rail__item">08. Data Cleaning &amp; Preprocessing</a>
+            <a href="#mod09" class="toc-rail__item">09. Visualisasi Data: Matplotlib &amp; Seaborn</a>
+            <a href="#mod10" class="toc-rail__item">10. Exploratory Data Analysis (EDA)</a>
+            <a href="#mod11" class="toc-rail__item">11. Statistik Deskriptif &amp; Inferensial</a>
+            <a href="#mod12" class="toc-rail__item">12. Proyek Portofolio &amp; Best Practices</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="main-footer">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <p class="footer__copyright">&copy; 2026 DataSchool Indonesia. Dokumentasi analitika data terbuka untuk pembelajar mandiri.</p>
+      </div>
+      <div class="footer__links">
+        <a href="fundamental.html" class="footer__link">Fondasi</a>
+        <a href="sql-tutorial.html" class="footer__link">SQL</a>
+        <a href="python-tutorial.html" class="footer__link">Python</a>
+        <a href="cheatsheets.html" class="footer__link">Cheatsheets</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

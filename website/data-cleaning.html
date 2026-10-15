@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Cleaning: NaN & Duplikasi — DataSchool</title>
-  <meta name="description" content="80% waktu Data Analyst dihabiskan untuk merapikan dataset mentah. Pelajari strategi drop vs imputasi dengan Pandas sandbox interaktif.">
+  <meta name="description" content="80% waktu Data Analyst dihabiskan untuk merapikan dataset mentah. Pelajari strategi drop vs imputasi dengan contoh kode Pandas.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
@@ -17,27 +17,34 @@
     <div class="header__inner">
       <div class="header__left">
         <a href="index.html" class="logo">
-          <span class="logo__icon material-symbols-outlined" style="font-size:28px;color:var(--primary)">school</span>
+          <span class="logo__icon material-symbols-outlined">school</span>
           <span class="logo__text">DataSchool</span>
         </a>
-        <nav class="nav-desktop">
-          <a href="sql-tutorial.html" class="nav-link">SQL Tutorial</a>
-          <a href="data-cleaning.html" class="nav-link active">Data Cleaning</a>
-          <a href="ecommerce-case-study.html" class="nav-link">Studi Kasus E-Commerce</a>
+        <nav class="nav-desktop" id="desktop-nav">
+          <a href="fundamental.html" class="nav-link">Fondasi</a>
+          <a href="sql-tutorial.html" class="nav-link">SQL</a>
+          <a href="python-tutorial.html" class="nav-link">Python</a>
+          <a href="powerbi-tutorial.html" class="nav-link">Power BI</a>
+          <a href="excel-tutorial.html" class="nav-link">Excel</a>
+          <a href="ecommerce-case-study.html" class="nav-link">Studi Kasus</a>
           <a href="cheatsheets.html" class="nav-link">Cheatsheets</a>
         </nav>
       </div>
       <div class="header__right">
-        <div class="search-bar">
+        <div class="search-bar" id="global-search">
           <span class="material-symbols-outlined search-bar__icon">search</span>
           <input type="text" placeholder="Cari materi data..." class="search-bar__input" id="search-input">
           <kbd class="search-bar__kbd">/</kbd>
         </div>
         <div class="header__actions">
-          <div class="avatar"><span class="material-symbols-outlined">person</span></div>
+          <button class="btn-icon" title="Ganti tema terang / gelap" id="theme-toggle">
+            <span class="material-symbols-outlined">dark_mode</span>
+          </button>
         </div>
       </div>
-      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu"><span class="material-symbols-outlined">menu</span></button>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Buka menu navigasi">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
     </div>
   </header>
   <div class="mobile-drawer" id="mobile-drawer">
@@ -45,89 +52,114 @@
     <div class="mobile-drawer__content">
       <div class="mobile-drawer__header">
         <a href="index.html" class="logo">
-          <span class="logo__icon material-symbols-outlined" style="font-size:24px;color:var(--primary)">school</span>
+          <span class="logo__icon material-symbols-outlined">school</span>
           <span class="logo__text">DataSchool</span>
         </a>
-        <button class="btn-icon" id="close-drawer">
+        <button class="btn-icon" id="close-drawer" aria-label="Tutup menu navigasi">
           <span class="material-symbols-outlined">close</span>
         </button>
       </div>
       <nav class="mobile-drawer__nav">
-        <a href="index.html" class="mobile-nav-link"><span class="material-symbols-outlined">home</span>Beranda</a>
-        <a href="sql-tutorial.html" class="mobile-nav-link"><span class="material-symbols-outlined">database</span>SQL Tutorial</a>
-        <a href="data-cleaning.html" class="mobile-nav-link" style="color:var(--primary);font-weight:700"><span class="material-symbols-outlined">cleaning_services</span>Data Cleaning</a>
-        <a href="ecommerce-case-study.html" class="mobile-nav-link"><span class="material-symbols-outlined">analytics</span>Studi Kasus E-Commerce</a>
-        <a href="cheatsheets.html" class="mobile-nav-link"><span class="material-symbols-outlined">menu_book</span>Cheatsheets</a>
+        <a href="index.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">home</span>Beranda
+        </a>
+        <a href="fundamental.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">auto_stories</span>Fondasi
+        </a>
+        <a href="sql-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">database</span>SQL
+        </a>
+        <a href="python-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">code</span>Python
+        </a>
+        <a href="powerbi-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">monitoring</span>Power BI
+        </a>
+        <a href="excel-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">grid_on</span>Excel
+        </a>
+        <a href="data-cleaning.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">cleaning_services</span>Data Cleaning
+        </a>
+        <a href="ecommerce-case-study.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">analytics</span>Studi Kasus
+        </a>
+        <a href="cheatsheets.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">menu_book</span>Cheatsheets
+        </a>
       </nav>
     </div>
   </div>
 
   <main class="main">
+    <section class="content-hero">
+      <div class="content-hero__container">
+        <div class="content-hero__breadcrumb">
+          <a href="index.html">Beranda</a>
+          <span>›</span>
+          <a href="data-cleaning.html">Python &amp; Pandas</a>
+          <span>›</span>
+          <span>Pembersihan Data</span>
+        </div>
+        <div class="content-hero__badge">
+          <span class="material-symbols-outlined" style="font-size:14px">timer</span>
+          <span>Modul Pandas 04 • Estimasi Waktu: 18 Menit</span>
+        </div>
+        <h1 class="content-hero__title">Data Cleaning: Menangani Nilai Kosong (NaN) dan Duplikasi</h1>
+        <p class="content-hero__subtitle">
+          80% waktu seorang Data Analyst dihabiskan untuk merapikan dataset mentah sebelum tahap visualisasi atau modeling. Modul ini mencakup strategi diagnosa, penghapusan, dan imputasi data menggunakan Pandas.
+        </p>
+        <div class="content-hero__meta">
+          <span class="content-hero__meta-item">
+            <span class="material-symbols-outlined" style="font-size:18px">signal_cellular_alt</span>
+            Level Menengah
+          </span>
+          <span class="content-hero__meta-item">
+            <span class="material-symbols-outlined" style="font-size:18px">code</span>
+            Python &amp; Pandas
+          </span>
+          <span class="content-hero__meta-item">
+            <span class="material-symbols-outlined" style="font-size:18px">checklist</span>
+            Checklist Kualitas Data
+          </span>
+        </div>
+      </div>
+    </section>
+
     <div class="layout-docs">
       <!-- Sidebar -->
       <aside class="sidebar" id="sidebar">
-        <div class="sidebar__section-title">Pengenalan Data Analytics</div>
-        <a href="index.html" class="sidebar__item completed"><span class="material-symbols-outlined" style="font-size:16px">check_circle</span>Apa itu Data Analyst</a>
-        <a href="index.html#roadmap" class="sidebar__item completed"><span class="material-symbols-outlined" style="font-size:16px">check_circle</span>Roadmap Belajar</a>
-        <a href="index.html#tools" class="sidebar__item completed"><span class="material-symbols-outlined" style="font-size:16px">check_circle</span>Setup Tools</a>
-
-        <div class="sidebar__section-title">SQL untuk Analisis Data</div>
-        <a href="sql-tutorial.html" class="sidebar__item completed"><span class="material-symbols-outlined" style="font-size:16px">check_circle</span>SQL Sintaks Dasar</a>
-        <a href="sql-tutorial.html" class="sidebar__item completed"><span class="material-symbols-outlined" style="font-size:16px">check_circle</span>SELECT & WHERE</a>
-        <a href="cheatsheets.html#sql" class="sidebar__item">GROUP BY & HAVING</a>
-        <a href="cheatsheets.html#sql" class="sidebar__item">JOIN Masterclass</a>
-        <a href="cheatsheets.html#sql" class="sidebar__item">Window Functions</a>
-        <a href="cheatsheets.html#sql" class="sidebar__item">Subqueries</a>
-
-        <div class="sidebar__section-title">Pandas & Python</div>
-        <a href="data-cleaning.html" class="sidebar__item completed"><span class="material-symbols-outlined" style="font-size:16px">check_circle</span>Dataframe Basics</a>
-        <a href="data-cleaning.html" class="sidebar__item active"><span class="material-symbols-outlined" style="font-size:16px;font-variation-settings:'FILL' 1">play_circle</span>Cleaning Data</a>
-        <a href="ecommerce-case-study.html" class="sidebar__item">Merging Datasets</a>
-
-        <div class="sidebar__section-title">Studi Kasus & Dataset</div>
-        <a href="ecommerce-case-study.html" class="sidebar__item">E-Commerce Analysis</a>
-        <a href="ecommerce-case-study.html" class="sidebar__item">Churn Prediction</a>
+        <div class="sidebar__section-title">Fundamental</div>
+        <a href="fundamental.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">auto_stories</span>Fondasi Data Analytics</a>
+        <a href="sql-tutorial.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">database</span>SQL Analytics</a>
+        <a href="python-tutorial.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">code</span>Python & Pandas</a>
+        <div class="sidebar__section-title">Alat & Pelaporan</div>
+        <a href="data-cleaning.html" class="sidebar__item active"><span class="material-symbols-outlined" style="font-size:16px">cleaning_services</span>Data Cleaning</a>
+        <a href="powerbi-tutorial.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">monitoring</span>Power BI</a>
+        <a href="excel-tutorial.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">grid_on</span>Excel & Reporting</a>
+        <div class="sidebar__section-title">Praktik & Referensi</div>
+        <a href="ecommerce-case-study.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">analytics</span>Studi Kasus E-Commerce</a>
+        <a href="cheatsheets.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">menu_book</span>Cheatsheets</a>
       </aside>
 
       <!-- Content -->
       <div class="content-area">
-        <div class="breadcrumbs">
-          <a href="index.html">Beranda</a><span class="breadcrumbs__sep">›</span>
-          <a href="#">Python & Pandas</a><span class="breadcrumbs__sep">›</span>
-          <span>Pembersihan Data</span>
-        </div>
-
-        <div style="margin-bottom:1rem">
-          <span class="badge badge--info">
-            <span class="material-symbols-outlined" style="font-size:12px">timer</span>
-            Modul Pandas 04 • Estimasi Waktu: 18 Menit
-          </span>
-        </div>
-
-        <h1 style="font-size:1.875rem;font-weight:700;line-height:2.25rem;letter-spacing:-0.02em;color:var(--on-surface);margin-bottom:1rem">
-          Data Cleaning: Menangani Nilai Kosong (NaN) dan Duplikasi
-        </h1>
-
-        <p style="font-size:1rem;line-height:1.75;color:var(--text-secondary);margin-bottom:2rem;max-width:56rem">
-          80% waktu seorang Data Analyst dihabiskan untuk merapikan dataset mentah sebelum tahap visualisasi atau modeling. Modul ini mencakup strategi diagnosa, penghapusan, dan imputasi data menggunakan Pandas.
-        </p>
-
         <!-- Metadata Cards -->
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;margin-bottom:3rem">
           <div style="padding:1rem;background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md)">
-            <div style="font-size:0.6875rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.25rem">Metode Utama</div>
+            <div style="font-size:0.8125rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.25rem">Metode Utama</div>
             <div style="font-size:0.8125rem;font-weight:700;color:var(--on-surface)"><code class="code-inline">.isna()</code> / <code class="code-inline">.fillna()</code></div>
           </div>
           <div style="padding:1rem;background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md)">
-            <div style="font-size:0.6875rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.25rem">Tipe Masalah</div>
+            <div style="font-size:0.8125rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.25rem">Tipe Masalah</div>
             <div style="font-size:0.8125rem;font-weight:700;color:var(--on-surface)">MCAR & MAR</div>
           </div>
           <div style="padding:1rem;background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md)">
-            <div style="font-size:0.6875rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.25rem">Efek Samping</div>
+            <div style="font-size:0.8125rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.25rem">Efek Samping</div>
             <div style="font-size:0.8125rem;font-weight:700;color:var(--error)">Distortion & Leakage</div>
           </div>
           <div style="padding:1rem;background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md)">
-            <div style="font-size:0.6875rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.25rem">Dataset Sampel</div>
+            <div style="font-size:0.8125rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.25rem">Dataset Sampel</div>
             <div style="font-size:0.8125rem;font-weight:700;color:var(--on-surface)">13,000 baris</div>
           </div>
         </div>
@@ -151,7 +183,7 @@
               <span class="dot dot--green" style="width:8px;height:8px"></span>
               <span style="margin-left:0.5rem">bash • IPython Console</span>
             </span>
-            <span style="font-size:0.6875rem;color:var(--text-secondary)">Python 3.11.4 • Pandas 2.3.0</span>
+            <span style="font-size:0.8125rem;color:var(--text-secondary)">Python 3.11.4 • Pandas 2.3.0</span>
           </div>
           <div class="code-sandbox__editor">
 <pre style="margin:0"><code><span class="cm">In [1]:</span> <span class="kw">import</span> pandas <span class="kw">as</span> pd
@@ -173,7 +205,7 @@ payment_method    <span style="color:#94A3B8">0</span></code></pre>
         <!-- Section 02: Metode Penanganan -->
         <div style="display:flex;align-items:center;gap:0.75rem;margin-top:3rem;margin-bottom:1rem">
           <span style="width:32px;height:32px;border-radius:var(--radius-full);background:var(--primary);color:var(--on-primary);display:flex;align-items:center;justify-content:center;font-size:0.8125rem;font-weight:700;flex-shrink:0">02</span>
-          <h2 style="font-size:1.5rem;font-weight:600;line-height:2rem;letter-spacing:-0.015em">Metode Penanganan: Drop vs Imputasi</h2>
+          <h2 id="strategi" style="font-size:1.5rem;font-weight:600;line-height:2rem;letter-spacing:-0.015em;scroll-margin-top:96px">Metode Penanganan: Drop vs Imputasi</h2>
         </div>
 
         <p style="font-size:0.9375rem;line-height:1.75;color:var(--text-secondary);margin-bottom:1.5rem">
@@ -185,7 +217,7 @@ payment_method    <span style="color:#94A3B8">0</span></code></pre>
           <!-- Method 1: Drop -->
           <div style="background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden">
             <div style="padding:0.75rem 1rem;background:var(--secondary-surface);border-bottom:1px solid var(--border-default);display:flex;align-items:center;gap:0.5rem">
-              <span class="badge badge--warning" style="text-transform:uppercase;font-size:0.625rem">Metode 1: Penghapusan</span>
+              <span class="badge badge--warning" style="text-transform:uppercase;font-size:0.8125rem">Metode 1: Penghapusan</span>
               <span class="material-symbols-outlined" style="font-size:16px;color:var(--text-secondary);margin-left:auto">delete</span>
             </div>
             <div style="padding:1.25rem">
@@ -199,7 +231,7 @@ payment_method    <span style="color:#94A3B8">0</span></code></pre>
 df = df.dropna(subset=[<span class="str">'email'</span>])</code></pre>
                 </div>
               </div>
-              <div style="display:flex;align-items:center;gap:0.375rem;margin-top:0.75rem;font-size:0.75rem;color:var(--warning)">
+              <div style="display:flex;align-items:center;gap:0.375rem;margin-top:0.75rem;font-size:0.8125rem;color:var(--warning)">
                 <span class="material-symbols-outlined" style="font-size:14px">warning</span>
                 Menyebabkan berkurangnya ukuran sampel secara permanen.
               </div>
@@ -209,7 +241,7 @@ df = df.dropna(subset=[<span class="str">'email'</span>])</code></pre>
           <!-- Method 2: Imputasi -->
           <div style="background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden">
             <div style="padding:0.75rem 1rem;background:var(--secondary-surface);border-bottom:1px solid var(--border-default);display:flex;align-items:center;gap:0.5rem">
-              <span class="badge badge--success" style="text-transform:uppercase;font-size:0.625rem">Metode 2: Imputasi Statistik</span>
+              <span class="badge badge--success" style="text-transform:uppercase;font-size:0.8125rem">Metode 2: Imputasi Statistik</span>
               <span class="material-symbols-outlined" style="font-size:16px;color:var(--text-secondary);margin-left:auto">calculate</span>
             </div>
             <div style="padding:1.25rem">
@@ -224,7 +256,7 @@ median_val = df[<span class="str">'age'</span>].median()
 df[<span class="str">'age'</span>] = df[<span class="str">'age'</span>].fillna(median_val)</code></pre>
                 </div>
               </div>
-              <div style="display:flex;align-items:center;gap:0.375rem;margin-top:0.75rem;font-size:0.75rem;color:var(--primary)">
+              <div style="display:flex;align-items:center;gap:0.375rem;margin-top:0.75rem;font-size:0.8125rem;color:var(--primary)">
                 <span class="material-symbols-outlined" style="font-size:14px">check_circle</span>
                 Menjaga ukuran observasi tanpa mengorbankan sample size.
               </div>
@@ -235,12 +267,12 @@ df[<span class="str">'age'</span>] = df[<span class="str">'age'</span>].fillna(m
         <!-- Section 03: Interactive Sandbox -->
         <div id="sandbox" style="display:flex;align-items:center;gap:0.75rem;margin-top:3rem;margin-bottom:0.5rem">
           <span style="width:32px;height:32px;border-radius:var(--radius-full);background:var(--primary);color:var(--on-primary);display:flex;align-items:center;justify-content:center;font-size:0.8125rem;font-weight:700;flex-shrink:0">03</span>
-          <h2 style="font-size:1.5rem;font-weight:600;line-height:2rem;letter-spacing:-0.015em">Fitur Coba Sendiri (Interactive Pandas Sandbox)</h2>
+          <h2 style="font-size:1.5rem;font-weight:600;line-height:2rem;letter-spacing:-0.015em">Contoh Kode Pembersihan (Sandbox Pandas)</h2>
         </div>
 
         <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem">
-          <span style="width:8px;height:8px;border-radius:50%;background:var(--primary);animation:pulse-icon 2s infinite"></span>
-          <span style="font-size:0.75rem;font-weight:600;color:var(--primary)">Virtual Kernel Siap</span>
+          <span style="width:8px;height:8px;border-radius:50%;background:var(--primary);display:inline-block"></span>
+          <span style="font-size:0.8125rem;font-weight:600;color:var(--primary)">Contoh hasil siap ditampilkan</span>
         </div>
 
         <div class="code-sandbox" id="sandbox-pandas-1">
@@ -249,13 +281,13 @@ df[<span class="str">'age'</span>] = df[<span class="str">'age'</span>].fillna(m
               <span class="material-symbols-outlined" style="font-size:14px;color:var(--primary)">code</span>
               <span>data_cleaner.py</span>
             </span>
-            <span style="font-size:0.6875rem;color:var(--text-secondary)">Memory: 1.2 MB • Engine: Pyodide Micro-Python</span>
+            <span style="font-size:0.8125rem;color:var(--text-secondary)">Contoh hasil pada data latihan</span>
             <div style="display:flex;gap:0.5rem;margin-left:auto">
-              <button class="btn btn--secondary btn--sm" style="font-size:0.6875rem">
-                <span class="material-symbols-outlined" style="font-size:14px">restart_alt</span> Reset
+              <button class="btn btn--secondary btn--sm" style="font-size:0.8125rem" onclick="resetSandbox('sandbox-pandas-1')">
+                <span class="material-symbols-outlined" style="font-size:14px">restart_alt</span> Reset Hasil
               </button>
-              <button class="btn btn--primary btn--sm" style="font-size:0.6875rem" onclick="runSandboxCode('sandbox-pandas-1')">
-                <span class="material-symbols-outlined" style="font-size:14px">play_arrow</span> Jalankan Kode (Run Python)
+              <button class="btn btn--primary btn--sm" style="font-size:0.8125rem" onclick="runSandboxCode('sandbox-pandas-1')">
+                <span class="material-symbols-outlined" style="font-size:14px">play_arrow</span> Tampilkan Contoh Hasil
               </button>
             </div>
           </div>
@@ -273,17 +305,15 @@ df_clean = df_clean.drop_duplicates(subset=[<span class="str">'customer_id'</spa
           </div>
           <div class="code-sandbox__output">
             <div style="margin-bottom:0.75rem">
-              <div style="display:flex;align-items:center;gap:1.5rem;font-size:0.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-secondary);margin-bottom:0.5rem">
-                <span>DATAFRAME VISUAL INSPECTOR</span>
+              <div style="display:flex;align-items:center;gap:1.5rem;font-size:0.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-secondary);margin-bottom:0.5rem;flex-wrap:wrap">
+                <span>PRATINJAU DATAFRAME</span>
                 <span style="display:flex;align-items:center;gap:0.375rem">
-                  <span style="color:var(--primary)">Status: Menampilkan Data Sebelum Pembersihan</span>
+                  <span style="color:var(--primary)">Perbandingan sebelum &amp; sesudah pembersihan</span>
                 </span>
               </div>
-              <div style="display:flex;gap:1rem;font-size:0.6875rem;margin-bottom:0.75rem">
-                <label style="display:flex;align-items:center;gap:0.25rem;color:var(--text-secondary);cursor:pointer">
-                  <input type="radio" name="view" checked style="accent-color:var(--primary)"> Sebelum Pembersihan (Raw Data)
-                </label>
-                <span style="color:var(--text-secondary)">NaN terdeteksi</span>
+              <div style="display:flex;gap:1rem;font-size:0.8125rem;margin-bottom:0.75rem;flex-wrap:wrap">
+                <span style="display:flex;align-items:center;gap:0.25rem;color:var(--text-secondary)">Sebelum: 2 nilai NaN &amp; 1 duplikat</span>
+                <span style="display:flex;align-items:center;gap:0.25rem;color:var(--primary)">Sesudah: bersih, 3 baris unik</span>
               </div>
             </div>
 
@@ -291,7 +321,7 @@ df_clean = df_clean.drop_duplicates(subset=[<span class="str">'customer_id'</spa
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
               <!-- Before -->
               <div class="data-table-wrap" style="margin:0">
-                <div style="font-size:0.6875rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;padding:0.5rem 0.75rem;background:var(--canvas-sunken);border-bottom:1px solid var(--border-default)">
+                <div style="font-size:0.8125rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;padding:0.5rem 0.75rem;background:var(--canvas-sunken);border-bottom:1px solid var(--border-default)">
                   5 baris teratas (Head Preview)
                 </div>
                 <table class="data-table">
@@ -308,7 +338,7 @@ df_clean = df_clean.drop_duplicates(subset=[<span class="str">'customer_id'</spa
               </div>
               <!-- After -->
               <div class="data-table-wrap" style="margin:0">
-                <div style="font-size:0.6875rem;font-weight:700;color:var(--primary);text-transform:uppercase;padding:0.5rem 0.75rem;background:var(--primary-light);border-bottom:1px solid var(--border-default)">
+                <div style="font-size:0.8125rem;font-weight:700;color:var(--primary);text-transform:uppercase;padding:0.5rem 0.75rem;background:var(--primary-light);border-bottom:1px solid var(--border-default)">
                   Sesudah Pembersihan (Cleaned) — Tervalidasi rapi
                 </div>
                 <table class="data-table">
@@ -320,7 +350,7 @@ df_clean = df_clean.drop_duplicates(subset=[<span class="str">'customer_id'</spa
                     <tr><td>C103</td><td>Dimas Anggara</td><td>dimas@web.id</td><td class="numeric" style="color:var(--primary);font-weight:600">29*</td><td class="numeric" style="color:var(--primary);font-weight:600">480.0</td></tr>
                   </tbody>
                 </table>
-                <div style="font-size:0.6875rem;color:var(--text-secondary);padding:0.5rem 0.75rem;background:var(--canvas-sunken)">
+                <div style="font-size:0.8125rem;color:var(--text-secondary);padding:0.5rem 0.75rem;background:var(--canvas-sunken)">
                   * Nilai baris C102 dihapus karena ketiadaan email.<br>
                   Duplikat C101 direduksi. Usia C103 diimputasi median (29).
                 </div>
@@ -353,8 +383,8 @@ X_test[<span class="str">'age'</span>].fillna(median_age, inplace=<span class="k
 
         <!-- Checklist Praktis -->
         <div id="checklist" style="margin-top:2.5rem;padding:1.5rem;background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md)">
-          <h3 style="font-size:0.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--primary);margin-bottom:0.75rem">
-            ✅ Checklist Praktis
+          <h3 style="font-size:0.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--primary);margin-bottom:0.75rem">
+            <span class="material-symbols-outlined" style="font-size:18px">checklist</span> Checklist Praktis
           </h3>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;font-size:0.8125rem;color:var(--text-secondary)">
             <li style="display:flex;align-items:center;gap:0.5rem"><span class="material-symbols-outlined" style="font-size:16px;color:var(--primary)">check_circle</span>Cek null via <code class="code-inline">.isnull().sum()</code></li>
@@ -366,12 +396,12 @@ X_test[<span class="str">'age'</span>].fillna(median_age, inplace=<span class="k
 
         <!-- Navigation -->
         <div class="nav-prev-next" style="margin-top:3rem">
-          <a href="sql-tutorial.html" class="nav-prev-next__link">
+          <a href="python-tutorial.html" class="nav-prev-next__link">
             <span class="material-symbols-outlined" style="font-size:16px">arrow_back</span>
-            <div><div style="font-size:0.6875rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.04em">MODUL SEBELUMNYA</div><div>SQL SELECT & WHERE</div></div>
+            <div><div style="font-size:0.8125rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.04em">MODUL SEBELUMNYA</div><div>Python & Pandas</div></div>
           </a>
-          <a href="ecommerce-case-study.html" class="nav-prev-next__link nav-prev-next__link--next">
-            <div style="text-align:right"><div style="font-size:0.6875rem;text-transform:uppercase;letter-spacing:0.04em;opacity:0.8">STUDI KASUS LANJUTAN</div><div>E-Commerce Cohort Retention</div></div>
+          <a href="powerbi-tutorial.html" class="nav-prev-next__link nav-prev-next__link--next">
+            <div style="text-align:right"><div style="font-size:0.8125rem;text-transform:uppercase;letter-spacing:0.04em;opacity:0.8">MODUL SELANJUTNYA</div><div>Power BI</div></div>
             <span class="material-symbols-outlined" style="font-size:16px">arrow_forward</span>
           </a>
         </div>
@@ -381,14 +411,26 @@ X_test[<span class="str">'age'</span>].fillna(median_age, inplace=<span class="k
       <aside class="toc-rail">
         <div class="toc-rail__title">DI HALAMAN INI</div>
         <a href="#diagnosa" class="toc-rail__item active">1. Diagnosis Dataset</a>
-        <a href="#strategi" class="toc-rail__item">2. Strategi Imputasi</a>
+        <a href="#strategi" class="toc-rail__item">2. Strategi Drop vs Imputasi</a>
         <a href="#sandbox" class="toc-rail__item">3. Sandbox Interaktif</a>
         <a href="#checklist" class="toc-rail__item">4. Checklist Kualitas Data</a>
       </aside>
     </div>
   </main>
 
-  <footer class="footer"><div class="footer__inner"><div class="footer__left"><p class="footer__copyright">&copy; 2026 DataSchool Indonesia. Dokumentasi analitika data terbuka untuk pembelajar mandiri.</p></div><div class="footer__links"><a href="cheatsheets.html" class="footer__link">Cheatsheets</a><a href="ecommerce-case-study.html" class="footer__link">Studi Kasus</a><a href="sql-tutorial.html" class="footer__link">SQL Tutorial</a></div></div></footer>
+  <footer class="footer" id="main-footer">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <p class="footer__copyright">&copy; 2026 DataSchool Indonesia. Dokumentasi analitika data terbuka untuk pembelajar mandiri.</p>
+      </div>
+      <div class="footer__links">
+        <a href="fundamental.html" class="footer__link">Fondasi</a>
+        <a href="sql-tutorial.html" class="footer__link">SQL</a>
+        <a href="python-tutorial.html" class="footer__link">Python</a>
+        <a href="cheatsheets.html" class="footer__link">Cheatsheets</a>
+      </div>
+    </div>
+  </footer>
   <script src="main.js"></script>
 </body>
 </html>

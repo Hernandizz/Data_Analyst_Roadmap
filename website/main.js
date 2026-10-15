@@ -99,25 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ===== INTERSECTION OBSERVER FOR REVEAL ANIMATIONS (SAFE FALLBACK) =====
-  const revealElements = document.querySelectorAll('.reveal');
-  if (revealElements.length > 0 && 'IntersectionObserver' in window) {
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.05
-    });
-
-    revealElements.forEach(el => {
-      revealObserver.observe(el);
-    });
-  }
-
   // ===== ACTIVE NAV LINK =====
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   const navLinks = document.querySelectorAll('.nav-link');
@@ -177,16 +158,57 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3000);
   };
 
-  // ===== DOWNLOAD ALERT =====
-  window.triggerDownloadAlert = function(name) {
-    showToast(`⬇️ Mengunduh "${name}"... (Demo — belum terhubung ke server)`);
+  // ===== DOWNLOAD DATASET (Contoh CSV dibangkitkan di browser) =====
+  window.downloadSampleCsv = function() {
+    const header = 'order_id,user_id,order_timestamp,gross_amount,status\n';
+    const names = ['usr_88120', 'usr_88121', 'usr_88122', 'usr_88123', 'usr_88124'];
+    const statuses = ['COMPLETED', 'COMPLETED', 'CANCELLED', 'COMPLETED', 'REFUNDED'];
+    const rows = [];
+    for (let i = 0; i < 50; i++) {
+      const d = new Date(2024, 0, 1 + (i % 28), 9 + (i % 9), (i * 7) % 60);
+      const amount = (120000 + ((i * 37000) % 880000)).toFixed(2);
+      const ts = d.toISOString().slice(0, 19).replace('T', ' ');
+      rows.push([
+        'ord_' + (990200 + i),
+        names[i % names.length],
+        ts,
+        amount,
+        statuses[i % statuses.length]
+      ].join(','));
+    }
+    const blob = new Blob([header + rows.join('\n')], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'dataset_ecommerce_contoh.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    showToast('Contoh dataset (50 baris) diunduh sebagai CSV.');
+  };
+
+  // ===== CETAK / SIMPAN PDF =====
+  window.printCheatsheet = function() {
+    window.print();
+  };
+
+  // ===== TAMPATKAN / SEMBUNYIKAN SOLUSI (studi kasus) =====
+  window.toggleSolution = function(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const btn = document.querySelector('[onclick="toggleSolution(\'' + id + '\')"]');
+    const label = btn ? btn.querySelector('span:last-child') : null;
+    if (label && !el.dataset.showLabel) el.dataset.showLabel = label.textContent;
+    const willShow = !el.classList.contains('show');
+    el.classList.toggle('show', willShow);
+    if (label) label.textContent = willShow ? 'Sembunyikan Solusi' : el.dataset.showLabel;
   };
 
   // ===== CHEATSHEET SEARCH & FILTER =====
   const searchInput = document.getElementById('cheatsheet-search');
   const filterPills = document.querySelectorAll('.category-pill');
   const categorySections = document.querySelectorAll('.category-section');
-  const snippetCards = document.querySelectorAll('.snippet-card');
   const noResults = document.getElementById('no-results-state');
   const clearSearchBtn = document.getElementById('clear-search-btn');
 
@@ -196,12 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
     filterPills.forEach(pill => {
       pill.addEventListener('click', () => {
         activeFilter = pill.getAttribute('data-filter');
-        filterPills.forEach(p => {
-          p.classList.remove('bg-primary', 'text-on-primary');
-          p.classList.add('bg-surface-container-high', 'text-on-surface');
-        });
-        pill.classList.remove('bg-surface-container-high', 'text-on-surface');
-        pill.classList.add('bg-primary', 'text-on-primary');
+        filterPills.forEach(p => p.classList.toggle('active', p === pill));
         applyFilters();
       });
     });
@@ -222,6 +239,15 @@ document.addEventListener('DOMContentLoaded', () => {
       clearSearchBtn.style.display = 'none';
       applyFilters();
     });
+  }
+
+  if (searchInput) {
+    const initialQuery = new URLSearchParams(window.location.search).get('q');
+    if (initialQuery) {
+      searchInput.value = initialQuery;
+      if (clearSearchBtn) clearSearchBtn.style.display = 'flex';
+      applyFilters();
+    }
   }
 
   function applyFilters() {
@@ -264,15 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
     activeFilter = 'all';
     if (searchInput) searchInput.value = '';
     if (clearSearchBtn) clearSearchBtn.style.display = 'none';
-    filterPills.forEach((p, i) => {
-      if (i === 0) {
-        p.classList.add('bg-primary', 'text-on-primary');
-        p.classList.remove('bg-surface-container-high', 'text-on-surface');
-      } else {
-        p.classList.remove('bg-primary', 'text-on-primary');
-        p.classList.add('bg-surface-container-high', 'text-on-surface');
-      }
-    });
+    filterPills.forEach(p => p.classList.toggle('active', p.getAttribute('data-filter') === 'all'));
     applyFilters();
   };
 
@@ -285,44 +303,37 @@ document.addEventListener('DOMContentLoaded', () => {
     applyFilters();
   }
 
-  // ===== SANDBOX RUN CODE (Demo) =====
+  // ===== SANDBOX: TAMPILKAN CONTOH HASIL =====
+  const sandboxOutputs = new WeakMap();
+
+  document.querySelectorAll('.code-sandbox__output').forEach(output => {
+    sandboxOutputs.set(output, output.innerHTML);
+  });
+
   window.runSandboxCode = function(sandboxId) {
     const sandbox = document.getElementById(sandboxId);
     if (!sandbox) return;
     const output = sandbox.querySelector('.code-sandbox__output');
-    if (!output) return;
+    if (!output || !sandboxOutputs.has(output)) return;
 
-    output.innerHTML = '<div style="display:flex;align-items:center;gap:0.5rem;color:var(--primary);font-weight:600"><span class="material-symbols-outlined" style="font-size:18px;animation:spin 1s linear infinite">autorenew</span> Menjalankan query...</div>';
-    
+    output.innerHTML = '<div style="display:flex;align-items:center;gap:0.5rem;color:var(--primary);font-weight:600"><span class="material-symbols-outlined" style="font-size:18px;animation:spin 1s linear infinite">autorenew</span> Menampilkan contoh hasil...</div>';
+
     setTimeout(() => {
-      output.innerHTML = `
-        <div style="margin-bottom:0.5rem;display:flex;align-items:center;gap:0.5rem">
-          <span class="material-symbols-outlined" style="font-size:16px;color:var(--primary)">check_circle</span>
-          <span style="font-size:0.8125rem;font-weight:600;color:var(--primary)">5 baris dieksekusi dengan sukses</span>
-          <span style="font-size:0.75rem;color:var(--text-secondary);margin-left:auto">Latensi: 0.04s</span>
-        </div>
-        <div class="data-table-wrap" style="margin:0">
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>ORDER ID</th>
-                <th>PELANGGAN</th>
-                <th>KOTA</th>
-                <th>NILAI TRANSAKSI (IDR)</th>
-                <th>STATUS</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>XORD-9032</td><td>Budi Santosa</td><td>Surabaya</td><td class="numeric">Rp 750.000</td><td><span class="badge badge--completed">Completed</span></td></tr>
-              <tr><td>XORD-9034</td><td>Siti Rahmawati</td><td>Jakarta</td><td class="numeric">Rp 1.250.000</td><td><span class="badge badge--completed">Completed</span></td></tr>
-              <tr><td>XORD-9035</td><td>Ahmad Pratama</td><td>Bandung</td><td class="numeric">Rp 520.000</td><td><span class="badge badge--completed">Completed</span></td></tr>
-              <tr><td>XORD-9038</td><td>Dewi Lestari</td><td>Surabaya</td><td class="numeric">Rp 890.000</td><td><span class="badge badge--completed">Completed</span></td></tr>
-              <tr><td>XORD-9041</td><td>Farhan Siregar</td><td>Medan</td><td class="numeric">Rp 640.000</td><td><span class="badge badge--completed">Completed</span></td></tr>
-            </tbody>
-          </table>
-        </div>
-      `;
-    }, 800);
+      output.innerHTML =
+        '<div style="margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem;font-size:0.8125rem;font-weight:600;color:var(--primary)">' +
+        '<span class="material-symbols-outlined" style="font-size:16px">check_circle</span>' +
+        'Contoh hasil pada data latihan (bukan eksekusi sungguhan)' +
+        '</div>' + sandboxOutputs.get(output);
+    }, 600);
+  };
+
+  window.resetSandbox = function(sandboxId) {
+    const sandbox = document.getElementById(sandboxId);
+    if (!sandbox) return;
+    const output = sandbox.querySelector('.code-sandbox__output');
+    if (!output || !sandboxOutputs.has(output)) return;
+    output.innerHTML = sandboxOutputs.get(output);
+    showToast('Hasil sandbox dikembalikan ke contoh bawaan.');
   };
 
   // ===== QUIZ CHECK ANSWER =====
@@ -366,38 +377,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // ===== CSS ANIMATION KEYFRAMES =====
-  const styleSheet = document.createElement('style');
-  styleSheet.textContent = `
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-    .quiz-option { 
-      transition: all 0.2s ease; 
-      cursor: pointer;
-    }
-    .quiz-option:hover { 
-      background: var(--surface-container-low); 
-    }
-    .quiz-option--correct {
-      background: var(--primary-light) !important;
-      border-color: var(--primary) !important;
-    }
-    .quiz-option--wrong {
-      background: var(--error-container) !important;
-      border-color: var(--error) !important;
-    }
-    .quiz-feedback {
-      display: none;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1rem;
-      border-radius: var(--radius-md);
-      font-size: 0.875rem;
-      font-weight: 500;
-      margin-top: 0.75rem;
-    }
-  `;
-  document.head.appendChild(styleSheet);
+  // ===== TOC SCROLLSPY =====
+  const tocItems = Array.from(document.querySelectorAll('.toc-rail__item[href^="#"]'));
+  if (tocItems.length > 1) {
+    const targets = tocItems
+      .map(item => ({ item, el: document.getElementById(item.getAttribute('href').slice(1)) }))
+      .filter(entry => entry.el);
+
+    const updateToc = () => {
+      const offset = window.innerHeight * 0.35;
+      let current = targets[0];
+      for (const entry of targets) {
+        if (entry.el.getBoundingClientRect().top <= offset) current = entry;
+      }
+      targets.forEach(entry => entry.item.classList.toggle('active', entry === current));
+    };
+
+    let tocTicking = false;
+    window.addEventListener('scroll', () => {
+      if (tocTicking) return;
+      tocTicking = true;
+      window.requestAnimationFrame(() => {
+        updateToc();
+        tocTicking = false;
+      });
+    }, { passive: true });
+
+    updateToc();
+  }
 });

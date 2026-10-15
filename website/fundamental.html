@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fondasi Data Analytics — DataSchool</title>
+  <meta name="description" content="Pelajari fondasi data analytics: peran Data Analyst, Descriptive, Diagnostic, Predictive, dan Prescriptive Analytics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="main-header">
+    <div class="header__inner">
+      <div class="header__left">
+        <a href="index.html" class="logo">
+          <span class="logo__icon material-symbols-outlined">school</span>
+          <span class="logo__text">DataSchool</span>
+        </a>
+        <nav class="nav-desktop" id="desktop-nav">
+          <a href="fundamental.html" class="nav-link active">Fondasi</a>
+          <a href="sql-tutorial.html" class="nav-link">SQL</a>
+          <a href="python-tutorial.html" class="nav-link">Python</a>
+          <a href="powerbi-tutorial.html" class="nav-link">Power BI</a>
+          <a href="excel-tutorial.html" class="nav-link">Excel</a>
+          <a href="ecommerce-case-study.html" class="nav-link">Studi Kasus</a>
+          <a href="cheatsheets.html" class="nav-link">Cheatsheets</a>
+        </nav>
+      </div>
+      <div class="header__right">
+        <div class="search-bar" id="global-search">
+          <span class="material-symbols-outlined search-bar__icon">search</span>
+          <input type="text" placeholder="Cari materi data..." class="search-bar__input" id="search-input">
+          <kbd class="search-bar__kbd">/</kbd>
+        </div>
+        <div class="header__actions">
+          <button class="btn-icon" title="Ganti tema terang / gelap" id="theme-toggle">
+            <span class="material-symbols-outlined">dark_mode</span>
+          </button>
+        </div>
+      </div>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Buka menu navigasi">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE NAV DRAWER ===== -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-drawer__overlay" id="drawer-overlay"></div>
+    <div class="mobile-drawer__content">
+      <div class="mobile-drawer__header">
+        <a href="index.html" class="logo">
+          <span class="logo__icon material-symbols-outlined">school</span>
+          <span class="logo__text">DataSchool</span>
+        </a>
+        <button class="btn-icon" id="close-drawer" aria-label="Tutup menu navigasi">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <nav class="mobile-drawer__nav">
+        <a href="index.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">home</span>Beranda
+        </a>
+        <a href="fundamental.html" class="mobile-nav-link mobile-nav-link--active">
+          <span class="material-symbols-outlined">auto_stories</span>Fondasi
+        </a>
+        <a href="sql-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">database</span>SQL
+        </a>
+        <a href="python-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">code</span>Python
+        </a>
+        <a href="powerbi-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">monitoring</span>Power BI
+        </a>
+        <a href="excel-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">grid_on</span>Excel
+        </a>
+        <a href="data-cleaning.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">cleaning_services</span>Data Cleaning
+        </a>
+        <a href="ecommerce-case-study.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">analytics</span>Studi Kasus
+        </a>
+        <a href="cheatsheets.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">menu_book</span>Cheatsheets
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="main">
+    <!-- Hero -->
+    <section class="content-hero" id="fundamental-hero">
+      <div class="content-hero__container">
+        <div class="content-hero__breadcrumb">
+          <a href="index.html">Beranda</a>
+          <span class="material-symbols-outlined" style="font-size:16px">chevron_right</span>
+          <span>Fondasi Data Analytics</span>
+        </div>
+        <div class="content-hero__badge">
+          <span class="material-symbols-outlined" style="font-size:14px">auto_stories</span>
+          <span>FONDASI & KONSEP DASAR</span>
+        </div>
+        <h1 class="content-hero__title">Fondasi Data Analytics & Peran Data Analyst</h1>
+        <p class="content-hero__subtitle">
+          Pahami peran seorang Data Analyst, siklus hidup data, dan empat pilar analisis: Descriptive, Diagnostic, Predictive, dan Prescriptive Analytics.
+        </p>
+        <div class="content-hero__meta">
+          <span class="content-hero__meta-item">
+            <span class="material-symbols-outlined" style="font-size:18px">menu_book</span>
+            11 Materi
+          </span>
+          <span class="content-hero__meta-item">
+            <span class="material-symbols-outlined" style="font-size:18px">signal_cellular_alt</span>
+            Pemula
+          </span>
+          <span class="content-hero__meta-item">
+            <span class="material-symbols-outlined" style="font-size:18px">schedule</span>
+            ~2 Jam
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Body -->
+    <section class="section" id="fundamental-content">
+      <div class="section__container">
+        <div class="content-layout content-layout--toc">
+          <!-- Sidebar -->
+          <aside class="content-sidebar" id="kurikulum-sidebar">
+            <div class="sidebar__section-title">Fundamental</div>
+            <a href="fundamental.html" class="sidebar__item active"><span class="material-symbols-outlined" style="font-size:16px">auto_stories</span>Fondasi Data Analytics</a>
+            <a href="sql-tutorial.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">database</span>SQL Analytics</a>
+            <a href="python-tutorial.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">code</span>Python & Pandas</a>
+            <div class="sidebar__section-title">Alat & Pelaporan</div>
+            <a href="data-cleaning.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">cleaning_services</span>Data Cleaning</a>
+            <a href="powerbi-tutorial.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">monitoring</span>Power BI</a>
+            <a href="excel-tutorial.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">grid_on</span>Excel & Reporting</a>
+            <div class="sidebar__section-title">Praktik & Referensi</div>
+            <a href="ecommerce-case-study.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">analytics</span>Studi Kasus E-Commerce</a>
+            <a href="cheatsheets.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">menu_book</span>Cheatsheets</a>
+          </aside>
+
+          <!-- Main Content -->
+          <div class="content-body">
+            <!-- Peran Data Analyst -->
+            <article class="content-article" id="peran-analyst">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#047857,#10B981)">
+                  <span class="material-symbols-outlined">person</span>
+                </div>
+                <div>
+                  <h2>Apa itu Data Analyst?</h2>
+                  <p class="article-header__sub">Peran, Tanggung Jawab & Skill Set</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Seorang <strong>Data Analyst</strong> adalah profesional yang mengumpulkan, membersihkan, menganalisis, dan memvisualisasikan data untuk membantu organisasi membuat keputusan bisnis yang lebih baik berdasarkan bukti (<em>evidence-based decision making</em>).</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">target</span> Tanggung Jawab Utama</h4>
+                  <ul>
+                    <li>Mengumpulkan data dari berbagai sumber (database, API, spreadsheet)</li>
+                    <li>Membersihkan dan memvalidasi kualitas data</li>
+                    <li>Melakukan analisis eksploratif (EDA)</li>
+                    <li>Membuat visualisasi dan dashboard</li>
+                    <li>Menyampaikan insight melalui data storytelling</li>
+                  </ul>
+                </div>
+                <div class="info-card info-card--secondary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">build</span> Skill Set yang Dibutuhkan</h4>
+                  <div class="skill-tags">
+                    <span class="chip">SQL</span>
+                    <span class="chip">Python / R</span>
+                    <span class="chip">Excel</span>
+                    <span class="chip">Power BI / Tableau</span>
+                    <span class="chip">Statistika</span>
+                    <span class="chip">Data Storytelling</span>
+                    <span class="chip">Critical Thinking</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- 4 Pilar Analitik -->
+            <article class="content-article" id="descriptive">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#2563EB,#60A5FA)">
+                  <span class="material-symbols-outlined">bar_chart</span>
+                </div>
+                <div>
+                  <h2>Descriptive Analytics</h2>
+                  <p class="article-header__sub">"Apa yang telah terjadi?" (What happened?)</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Descriptive analytics menggunakan <strong>data historis</strong> untuk merangkum dan memahami apa yang telah terjadi di masa lalu. Ini adalah fondasi dari semua jenis analitik lainnya.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">bar_chart</span> Teknik & Tools</h4>
+                  <ul>
+                    <li><strong>Summary Statistics</strong> — Mean, Median, Mode, Standard Deviation</li>
+                    <li><strong>KPI Dashboards</strong> — Revenue, Conversion Rate, Churn Rate</li>
+                    <li><strong>Visualisasi</strong> — Bar chart, Line chart, Heatmap</li>
+                    <li><strong>Reporting</strong> — Laporan berkala harian/mingguan/bulanan</li>
+                  </ul>
+                </div>
+                <div class="callout callout--example">
+                  <strong>Contoh:</strong> "Total penjualan bulan lalu adalah Rp 2.5 Miliar, naik 12% dari bulan sebelumnya."
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="diagnostic">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#D97706,#FBBF24)">
+                  <span class="material-symbols-outlined">troubleshoot</span>
+                </div>
+                <div>
+                  <h2>Diagnostic Analytics</h2>
+                  <p class="article-header__sub">"Mengapa hal tersebut terjadi?" (Why did it happen?)</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Diagnostic analytics menyelidiki <strong>akar penyebab</strong> dari pola atau anomali yang ditemukan dalam descriptive analytics menggunakan teknik drill-down dan root cause analysis.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">search</span> Teknik & Tools</h4>
+                  <ul>
+                    <li><strong>Root Cause Analysis (RCA)</strong> — 5 Whys, Fishbone Diagram</li>
+                    <li><strong>Drill-Down Analysis</strong> — Menggali data dari level umum ke spesifik</li>
+                    <li><strong>Korelasi</strong> — Mencari hubungan antar variabel</li>
+                    <li><strong>Data Discovery</strong> — Eksplorasi pola tersembunyi</li>
+                  </ul>
+                </div>
+                <div class="callout callout--example">
+                  <strong>Contoh:</strong> "Penjualan turun 15% karena kampanye marketing dihentikan di minggu ke-3 dan stok produk A habis."
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="predictive">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#7C3AED,#A78BFA)">
+                  <span class="material-symbols-outlined">trending_up</span>
+                </div>
+                <div>
+                  <h2>Predictive Analytics</h2>
+                  <p class="article-header__sub">"Apa yang mungkin akan terjadi?" (What is likely to happen?)</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Predictive analytics menggunakan <strong>model statistik dan machine learning</strong> untuk membuat perkiraan tentang kejadian di masa depan berdasarkan pola data historis.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">auto_graph</span> Teknik & Tools</h4>
+                  <ul>
+                    <li><strong>Time Series Forecasting</strong> — ARIMA, Prophet, Exponential Smoothing</li>
+                    <li><strong>Regression Analysis</strong> — Linear, Logistic Regression</li>
+                    <li><strong>Classification</strong> — Decision Tree, Random Forest</li>
+                    <li><strong>Clustering</strong> — K-Means, DBSCAN untuk segmentasi</li>
+                  </ul>
+                </div>
+                <div class="callout callout--example">
+                  <strong>Contoh:</strong> "Berdasarkan tren 12 bulan terakhir, prediksi revenue Q4 akan mencapai Rp 8 Miliar dengan confidence interval 90%."
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="prescriptive">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#DC2626,#F87171)">
+                  <span class="material-symbols-outlined">lightbulb</span>
+                </div>
+                <div>
+                  <h2>Prescriptive Analytics</h2>
+                  <p class="article-header__sub">"Tindakan apa yang harus kita ambil?" (What should we do?)</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Prescriptive analytics memberikan <strong>rekomendasi aksi</strong> berdasarkan hasil analisis prediktif, menggunakan optimasi dan simulasi untuk membantu pengambilan keputusan.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">lightbulb</span> Teknik & Tools</h4>
+                  <ul>
+                    <li><strong>Optimization</strong> — Linear Programming, Integer Programming</li>
+                    <li><strong>Simulation</strong> — Monte Carlo, What-If Scenarios</li>
+                    <li><strong>A/B Testing</strong> — Eksperimen terkontrol untuk validasi</li>
+                    <li><strong>Decision Framework</strong> — Cost-Benefit Analysis, Decision Tree</li>
+                  </ul>
+                </div>
+                <div class="callout callout--example">
+                  <strong>Contoh:</strong> "Untuk mencapai target Q4, alokasikan 40% budget marketing ke channel digital dan naikkan harga produk B sebesar 5%."
+                </div>
+              </div>
+            </article>
+
+            <!-- Key Concepts Section -->
+            <div class="content-divider">
+              <span class="material-symbols-outlined">data_object</span>
+              <h2>Key Concepts of Data</h2>
+              <p>Konsep-konsep inti dalam siklus hidup pengolahan data</p>
+            </div>
+
+            <article class="content-article" id="collection">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#0891B2,#67E8F9)">
+                  <span class="material-symbols-outlined">cloud_download</span>
+                </div>
+                <div>
+                  <h2>Data Collection</h2>
+                  <p class="article-header__sub">Proses pengumpulan informasi dari berbagai sumber</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Data collection adalah proses <strong>mengumpulkan informasi</strong> dari berbagai sumber internal dan eksternal yang relevan untuk digunakan dalam analisis.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">cloud_download</span> Jenis Sumber Data</h4>
+                  <ul>
+                    <li><strong>Internal</strong> — Sistem ERP, database penjualan, laporan keuangan</li>
+                    <li><strong>Eksternal</strong> — Survei pelanggan, media sosial, data pasar, API pihak ketiga</li>
+                  </ul>
+                </div>
+                <div class="info-card info-card--secondary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">list_alt</span> Langkah Utama</h4>
+                  <ol>
+                    <li>Menentukan tujuan pengumpulan data</li>
+                    <li>Memilih sumber data yang tepat</li>
+                    <li>Mengumpulkan data secara terstruktur</li>
+                    <li>Menyimpan data dalam format yang mudah diproses</li>
+                  </ol>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="cleanup">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#059669,#34D399)">
+                  <span class="material-symbols-outlined">cleaning_services</span>
+                </div>
+                <div>
+                  <h2>Data Cleanup</h2>
+                  <p class="article-header__sub">Membersihkan data agar siap dianalisis</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Data cleanup atau data cleaning adalah proses <strong>memperbaiki atau menghapus data</strong> yang tidak akurat, tidak lengkap, duplikat, atau tidak relevan dari dataset.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">cleaning_services</span> Proses Pembersihan</h4>
+                  <ul>
+                    <li>Menangani nilai kosong (missing values / NaN)</li>
+                    <li>Menghapus data duplikat</li>
+                    <li>Memperbaiki format data yang tidak konsisten</li>
+                    <li>Mendeteksi dan menangani outlier</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="exploration">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#6366F1,#A5B4FC)">
+                  <span class="material-symbols-outlined">explore</span>
+                </div>
+                <div>
+                  <h2>Data Exploration</h2>
+                  <p class="article-header__sub">Eksplorasi awal untuk memahami karakteristik data</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Data exploration atau <strong>Exploratory Data Analysis (EDA)</strong> adalah proses investigasi awal untuk menemukan pola, anomali, dan hubungan antar variabel dalam dataset.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">explore</span> Teknik Eksplorasi</h4>
+                  <ul>
+                    <li>Melihat distribusi variabel (histogram, box plot)</li>
+                    <li>Analisis korelasi antar variabel</li>
+                    <li>Summary statistics (mean, median, std, quartile)</li>
+                    <li>Identifikasi pola dan tren awal</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="visualization">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#EA580C,#FB923C)">
+                  <span class="material-symbols-outlined">insert_chart</span>
+                </div>
+                <div>
+                  <h2>Data Visualisation</h2>
+                  <p class="article-header__sub">Menyajikan data dalam bentuk visual yang mudah dipahami</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Data visualisation adalah proses <strong>menerjemahkan data</strong> menjadi representasi grafis seperti chart, diagram, dan dashboard untuk memudahkan pemahaman insight.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">insert_chart</span> Jenis Visualisasi Utama</h4>
+                  <ul>
+                    <li><strong>Bar/Column Chart</strong> — Perbandingan kategori</li>
+                    <li><strong>Line Chart</strong> — Tren data sepanjang waktu</li>
+                    <li><strong>Scatter Plot</strong> — Hubungan antar variabel</li>
+                    <li><strong>Heatmap</strong> — Korelasi dan distribusi 2D</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="statistical">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#0D9488,#5EEAD4)">
+                  <span class="material-symbols-outlined">functions</span>
+                </div>
+                <div>
+                  <h2>Statistical Analysis</h2>
+                  <p class="article-header__sub">Menerapkan metode statistik untuk mengambil kesimpulan</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Statistical analysis menggunakan <strong>metode matematika dan probabilitas</strong> untuk mengumpulkan, menganalisis, dan menarik kesimpulan dari data.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">straighten</span> Konsep Kunci</h4>
+                  <ul>
+                    <li><strong>Statistik Deskriptif</strong> — Central tendency, dispersion</li>
+                    <li><strong>Statistik Inferensial</strong> — Hypothesis testing, confidence interval</li>
+                    <li><strong>Regresi</strong> — Linear, logistic regression</li>
+                    <li><strong>Probabilitas</strong> — Distribusi normal, Bayes theorem</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="ml">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#9333EA,#C084FC)">
+                  <span class="material-symbols-outlined">psychology</span>
+                </div>
+                <div>
+                  <h2>Machine Learning</h2>
+                  <p class="article-header__sub">Pengenalan algoritma pembelajaran mesin untuk analisis data</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Machine learning adalah cabang AI yang memungkinkan komputer <strong>belajar dari data</strong> tanpa diprogram secara eksplisit, untuk membuat prediksi atau keputusan.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">smart_toy</span> Jenis Machine Learning</h4>
+                  <ul>
+                    <li><strong>Supervised Learning</strong> — Classification, Regression</li>
+                    <li><strong>Unsupervised Learning</strong> — Clustering, Dimensionality Reduction</li>
+                    <li><strong>Algoritma Populer</strong> — Decision Tree, Random Forest, K-Means, XGBoost</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <!-- Nav Footer -->
+            <div class="content-nav-footer">
+              <a href="index.html" class="content-nav-footer__link content-nav-footer__link--prev">
+                <span class="material-symbols-outlined">arrow_back</span>
+                <div>
+                  <span class="content-nav-footer__label">Sebelumnya</span>
+                  <span class="content-nav-footer__title">Beranda</span>
+                </div>
+              </a>
+              <a href="sql-tutorial.html" class="content-nav-footer__link content-nav-footer__link--next">
+                <div>
+                  <span class="content-nav-footer__label">Selanjutnya</span>
+                  <span class="content-nav-footer__title">SQL Tutorial</span>
+                </div>
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+          <aside class="toc-rail" id="toc-rail">
+            <div class="toc-rail__title">DI HALAMAN INI</div>
+            <a href="#peran-analyst" class="toc-rail__item active">Apa itu Data Analyst?</a>
+            <a href="#descriptive" class="toc-rail__item">Descriptive Analytics</a>
+            <a href="#diagnostic" class="toc-rail__item">Diagnostic Analytics</a>
+            <a href="#predictive" class="toc-rail__item">Predictive Analytics</a>
+            <a href="#prescriptive" class="toc-rail__item">Prescriptive Analytics</a>
+            <a href="#collection" class="toc-rail__item">Data Collection</a>
+            <a href="#cleanup" class="toc-rail__item">Data Cleanup</a>
+            <a href="#exploration" class="toc-rail__item">Data Exploration</a>
+            <a href="#visualization" class="toc-rail__item">Data Visualisation</a>
+            <a href="#statistical" class="toc-rail__item">Statistical Analysis</a>
+            <a href="#ml" class="toc-rail__item">Machine Learning</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="main-footer">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <p class="footer__copyright">&copy; 2026 DataSchool Indonesia. Dokumentasi analitika data terbuka untuk pembelajar mandiri.</p>
+      </div>
+      <div class="footer__links">
+        <a href="fundamental.html" class="footer__link">Fondasi</a>
+        <a href="sql-tutorial.html" class="footer__link">SQL</a>
+        <a href="python-tutorial.html" class="footer__link">Python</a>
+        <a href="cheatsheets.html" class="footer__link">Cheatsheets</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

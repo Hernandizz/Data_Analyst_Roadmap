@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excel & Reporting — DataSchool</title>
+  <meta name="description" content="Latihan Excel untuk analisis data dan reporting: SUM, AVERAGE, IF, VLOOKUP, HLOOKUP, XLOOKUP, CONCAT, TRIM, DATEDIF, dan fungsi teks.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="main-header">
+    <div class="header__inner">
+      <div class="header__left">
+        <a href="index.html" class="logo">
+          <span class="logo__icon material-symbols-outlined">school</span>
+          <span class="logo__text">DataSchool</span>
+        </a>
+        <nav class="nav-desktop" id="desktop-nav">
+          <a href="fundamental.html" class="nav-link">Fondasi</a>
+          <a href="sql-tutorial.html" class="nav-link">SQL</a>
+          <a href="python-tutorial.html" class="nav-link">Python</a>
+          <a href="powerbi-tutorial.html" class="nav-link">Power BI</a>
+          <a href="excel-tutorial.html" class="nav-link active">Excel</a>
+          <a href="ecommerce-case-study.html" class="nav-link">Studi Kasus</a>
+          <a href="cheatsheets.html" class="nav-link">Cheatsheets</a>
+        </nav>
+      </div>
+      <div class="header__right">
+        <div class="search-bar" id="global-search">
+          <span class="material-symbols-outlined search-bar__icon">search</span>
+          <input type="text" placeholder="Cari materi data..." class="search-bar__input" id="search-input">
+          <kbd class="search-bar__kbd">/</kbd>
+        </div>
+        <div class="header__actions">
+          <button class="btn-icon" title="Ganti tema terang / gelap" id="theme-toggle">
+            <span class="material-symbols-outlined">dark_mode</span>
+          </button>
+        </div>
+      </div>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Buka menu navigasi">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE NAV DRAWER ===== -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-drawer__overlay" id="drawer-overlay"></div>
+    <div class="mobile-drawer__content">
+      <div class="mobile-drawer__header">
+        <a href="index.html" class="logo">
+          <span class="logo__icon material-symbols-outlined">school</span>
+          <span class="logo__text">DataSchool</span>
+        </a>
+        <button class="btn-icon" id="close-drawer" aria-label="Tutup menu navigasi">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <nav class="mobile-drawer__nav">
+        <a href="index.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">home</span>Beranda
+        </a>
+        <a href="fundamental.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">auto_stories</span>Fondasi
+        </a>
+        <a href="sql-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">database</span>SQL
+        </a>
+        <a href="python-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">code</span>Python
+        </a>
+        <a href="powerbi-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">monitoring</span>Power BI
+        </a>
+        <a href="excel-tutorial.html" class="mobile-nav-link mobile-nav-link--active">
+          <span class="material-symbols-outlined">grid_on</span>Excel
+        </a>
+        <a href="data-cleaning.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">cleaning_services</span>Data Cleaning
+        </a>
+        <a href="ecommerce-case-study.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">analytics</span>Studi Kasus
+        </a>
+        <a href="cheatsheets.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">menu_book</span>Cheatsheets
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="main">
+    <!-- Hero -->
+    <section class="content-hero" id="excel-hero">
+      <div class="content-hero__container">
+        <div class="content-hero__breadcrumb">
+          <a href="index.html">Beranda</a>
+          <span class="material-symbols-outlined" style="font-size:16px">chevron_right</span>
+          <span>Excel & Reporting</span>
+        </div>
+        <div class="content-hero__badge">
+          <span class="material-symbols-outlined" style="font-size:14px">grid_on</span>
+          <span>EXCEL & SPREADSHEET</span>
+        </div>
+        <h1 class="content-hero__title">Analyst &amp; Reporting with Excel</h1>
+        <p class="content-hero__subtitle">
+          Latihan praktis langsung di Excel untuk menguasai fungsi-fungsi penting: SUM, AVERAGE, IF, VLOOKUP, HLOOKUP, XLOOKUP, CONCAT, TRIM, DATEDIF, dan fungsi teks.
+        </p>
+        <div class="content-hero__meta">
+          <span class="content-hero__meta-item">
+            <span class="material-symbols-outlined" style="font-size:18px">menu_book</span>
+            7 Latihan
+          </span>
+          <span class="content-hero__meta-item">
+            <span class="material-symbols-outlined" style="font-size:18px">signal_cellular_alt</span>
+            Pemula → Menengah
+          </span>
+          <span class="content-hero__meta-item">
+            <span class="material-symbols-outlined" style="font-size:18px">schedule</span>
+            ~10 Jam
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Body -->
+    <section class="section" id="excel-content">
+      <div class="section__container">
+        <div class="content-layout content-layout--toc">
+          <!-- Sidebar -->
+          <aside class="content-sidebar" id="kurikulum-sidebar">
+            <div class="sidebar__section-title">Fundamental</div>
+            <a href="fundamental.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">auto_stories</span>Fondasi Data Analytics</a>
+            <a href="sql-tutorial.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">database</span>SQL Analytics</a>
+            <a href="python-tutorial.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">code</span>Python & Pandas</a>
+            <div class="sidebar__section-title">Alat & Pelaporan</div>
+            <a href="data-cleaning.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">cleaning_services</span>Data Cleaning</a>
+            <a href="powerbi-tutorial.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">monitoring</span>Power BI</a>
+            <a href="excel-tutorial.html" class="sidebar__item active"><span class="material-symbols-outlined" style="font-size:16px">grid_on</span>Excel & Reporting</a>
+            <div class="sidebar__section-title">Praktik & Referensi</div>
+            <a href="ecommerce-case-study.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">analytics</span>Studi Kasus E-Commerce</a>
+            <a href="cheatsheets.html" class="sidebar__item"><span class="material-symbols-outlined" style="font-size:16px">menu_book</span>Cheatsheets</a>
+          </aside>
+
+          <!-- Main Content -->
+          <div class="content-body">
+            <div class="content-divider">
+              <span class="material-symbols-outlined">grid_on</span>
+              <h2>Latihan Fungsi Excel</h2>
+              <p>Buat data latihan sendiri di Excel, lalu kerjakan soal pada tiap bagian di bawah</p>
+            </div>
+
+            <article class="content-article" id="excel-sum">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#047857,#10B981)">
+                  <span class="material-symbols-outlined">functions</span>
+                </div>
+                <div>
+                  <h2>SUM, AVERAGE, MIN, MAX</h2>
+                  <p class="article-header__sub">Fungsi agregasi dasar untuk analisis numerik</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Menguasai empat fungsi agregasi dasar Excel: <code>=SUM()</code> untuk menjumlahkan, <code>=AVERAGE()</code> untuk rata-rata, <code>=MIN()</code> untuk nilai terkecil, dan <code>=MAX()</code> untuk nilai terbesar.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">edit_note</span> Latihan Mandiri</h4>
+                  <p>Buat data penjualan 100 baris, lalu hitung total, rata-rata, nilai minimum, dan maksimum kolom nominal.</p>
+                </div>
+                <div class="callout callout--example">
+                  <strong>Contoh:</strong> <code>=SUM(B2:B100)</code> — Menjumlahkan seluruh nilai di kolom B baris 2-100.
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="excel-if">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#2563EB,#60A5FA)">
+                  <span class="material-symbols-outlined">rule</span>
+                </div>
+                <div>
+                  <h2>IF Function</h2>
+                  <p class="article-header__sub">Logika kondisional untuk pengambilan keputusan</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Fungsi <code>=IF()</code> untuk membuat logika kondisional: jika kondisi terpenuhi, lakukan aksi A, jika tidak, lakukan aksi B. Termasuk nested IF dan IFS.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">edit_note</span> Latihan Mandiri</h4>
+                  <p>Isi 20 skor ujian, beri label "Lulus" dengan batas 75, lalu buat tiga grade (A/B/C) memakai IFS.</p>
+                </div>
+                <div class="callout callout--example">
+                  <strong>Contoh:</strong> <code>=IF(B2>=80,"Lulus","Tidak Lulus")</code>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="excel-lookup">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#7C3AED,#A78BFA)">
+                  <span class="material-symbols-outlined">search</span>
+                </div>
+                <div>
+                  <h2>VLOOKUP, HLOOKUP & XLOOKUP</h2>
+                  <p class="article-header__sub">Pencarian data lintas tabel dan referensi</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Tiga fungsi lookup utama: <code>=VLOOKUP()</code> untuk pencarian vertikal, <code>=HLOOKUP()</code> untuk pencarian horizontal, dan <code>=XLOOKUP()</code> (modern) yang lebih fleksibel.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">edit_note</span> Latihan Mandiri</h4>
+                  <p>Buat sheet "Produk" (kode, nama, harga) dan sheet "Penjualan". Ambil harga ke sheet penjualan dengan VLOOKUP, ulangi dengan XLOOKUP, bandingkan hasilnya.</p>
+                </div>
+                <div class="callout callout--example">
+                  <strong>Contoh:</strong> <code>=VLOOKUP(A2,Sheet2!A:C,3,FALSE)</code>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="excel-concat">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#D97706,#FBBF24)">
+                  <span class="material-symbols-outlined">link</span>
+                </div>
+                <div>
+                  <h2>CONCAT</h2>
+                  <p class="article-header__sub">Menggabungkan teks dari beberapa sel</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Fungsi <code>=CONCAT()</code> dan operator <code>&amp;</code> untuk menggabungkan teks dari beberapa sel menjadi satu string, berguna untuk membuat ID unik atau label gabungan.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">edit_note</span> Latihan Mandiri</h4>
+                  <p>Gabungkan kolom kota dan kode pos menjadi kolom alamat, lalu buat ID pelanggan unik dari kode pelanggan dan tahun daftar.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="excel-text">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#059669,#34D399)">
+                  <span class="material-symbols-outlined">text_fields</span>
+                </div>
+                <div>
+                  <h2>UPPER, LOWER, PROPER</h2>
+                  <p class="article-header__sub">Transformasi huruf besar/kecil untuk standardisasi teks</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Fungsi teks untuk standardisasi: <code>=UPPER()</code> semua huruf besar, <code>=LOWER()</code> semua huruf kecil, <code>=PROPER()</code> huruf kapital di awal kata.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">edit_note</span> Latihan Mandiri</h4>
+                  <p>Standardisasi 20 nama kota yang berantakan (campur huruf besar/kecil) menjadi format Title Case.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="excel-trim">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#0891B2,#67E8F9)">
+                  <span class="material-symbols-outlined">content_cut</span>
+                </div>
+                <div>
+                  <h2>TRIM</h2>
+                  <p class="article-header__sub">Menghapus spasi berlebih dari teks</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Fungsi <code>=TRIM()</code> menghapus spasi berlebih di awal, akhir, dan tengah teks — sangat penting saat data cleaning sebelum analisis.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">edit_note</span> Latihan Mandiri</h4>
+                  <p>Bersihkan kolom email yang mengandung spasi di awal/akhir, lalu hitung berapa baris yang terdampak.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="excel-datedif">
+              <div class="article-header">
+                <div class="article-header__icon" style="background:linear-gradient(135deg,#DC2626,#F87171)">
+                  <span class="material-symbols-outlined">calendar_today</span>
+                </div>
+                <div>
+                  <h2>DATEDIF</h2>
+                  <p class="article-header__sub">Menghitung selisih tanggal (hari, bulan, tahun)</p>
+                </div>
+              </div>
+              <div class="article-content">
+                <p>Fungsi <code>=DATEDIF()</code> untuk menghitung selisih antara dua tanggal dalam hari, bulan, atau tahun — berguna untuk analisis tenure, aging, dan durasi.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">edit_note</span> Latihan Mandiri</h4>
+                  <p>Hitung umur pelanggan dari tanggal lahir dan lama menjadi member (dalam bulan) dari tanggal daftar.</p>
+                </div>
+                <div class="callout callout--example">
+                  <strong>Contoh:</strong> <code>=DATEDIF(A2,B2,"M")</code> — Menghitung selisih bulan antara dua tanggal.
+                </div>
+              </div>
+            </article>
+
+            <!-- Nav Footer -->
+            <div class="content-nav-footer">
+              <a href="powerbi-tutorial.html" class="content-nav-footer__link content-nav-footer__link--prev">
+                <span class="material-symbols-outlined">arrow_back</span>
+                <div>
+                  <span class="content-nav-footer__label">Sebelumnya</span>
+                  <span class="content-nav-footer__title">Power BI</span>
+                </div>
+              </a>
+              <a href="ecommerce-case-study.html" class="content-nav-footer__link content-nav-footer__link--next">
+                <div>
+                  <span class="content-nav-footer__label">Selanjutnya</span>
+                  <span class="content-nav-footer__title">Studi Kasus E-Commerce</span>
+                </div>
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+          <aside class="toc-rail" id="toc-rail">
+            <div class="toc-rail__title">DI HALAMAN INI</div>
+            <a href="#excel-sum" class="toc-rail__item active">SUM, AVERAGE, MIN, MAX</a>
+            <a href="#excel-if" class="toc-rail__item">IF Function</a>
+            <a href="#excel-lookup" class="toc-rail__item">VLOOKUP, HLOOKUP &amp; XLOOKUP</a>
+            <a href="#excel-concat" class="toc-rail__item">CONCAT</a>
+            <a href="#excel-text" class="toc-rail__item">UPPER, LOWER, PROPER</a>
+            <a href="#excel-trim" class="toc-rail__item">TRIM</a>
+            <a href="#excel-datedif" class="toc-rail__item">DATEDIF</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="main-footer">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <p class="footer__copyright">&copy; 2026 DataSchool Indonesia. Dokumentasi analitika data terbuka untuk pembelajar mandiri.</p>
+      </div>
+      <div class="footer__links">
+        <a href="fundamental.html" class="footer__link">Fondasi</a>
+        <a href="sql-tutorial.html" class="footer__link">SQL</a>
+        <a href="python-tutorial.html" class="footer__link">Python</a>
+        <a href="cheatsheets.html" class="footer__link">Cheatsheets</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

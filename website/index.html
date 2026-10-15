@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DataSchool — Platform Belajar Data Analytics Indonesia</title>
-  <meta name="description" content="Platform e-learning premium untuk Data Analyst, Business Intelligence, dan Data Science. Kurikulum terstruktur dari SQL, Python, Pandas, hingga Machine Learning.">
+  <meta name="description" content="Tutorial data analytics dalam Bahasa Indonesia: SQL, Python, Pandas, Power BI, Excel, hingga studi kasus e-commerce.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
@@ -17,13 +17,16 @@
     <div class="header__inner">
       <div class="header__left">
         <a href="index.html" class="logo">
-          <span class="logo__icon material-symbols-outlined" style="font-size:28px;color:var(--primary)">school</span>
+          <span class="logo__icon material-symbols-outlined">school</span>
           <span class="logo__text">DataSchool</span>
         </a>
         <nav class="nav-desktop" id="desktop-nav">
-          <a href="sql-tutorial.html" class="nav-link">SQL Tutorial</a>
-          <a href="data-cleaning.html" class="nav-link">Data Cleaning</a>
-          <a href="ecommerce-case-study.html" class="nav-link">Studi Kasus E-Commerce</a>
+          <a href="fundamental.html" class="nav-link">Fondasi</a>
+          <a href="sql-tutorial.html" class="nav-link">SQL</a>
+          <a href="python-tutorial.html" class="nav-link">Python</a>
+          <a href="powerbi-tutorial.html" class="nav-link">Power BI</a>
+          <a href="excel-tutorial.html" class="nav-link">Excel</a>
+          <a href="ecommerce-case-study.html" class="nav-link">Studi Kasus</a>
           <a href="cheatsheets.html" class="nav-link">Cheatsheets</a>
         </nav>
       </div>
@@ -34,15 +37,12 @@
           <kbd class="search-bar__kbd">/</kbd>
         </div>
         <div class="header__actions">
-          <button class="btn-icon" title="Tema Gelap" id="theme-toggle">
+          <button class="btn-icon" title="Ganti tema terang / gelap" id="theme-toggle">
             <span class="material-symbols-outlined">dark_mode</span>
           </button>
-          <div class="avatar" id="user-avatar">
-            <span class="material-symbols-outlined">person</span>
-          </div>
         </div>
       </div>
-      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Buka menu navigasi">
         <span class="material-symbols-outlined">menu</span>
       </button>
     </div>
@@ -54,25 +54,37 @@
     <div class="mobile-drawer__content">
       <div class="mobile-drawer__header">
         <a href="index.html" class="logo">
-          <span class="logo__icon material-symbols-outlined" style="font-size:24px;color:var(--primary)">school</span>
+          <span class="logo__icon material-symbols-outlined">school</span>
           <span class="logo__text">DataSchool</span>
         </a>
-        <button class="btn-icon" id="close-drawer">
+        <button class="btn-icon" id="close-drawer" aria-label="Tutup menu navigasi">
           <span class="material-symbols-outlined">close</span>
         </button>
       </div>
       <nav class="mobile-drawer__nav">
-        <a href="index.html" class="mobile-nav-link" style="color:var(--primary);font-weight:700">
+        <a href="index.html" class="mobile-nav-link mobile-nav-link--active">
           <span class="material-symbols-outlined">home</span>Beranda
         </a>
+        <a href="fundamental.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">auto_stories</span>Fondasi
+        </a>
         <a href="sql-tutorial.html" class="mobile-nav-link">
-          <span class="material-symbols-outlined">database</span>SQL Tutorial
+          <span class="material-symbols-outlined">database</span>SQL
+        </a>
+        <a href="python-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">code</span>Python
+        </a>
+        <a href="powerbi-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">monitoring</span>Power BI
+        </a>
+        <a href="excel-tutorial.html" class="mobile-nav-link">
+          <span class="material-symbols-outlined">grid_on</span>Excel
         </a>
         <a href="data-cleaning.html" class="mobile-nav-link">
           <span class="material-symbols-outlined">cleaning_services</span>Data Cleaning
         </a>
         <a href="ecommerce-case-study.html" class="mobile-nav-link">
-          <span class="material-symbols-outlined">analytics</span>Studi Kasus E-Commerce
+          <span class="material-symbols-outlined">analytics</span>Studi Kasus
         </a>
         <a href="cheatsheets.html" class="mobile-nav-link">
           <span class="material-symbols-outlined">menu_book</span>Cheatsheets
@@ -88,14 +100,14 @@
       <div class="hero__container">
         <div class="hero__badge">
           <span class="material-symbols-outlined" style="font-size:14px">auto_awesome</span>
-          <span>Platform Pembelajaran Data Analytics Terlengkap di Indonesia</span>
+          <span>Kurikulum Data Analytics dalam Bahasa Indonesia</span>
         </div>
         <h1 class="hero__title">
           Kuasai <span class="hero__highlight">Data Analytics</span> dari Nol Hingga Siap Kerja
         </h1>
         <p class="hero__subtitle">
           Kurikulum terstruktur 30 hari dengan SQL, Python, Pandas, Power BI, dan Statistika. 
-          Dilengkapi sandbox interaktif, studi kasus nyata e-commerce, dan cheatsheet siap cetak.
+          Dilengkapi contoh sandbox SQL &amp; Python, studi kasus e-commerce, dan cheatsheet siap cetak.
         </p>
         <div class="hero__actions">
           <a href="sql-tutorial.html" class="btn btn--primary btn--lg">
@@ -109,18 +121,18 @@
         </div>
         <div class="hero__stats">
           <div class="hero__stat">
-            <span class="hero__stat-num">30+</span>
-            <span class="hero__stat-label">Modul Harian</span>
+            <span class="hero__stat-num">30</span>
+            <span class="hero__stat-label">Hari Roadmap</span>
           </div>
           <div class="hero__stat-divider"></div>
           <div class="hero__stat">
-            <span class="hero__stat-num">150+</span>
-            <span class="hero__stat-label">Latihan Interaktif</span>
+            <span class="hero__stat-num">8</span>
+            <span class="hero__stat-label">Halaman Materi</span>
           </div>
           <div class="hero__stat-divider"></div>
           <div class="hero__stat">
             <span class="hero__stat-num">5</span>
-            <span class="hero__stat-label">Jalur Karir</span>
+            <span class="hero__stat-label">Jalur Belajar</span>
           </div>
           <div class="hero__stat-divider"></div>
           <div class="hero__stat">
@@ -138,7 +150,7 @@
               <span class="dot dot--green"></span>
             </div>
             <span class="code-preview__filename">analytics_query.sql</span>
-            <span class="code-preview__tag">Live Preview</span>
+            <span class="code-preview__tag">Contoh Query</span>
           </div>
           <pre class="code-preview__body"><code><span class="kw">SELECT</span>
   customer_segment,
@@ -163,9 +175,25 @@
             <span>JALUR PEMBELAJARAN</span>
           </div>
           <h2 class="section__title">Pilih Jalur Belajar Anda</h2>
-          <p class="section__subtitle">Kurikulum terstruktur dari fondasi hingga mahir. Setiap jalur dilengkapi materi teori, latihan interaktif, dan studi kasus nyata.</p>
+          <p class="section__subtitle">Kurikulum terstruktur dari fondasi hingga mahir. Setiap jalur dilengkapi materi teori, contoh kode, dan studi kasus e-commerce.</p>
         </div>
         <div class="paths-grid">
+          <!-- Path 0: Fondasi -->
+          <a href="fundamental.html" class="path-card" id="path-fondasi">
+            <div class="path-card__icon-wrap path-card__icon--stats">
+              <span class="material-symbols-outlined">auto_stories</span>
+            </div>
+            <div class="path-card__content">
+              <div class="path-card__meta">
+                <span class="path-card__tag">11 Materi</span>
+                <span class="path-card__tag">Konsep Dasar</span>
+              </div>
+              <h3 class="path-card__title">Fondasi Data Analytics</h3>
+              <p class="path-card__desc">Peran Data Analyst, 4 jenis analitik (Descriptive, Diagnostic, Predictive, Prescriptive), dan key concepts of data.</p>
+            </div>
+            <span class="material-symbols-outlined path-card__arrow">arrow_forward</span>
+          </a>
+
           <!-- Path 1: SQL -->
           <a href="sql-tutorial.html" class="path-card" id="path-sql">
             <div class="path-card__icon-wrap path-card__icon--sql">
@@ -173,45 +201,33 @@
             </div>
             <div class="path-card__content">
               <div class="path-card__meta">
-                <span class="path-card__tag">12 Bab</span>
-                <span class="path-card__tag">Interaktif</span>
+                <span class="path-card__tag">Kuis Mandiri</span>
+                <span class="path-card__tag">Contoh Kueri</span>
               </div>
               <h3 class="path-card__title">SQL untuk Analisis Data</h3>
-              <p class="path-card__desc">SELECT, WHERE, JOIN, GROUP BY, Window Functions, CTE, dan Subqueries untuk analisis warehouse data.</p>
-              <div class="path-card__footer">
-                <div class="progress-mini">
-                  <div class="progress-mini__bar" style="width:45%"></div>
-                </div>
-                <span class="path-card__progress">Progress: 45%</span>
-              </div>
+              <p class="path-card__desc">SELECT, WHERE, JOIN, GROUP BY, Window Functions, CTE, dan Subqueries untuk analisis retail data.</p>
             </div>
             <span class="material-symbols-outlined path-card__arrow">arrow_forward</span>
           </a>
 
           <!-- Path 2: Python -->
-          <a href="data-cleaning.html" class="path-card" id="path-python">
+          <a href="python-tutorial.html" class="path-card" id="path-python">
             <div class="path-card__icon-wrap path-card__icon--python">
               <span class="material-symbols-outlined">code</span>
             </div>
             <div class="path-card__content">
               <div class="path-card__meta">
                 <span class="path-card__tag">12 Modul</span>
-                <span class="path-card__tag">Sandbox</span>
+                <span class="path-card__tag">Teori &amp; Contoh</span>
               </div>
               <h3 class="path-card__title">Python for Data Analyst</h3>
               <p class="path-card__desc">Fundamental Python, Pandas, NumPy, data wrangling, EDA, statistik inferensial, dan portofolio GitHub.</p>
-              <div class="path-card__footer">
-                <div class="progress-mini">
-                  <div class="progress-mini__bar" style="width:30%"></div>
-                </div>
-                <span class="path-card__progress">Progress: 30%</span>
-              </div>
             </div>
             <span class="material-symbols-outlined path-card__arrow">arrow_forward</span>
           </a>
 
           <!-- Path 3: Power BI -->
-          <a href="ecommerce-case-study.html" class="path-card" id="path-powerbi">
+          <a href="powerbi-tutorial.html" class="path-card" id="path-powerbi">
             <div class="path-card__icon-wrap path-card__icon--powerbi">
               <span class="material-symbols-outlined">monitoring</span>
             </div>
@@ -221,175 +237,25 @@
                 <span class="path-card__tag">DAX</span>
               </div>
               <h3 class="path-card__title">Microsoft Power BI</h3>
-              <p class="path-card__desc">Data Modeling, DAX Measures, Time Intelligence, Performance Tuning, hingga Deployment & Portofolio.</p>
-              <div class="path-card__footer">
-                <div class="progress-mini">
-                  <div class="progress-mini__bar" style="width:15%"></div>
-                </div>
-                <span class="path-card__progress">Progress: 15%</span>
-              </div>
+              <p class="path-card__desc">Power Query ETL, Data Modeling, DAX, Time Intelligence, Dashboard Design, AI Features, hingga Deployment.</p>
             </div>
             <span class="material-symbols-outlined path-card__arrow">arrow_forward</span>
           </a>
 
-          <!-- Path 4: Statistika -->
-          <a href="cheatsheets.html" class="path-card" id="path-stats">
-            <div class="path-card__icon-wrap path-card__icon--stats">
-              <span class="material-symbols-outlined">functions</span>
-            </div>
-            <div class="path-card__content">
-              <div class="path-card__meta">
-                <span class="path-card__tag">8 Bab</span>
-                <span class="path-card__tag">Teori + Praktik</span>
-              </div>
-              <h3 class="path-card__title">Statistika Dasar & Inferensial</h3>
-              <p class="path-card__desc">Descriptive stats, distribusi probabilitas, uji hipotesis, regresi, A/B testing, dan analisis kohort.</p>
-              <div class="path-card__footer">
-                <div class="progress-mini">
-                  <div class="progress-mini__bar" style="width:10%"></div>
-                </div>
-                <span class="path-card__progress">Progress: 10%</span>
-              </div>
-            </div>
-            <span class="material-symbols-outlined path-card__arrow">arrow_forward</span>
-          </a>
-
-          <!-- Path 5: Excel -->
-          <a href="cheatsheets.html" class="path-card" id="path-excel">
+          <!-- Path 4: Excel -->
+          <a href="excel-tutorial.html" class="path-card" id="path-excel">
             <div class="path-card__icon-wrap path-card__icon--excel">
               <span class="material-symbols-outlined">grid_on</span>
             </div>
             <div class="path-card__content">
               <div class="path-card__meta">
-                <span class="path-card__tag">6 Modul</span>
+                <span class="path-card__tag">7 Latihan</span>
                 <span class="path-card__tag">Reporting</span>
               </div>
-              <h3 class="path-card__title">Excel & Google Sheets Analytics</h3>
-              <p class="path-card__desc">XLOOKUP, FILTER, pivot tables, dynamic arrays, dan dashboard reporting untuk analisis bisnis.</p>
-              <div class="path-card__footer">
-                <div class="progress-mini">
-                  <div class="progress-mini__bar" style="width:0%"></div>
-                </div>
-                <span class="path-card__progress">Belum Dimulai</span>
-              </div>
+              <h3 class="path-card__title">Excel & Reporting</h3>
+              <p class="path-card__desc">SUM, AVERAGE, IF, VLOOKUP, HLOOKUP, XLOOKUP, CONCAT, TRIM, DATEDIF, dan fungsi teks untuk analisis.</p>
             </div>
             <span class="material-symbols-outlined path-card__arrow">arrow_forward</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured Pages: Quick Access -->
-    <section class="section section--alt" id="featured-pages">
-      <div class="section__container">
-        <div class="section__header">
-          <div class="section__badge">
-            <span class="material-symbols-outlined" style="font-size:14px">star</span>
-            <span>HALAMAN UNGGULAN</span>
-          </div>
-          <h2 class="section__title">Akses Cepat Materi Populer</h2>
-          <p class="section__subtitle">Halaman paling banyak diakses oleh siswa. Mulai dari tutorial SQL interaktif, studi kasus e-commerce, hingga cheatsheet referensi cepat.</p>
-        </div>
-        <div class="featured-grid">
-          <!-- Card 1: SQL SELECT & WHERE -->
-          <a href="sql-tutorial.html" class="featured-card" id="feat-sql-where">
-            <div class="featured-card__badge">
-              <span class="material-symbols-outlined" style="font-size:14px">database</span>
-              <span>SQL Tutorial</span>
-            </div>
-            <h3 class="featured-card__title">SQL: Memilih dan Memfilter Baris Data (SELECT & WHERE)</h3>
-            <p class="featured-card__desc">Pelajari klausa SELECT dan WHERE untuk memfilter data dari jutaan baris dalam hitungan detik. Dilengkapi sandbox SQLite interaktif.</p>
-            <div class="featured-card__meta">
-              <span class="featured-card__meta-item">
-                <span class="material-symbols-outlined" style="font-size:16px">timer</span>
-                Modul 02 • Dasar SQL
-              </span>
-              <span class="featured-card__meta-item">
-                <span class="material-symbols-outlined" style="font-size:16px">code</span>
-                Coba Sendiri
-              </span>
-            </div>
-            <div class="featured-card__chips">
-              <span class="chip">Filter Presisi</span>
-              <span class="chip">Hemat Bandwidth</span>
-              <span class="chip">Ekstraksi Bersih</span>
-            </div>
-          </a>
-
-          <!-- Card 2: Data Cleaning -->
-          <a href="data-cleaning.html" class="featured-card" id="feat-data-cleaning">
-            <div class="featured-card__badge">
-              <span class="material-symbols-outlined" style="font-size:14px">code</span>
-              <span>Python & Pandas</span>
-            </div>
-            <h3 class="featured-card__title">Data Cleaning: Menangani Nilai Kosong (NaN) dan Duplikasi</h3>
-            <p class="featured-card__desc">80% waktu Data Analyst dihabiskan untuk merapikan dataset mentah. Pelajari strategi drop vs imputasi dengan Pandas sandbox interaktif.</p>
-            <div class="featured-card__meta">
-              <span class="featured-card__meta-item">
-                <span class="material-symbols-outlined" style="font-size:16px">timer</span>
-                Modul Pandas 04 • 18 Menit
-              </span>
-              <span class="featured-card__meta-item">
-                <span class="material-symbols-outlined" style="font-size:16px">science</span>
-                Pyodide Sandbox
-              </span>
-            </div>
-            <div class="featured-card__chips">
-              <span class="chip">MCAR & MAR</span>
-              <span class="chip">Distortion & Leakage</span>
-              <span class="chip">13,000 Baris</span>
-            </div>
-          </a>
-
-          <!-- Card 3: E-Commerce Case Study -->
-          <a href="ecommerce-case-study.html" class="featured-card" id="feat-ecommerce">
-            <div class="featured-card__badge">
-              <span class="material-symbols-outlined" style="font-size:14px">storefront</span>
-              <span>Studi Kasus & Dataset</span>
-            </div>
-            <h3 class="featured-card__title">Eksplorasi Transaksi E-Commerce & Retensi Pengguna</h3>
-            <p class="featured-card__desc">Eksplorasi 150,000 data transaksi e-commerce nyata. Hitung AOV, identifikasi churn pattern, dan formulasikan strategi bisnis.</p>
-            <div class="featured-card__meta">
-              <span class="featured-card__meta-item">
-                <span class="material-symbols-outlined" style="font-size:16px">timer</span>
-                40 Menit
-              </span>
-              <span class="featured-card__meta-item">
-                <span class="material-symbols-outlined" style="font-size:16px">monitoring</span>
-                Google Colab
-              </span>
-            </div>
-            <div class="featured-card__chips">
-              <span class="chip">150K Baris</span>
-              <span class="chip">AOV & GMV</span>
-              <span class="chip">Kohort Retensi</span>
-            </div>
-          </a>
-
-          <!-- Card 4: Cheatsheets -->
-          <a href="cheatsheets.html" class="featured-card" id="feat-cheatsheets">
-            <div class="featured-card__badge">
-              <span class="material-symbols-outlined" style="font-size:14px">menu_book</span>
-              <span>Referensi Cepat</span>
-            </div>
-            <h3 class="featured-card__title">Kamus & Cheatsheet Referensi Cepat Analitika</h3>
-            <p class="featured-card__desc">Repositori sintaksis terverifikasi: SQL windowing, Pandas wrangling, metrik bisnis, statistika inferensial, dan fungsi spreadsheet.</p>
-            <div class="featured-card__meta">
-              <span class="featured-card__meta-item">
-                <span class="material-symbols-outlined" style="font-size:16px">verified</span>
-                v2.4.8 Updated
-              </span>
-              <span class="featured-card__meta-item">
-                <span class="material-symbols-outlined" style="font-size:16px">print</span>
-                PDF Siap Cetak
-              </span>
-            </div>
-            <div class="featured-card__chips">
-              <span class="chip">SQL</span>
-              <span class="chip">Pandas</span>
-              <span class="chip">Metrik Bisnis</span>
-              <span class="chip">Statistika</span>
-            </div>
           </a>
         </div>
       </div>
@@ -416,10 +282,10 @@
               </div>
             </div>
             <ul class="roadmap-phase__list">
-              <li class="roadmap-item roadmap-item--done"><span class="material-symbols-outlined">check_circle</span>Apa itu Data Analyst</li>
-              <li class="roadmap-item roadmap-item--done"><span class="material-symbols-outlined">check_circle</span>4 Jenis Analitik</li>
-              <li class="roadmap-item roadmap-item--done"><span class="material-symbols-outlined">check_circle</span>Setup Tools & Environment</li>
-              <li class="roadmap-item roadmap-item--active"><span class="material-symbols-outlined">play_circle</span>SQL Dasar: SELECT, WHERE</li>
+              <li class="roadmap-item"><span class="material-symbols-outlined">radio_button_unchecked</span>Apa itu Data Analyst</li>
+              <li class="roadmap-item"><span class="material-symbols-outlined">radio_button_unchecked</span>4 Jenis Analitik</li>
+              <li class="roadmap-item"><span class="material-symbols-outlined">radio_button_unchecked</span>Setup Tools & Environment</li>
+              <li class="roadmap-item"><span class="material-symbols-outlined">radio_button_unchecked</span>SQL Dasar: SELECT, WHERE</li>
               <li class="roadmap-item"><span class="material-symbols-outlined">radio_button_unchecked</span>SQL: GROUP BY, HAVING</li>
               <li class="roadmap-item"><span class="material-symbols-outlined">radio_button_unchecked</span>SQL: JOIN & Subqueries</li>
               <li class="roadmap-item"><span class="material-symbols-outlined">radio_button_unchecked</span>SQL: Window Functions</li>
@@ -492,7 +358,7 @@
             <span>FITUR PLATFORM</span>
           </div>
           <h2 class="section__title">Fitur yang Membuat Belajar Efektif</h2>
-          <p class="section__subtitle">Bukan hanya membaca teori — DataSchool menyediakan tools interaktif untuk praktik langsung di browser.</p>
+          <p class="section__subtitle">Bukan hanya membaca teori — setiap bab dilengkapi contoh kode, hasil query, dan latihan mandiri.</p>
         </div>
         <div class="tools-grid">
           <div class="tool-card" id="tool-sandbox">
@@ -500,42 +366,42 @@
               <span class="material-symbols-outlined">terminal</span>
             </div>
             <h3 class="tool-card__title">Sandbox Interaktif</h3>
-            <p class="tool-card__desc">Tulis dan jalankan SQL (SQLite) atau Python (Pyodide) langsung di browser. Tidak perlu instalasi apapun.</p>
+            <p class="tool-card__desc">Contoh kueri SQL dan kode Python siap pakai di halaman tutorial. Tekan "Tampilkan Contoh Hasil" untuk melihat outputnya.</p>
           </div>
           <div class="tool-card" id="tool-dataframe">
             <div class="tool-card__icon">
               <span class="material-symbols-outlined">table_chart</span>
             </div>
-            <h3 class="tool-card__title">DataFrame Inspector</h3>
-            <p class="tool-card__desc">Visualisasikan hasil query dalam format tabel interaktif dengan sorting, filtering, dan statistik kolom otomatis.</p>
+            <h3 class="tool-card__title">Pratinjau DataFrame</h3>
+            <p class="tool-card__desc">Perbandingan tabel sebelum dan sesudah pembersihan data, plus contoh hasil query pada tabel latihan.</p>
           </div>
           <div class="tool-card" id="tool-progress">
             <div class="tool-card__icon">
               <span class="material-symbols-outlined">trending_up</span>
             </div>
-            <h3 class="tool-card__title">Progress Tracking</h3>
-            <p class="tool-card__desc">Lacak kemajuan belajar per modul. Checkpoint otomatis menyimpan posisi terakhir video dan kode Anda.</p>
+            <h3 class="tool-card__title">Navigasi Terstruktur</h3>
+            <p class="tool-card__desc">Sidebar kurikulum, daftar isi tiap halaman, dan breadcrumb agar Anda selalu tahu posisi belajar.</p>
           </div>
           <div class="tool-card" id="tool-cheatsheet">
             <div class="tool-card__icon">
               <span class="material-symbols-outlined">picture_as_pdf</span>
             </div>
-            <h3 class="tool-card__title">Cheatsheet PDF (A4)</h3>
-            <p class="tool-card__desc">Unduh ringkasan densitas tinggi satu halaman untuk ditempel di meja kerja. SQL, Pandas, Metrik, & Stats.</p>
+            <h3 class="tool-card__title">Cheatsheet Siap Cetak</h3>
+            <p class="tool-card__desc">Ringkasan SQL, Pandas, metrik bisnis, dan statistik yang bisa dicetak atau disimpan sebagai PDF lewat browser.</p>
           </div>
           <div class="tool-card" id="tool-quiz">
             <div class="tool-card__icon">
               <span class="material-symbols-outlined">quiz</span>
             </div>
             <h3 class="tool-card__title">Mini Latihan & Kuis</h3>
-            <p class="tool-card__desc">Uji pemahaman di akhir setiap bab dengan kuis multiple-choice dan tantangan menulis query langsung.</p>
+            <p class="tool-card__desc">Uji pemahaman dengan kuis multiple-choice di tutorial SQL, plus latihan menulis query pada sandbox contoh.</p>
           </div>
           <div class="tool-card" id="tool-case-study">
             <div class="tool-card__icon">
               <span class="material-symbols-outlined">storefront</span>
             </div>
             <h3 class="tool-card__title">Studi Kasus Nyata</h3>
-            <p class="tool-card__desc">Dataset e-commerce 150K baris. Analisis AOV, GMV, churn, retensi kohort, dan presentasi rekomendasi bisnis.</p>
+            <p class="tool-card__desc">Studi kasus e-commerce dengan contoh data CSV siap unduh, analisis AOV, churn, dan retensi kohort.</p>
           </div>
         </div>
       </div>
@@ -546,12 +412,13 @@
   <footer class="footer" id="main-footer">
     <div class="footer__inner">
       <div class="footer__left">
-        <p class="footer__copyright">&copy; 2025 DataSchool. Dokumentasi analitika data terbuka untuk pembelajar mandiri.</p>
+        <p class="footer__copyright">&copy; 2026 DataSchool Indonesia. Dokumentasi analitika data terbuka untuk pembelajar mandiri.</p>
       </div>
       <div class="footer__links">
+        <a href="fundamental.html" class="footer__link">Fondasi</a>
+        <a href="sql-tutorial.html" class="footer__link">SQL</a>
+        <a href="python-tutorial.html" class="footer__link">Python</a>
         <a href="cheatsheets.html" class="footer__link">Cheatsheets</a>
-        <a href="#" class="footer__link">Referensi Sintaks</a>
-        <a href="#" class="footer__link">Forum Komunitas</a>
       </div>
     </div>
   </footer>
