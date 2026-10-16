@@ -155,6 +155,48 @@
 
   <!-- ===== MAIN CHEATSHEET CONTENT ===== -->
   <main class="cheatsheet-container" id="cheatsheet-content">
+
+<!-- Gambaran Sesi -->
+    <section class="session-brief" id="gambaran-sesi">
+      <div class="session-brief__head">
+        <span class="material-symbols-outlined session-brief__icon">assignment</span>
+        <div>
+          <span class="session-brief__eyebrow">Gambaran Sesi</span>
+          <h2 class="session-brief__title">Referensi yang dipakai saat mengerjakan, bukan dibaca berurutan</h2>
+        </div>
+      </div>
+      <p class="session-brief__intro">Halaman ini tempat Anda kembali setiap kali lupa sintaks. Pakai kotak pencarian dan filter kategori, lalu tandai fungsi yang paling sering Anda pakai agar makin cepat ditemukan.</p>
+      <div class="session-brief__grid">
+        <div class="session-brief__item">
+          <span class="material-symbols-outlined">category</span>
+          <div>
+            <span class="session-brief__label">Fokus Materi</span>
+            <p>Lima kategori referensi: SQL, Pandas & Python, metrik bisnis, statistika inferensial, dan fungsi spreadsheet.</p>
+          </div>
+        </div>
+        <div class="session-brief__item">
+          <span class="material-symbols-outlined">flag</span>
+          <div>
+            <span class="session-brief__label">Hasil Akhir</span>
+            <p>Daftar 10 fungsi favorit pribadi + lembar rujukan siap cetak A4.</p>
+          </div>
+        </div>
+        <div class="session-brief__item">
+          <span class="material-symbols-outlined">fact_check</span>
+          <div>
+            <span class="session-brief__label">Prasyarat</span>
+            <p>Tidak ada. Cocok dibuka berdampingan dengan sesi SQL, Python, atau Excel.</p>
+          </div>
+        </div>
+        <div class="session-brief__item">
+          <span class="material-symbols-outlined">schedule</span>
+          <div>
+            <span class="session-brief__label">Estimasi Waktu</span>
+            <p>±15 menit eksplorasi, lalu dipakai berulang saat latihan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
     
     <!-- 1. SQL ANALYTICS -->
     <section class="category-section" id="sql" data-category="sql">
@@ -762,7 +804,83 @@ GROUP BY 1;</code></pre>
       <button class="btn btn--primary btn--sm" onclick="resetFilters()">Reset Pencarian</button>
     </div>
 
-    <!-- NAVIGASI -->
+    <!-- Tugas Praktik -->
+    <section class="task-section" id="tugas-praktik">
+      <div class="session-brief__head">
+        <span class="material-symbols-outlined session-brief__icon">task_alt</span>
+        <div>
+          <span class="session-brief__eyebrow">Tugas Praktik</span>
+          <h2 class="session-brief__title">Jadikan Referensi Ini Benar-Benar Terpakai</h2>
+        </div>
+      </div>
+      <p class="session-brief__intro">Cheatsheet baru berguna kalau dipakai. Selesaikan tiga tugas ini agar halaman ini menjadi alat kerja harian Anda.</p>
+      <div class="task-progress">
+        <span class="task-progress__track"><span class="task-progress__bar" id="task-progress-bar"></span></span>
+        <span class="task-progress__text" id="task-progress-text">0 dari 3 tugas selesai</span>
+      </div>
+      <ol class="task-list">
+      <li class="task-card">
+        <span class="task-card__num">1</span>
+        <div class="task-card__body">
+          <h3 class="task-card__title">Bangun Daftar Fungsi Favorit</h3>
+          <p class="task-card__desc">Saring referensi sesuai kebutuhan Anda sendiri.</p>
+          <ul class="task-card__steps">
+            <li>Pakai filter kategori dan pencarian (mis. COALESCE, XLOOKUP, groupby).</li>
+            <li>Pilih 10 fungsi/sintaks yang paling relevan dengan pekerjaan atau target karier Anda.</li>
+            <li>Catat tiap fungsi beserta satu kalimat "kapan dipakai".</li>
+          </ul>
+          <div class="task-card__result">
+            <span class="material-symbols-outlined">flag</span>
+            <span><strong>Hasil yang dikumpulkan:</strong> Daftar 10 fungsi + keterangan penggunaannya.</span>
+          </div>
+          <label class="task-check">
+            <input type="checkbox" data-task="cheatsheets-1">
+            <span>Tandai tugas ini selesai</span>
+          </label>
+        </div>
+      </li>
+      <li class="task-card">
+        <span class="task-card__num">2</span>
+        <div class="task-card__body">
+          <h3 class="task-card__title">Cetak Lembar Rujukan</h3>
+          <p class="task-card__desc">Versi cetak kini bersih tanpa header, filter, dan navigasi.</p>
+          <ul class="task-card__steps">
+            <li>Klik tombol "Versi Cetak (A4)".</li>
+            <li>Pada dialog cetak, pilih "Simpan sebagai PDF".</li>
+            <li>Periksa hasilnya: hanya materi yang ikut tercetak.</li>
+          </ul>
+          <div class="task-card__result">
+            <span class="material-symbols-outlined">flag</span>
+            <span><strong>Hasil yang dikumpulkan:</strong> File PDF cheatsheet siap ditempel di meja kerja.</span>
+          </div>
+          <label class="task-check">
+            <input type="checkbox" data-task="cheatsheets-2">
+            <span>Tandai tugas ini selesai</span>
+          </label>
+        </div>
+      </li>
+      <li class="task-card">
+        <span class="task-card__num">3</span>
+        <div class="task-card__body">
+          <h3 class="task-card__title">Uji pada Tugas Nyata</h3>
+          <p class="task-card__desc">Latih kebiasaan memeriksa sintaks alih-alih menebak.</p>
+          <ul class="task-card__steps">
+            <li>Ambil satu tugas dari sesi SQL, Python, atau Excel.</li>
+            <li>Kerjakan seperti biasa, tetapi buka cheatsheet ini setiap kali ragu soal sintaks.</li>
+            <li>Catat 1–2 fungsi yang ternyata sering Anda lupa.</li>
+          </ul>
+          <div class="task-card__result">
+            <span class="material-symbols-outlined">flag</span>
+            <span><strong>Hasil yang dikumpulkan:</strong> Satu tugas selesai tanpa error sintaks + catatan fungsi yang perlu dihafal.</span>
+          </div>
+          <label class="task-check">
+            <input type="checkbox" data-task="cheatsheets-3">
+            <span>Tandai tugas ini selesai</span>
+          </label>
+        </div>
+      </li>
+      </ol>
+    </section><!-- NAVIGASI -->
     <nav class="nav-prev-next">
       <a href="ecommerce-case-study.html" class="nav-prev-next__link">
         <span class="material-symbols-outlined" style="font-size:16px">arrow_back</span>

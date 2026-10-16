@@ -149,6 +149,48 @@
 
           <!-- Main Content -->
           <div class="content-body">
+
+    <!-- Gambaran Sesi -->
+            <section class="session-brief" id="gambaran-sesi">
+              <div class="session-brief__head">
+                <span class="material-symbols-outlined session-brief__icon">assignment</span>
+                <div>
+                  <span class="session-brief__eyebrow">Gambaran Sesi</span>
+                  <h2 class="session-brief__title">Python & Pandas: 12 modul dari nol ke portofolio</h2>
+                </div>
+              </div>
+              <p class="session-brief__intro">Materi dibagi 5 level. Jangan dihafal — jalankan setiap kode di komputer atau Google Colab sambil membaca. Jeda di akhir tiap level sebelum lanjut.</p>
+              <div class="session-brief__grid">
+                <div class="session-brief__item">
+                  <span class="material-symbols-outlined">category</span>
+                  <div>
+                    <span class="session-brief__label">Fokus Materi</span>
+                    <p>Fondasi Python, NumPy, Pandas (termasuk groupby/merge/pivot), data cleaning, visualisasi, EDA, statistik, dan proyek portofolio.</p>
+                  </div>
+                </div>
+                <div class="session-brief__item">
+                  <span class="material-symbols-outlined">flag</span>
+                  <div>
+                    <span class="session-brief__label">Hasil Akhir</span>
+                    <p>Satu skrip analisis (.py), satu grafik, dan satu kalimat insight.</p>
+                  </div>
+                </div>
+                <div class="session-brief__item">
+                  <span class="material-symbols-outlined">fact_check</span>
+                  <div>
+                    <span class="session-brief__label">Prasyarat</span>
+                    <p>Python 3.10+ terpasang (opsional Jupyter), atau Google Colab gratis tanpa instalasi.</p>
+                  </div>
+                </div>
+                <div class="session-brief__item">
+                  <span class="material-symbols-outlined">schedule</span>
+                  <div>
+                    <span class="session-brief__label">Estimasi Waktu</span>
+                    <p>±3–4 jam, dibagi per level. Jangan dikerjakan dalam sekali duduk.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
             <!-- Level 1 -->
             <div class="content-divider">
               <span class="material-symbols-outlined">foundation</span>
@@ -167,17 +209,24 @@
                 </div>
               </div>
               <div class="article-content">
-                <p>Memahami mengapa Python menjadi bahasa utama untuk Data Analyst. Setup lingkungan kerja dengan <strong>Anaconda</strong> atau <strong>pip</strong>, konfigurasi <strong>Jupyter Notebook</strong>, dan konsep virtual environment.</p>
+                <p>Python dipilih bukan karena tren, tetapi karena ekosistem datanya paling lengkap dan paling sering diminta di lowongan Data Analyst. Modul ini menyiapkan lingkungan kerja Anda: dari instalasi hingga notebook siap dipakai.</p>
                 <div class="info-card info-card--primary">
-                  <h4><span class="material-symbols-outlined" style="font-size:18px">school</span> Yang Akan Dipelajari</h4>
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">school</span> Poin Kunci</h4>
                   <ul>
-                    <li>Instalasi Python via Anaconda atau python.org</li>
-                    <li>Menjalankan Jupyter Notebook dan JupyterLab</li>
-                    <li>Manajemen package dengan pip dan conda</li>
-                    <li>Virtual environment untuk isolasi proyek</li>
+                    <li><strong>Mesin:</strong> pasang Anaconda (praktis, sudah membawa Jupyter + library) atau Python dari python.org lalu tambah paket via <code>pip</code>.</li>
+                    <li><strong>Notebook:</strong> gunakan Jupyter Notebook untuk eksplorasi cepat dan JupyterLab untuk proyek berisi banyak file.</li>
+                    <li><strong>Isolasi:</strong> buat virtual environment per proyek agar versi library tidak saling bentrok.</li>
                   </ul>
                 </div>
-                <div class="featured-card__chips" style="margin-top:1rem">
+                <div class="code-sandbox" style="margin:0.75rem 0 1rem">
+                  <div class="code-sandbox__editor" style="min-height:auto">
+<pre style="margin:0"><code><span class="cm"># Siapkan lingkungan & dependency utama</span>
+python -m venv .venv
+pip install pandas numpy matplotlib seaborn
+jupyter lab</code></pre>
+                  </div>
+                </div>
+                <div class="featured-card__chips">
                   <span class="chip">Pemula</span>
                   <span class="chip">Setup</span>
                 </div>
@@ -195,8 +244,25 @@
                 </div>
               </div>
               <div class="article-content">
-                <p>Mempelajari tipe data primitif Python (<code>int</code>, <code>float</code>, <code>str</code>, <code>bool</code>), type casting, operator aritmatika dan logika, serta format string dengan f-string.</p>
-                <div class="featured-card__chips" style="margin-top:1rem">
+                <p>Sebelum mengolah tabel, Anda harus nyaman dengan bahan dasar: angka, teks, dan nilai benar/salah. Kesalahan tipe data adalah penyebab paling umum error saat membaca CSV.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">tag</span> Poin Kunci</h4>
+                  <ul>
+                    <li><strong>Empat tipe dasar:</strong> <code>int</code> (bilangan bulat), <code>float</code> (desimal), <code>str</code> (teks), <code>bool</code> (True/False).</li>
+                    <li><strong>Casting:</strong> ubah tipe dengan <code>int()</code>, <code>float()</code>, atau <code>str()</code> — sering dipakai saat kolom angka terbaca sebagai teks.</li>
+                    <li><strong>Operator:</strong> aritmatika (<code>+ - * / // % **</code>) dan logika (<code>and</code>, <code>or</code>, <code>not</code>).</li>
+                    <li><strong>f-string:</strong> cara rapi menyisipkan nilai ke dalam teks untuk laporan.</li>
+                  </ul>
+                </div>
+                <div class="code-sandbox" style="margin:0.75rem 0 1rem">
+                  <div class="code-sandbox__editor" style="min-height:auto">
+<pre style="margin:0"><code>harga = 150000
+diskon = 0.1
+<span class="fn">print</span>(<span class="str">f"Bayar: Rp{harga * (1 - diskon):,.0f}"</span>)
+<span class="cm"># Bayar: Rp135,000</span></code></pre>
+                  </div>
+                </div>
+                <div class="featured-card__chips">
                   <span class="chip">Pemula</span>
                   <span class="chip">Fundamental</span>
                 </div>
@@ -214,8 +280,26 @@
                 </div>
               </div>
               <div class="article-content">
-                <p>Menguasai empat struktur data inti Python: <strong>List</strong>, <strong>Dictionary</strong>, <strong>Tuple</strong>, dan <strong>Set</strong>. Termasuk indexing, slicing, list comprehension, dan nested structures.</p>
-                <div class="featured-card__chips" style="margin-top:1rem">
+                <p>Struktur data menentukan cara Anda menyimpan sekumpulan nilai. Analoginya: list seperti daftar belanja, dict seperti buku kontak, set seperti daftar ISBN unik.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">view_list</span> Poin Kunci</h4>
+                  <ul>
+                    <li><strong>List</strong> <code>[a, b]</code> — urut, bisa diubah, boleh duplikat. Struktur paling sering dipakai.</li>
+                    <li><strong>Tuple</strong> <code>(a, b)</code> — tidak bisa diubah; cocok untuk data tetap seperti koordinat.</li>
+                    <li><strong>Dict</strong> <code>{k: v}</code> — pasangan kunci-nilai, akses cepat berdasarkan kunci.</li>
+                    <li><strong>Set</strong> <code>{a, b}</code> — hanya nilai unik; berguna untuk menghitung anggota berbeda.</li>
+                    <li><strong>Indexing &amp; slicing:</strong> <code>data[0]</code>, <code>data[1:3]</code>, dan <strong>list comprehension</strong> untuk transformasi singkat.</li>
+                  </ul>
+                </div>
+                <div class="code-sandbox" style="margin:0.75rem 0 1rem">
+                  <div class="code-sandbox__editor" style="min-height:auto">
+<pre style="margin:0"><code>harga = [12000, 45000, 8000, 45000]
+mahal = [h <span class="kw">for</span> h <span class="kw">in</span> harga <span class="kw">if</span> h > 10000]
+<span class="fn">print</span>(mahal)        <span class="cm"># [12000, 45000, 45000]</span>
+<span class="fn">print</span>(<span class="fn">len</span>(<span class="fn">set</span>(harga)))  <span class="cm"># 3 nilai unik</span></code></pre>
+                  </div>
+                </div>
+                <div class="featured-card__chips">
                   <span class="chip">Pemula</span>
                   <span class="chip">Data Structures</span>
                 </div>
@@ -233,8 +317,26 @@
                 </div>
               </div>
               <div class="article-content">
-                <p>Kontrol alur program dengan <code>if/elif/else</code>, loop <code>for</code> dan <code>while</code>, serta membuat fungsi dengan <code>def</code>, <code>lambda</code>, <code>*args</code>/<code>**kwargs</code>, dan konsep scope.</p>
-                <div class="featured-card__chips" style="margin-top:1rem">
+                <p>Analisis data penuh percabangan dan pengulangan. Fungsi membuat logika itu bisa dipakai ulang, bukan disalin-tempel berulang kali.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">account_tree</span> Poin Kunci</h4>
+                  <ul>
+                    <li><strong>Percabangan:</strong> <code>if / elif / else</code> untuk memilih langkah berdasarkan kondisi.</li>
+                    <li><strong>Loop:</strong> <code>for</code> untuk mengulang sejumlah data, <code>while</code> selama kondisi terpenuhi, dengan <code>break</code>/<code>continue</code> untuk kontrol.</li>
+                    <li><strong>Fungsi:</strong> <code>def</code> + <code>return</code> untuk membungkus logika; <code>lambda</code> untuk fungsi singkat sekali pakai.</li>
+                    <li><strong>Scope:</strong> pahami beda variabel lokal dan global agar tidak salah mengubah data.</li>
+                  </ul>
+                </div>
+                <div class="code-sandbox" style="margin:0.75rem 0 1rem">
+                  <div class="code-sandbox__editor" style="min-height:auto">
+<pre style="margin:0"><code><span class="kw">def</span> <span class="fn">margin</span>(harga, biaya):
+    <span class="kw">return</span> (harga - biaya) / harga * 100
+
+<span class="fn">print</span>(<span class="str">f"Margin: {margin(150000, 90000):.1f}%"</span>)
+<span class="cm"># Margin: 40.0%</span></code></pre>
+                  </div>
+                </div>
+                <div class="featured-card__chips">
                   <span class="chip">Pemula - Menengah</span>
                   <span class="chip">Logic</span>
                 </div>
@@ -259,8 +361,25 @@
                 </div>
               </div>
               <div class="article-content">
-                <p>Belajar <strong>NumPy</strong> untuk komputasi numerik: membuat dan memanipulasi array multidimensi, broadcasting, vectorization, operasi statistik, reshape, dan random number generation.</p>
-                <div class="featured-card__chips" style="margin-top:1rem">
+                <p>NumPy adalah mesin di balik Pandas. Ia menyimpan angka dalam array dan menghitungnya jauh lebih cepat daripada loop Python biasa.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">grid_4x4</span> Poin Kunci</h4>
+                  <ul>
+                    <li><strong>ndarray:</strong> wadah angka cepat, satu dimensi (vektor) atau banyak dimensi (matriks).</li>
+                    <li><strong>Vectorization:</strong> operasi langsung ke seluruh array tanpa loop manual.</li>
+                    <li><strong>Broadcasting:</strong> menghitung array berbeda bentuk dengan aturan pelebaran otomatis.</li>
+                    <li><strong>Statistik:</strong> <code>.mean()</code>, <code>.sum()</code>, <code>.std()</code>, <code>.min()</code>, <code>.max()</code>.</li>
+                  </ul>
+                </div>
+                <div class="code-sandbox" style="margin:0.75rem 0 1rem">
+                  <div class="code-sandbox__editor" style="min-height:auto">
+<pre style="margin:0"><code><span class="kw">import</span> numpy <span class="kw">as</span> np
+harga = np.array([12000, 45000, 8000])
+<span class="fn">print</span>(harga * 1.11)   <span class="cm"># tambah PPN 11% ke semua elemen</span>
+<span class="fn">print</span>(harga.mean())   <span class="cm"># 21666.67</span></code></pre>
+                  </div>
+                </div>
+                <div class="featured-card__chips">
                   <span class="chip">Menengah</span>
                   <span class="chip">NumPy</span>
                 </div>
@@ -278,8 +397,26 @@
                 </div>
               </div>
               <div class="article-content">
-                <p>Menguasai <strong>Pandas</strong> untuk manipulasi data tabular: <code>Series</code>, <code>DataFrame</code>, membaca file CSV/Excel, filtering, seleksi data dengan <code>loc/iloc</code>, sorting, dan handling missing values.</p>
-                <div class="featured-card__chips" style="margin-top:1rem">
+                <p>Pandas adalah alat kerja utama Data Analyst. Di sini Anda belajar membaca tabel dan mengambil baris/kolom yang relevan — keterampilan yang setara dengan <code>SELECT ... WHERE</code> di SQL.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">table_chart</span> Poin Kunci</h4>
+                  <ul>
+                    <li><strong>Membaca data:</strong> <code>pd.read_csv()</code> dan <code>pd.read_excel()</code>.</li>
+                    <li><strong>Inspeksi cepat:</strong> <code>.head()</code>, <code>.info()</code>, <code>.describe()</code>, <code>.shape</code>.</li>
+                    <li><strong>Seleksi:</strong> <code>loc</code> berdasarkan label, <code>iloc</code> berdasarkan posisi indeks.</li>
+                    <li><strong>Filter &amp; urut:</strong> filter boolean <code>df[df["nilai"] &gt; 500000]</code> dan <code>.sort_values()</code>.</li>
+                  </ul>
+                </div>
+                <div class="code-sandbox" style="margin:0.75rem 0 1rem">
+                  <div class="code-sandbox__editor" style="min-height:auto">
+<pre style="margin:0"><code><span class="kw">import</span> pandas <span class="kw">as</span> pd
+df = pd.read_csv(<span class="str">"penjualan.csv"</span>)
+df[df[<span class="str">"status"</span>] == <span class="str">"Completed"</span>].sort_values(
+    <span class="str">"total"</span>, ascending=<span class="kw">False</span>
+).head()</code></pre>
+                  </div>
+                </div>
+                <div class="featured-card__chips">
                   <span class="chip">Menengah</span>
                   <span class="chip">Pandas</span>
                 </div>
@@ -297,8 +434,25 @@
                 </div>
               </div>
               <div class="article-content">
-                <p>Teknik Pandas tingkat lanjut: <code>groupby()</code>, <code>agg()</code>, <code>merge()</code>, <code>concat()</code>, <code>pivot_table()</code>, <code>melt()</code>, <code>apply()</code>, dan <code>map()</code> untuk analisis data kompleks.</p>
-                <div class="featured-card__chips" style="margin-top:1rem">
+                <p>Di sinilah data mentah berubah menjadi jawaban bisnis: merangkum per kelompok, menggabungkan tabel, dan mengubah bentuk data agar siap divisualisasikan.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">merge</span> Poin Kunci</h4>
+                  <ul>
+                    <li><strong>groupby + agg:</strong> rangkum beberapa metrik sekaligus per kelompok.</li>
+                    <li><strong>merge():</strong> gabungkan tabel seperti JOIN di SQL — tentukan <code>how="left"</code> agar baris kiri tetap utuh.</li>
+                    <li><strong>concat():</strong> susun tabel secara vertikal atau horizontal.</li>
+                    <li><strong>pivot_table() &amp; melt():</strong> ubah bentuk lebar ke panjang dan sebaliknya agar cocok untuk chart.</li>
+                  </ul>
+                </div>
+                <div class="code-sandbox" style="margin:0.75rem 0 1rem">
+                  <div class="code-sandbox__editor" style="min-height:auto">
+<pre style="margin:0"><code>ringkasan = df.groupby(<span class="str">"kategori"</span>).agg(
+    total_nilai=(<span class="str">"nilai"</span>, <span class="str">"sum"</span>),
+    jumlah_order=(<span class="str">"order_id"</span>, <span class="str">"nunique"</span>),
+).reset_index()</code></pre>
+                  </div>
+                </div>
+                <div class="featured-card__chips">
                   <span class="chip">Menengah - Mahir</span>
                   <span class="chip">Pandas Advanced</span>
                 </div>
@@ -323,8 +477,24 @@
                 </div>
               </div>
               <div class="article-content">
-                <p>Teknik pembersihan data profesional: handling nulls, duplikasi, deteksi outlier (IQR dan Z-score), encoding kategorikal, normalisasi, regex, dan membangun data pipeline.</p>
-                <div class="featured-card__chips" style="margin-top:1rem">
+                <p>Data kotor adalah hal normal. Modul ini melatih kebiasaan seorang analyst: mendiagnosis masalah dulu, baru memutuskan strategi — bukan asal menghapus baris.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">cleaning_services</span> Poin Kunci</h4>
+                  <ul>
+                    <li><strong>Diagnosis:</strong> <code>df.isnull().sum()</code>, <code>df.duplicated().sum()</code>, cek <code>df.dtypes</code>.</li>
+                    <li><strong>Penanganan:</strong> <code>dropna()</code>, <code>fillna()</code> dengan median/modus, <code>drop_duplicates()</code>.</li>
+                    <li><strong>Outlier:</strong> deteksi lewat aturan IQR atau Z-score sebelum diputuskan dibuang.</li>
+                    <li><strong>Standarisasi:</strong> rapikan teks dengan regex, normalisasi skala, dan encoding kategorikal.</li>
+                  </ul>
+                </div>
+                <div class="code-sandbox" style="margin:0.75rem 0 1rem">
+                  <div class="code-sandbox__editor" style="min-height:auto">
+<pre style="margin:0"><code><span class="cm"># Isi nilai kosong dengan median, hapus duplikat</span>
+df[<span class="str">"umur"</span>] = df[<span class="str">"umur"</span>].fillna(df[<span class="str">"umur"</span>].median())
+df = df.drop_duplicates(subset=[<span class="str">"customer_id"</span>])</code></pre>
+                  </div>
+                </div>
+                <div class="featured-card__chips">
                   <span class="chip">Menengah - Mahir</span>
                   <span class="chip">Data Cleaning</span>
                 </div>
@@ -342,8 +512,27 @@
                 </div>
               </div>
               <div class="article-content">
-                <p>Membuat visualisasi data profesional dengan <strong>Matplotlib</strong> (figure, axes, subplot) dan <strong>Seaborn</strong> (heatmap, pairplot, boxplot) termasuk customization dan styling.</p>
-                <div class="featured-card__chips" style="margin-top:1rem">
+                <p>Grafik yang baik bukan hiasan — ia menjawab satu pertanyaan dengan jelas. Matplotlib memberi kontrol penuh, Seaborn mempercepat pembuatan chart statistik.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">insert_chart</span> Poin Kunci</h4>
+                  <ul>
+                    <li><strong>Struktur Matplotlib:</strong> figure (kanvas) → axes (area plot) → subplot untuk panel jamak.</li>
+                    <li><strong>Jenis chart:</strong> bar (perbandingan kategori), line (tren waktu), scatter (hubungan variabel), histogram (distribusi).</li>
+                    <li><strong>Seaborn:</strong> <code>heatmap</code> korelasi, <code>pairplot</code> antar-variabel, <code>boxplot</code> sebaran per kelompok.</li>
+                    <li><strong>Prinsip:</strong> satu grafik = satu pesan; beri judul, label sumbu, dan satuan.</li>
+                  </ul>
+                </div>
+                <div class="code-sandbox" style="margin:0.75rem 0 1rem">
+                  <div class="code-sandbox__editor" style="min-height:auto">
+<pre style="margin:0"><code><span class="kw">import</span> seaborn <span class="kw">as</span> sns
+<span class="kw">import</span> matplotlib.pyplot <span class="kw">as</span> plt
+
+sns.barplot(data=df, x=<span class="str">"kategori"</span>, y=<span class="str">"nilai"</span>)
+plt.title(<span class="str">"Penjualan per Kategori"</span>)
+plt.show()</code></pre>
+                  </div>
+                </div>
+                <div class="featured-card__chips">
                   <span class="chip">Menengah - Mahir</span>
                   <span class="chip">Visualization</span>
                 </div>
@@ -368,8 +557,24 @@
                 </div>
               </div>
               <div class="article-content">
-                <p>Proses EDA sistematis: analisis univariate, bivariate, dan multivariate. Profiling data, identifikasi pola, dan data storytelling untuk komunikasi insight.</p>
-                <div class="featured-card__chips" style="margin-top:1rem">
+                <p>EDA adalah fase investigasi: mengajukan pertanyaan ke data sebelum menarik kesimpulan. Tujuannya menemukan pola, anomali, dan hubungan yang layak ditindaklanjuti.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">query_stats</span> Poin Kunci</h4>
+                  <ul>
+                    <li><strong>Urutan sistematis:</strong> bentuk &amp; tipe data → nilai kosong → distribusi → korelasi → anomali.</li>
+                    <li><strong>Tiga tingkat:</strong> univariate (satu kolom), bivariate (dua kolom), multivariate (banyak kolom).</li>
+                    <li><strong>Alat andalan:</strong> <code>describe()</code>, histogram, <code>corr()</code>, dan scatter plot.</li>
+                    <li><strong>Output:</strong> bukan sekadar chart, tetapi kalimat insight yang bisa ditindaklanjuti.</li>
+                  </ul>
+                </div>
+                <div class="code-sandbox" style="margin:0.75rem 0 1rem">
+                  <div class="code-sandbox__editor" style="min-height:auto">
+<pre style="margin:0"><code>df.describe()
+df.corr(numeric_only=<span class="kw">True</span>)
+df.groupby(<span class="str">"segment"</span>)[<span class="str">"revenue"</span>].mean()</code></pre>
+                  </div>
+                </div>
+                <div class="featured-card__chips">
                   <span class="chip">Mahir</span>
                   <span class="chip">EDA</span>
                 </div>
@@ -387,8 +592,24 @@
                 </div>
               </div>
               <div class="article-content">
-                <p>Statistik deskriptif (mean, median, std) dan inferensial (hypothesis testing, t-test, chi-square, confidence interval) untuk menarik kesimpulan dari data.</p>
-                <div class="featured-card__chips" style="margin-top:1rem">
+                <p>Statistik membuat Anda bisa berkata "perbedaan ini nyata", bukan sekadar "kelihatannya berbeda". Inilah dasar pengambilan keputusan berbasis bukti dan A/B testing.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">functions</span> Poin Kunci</h4>
+                  <ul>
+                    <li><strong>Deskriptif:</strong> mean, median, standar deviasi, dan kuartil untuk merangkum data.</li>
+                    <li><strong>Distribusi:</strong> pahami bentuk sebaran sebelum memilih uji yang tepat.</li>
+                    <li><strong>Korelasi:</strong> mengukur kekuatan hubungan, bukan sebab-akibat.</li>
+                    <li><strong>Inferensial:</strong> t-test, chi-square, p-value, dan confidence interval untuk menguji hipotesis.</li>
+                  </ul>
+                </div>
+                <div class="code-sandbox" style="margin:0.75rem 0 1rem">
+                  <div class="code-sandbox__editor" style="min-height:auto">
+<pre style="margin:0"><code><span class="kw">from</span> scipy <span class="kw">import</span> stats
+t, p = stats.ttest_ind(grup_kontrol, grup_perlakuan)
+<span class="fn">print</span>(<span class="str">f"p-value: {p:.4f}"</span>)  <span class="cm"># p &lt; 0.05 → berbeda signifikan</span></code></pre>
+                  </div>
+                </div>
+                <div class="featured-card__chips">
                   <span class="chip">Mahir</span>
                   <span class="chip">Statistics</span>
                 </div>
@@ -413,8 +634,17 @@
                 </div>
               </div>
               <div class="article-content">
-                <p>Membangun proyek portofolio end-to-end, best practices Jupyter Notebook, Git workflow untuk Data Analyst, struktur portofolio GitHub, dan persiapan interview.</p>
-                <div class="featured-card__chips" style="margin-top:1rem">
+                <p>Portofolio adalah bukti kemampuan Anda. Recruiter tidak melihat nilai, mereka melihat bagaimana Anda memecahkan masalah dari data mentah sampai rekomendasi.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">work</span> Poin Kunci</h4>
+                  <ul>
+                    <li><strong>Alur proyek:</strong> pertanyaan bisnis → data → pembersihan → analisis → visualisasi → insight.</li>
+                    <li><strong>Repositori:</strong> satu proyek satu repo GitHub, lengkap dengan <code>README</code> berisi tujuan, langkah, dan temuan bergambar.</li>
+                    <li><strong>Kebiasaan baik:</strong> notebook rapi dan berurutan, komentar seperlunya, serta commit Git yang jelas.</li>
+                    <li><strong>Interview:</strong> siapkan cerita proyek (masalah, proses, dampak), plus latihan SQL dan studi kasus.</li>
+                  </ul>
+                </div>
+                <div class="featured-card__chips">
                   <span class="chip">Siap Kerja</span>
                   <span class="chip">Portfolio</span>
                 </div>
@@ -443,7 +673,83 @@
             </div>
 
             <!-- Nav Footer -->
-            <div class="content-nav-footer">
+                <!-- Tugas Praktik -->
+            <section class="task-section" id="tugas-praktik">
+              <div class="session-brief__head">
+                <span class="material-symbols-outlined session-brief__icon">task_alt</span>
+                <div>
+                  <span class="session-brief__eyebrow">Tugas Praktik</span>
+                  <h2 class="session-brief__title">Bangun Skrip Analisis Pertama</h2>
+                </div>
+              </div>
+              <p class="session-brief__intro">Tiga tugas ini menghasilkan portofolio pertama Anda: skrip yang membaca, merangkum, dan memvisualisasikan data.</p>
+              <div class="task-progress">
+                <span class="task-progress__track"><span class="task-progress__bar" id="task-progress-bar"></span></span>
+                <span class="task-progress__text" id="task-progress-text">0 dari 3 tugas selesai</span>
+              </div>
+              <ol class="task-list">
+              <li class="task-card">
+                <span class="task-card__num">1</span>
+                <div class="task-card__body">
+                  <h3 class="task-card__title">Siapkan Lingkungan</h3>
+                  <p class="task-card__desc">Pastikan Python dan library utama berjalan sebelum mulai menulis analisis.</p>
+                  <ul class="task-card__steps">
+                    <li>Pasang Python, lalu jalankan pip install pandas numpy matplotlib.</li>
+                    <li>Buka Jupyter Notebook atau Google Colab.</li>
+                    <li>Jalankan import pandas as pd; print(pd.__version__).</li>
+                  </ul>
+                  <div class="task-card__result">
+                    <span class="material-symbols-outlined">flag</span>
+                    <span><strong>Hasil yang dikumpulkan:</strong> Cetakan versi library sebagai bukti lingkungan siap.</span>
+                  </div>
+                  <label class="task-check">
+                    <input type="checkbox" data-task="python-tutorial-1">
+                    <span>Tandai tugas ini selesai</span>
+                  </label>
+                </div>
+              </li>
+              <li class="task-card">
+                <span class="task-card__num">2</span>
+                <div class="task-card__body">
+                  <h3 class="task-card__title">Skrip Ringkasan Penjualan</h3>
+                  <p class="task-card__desc">Buat file analisis.py yang membaca dataset dan merangkumnya.</p>
+                  <ul class="task-card__steps">
+                    <li>Baca CSV (boleh contoh CSV dari halaman Studi Kasus E-Commerce).</li>
+                    <li>Tampilkan 5 baris pertama, jumlah baris, dan tipe data tiap kolom.</li>
+                    <li>Hitung ringkasan penjualan per kategori memakai groupby.</li>
+                  </ul>
+                  <div class="task-card__result">
+                    <span class="material-symbols-outlined">flag</span>
+                    <span><strong>Hasil yang dikumpulkan:</strong> File analisis.py + keluaran konsol: 5 baris teratas, jumlah baris, dan tabel ringkasan per kategori.</span>
+                  </div>
+                  <label class="task-check">
+                    <input type="checkbox" data-task="python-tutorial-2">
+                    <span>Tandai tugas ini selesai</span>
+                  </label>
+                </div>
+              </li>
+              <li class="task-card">
+                <span class="task-card__num">3</span>
+                <div class="task-card__body">
+                  <h3 class="task-card__title">Satu Grafik, Satu Insight</h3>
+                  <p class="task-card__desc">Visualisasi bukan hiasan — setiap grafik harus menjawab pertanyaan.</p>
+                  <ul class="task-card__steps">
+                    <li>Buat grafik batang penjualan per kategori dan grafik garis tren.</li>
+                    <li>Simpan grafik sebagai file PNG.</li>
+                    <li>Tulis satu kalimat insight yang bisa ditindaklanjuti dari grafik tersebut.</li>
+                  </ul>
+                  <div class="task-card__result">
+                    <span class="material-symbols-outlined">flag</span>
+                    <span><strong>Hasil yang dikumpulkan:</strong> File PNG + satu kalimat insight.</span>
+                  </div>
+                  <label class="task-check">
+                    <input type="checkbox" data-task="python-tutorial-3">
+                    <span>Tandai tugas ini selesai</span>
+                  </label>
+                </div>
+              </li>
+              </ol>
+            </section><div class="content-nav-footer">
               <a href="sql-tutorial.html" class="content-nav-footer__link content-nav-footer__link--prev">
                 <span class="material-symbols-outlined">arrow_back</span>
                 <div>
@@ -462,6 +768,7 @@
           </div>
           <aside class="toc-rail" id="toc-rail">
             <div class="toc-rail__title">DI HALAMAN INI</div>
+            <a href="#gambaran-sesi" class="toc-rail__item">Gambaran Sesi</a>
             <a href="#mod01" class="toc-rail__item active">01. Pengenalan Python &amp; Setup</a>
             <a href="#mod02" class="toc-rail__item">02. Variabel, Tipe Data &amp; Operator</a>
             <a href="#mod03" class="toc-rail__item">03. Struktur Data: List, Dict, Tuple, Set</a>
@@ -474,7 +781,8 @@
             <a href="#mod10" class="toc-rail__item">10. Exploratory Data Analysis (EDA)</a>
             <a href="#mod11" class="toc-rail__item">11. Statistik Deskriptif &amp; Inferensial</a>
             <a href="#mod12" class="toc-rail__item">12. Proyek Portofolio &amp; Best Practices</a>
-          </aside>
+                      <a href="#tugas-praktik" class="toc-rail__item">Tugas Praktik</a>
+</aside>
         </div>
       </div>
     </section>

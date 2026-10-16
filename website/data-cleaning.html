@@ -144,24 +144,61 @@
 
       <!-- Content -->
       <div class="content-area">
-        <!-- Metadata Cards -->
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;margin-bottom:3rem">
-          <div style="padding:1rem;background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md)">
-            <div style="font-size:0.8125rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.25rem">Metode Utama</div>
-            <div style="font-size:0.8125rem;font-weight:700;color:var(--on-surface)"><code class="code-inline">.isna()</code> / <code class="code-inline">.fillna()</code></div>
+
+<!-- Gambaran Sesi -->
+        <section class="session-brief" id="gambaran-sesi">
+          <div class="session-brief__head">
+            <span class="material-symbols-outlined session-brief__icon">assignment</span>
+            <div>
+              <span class="session-brief__eyebrow">Gambaran Sesi</span>
+              <h2 class="session-brief__title">Dari data kotor menjadi siap analisis</h2>
+            </div>
           </div>
-          <div style="padding:1rem;background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md)">
-            <div style="font-size:0.8125rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.25rem">Tipe Masalah</div>
-            <div style="font-size:0.8125rem;font-weight:700;color:var(--on-surface)">MCAR & MAR</div>
+          <p class="session-brief__intro">Semua kode di sesi ini bisa Anda jalankan ulang: gunakan sandbox di halaman ini atau notebook sendiri. Fokusnya bukan menghafal metode, tetapi memilih strategi yang tepat dan bisa dipertanggungjawabkan.</p>
+          <div class="session-brief__grid">
+            <div class="session-brief__item">
+              <span class="material-symbols-outlined">category</span>
+              <div>
+                <span class="session-brief__label">Fokus Materi</span>
+                <p>Diagnosis dataframe (.isna(), .duplicated(), .dtypes), strategi drop vs imputasi, pencegahan data leakage, dan checklist kualitas data.</p>
+              </div>
+            </div>
+            <div class="session-brief__item">
+              <span class="material-symbols-outlined">flag</span>
+              <div>
+                <span class="session-brief__label">Hasil Akhir</span>
+                <p>Laporan pembersihan "sebelum → sesudah" untuk satu dataset.</p>
+              </div>
+            </div>
+            <div class="session-brief__item">
+              <span class="material-symbols-outlined">fact_check</span>
+              <div>
+                <span class="session-brief__label">Prasyarat</span>
+                <p>Sesi Python & Pandas (atau cukup pakai sandbox di halaman ini) + dataset contoh dari Studi Kasus E-Commerce.</p>
+              </div>
+            </div>
+            <div class="session-brief__item">
+              <span class="material-symbols-outlined">schedule</span>
+              <div>
+                <span class="session-brief__label">Estimasi Waktu</span>
+                <p>±20 menit membaca, ±45 menit mengerjakan tugas.</p>
+              </div>
+            </div>
           </div>
-          <div style="padding:1rem;background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md)">
-            <div style="font-size:0.8125rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.25rem">Efek Samping</div>
-            <div style="font-size:0.8125rem;font-weight:700;color:var(--error)">Distortion & Leakage</div>
-          </div>
-          <div style="padding:1rem;background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md)">
-            <div style="font-size:0.8125rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.25rem">Dataset Sampel</div>
-            <div style="font-size:0.8125rem;font-weight:700;color:var(--on-surface)">13,000 baris</div>
-          </div>
+        </section>
+        <!-- Peta Singkat -->
+        <div style="margin-bottom:3rem">
+          <p style="font-size:0.9375rem;line-height:1.75;color:var(--text-secondary);margin-bottom:0.75rem">
+            Sebelum menyentuh kode, kenali tiga hal yang akan dipakai terus di sepanjang sesi ini:
+          </p>
+          <ul style="font-size:0.9375rem;line-height:1.75;color:var(--text-secondary);padding-left:1.25rem;display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1rem">
+            <li><strong style="color:var(--on-surface)">Metode utama.</strong> <code class="code-inline">.isna()</code> untuk memetakan nilai kosong, <code class="code-inline">.fillna()</code> untuk mengisinya, dan <code class="code-inline">.duplicated()</code> untuk menandai baris ganda.</li>
+            <li><strong style="color:var(--on-surface)">Tipe masalah.</strong> Pahami apakah data hilang secara acak (MCAR) atau bergantung variabel lain (MAR) — jenisnya menentukan boleh tidaknya imputasi dilakukan.</li>
+            <li><strong style="color:var(--on-surface)">Efek samping.</strong> Imputasi yang salah memicu <em>distortion</em> distribusi dan <em>data leakage</em> yang membuat hasil analisis menyesatkan.</li>
+          </ul>
+          <p style="font-size:0.9375rem;line-height:1.75;color:var(--text-secondary)">
+            Sesi ini memakai dataset sampel 13.000 baris bergaya data pelanggan telekomunikasi dengan kolom identitas, demografi, dan nilai transaksi. Semua kode bisa Anda jalankan ulang di notebook sendiri.
+          </p>
         </div>
 
         <!-- Section 01: Diagnosa Dataframe -->
@@ -213,53 +250,47 @@ payment_method    <span style="color:#94A3B8">0</span></code></pre>
         </p>
 
         <!-- Two-column method comparison -->
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2rem">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:2rem">
           <!-- Method 1: Drop -->
-          <div style="background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden">
-            <div style="padding:0.75rem 1rem;background:var(--secondary-surface);border-bottom:1px solid var(--border-default);display:flex;align-items:center;gap:0.5rem">
-              <span class="badge badge--warning" style="text-transform:uppercase;font-size:0.8125rem">Metode 1: Penghapusan</span>
-              <span class="material-symbols-outlined" style="font-size:16px;color:var(--text-secondary);margin-left:auto">delete</span>
-            </div>
-            <div style="padding:1.25rem">
-              <h4 style="font-size:1rem;font-weight:700;color:var(--on-surface);margin-bottom:0.5rem">Drop Missing Rows / Columns</h4>
-              <p style="font-size:0.8125rem;line-height:1.5;color:var(--text-secondary);margin-bottom:1rem">
-                Tepat jika identitas baris bergantung mutlak pada kolom tersebut (misal: ID pelanggan, email autentikasi) atau jika rasio missing > 65% sehingga kolom tak bermakna secara prediktif.
-              </p>
-              <div class="code-sandbox" style="margin:0">
-                <div class="code-sandbox__editor" style="padding:0.75rem;min-height:auto">
+          <div class="info-card info-card--secondary">
+            <h4>
+              Drop Missing Rows / Columns
+              <span class="badge badge--warning" style="margin-left:auto;text-transform:uppercase">Metode 1</span>
+            </h4>
+            <p style="font-size:0.875rem;line-height:1.6;color:var(--text-secondary);margin-bottom:1rem">
+              Tepat jika identitas baris bergantung mutlak pada kolom tersebut (misal ID pelanggan atau email autentikasi), atau jika rasio missing &gt; 65% sehingga kolom tak lagi bermakna secara prediktif.
+            </p>
+            <div class="code-sandbox" style="margin:0">
+              <div class="code-sandbox__editor" style="padding:0.75rem;min-height:auto">
 <pre style="margin:0"><code><span class="cm"># Hapus baris hanya jika email NaN</span>
 df = df.dropna(subset=[<span class="str">'email'</span>])</code></pre>
-                </div>
               </div>
-              <div style="display:flex;align-items:center;gap:0.375rem;margin-top:0.75rem;font-size:0.8125rem;color:var(--warning)">
-                <span class="material-symbols-outlined" style="font-size:14px">warning</span>
-                Menyebabkan berkurangnya ukuran sampel secara permanen.
-              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.375rem;margin-top:0.75rem;font-size:0.8125rem;color:var(--warning)">
+              <span class="material-symbols-outlined" style="font-size:14px">warning</span>
+              Berkurangnya ukuran sampel bersifat permanen — tidak bisa dikembalikan.
             </div>
           </div>
 
           <!-- Method 2: Imputasi -->
-          <div style="background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden">
-            <div style="padding:0.75rem 1rem;background:var(--secondary-surface);border-bottom:1px solid var(--border-default);display:flex;align-items:center;gap:0.5rem">
-              <span class="badge badge--success" style="text-transform:uppercase;font-size:0.8125rem">Metode 2: Imputasi Statistik</span>
-              <span class="material-symbols-outlined" style="font-size:16px;color:var(--text-secondary);margin-left:auto">calculate</span>
-            </div>
-            <div style="padding:1.25rem">
-              <h4 style="font-size:1rem;font-weight:700;color:var(--on-surface);margin-bottom:0.5rem">Imputasi Mean / Median / Modus</h4>
-              <p style="font-size:0.8125rem;line-height:1.5;color:var(--text-secondary);margin-bottom:1rem">
-                Gunakan <strong>Median</strong> saat data numerik memiliki pencilan (skewed/miring), seperti kolom usia atau gaji. Gunakan <strong>Modus</strong> untuk variabel kategorikal diskrit.
-              </p>
-              <div class="code-sandbox" style="margin:0">
-                <div class="code-sandbox__editor" style="padding:0.75rem;min-height:auto">
+          <div class="info-card info-card--primary">
+            <h4>
+              Imputasi Mean / Median / Modus
+              <span class="badge badge--success" style="margin-left:auto;text-transform:uppercase">Metode 2</span>
+            </h4>
+            <p style="font-size:0.875rem;line-height:1.6;color:var(--text-secondary);margin-bottom:1rem">
+              Gunakan <strong>Median</strong> ketika data numerik memiliki pencilan (miring/skewed), seperti usia atau gaji. Gunakan <strong>Modus</strong> untuk variabel kategorikal diskrit, atau isi label "Unknown" bila tidak ada dominasi jelas.
+            </p>
+            <div class="code-sandbox" style="margin:0">
+              <div class="code-sandbox__editor" style="padding:0.75rem;min-height:auto">
 <pre style="margin:0"><code><span class="cm"># Mengisi NaN usia dengan nilai median</span>
 median_val = df[<span class="str">'age'</span>].median()
 df[<span class="str">'age'</span>] = df[<span class="str">'age'</span>].fillna(median_val)</code></pre>
-                </div>
               </div>
-              <div style="display:flex;align-items:center;gap:0.375rem;margin-top:0.75rem;font-size:0.8125rem;color:var(--primary)">
-                <span class="material-symbols-outlined" style="font-size:14px">check_circle</span>
-                Menjaga ukuran observasi tanpa mengorbankan sample size.
-              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.375rem;margin-top:0.75rem;font-size:0.8125rem;color:var(--primary)">
+              <span class="material-symbols-outlined" style="font-size:14px">check_circle</span>
+              Menjaga jumlah observasi tanpa mengorbankan sample size.
             </div>
           </div>
         </div>
@@ -382,7 +413,7 @@ X_test[<span class="str">'age'</span>].fillna(median_age, inplace=<span class="k
         </div>
 
         <!-- Checklist Praktis -->
-        <div id="checklist" style="margin-top:2.5rem;padding:1.5rem;background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md)">
+        <div id="checklist" class="info-card info-card--primary" style="margin-top:2.5rem">
           <h3 style="font-size:0.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--primary);margin-bottom:0.75rem">
             <span class="material-symbols-outlined" style="font-size:18px">checklist</span> Checklist Praktis
           </h3>
@@ -394,7 +425,83 @@ X_test[<span class="str">'age'</span>].fillna(median_age, inplace=<span class="k
           </ul>
         </div>
 
-        <!-- Navigation -->
+        <!-- Tugas Praktik -->
+        <section class="task-section" id="tugas-praktik">
+          <div class="session-brief__head">
+            <span class="material-symbols-outlined session-brief__icon">task_alt</span>
+            <div>
+              <span class="session-brief__eyebrow">Tugas Praktik</span>
+              <h2 class="session-brief__title">Bersihkan Satu Dataset Sampai Tuntas</h2>
+            </div>
+          </div>
+          <p class="session-brief__intro">Kerjakan tiga tugas berikut pada satu dataset yang sama sehingga hasilnya berupa laporan pembersihan utuh.</p>
+          <div class="task-progress">
+            <span class="task-progress__track"><span class="task-progress__bar" id="task-progress-bar"></span></span>
+            <span class="task-progress__text" id="task-progress-text">0 dari 3 tugas selesai</span>
+          </div>
+          <ol class="task-list">
+          <li class="task-card">
+            <span class="task-card__num">1</span>
+            <div class="task-card__body">
+              <h3 class="task-card__title">Diagnosa Dataset</h3>
+              <p class="task-card__desc">Petakan masalah data sebelum menyentuh satu nilai pun.</p>
+              <ul class="task-card__steps">
+                <li>Unduh contoh CSV dari halaman Studi Kasus E-Commerce.</li>
+                <li>Jalankan df.shape, df.dtypes, df.isna().sum(), dan df.duplicated().sum().</li>
+                <li>Catat kolom mana saja yang bermasalah dan seberapa parah.</li>
+              </ul>
+              <div class="task-card__result">
+                <span class="material-symbols-outlined">flag</span>
+                <span><strong>Hasil yang dikumpulkan:</strong> Tabel diagnosa: nama kolom, jumlah nilai kosong, tipe data, dan jumlah duplikat.</span>
+              </div>
+              <label class="task-check">
+                <input type="checkbox" data-task="data-cleaning-1">
+                <span>Tandai tugas ini selesai</span>
+              </label>
+            </div>
+          </li>
+          <li class="task-card">
+            <span class="task-card__num">2</span>
+            <div class="task-card__body">
+              <h3 class="task-card__title">Putuskan Drop atau Imputasi</h3>
+              <p class="task-card__desc">Setiap keputusan harus punya alasan, bukan asal pilih metode.</p>
+              <ul class="task-card__steps">
+                <li>Tentukan strategi per kolom: identitas → drop, numerik → median/mean, kategorikal → modus atau label "Unknown".</li>
+                <li>Jalankan drop_duplicates() dan fillna() sesuai keputusan tadi.</li>
+                <li>Catat alasan singkat untuk setiap keputusan.</li>
+              </ul>
+              <div class="task-card__result">
+                <span class="material-symbols-outlined">flag</span>
+                <span><strong>Hasil yang dikumpulkan:</strong> Kode 5–10 baris + jumlah baris sebelum dan sesudah pembersihan.</span>
+              </div>
+              <label class="task-check">
+                <input type="checkbox" data-task="data-cleaning-2">
+                <span>Tandai tugas ini selesai</span>
+              </label>
+            </div>
+          </li>
+          <li class="task-card">
+            <span class="task-card__num">3</span>
+            <div class="task-card__body">
+              <h3 class="task-card__title">Verifikasi & Catatan Keputusan</h3>
+              <p class="task-card__desc">Buktikan dataset sudah bersih, lalu dokumentasikan.</p>
+              <ul class="task-card__steps">
+                <li>Jalankan ulang fungsi diagnosa.</li>
+                <li>Pastikan kolom wajib bersih (0 nilai kosong) dan duplikat hilang.</li>
+                <li>Tulis 3 kalimat: apa yang diubah, mengapa, dan dampaknya ke analisis.</li>
+              </ul>
+              <div class="task-card__result">
+                <span class="material-symbols-outlined">flag</span>
+                <span><strong>Hasil yang dikumpulkan:</strong> Skrip bersih + catatan keputusan 3 kalimat.</span>
+              </div>
+              <label class="task-check">
+                <input type="checkbox" data-task="data-cleaning-3">
+                <span>Tandai tugas ini selesai</span>
+              </label>
+            </div>
+          </li>
+          </ol>
+        </section><!-- Navigation -->
         <div class="nav-prev-next" style="margin-top:3rem">
           <a href="python-tutorial.html" class="nav-prev-next__link">
             <span class="material-symbols-outlined" style="font-size:16px">arrow_back</span>
@@ -410,11 +517,13 @@ X_test[<span class="str">'age'</span>].fillna(median_age, inplace=<span class="k
       <!-- TOC Rail -->
       <aside class="toc-rail">
         <div class="toc-rail__title">DI HALAMAN INI</div>
+        <a href="#gambaran-sesi" class="toc-rail__item">Gambaran Sesi</a>
         <a href="#diagnosa" class="toc-rail__item active">1. Diagnosis Dataset</a>
         <a href="#strategi" class="toc-rail__item">2. Strategi Drop vs Imputasi</a>
         <a href="#sandbox" class="toc-rail__item">3. Sandbox Interaktif</a>
         <a href="#checklist" class="toc-rail__item">4. Checklist Kualitas Data</a>
-      </aside>
+              <a href="#tugas-praktik" class="toc-rail__item">Tugas Praktik</a>
+</aside>
     </div>
   </main>
 

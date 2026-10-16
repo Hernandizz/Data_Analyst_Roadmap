@@ -149,6 +149,48 @@
 
           <!-- Main Content -->
           <div class="content-body">
+
+    <!-- Gambaran Sesi -->
+            <section class="session-brief" id="gambaran-sesi">
+              <div class="session-brief__head">
+                <span class="material-symbols-outlined session-brief__icon">assignment</span>
+                <div>
+                  <span class="session-brief__eyebrow">Gambaran Sesi</span>
+                  <h2 class="session-brief__title">Dari data mentah ke dashboard siap presentasi</h2>
+                </div>
+              </div>
+              <p class="session-brief__intro">Sepuluh modul menuntun Anda dari impor data sampai laporan yang layak dipresentasikan ke manajemen. Setelah membaca, bangun satu laporan sendiri di Power BI Desktop.</p>
+              <div class="session-brief__grid">
+                <div class="session-brief__item">
+                  <span class="material-symbols-outlined">category</span>
+                  <div>
+                    <span class="session-brief__label">Fokus Materi</span>
+                    <p>Antarmuka Power BI, Power Query, star schema, DAX dasar & lanjutan, desain dashboard, optimasi performa, serta Power BI Service dan keamanan.</p>
+                  </div>
+                </div>
+                <div class="session-brief__item">
+                  <span class="material-symbols-outlined">flag</span>
+                  <div>
+                    <span class="session-brief__label">Hasil Akhir</span>
+                    <p>File .pbix berisi satu halaman dashboard + minimal 3 measure.</p>
+                  </div>
+                </div>
+                <div class="session-brief__item">
+                  <span class="material-symbols-outlined">fact_check</span>
+                  <div>
+                    <span class="session-brief__label">Prasyarat</span>
+                    <p>Power BI Desktop (gratis, Windows) dan idealnya sudah melewati sesi Data Cleaning.</p>
+                  </div>
+                </div>
+                <div class="session-brief__item">
+                  <span class="material-symbols-outlined">schedule</span>
+                  <div>
+                    <span class="session-brief__label">Estimasi Waktu</span>
+                    <p>±60–90 menit.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
             <!-- Level 1 -->
             <div class="content-divider">
               <span class="material-symbols-outlined">foundation</span>
@@ -167,8 +209,16 @@
                 </div>
               </div>
               <div class="article-content">
-                <p>Memahami ekosistem Business Intelligence, arsitektur <strong>Power BI Desktop</strong>, empat view utama (Report, Data, Model, DAX Query), panel navigasi, dan siklus hidup BI.</p>
-                <div class="featured-card__chips" style="margin-top:1rem">
+                <p>Power BI adalah alat mengubah data menjadi cerita visual. Sebelum membangun dashboard, Anda perlu mengenal "ruangan kerja" dan alur hidup proyek BI.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">desktop_windows</span> Poin Kunci</h4>
+                  <ul>
+                    <li><strong>Ekosistem:</strong> Power BI Desktop (membangun) dan Power BI Service (membagikan) bekerja berpasangan.</li>
+                    <li><strong>Empat view:</strong> Report (kanvas visual), Data (tabel mentah), Model (relasi antar tabel), DAX Query.</li>
+                    <li><strong>Siklus BI:</strong> impor data → transformasi → permodelan → visualisasi → publikasi.</li>
+                  </ul>
+                </div>
+                <div class="featured-card__chips">
                   <span class="chip">Pemula</span>
                   <span class="chip">Interface</span>
                 </div>
@@ -186,8 +236,17 @@
                 </div>
               </div>
               <div class="article-content">
-                <p>Konsep ETL (Extract, Transform, Load) menggunakan <strong>Power Query</strong>: data cleaning, data typing, Pivot vs Unpivot, Merge (JOIN), Append (UNION), dan pengenalan bahasa M.</p>
-                <div class="featured-card__chips" style="margin-top:1rem">
+                <p>Power Query adalah dapur tempat data dibersihkan. Semua langkah yang Anda lakukan terekam dan bisa diulang otomatis setiap kali data diperbarui.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">transform</span> Poin Kunci</h4>
+                  <ul>
+                    <li><strong>ETL:</strong> Extract data, Transform (bersihkan &amp; atur bentuk), Load ke model.</li>
+                    <li><strong>Transformasi umum:</strong> perbaiki tipe data, hapus kolom kosong, ganti nilai, bagi kolom teks.</li>
+                    <li><strong>Pivot/Unpivot:</strong> ubah bentuk data lebar menjadi panjang atau sebaliknya.</li>
+                    <li><strong>Merge vs Append:</strong> Merge menyatukan kolom (JOIN), Append menumpuk baris (UNION).</li>
+                  </ul>
+                </div>
+                <div class="featured-card__chips">
                   <span class="chip">Pemula - Menengah</span>
                   <span class="chip">Power Query</span>
                 </div>
@@ -212,8 +271,17 @@
                 </div>
               </div>
               <div class="article-content">
-                <p>Merancang model data profesional: memahami <strong>Fact vs Dimension table</strong>, Star Schema, kardinalitas relasi, filter direction, dan membangun tabel Dim_Date.</p>
-                <div class="featured-card__chips" style="margin-top:1rem">
+                <p>Model yang rapi membuat DAX sederhana dan laporan cepat. Sebaliknya, model berantakan membuat setiap visual bekerja keras. Di sini kita membangun fondasinya.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">hub</span> Poin Kunci</h4>
+                  <ul>
+                    <li><strong>Fact vs Dimension:</strong> tabel fakta menyimpan angka transaksi, tabel dimensi menyimpan konteks (produk, pelanggan, tanggal).</li>
+                    <li><strong>Star schema:</strong> satu tabel fakta dikelilingi tabel dimensi — bentuk yang paling disarankan.</li>
+                    <li><strong>Kardinalitas:</strong> umumnya satu-ke-banyak dari dimensi ke fakta.</li>
+                    <li><strong>Dim_Date:</strong> tabel tanggal khusus untuk mengaktifkan fungsi waktu.</li>
+                  </ul>
+                </div>
+                <div class="featured-card__chips">
                   <span class="chip">Menengah</span>
                   <span class="chip">Star Schema</span>
                 </div>
@@ -231,8 +299,17 @@
                 </div>
               </div>
               <div class="article-content">
-                <p>Fondasi <strong>DAX (Data Analysis Expressions)</strong>: perbedaan Calculated Column vs Measure, Row Context vs Filter Context, fungsi agregasi, Iterator (SUMX), dan pola VAR/RETURN.</p>
-                <div class="featured-card__chips" style="margin-top:1rem">
+                <p>DAX adalah bahasa formula Power BI. Menguasai dua konsep dasarnya — Column vs Measure dan Row vs Filter Context — membuat Anda menulis ukuran yang benar sejak awal.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">calculate</span> Poin Kunci</h4>
+                  <ul>
+                    <li><strong>Column vs Measure:</strong> calculated column disimpan per baris; measure dihitung sesuai konteks visual (lebih hemat memori).</li>
+                    <li><strong>Row vs Filter Context:</strong> memahami keduanya adalah kunci agar agregasi tidak salah.</li>
+                    <li><strong>Iterator SUMX:</strong> jumlahkan hasil ekspresi per baris, bukan hanya kolom.</li>
+                    <li><strong>Pola VAR/RETURN:</strong> simpan hasil antara agar formula lebih mudah dibaca dan cepat.</li>
+                  </ul>
+                </div>
+                <div class="featured-card__chips">
                   <span class="chip">Menengah</span>
                   <span class="chip">DAX</span>
                 </div>
@@ -257,8 +334,17 @@
                 </div>
               </div>
               <div class="article-content">
-                <p>Teknik DAX lanjutan: <code>CALCULATE()</code>, <code>ALL()</code>, <code>FILTER()</code>, Time Intelligence (YoY, MoM, YTD), Moving Average, dan <code>DIVIDE()</code> untuk analisis waktu.</p>
-                <div class="featured-card__chips" style="margin-top:1rem">
+                <p>Time Intelligence adalah kemampuan yang paling sering diminta di laporan manajemen: membandingkan kinerja bulan ini dengan bulan lalu atau tahun lalu.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">timeline</span> Poin Kunci</h4>
+                  <ul>
+                    <li><strong>CALCULATE():</strong> mengubah filter konteks — fungsi paling penting di DAX.</li>
+                    <li><strong>ALL() &amp; FILTER():</strong> menghapus atau menyesuaikan filter untuk perhitungan khusus.</li>
+                    <li><strong>Perbandingan waktu:</strong> YoY (tahun ke tahun), MoM (bulan ke bulan), YTD (akumulasi tahun berjalan).</li>
+                    <li><strong>DIVIDE():</strong> pembagian aman yang mengembalikan nilai cadangan saat penyebut nol.</li>
+                  </ul>
+                </div>
+                <div class="featured-card__chips">
                   <span class="chip">Menengah - Mahir</span>
                   <span class="chip">Time Intelligence</span>
                 </div>
@@ -276,8 +362,17 @@
                 </div>
               </div>
               <div class="article-content">
-                <p>Merancang dashboard interaktif: pemilihan jenis chart yang tepat, prinsip UI/UX grid, color palette, slicers, drill-down, drill-through, dan bookmarks.</p>
-                <div class="featured-card__chips" style="margin-top:1rem">
+                <p>Dashboard yang baik bisa dipahami dalam 30 detik. Fokusnya bukan jumlah visual, tetapi kejelasan pesan dan kemudahan interaksi.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">dashboard</span> Poin Kunci</h4>
+                  <ul>
+                    <li><strong>Pilih chart sesuai pesan:</strong> batang untuk perbandingan, garis untuk tren, kartu untuk KPI tunggal.</li>
+                    <li><strong>Grid &amp; warna:</strong> susun visual pada grid rapi dan pakai palet warna terbatas agar tidak ramai.</li>
+                    <li><strong>Interaksi:</strong> slicer untuk filter, drill-down untuk detail, drill-through untuk halaman rincian.</li>
+                    <li><strong>Bookmarks:</strong> simpan tampilan tertentu untuk cerita atau mode presentasi.</li>
+                  </ul>
+                </div>
+                <div class="featured-card__chips">
                   <span class="chip">Menengah - Mahir</span>
                   <span class="chip">Dashboard Design</span>
                 </div>
@@ -295,8 +390,17 @@
                 </div>
               </div>
               <div class="article-content">
-                <p>Memanfaatkan fitur AI Power BI: Key Influencers, Decomposition Tree, Smart Narrative, Q&A natural language, What-If Parameters, dan Field Parameters.</p>
-                <div class="featured-card__chips" style="margin-top:1rem">
+                <p>Fitur AI di Power BI membantu Anda menemukan "mengapa" di balik angka lebih cepat, tanpa harus menulis setiap kueri secara manual.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">smart_toy</span> Poin Kunci</h4>
+                  <ul>
+                    <li><strong>Key Influencers:</strong> menemukan faktor yang paling memengaruhi sebuah metrik.</li>
+                    <li><strong>Decomposition Tree:</strong> menelusuri penyebab secara bercabang dari total ke rincian.</li>
+                    <li><strong>Smart Narrative &amp; Q&A:</strong> ringkasan otomatis dan tanya-jawab data dengan bahasa sehari-hari.</li>
+                    <li><strong>What-If Parameters:</strong> simulasi skenario (misal diskon, harga) untuk melihat dampaknya.</li>
+                  </ul>
+                </div>
+                <div class="featured-card__chips">
                   <span class="chip">Mahir</span>
                   <span class="chip">AI Features</span>
                 </div>
@@ -314,8 +418,17 @@
                 </div>
               </div>
               <div class="article-content">
-                <p>Mengoptimalkan performa Power BI: memahami VertiPaq engine, menggunakan Performance Analyzer, teknik reduksi ukuran file .pbix, optimasi DAX query, dan DAX Studio.</p>
-                <div class="featured-card__chips" style="margin-top:1rem">
+                <p>Laporan yang lambat membuat pengguna malas membukanya. Modul ini mengajarkan cara menemukan penyebab dan memperbaikinya.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">speed</span> Poin Kunci</h4>
+                  <ul>
+                    <li><strong>VertiPaq:</strong> mesin penyimpan kolom Power BI — pahami cara kerjanya agar file tetap ringan.</li>
+                    <li><strong>Performance Analyzer:</strong> mengukur waktu tiap visual untuk menemukan yang paling berat.</li>
+                    <li><strong>Reduksi ukuran:</strong> buang kolom tak perlu, pilih tipe data tepat, kurangi jumlah measure berulang.</li>
+                    <li><strong>DAX Studio:</strong> alat bantu menganalisis dan menyetel kueri DAX yang mahal.</li>
+                  </ul>
+                </div>
+                <div class="featured-card__chips">
                   <span class="chip">Mahir</span>
                   <span class="chip">Performance</span>
                 </div>
@@ -340,8 +453,17 @@
                 </div>
               </div>
               <div class="article-content">
-                <p>Deployment ke <strong>Power BI Service</strong>: Workspaces, Apps, Scheduled Refresh, Data Gateway, dan Row-Level Security (RLS) untuk keamanan data enterprise.</p>
-                <div class="featured-card__chips" style="margin-top:1rem">
+                <p>Laporan selesai bukan berarti selesai. Agar berguna, ia harus dibagikan, diperbarui otomatis, dan tetap aman sesuai hak akses pengguna.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">security</span> Poin Kunci</h4>
+                  <ul>
+                    <li><strong>Workspaces &amp; Apps:</strong> tempat menyusun dan membagikan laporan ke tim.</li>
+                    <li><strong>Scheduled Refresh:</strong> jadwalkan pembaruan data agar laporan selalu mutakhir.</li>
+                    <li><strong>Data Gateway:</strong> jembatan aman ke sumber data lokal di perusahaan.</li>
+                    <li><strong>Row-Level Security (RLS):</strong> batasi baris yang boleh dilihat tiap pengguna sesuai peran.</li>
+                  </ul>
+                </div>
+                <div class="featured-card__chips">
                   <span class="chip">Mahir / Enterprise</span>
                   <span class="chip">Cloud</span>
                 </div>
@@ -359,8 +481,17 @@
                 </div>
               </div>
               <div class="article-content">
-                <p>Membangun portofolio Power BI profesional: business storytelling, tiga skenario proyek nyata (retail, HR, finance), dan panduan interview untuk posisi BI Analyst.</p>
-                <div class="featured-card__chips" style="margin-top:1rem">
+                <p>Portofolio Power BI yang kuat menunjukkan Anda mampu mengubah data menjadi keputusan. Publikasikan laporan dan ceritakan proses di baliknya.</p>
+                <div class="info-card info-card--primary">
+                  <h4><span class="material-symbols-outlined" style="font-size:18px">work</span> Poin Kunci</h4>
+                  <ul>
+                    <li><strong>Business storytelling:</strong> setiap dashboard harus menjawab satu pertanyaan dan mendorong satu aksi.</li>
+                    <li><strong>Tiga skenario:</strong> proyek retail, HR, dan finance memberi variasi domain yang dicari perusahaan.</li>
+                    <li><strong>Publikasi:</strong> bagikan file <code>.pbix</code> dan tautan laporan, plus tangkapan layar di portofolio.</li>
+                    <li><strong>Interview:</strong> siapkan penjelasan model data, measure kunci, dan alasan tiap keputusan desain.</li>
+                  </ul>
+                </div>
+                <div class="featured-card__chips">
                   <span class="chip">Siap Kerja</span>
                   <span class="chip">Portfolio</span>
                 </div>
@@ -382,7 +513,83 @@
             </div>
 
             <!-- Nav Footer -->
-            <div class="content-nav-footer">
+                <!-- Tugas Praktik -->
+            <section class="task-section" id="tugas-praktik">
+              <div class="session-brief__head">
+                <span class="material-symbols-outlined session-brief__icon">task_alt</span>
+                <div>
+                  <span class="session-brief__eyebrow">Tugas Praktik</span>
+                  <h2 class="session-brief__title">Bangun Satu Laporan Power BI</h2>
+                </div>
+              </div>
+              <p class="session-brief__intro">Ikuti langkah 1 → 3. Setiap langkah menghasilkan bagian dari satu laporan yang sama.</p>
+              <div class="task-progress">
+                <span class="task-progress__track"><span class="task-progress__bar" id="task-progress-bar"></span></span>
+                <span class="task-progress__text" id="task-progress-text">0 dari 3 tugas selesai</span>
+              </div>
+              <ol class="task-list">
+              <li class="task-card">
+                <span class="task-card__num">1</span>
+                <div class="task-card__body">
+                  <h3 class="task-card__title">Bangun Model Bintang Sederhana</h3>
+                  <p class="task-card__desc">Rapikan dan hubungkan tabel sebelum membuat visual.</p>
+                  <ul class="task-card__steps">
+                    <li>Impor dua tabel: fakta penjualan dan dimensi produk (boleh dari CSV contoh).</li>
+                    <li>Perbaiki tipe data dan hapus kolom yang tidak perlu di Power Query.</li>
+                    <li>Buat relasi satu-ke-banyak dari tabel dimensi ke tabel fakta.</li>
+                  </ul>
+                  <div class="task-card__result">
+                    <span class="material-symbols-outlined">flag</span>
+                    <span><strong>Hasil yang dikumpulkan:</strong> Model dengan satu relasi aktif + tabel yang tipe datanya sudah benar.</span>
+                  </div>
+                  <label class="task-check">
+                    <input type="checkbox" data-task="powerbi-tutorial-1">
+                    <span>Tandai tugas ini selesai</span>
+                  </label>
+                </div>
+              </li>
+              <li class="task-card">
+                <span class="task-card__num">2</span>
+                <div class="task-card__body">
+                  <h3 class="task-card__title">Tiga Measure Wajib</h3>
+                  <p class="task-card__desc">Measure adalah otak laporan Anda.</p>
+                  <ul class="task-card__steps">
+                    <li>Total Penjualan memakai SUM pada kolom nilai.</li>
+                    <li>Jumlah Transaksi memakai DISTINCTCOUNT pada id pesanan.</li>
+                    <li>AOV = Total Penjualan ÷ Jumlah Transaksi.</li>
+                  </ul>
+                  <div class="task-card__result">
+                    <span class="material-symbols-outlined">flag</span>
+                    <span><strong>Hasil yang dikumpulkan:</strong> 3 measure muncul di panel Fields dan angkanya benar saat ditaruh di kartu.</span>
+                  </div>
+                  <label class="task-check">
+                    <input type="checkbox" data-task="powerbi-tutorial-2">
+                    <span>Tandai tugas ini selesai</span>
+                  </label>
+                </div>
+              </li>
+              <li class="task-card">
+                <span class="task-card__num">3</span>
+                <div class="task-card__body">
+                  <h3 class="task-card__title">Dashboard Satu Halaman</h3>
+                  <p class="task-card__desc">Rangkum temuan dalam satu halaman yang bisa dipahami dalam 30 detik.</p>
+                  <ul class="task-card__steps">
+                    <li>Tambahkan 3 visual: kartu KPI, batang per kategori, dan garis tren bulanan.</li>
+                    <li>Beri judul yang jelas pada halaman.</li>
+                    <li>Tulis satu kalimat insight dari visual yang dibuat.</li>
+                  </ul>
+                  <div class="task-card__result">
+                    <span class="material-symbols-outlined">flag</span>
+                    <span><strong>Hasil yang dikumpulkan:</strong> Tangkapan layar halaman 1 berisi 3 visual + judul + insight.</span>
+                  </div>
+                  <label class="task-check">
+                    <input type="checkbox" data-task="powerbi-tutorial-3">
+                    <span>Tandai tugas ini selesai</span>
+                  </label>
+                </div>
+              </li>
+              </ol>
+            </section><div class="content-nav-footer">
               <a href="data-cleaning.html" class="content-nav-footer__link content-nav-footer__link--prev">
                 <span class="material-symbols-outlined">arrow_back</span>
                 <div>
@@ -401,6 +608,7 @@
           </div>
           <aside class="toc-rail" id="toc-rail">
             <div class="toc-rail__title">DI HALAMAN INI</div>
+            <a href="#gambaran-sesi" class="toc-rail__item">Gambaran Sesi</a>
             <a href="#pbi01" class="toc-rail__item active">01. Pengenalan &amp; Antarmuka Power BI</a>
             <a href="#pbi02" class="toc-rail__item">02. Data Preparation &amp; Power Query</a>
             <a href="#pbi03" class="toc-rail__item">03. Data Modeling &amp; Star Schema</a>
@@ -411,7 +619,8 @@
             <a href="#pbi08" class="toc-rail__item">08. Optimasi Performa</a>
             <a href="#pbi09" class="toc-rail__item">09. Power BI Service &amp; Keamanan</a>
             <a href="#pbi10" class="toc-rail__item">10. Proyek Portofolio End-to-End</a>
-          </aside>
+                      <a href="#tugas-praktik" class="toc-rail__item">Tugas Praktik</a>
+</aside>
         </div>
       </div>
     </section>

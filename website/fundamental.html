@@ -149,6 +149,48 @@
 
           <!-- Main Content -->
           <div class="content-body">
+
+    <!-- Gambaran Sesi -->
+            <section class="session-brief" id="gambaran-sesi">
+              <div class="session-brief__head">
+                <span class="material-symbols-outlined session-brief__icon">assignment</span>
+                <div>
+                  <span class="session-brief__eyebrow">Gambaran Sesi</span>
+                  <h2 class="session-brief__title">Peta jalan: dari konsep sampai skill kerja</h2>
+                </div>
+              </div>
+              <p class="session-brief__intro">Sesi pembuka ini menyatukan gambaran besar sebelum Anda menyentuh tool apa pun. Baca berurutan, lalu kerjakan tiga tugas di bagian bawah agar konsepnya melekat lewat praktik.</p>
+              <div class="session-brief__grid">
+                <div class="session-brief__item">
+                  <span class="material-symbols-outlined">category</span>
+                  <div>
+                    <span class="session-brief__label">Fokus Materi</span>
+                    <p>Empat jenis analitik (descriptive, diagnostic, predictive, prescriptive), konsep data inti, dan alur kerja collection → cleanup → exploration → visualization → statistical analysis → machine learning.</p>
+                  </div>
+                </div>
+                <div class="session-brief__item">
+                  <span class="material-symbols-outlined">flag</span>
+                  <div>
+                    <span class="session-brief__label">Hasil Akhir</span>
+                    <p>Kamus data mini berisi 10 istilah + satu dokumen rencana belajar 30 hari.</p>
+                  </div>
+                </div>
+                <div class="session-brief__item">
+                  <span class="material-symbols-outlined">fact_check</span>
+                  <div>
+                    <span class="session-brief__label">Prasyarat</span>
+                    <p>Tidak ada. Cukup spreadsheet atau aplikasi catatan.</p>
+                  </div>
+                </div>
+                <div class="session-brief__item">
+                  <span class="material-symbols-outlined">schedule</span>
+                  <div>
+                    <span class="session-brief__label">Estimasi Waktu</span>
+                    <p>±45 menit membaca, ±60 menit mengerjakan tugas.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
             <!-- Peran Data Analyst -->
             <article class="content-article" id="peran-analyst">
               <div class="article-header">
@@ -293,6 +335,52 @@
                 <div class="callout callout--example">
                   <strong>Contoh:</strong> "Untuk mencapai target Q4, alokasikan 40% budget marketing ke channel digital dan naikkan harga produk B sebesar 5%."
                 </div>
+              </div>
+            </article>
+
+            <article class="content-article" id="ringkasan-jenis">
+              <div class="article-content">
+                <h3>Ringkasan: memilih jenis analitik yang tepat</h3>
+                <p>Empat jenis analitik di atas bukan pilihan yang saling meniadakan, melainkan tangga bertingkat. Seorang analyst umumnya memulai dari descriptive, lalu naik ke diagnostic, predictive, dan prescriptive sesuai kebutuhan bisnis. Gunakan tabel berikut sebagai navigasi cepat.</p>
+                <div class="data-table-wrap">
+                  <table class="data-table">
+                    <thead>
+                      <tr>
+                        <th>Jenis</th>
+                        <th>Pertanyaan Kunci</th>
+                        <th>Output Utama</th>
+                        <th>Tingkat Kesulitan</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>Descriptive</strong></td>
+                        <td>Apa yang terjadi?</td>
+                        <td>Laporan, KPI, ringkasan statistik</td>
+                        <td>Dasar</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Diagnostic</strong></td>
+                        <td>Mengapa hal itu terjadi?</td>
+                        <td>Analisis akar masalah, korelasi</td>
+                        <td>Menengah</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Predictive</strong></td>
+                        <td>Apa yang mungkin terjadi?</td>
+                        <td>Prakiraan, skor probabilitas</td>
+                        <td>Mahir</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Prescriptive</strong></td>
+                        <td>Apa yang sebaiknya dilakukan?</td>
+                        <td>Rekomendasi aksi, simulasi</td>
+                        <td>Mahir</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>Kesimpulannya: nilai seorang Data Analyst tidak berhenti pada menyajikan angka, tetapi pada kemampuan menjawab pertanyaan berikutnya — dari "apa" menuju "harus bagaimana".</p>
               </div>
             </article>
 
@@ -454,7 +542,83 @@
             </article>
 
             <!-- Nav Footer -->
-            <div class="content-nav-footer">
+                <!-- Tugas Praktik -->
+            <section class="task-section" id="tugas-praktik">
+              <div class="session-brief__head">
+                <span class="material-symbols-outlined session-brief__icon">task_alt</span>
+                <div>
+                  <span class="session-brief__eyebrow">Tugas Praktik</span>
+                  <h2 class="session-brief__title">Latihan Berpikir Data Sebelum Menyentuh Tool</h2>
+                </div>
+              </div>
+              <p class="session-brief__intro">Kerjakan tiga tugas berikut secara berurutan. Setiap tugas menghasilkan artefak nyata yang akan dipakai lagi di sesi SQL, Python, dan Data Cleaning.</p>
+              <div class="task-progress">
+                <span class="task-progress__track"><span class="task-progress__bar" id="task-progress-bar"></span></span>
+                <span class="task-progress__text" id="task-progress-text">0 dari 3 tugas selesai</span>
+              </div>
+              <ol class="task-list">
+              <li class="task-card">
+                <span class="task-card__num">1</span>
+                <div class="task-card__body">
+                  <h3 class="task-card__title">Peta Pertanyaan & Jenis Analitik</h3>
+                  <p class="task-card__desc">Ambil satu topik bisnis sederhana (mis. penjualan kedai kopi atau toko online), lalu susun pertanyaan yang ingin dijawab.</p>
+                  <ul class="task-card__steps">
+                    <li>Tulis 5 pertanyaan bisnis yang relevan dengan topik tersebut.</li>
+                    <li>Klasifikasikan setiap pertanyaan: descriptive, diagnostic, predictive, atau prescriptive.</li>
+                    <li>Catat 2–3 kolom data yang dibutuhkan untuk menjawab tiap pertanyaan.</li>
+                  </ul>
+                  <div class="task-card__result">
+                    <span class="material-symbols-outlined">flag</span>
+                    <span><strong>Hasil yang dikumpulkan:</strong> Tabel 5 baris: Pertanyaan → Jenis Analitik → Data yang Dibutuhkan.</span>
+                  </div>
+                  <label class="task-check">
+                    <input type="checkbox" data-task="fundamental-1">
+                    <span>Tandai tugas ini selesai</span>
+                  </label>
+                </div>
+              </li>
+              <li class="task-card">
+                <span class="task-card__num">2</span>
+                <div class="task-card__body">
+                  <h3 class="task-card__title">Audit Data Mini</h3>
+                  <p class="task-card__desc">Unduh contoh CSV 50 baris dari halaman Studi Kasus E-Commerce, lalu periksa kualitas datanya secara manual.</p>
+                  <ul class="task-card__steps">
+                    <li>Catat jumlah baris, jumlah kolom, dan nama kolom.</li>
+                    <li>Cari nilai kosong dan baris duplikat.</li>
+                    <li>Tandai kolom teks yang seharusnya bertipe angka atau tanggal.</li>
+                  </ul>
+                  <div class="task-card__result">
+                    <span class="material-symbols-outlined">flag</span>
+                    <span><strong>Hasil yang dikumpulkan:</strong> Checklist kualitas data berisi temuan dan rencana penanganannya (dipakai lagi di sesi Data Cleaning).</span>
+                  </div>
+                  <label class="task-check">
+                    <input type="checkbox" data-task="fundamental-2">
+                    <span>Tandai tugas ini selesai</span>
+                  </label>
+                </div>
+              </li>
+              <li class="task-card">
+                <span class="task-card__num">3</span>
+                <div class="task-card__body">
+                  <h3 class="task-card__title">Rencana Belajar 30 Hari</h3>
+                  <p class="task-card__desc">Susun jadwal belajar memakai urutan 8 halaman materi pada roadmap beranda.</p>
+                  <ul class="task-card__steps">
+                    <li>Urutkan alurnya: Fondasi → SQL → Python → Data Cleaning → Power BI → Excel → Studi Kasus → Cheatsheets.</li>
+                    <li>Bagi menjadi 4 minggu dan tetapkan target tiap minggu.</li>
+                    <li>Cantumkan tugas praktik setiap sesi sebagai tolok ukur kemajuan.</li>
+                  </ul>
+                  <div class="task-card__result">
+                    <span class="material-symbols-outlined">flag</span>
+                    <span><strong>Hasil yang dikumpulkan:</strong> Jadwal 4 minggu di spreadsheet/Notion dengan minimal 1 deliverable per sesi.</span>
+                  </div>
+                  <label class="task-check">
+                    <input type="checkbox" data-task="fundamental-3">
+                    <span>Tandai tugas ini selesai</span>
+                  </label>
+                </div>
+              </li>
+              </ol>
+            </section><div class="content-nav-footer">
               <a href="index.html" class="content-nav-footer__link content-nav-footer__link--prev">
                 <span class="material-symbols-outlined">arrow_back</span>
                 <div>
@@ -473,6 +637,7 @@
           </div>
           <aside class="toc-rail" id="toc-rail">
             <div class="toc-rail__title">DI HALAMAN INI</div>
+            <a href="#gambaran-sesi" class="toc-rail__item">Gambaran Sesi</a>
             <a href="#peran-analyst" class="toc-rail__item active">Apa itu Data Analyst?</a>
             <a href="#descriptive" class="toc-rail__item">Descriptive Analytics</a>
             <a href="#diagnostic" class="toc-rail__item">Diagnostic Analytics</a>
@@ -484,7 +649,8 @@
             <a href="#visualization" class="toc-rail__item">Data Visualisation</a>
             <a href="#statistical" class="toc-rail__item">Statistical Analysis</a>
             <a href="#ml" class="toc-rail__item">Machine Learning</a>
-          </aside>
+                      <a href="#tugas-praktik" class="toc-rail__item">Tugas Praktik</a>
+</aside>
         </div>
       </div>
     </section>

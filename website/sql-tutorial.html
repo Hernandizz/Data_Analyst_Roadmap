@@ -147,23 +147,64 @@
 
       <!-- Content Area -->
       <div class="content-area">
-        <!-- Benefit Cards -->
-        <div id="pengantar" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:3rem">
-          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.25rem;background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md)">
-            <span class="material-symbols-outlined" style="font-size:28px;color:var(--text-secondary);margin-bottom:0.5rem">filter_alt</span>
-            <strong style="font-size:0.8125rem;color:var(--on-surface)">Filter Presisi</strong>
-            <span style="font-size:0.8125rem;color:var(--text-secondary)">Hanya baris dengan kondisi TRUE yang dikembalikan mesin SQL.</span>
+
+<!-- Gambaran Sesi -->
+        <section class="session-brief" id="gambaran-sesi">
+          <div class="session-brief__head">
+            <span class="material-symbols-outlined session-brief__icon">assignment</span>
+            <div>
+              <span class="session-brief__eyebrow">Gambaran Sesi</span>
+              <h2 class="session-brief__title">Menyaring data dengan SELECT & WHERE</h2>
+            </div>
           </div>
-          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.25rem;background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md)">
-            <span class="material-symbols-outlined" style="font-size:28px;color:var(--text-secondary);margin-bottom:0.5rem">speed</span>
-            <strong style="font-size:0.8125rem;color:var(--on-surface)">Hemat Bandwidth & Biaya</strong>
-            <span style="font-size:0.8125rem;color:var(--text-secondary)">Memangkas beban komputasi di cloud warehouse seperti BigQuery.</span>
+          <p class="session-brief__intro">Dua klausa yang paling sering dipakai di pekerjaan harian. Setelah membaca, Anda akan langsung berlatih di SQL editor sungguhan — bukan sekadar membaca sintaks.</p>
+          <div class="session-brief__grid">
+            <div class="session-brief__item">
+              <span class="material-symbols-outlined">category</span>
+              <div>
+                <span class="session-brief__label">Fokus Materi</span>
+                <p>Sintaks ANSI SQL, SELECT kolom & alias, klausa WHERE, operator perbandingan dan logika, pola LIKE/BETWEEN, serta tips efisiensi BigQuery.</p>
+              </div>
+            </div>
+            <div class="session-brief__item">
+              <span class="material-symbols-outlined">flag</span>
+              <div>
+                <span class="session-brief__label">Hasil Akhir</span>
+                <p>Lima kueri filter siap pakai + skor mini kuis.</p>
+              </div>
+            </div>
+            <div class="session-brief__item">
+              <span class="material-symbols-outlined">fact_check</span>
+              <div>
+                <span class="session-brief__label">Prasyarat</span>
+                <p>Sesi Fondasi Data Analytics. Akses SQL editor gratis: BigQuery Sandbox, SQLite, atau DB Fiddle.</p>
+              </div>
+            </div>
+            <div class="session-brief__item">
+              <span class="material-symbols-outlined">schedule</span>
+              <div>
+                <span class="session-brief__label">Estimasi Waktu</span>
+                <p>±30 menit membaca, ±45 menit mengerjakan tugas.</p>
+              </div>
+            </div>
           </div>
-          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.25rem;background:var(--surface-container-lowest);border:1px solid var(--border-default);border-radius:var(--radius-md)">
-            <span class="material-symbols-outlined" style="font-size:28px;color:var(--text-secondary);margin-bottom:0.5rem">grid_view</span>
-            <strong style="font-size:0.8125rem;color:var(--on-surface)">Ekstraksi Bersih</strong>
-            <span style="font-size:0.8125rem;color:var(--text-secondary)">Output siap langsung dikonversi ke format DataFrame Pandas.</span>
-          </div>
+        </section>
+        <!-- Pengantar -->
+        <div id="pengantar" style="margin-bottom:3rem">
+          <p style="font-size:0.9375rem;line-height:1.75;color:var(--text-secondary);margin-bottom:1rem">
+            Sebelum menulis kueri, pahami dulu mengapa dua klausa ini menjadi bekal wajib seorang analyst. <code class="code-inline">SELECT</code> menentukan kolom metrik yang ingin Anda tarik, sedangkan <code class="code-inline">WHERE</code> memutuskan baris mana yang lolos. Kombinasi keduanya adalah cara menerjemahkan pertanyaan bisnis menjadi perintah yang bisa dijalankan mesin.
+          </p>
+          <p style="font-size:0.9375rem;line-height:1.75;color:var(--text-secondary);margin-bottom:0.75rem">
+            Ada tiga alasan klausa ini paling sering muncul di pekerjaan harian Data Analyst:
+          </p>
+          <ul style="font-size:0.9375rem;line-height:1.75;color:var(--text-secondary);padding-left:1.25rem;display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1rem">
+            <li><strong style="color:var(--on-surface)">Filter presisi.</strong> Hanya baris dengan kondisi bernilai <code class="code-inline">TRUE</code> yang dikembalikan mesin SQL; sisanya diabaikan.</li>
+            <li><strong style="color:var(--on-surface)">Efisiensi biaya.</strong> Memangkas kolom dan baris sejak awal menurunkan beban komputasi — sekaligus tagihan — di cloud warehouse seperti BigQuery atau Snowflake.</li>
+            <li><strong style="color:var(--on-surface)">Output siap analisis.</strong> Hasil yang sudah terarah lebih mudah langsung dikonversi menjadi DataFrame Pandas atau grafik.</li>
+          </ul>
+          <p style="font-size:0.9375rem;line-height:1.75;color:var(--text-secondary)">
+            Contoh paling sederhana: daripada menarik seluruh tabel <code class="code-inline">orders</code> berisi ratusan ribu baris, Anda cukup meminta transaksi berstatus <em>Completed</em> di atas nilai tertentu. Di bawah ini kita bahas sintaksnya, operatornya, lalu berlatih langsung.
+          </p>
         </div>
 
         <!-- Sintaks Dasar -->
@@ -387,7 +428,85 @@
           </button>
         </div>
 
-        <!-- Navigation -->
+        <!-- Tugas Praktik -->
+        <section class="task-section" id="tugas-praktik">
+          <div class="session-brief__head">
+            <span class="material-symbols-outlined session-brief__icon">task_alt</span>
+            <div>
+              <span class="session-brief__eyebrow">Tugas Praktik</span>
+              <h2 class="session-brief__title">Latihan Kueri di Editor Sungguhan</h2>
+            </div>
+          </div>
+          <p class="session-brief__intro">Tulis kueri di editor, bukan di kepala. Kalau hasilnya error, itu bagian dari belajar — perbaiki dan catat penyebabnya.</p>
+          <div class="task-progress">
+            <span class="task-progress__track"><span class="task-progress__bar" id="task-progress-bar"></span></span>
+            <span class="task-progress__text" id="task-progress-text">0 dari 3 tugas selesai</span>
+          </div>
+          <ol class="task-list">
+          <li class="task-card">
+            <span class="task-card__num">1</span>
+            <div class="task-card__body">
+              <h3 class="task-card__title">Siapkan Tempat Berlatih</h3>
+              <p class="task-card__desc">Pilih satu editor SQL gratis dan pastikan bisa menjalankan kueri.</p>
+              <ul class="task-card__steps">
+                <li>Buka BigQuery Sandbox (gratis, tanpa kartu kredit) atau SQLite/DB Fiddle.</li>
+                <li>Muat satu tabel contoh: dataset publik, file CSV, atau tabel bawaan editor.</li>
+                <li>Jalankan SELECT * FROM nama_tabel LIMIT 10; sampai baris muncul.</li>
+              </ul>
+              <div class="task-card__result">
+                <span class="material-symbols-outlined">flag</span>
+                <span><strong>Hasil yang dikumpulkan:</strong> Satu kueri pertama yang berjalan + nama tabel yang Anda pakai.</span>
+              </div>
+              <label class="task-check">
+                <input type="checkbox" data-task="sql-tutorial-1">
+                <span>Tandai tugas ini selesai</span>
+              </label>
+            </div>
+          </li>
+          <li class="task-card">
+            <span class="task-card__num">2</span>
+            <div class="task-card__body">
+              <h3 class="task-card__title">Lima Kueri Filter Bisnis</h3>
+              <p class="task-card__desc">Untuk tiap kueri, pilih kolom tertentu (hindari SELECT *) dan tambahkan WHERE.</p>
+              <ul class="task-card__steps">
+                <li>Filter satu kategori: WHERE kolom = 'nilai'.</li>
+                <li>Gabungkan dua kondisi memakai AND.</li>
+                <li>Pakai OR bersama tanda kurung agar logika benar.</li>
+                <li>Gunakan BETWEEN (atau >= dan <=) untuk rentang tanggal atau angka.</li>
+                <li>Cari pola teks dengan LIKE '%kata%'.</li>
+              </ul>
+              <div class="task-card__result">
+                <span class="material-symbols-outlined">flag</span>
+                <span><strong>Hasil yang dikumpulkan:</strong> 5 kueri tersimpan, masing-masing disertai jumlah baris hasil.</span>
+              </div>
+              <label class="task-check">
+                <input type="checkbox" data-task="sql-tutorial-2">
+                <span>Tandai tugas ini selesai</span>
+              </label>
+            </div>
+          </li>
+          <li class="task-card">
+            <span class="task-card__num">3</span>
+            <div class="task-card__body">
+              <h3 class="task-card__title">Dari Pertanyaan Bisnis ke SQL</h3>
+              <p class="task-card__desc">Latih penerjemahan bahasa manusia menjadi kueri.</p>
+              <ul class="task-card__steps">
+                <li>Tulis 3 pertanyaan bisnis nyata (contoh: "pesanan dengan nilai di atas 500.000").</li>
+                <li>Terjemahkan tiap pertanyaan menjadi SELECT ... WHERE.</li>
+                <li>Kerjakan Mini Latihan Interaktif di halaman ini tanpa melihat jawaban dulu.</li>
+              </ul>
+              <div class="task-card__result">
+                <span class="material-symbols-outlined">flag</span>
+                <span><strong>Hasil yang dikumpulkan:</strong> 3 kueri + skor mini latihan (target 100%).</span>
+              </div>
+              <label class="task-check">
+                <input type="checkbox" data-task="sql-tutorial-3">
+                <span>Tandai tugas ini selesai</span>
+              </label>
+            </div>
+          </li>
+          </ol>
+        </section><!-- Navigation -->
         <div class="nav-prev-next">
           <a href="fundamental.html" class="nav-prev-next__link">
             <span class="material-symbols-outlined" style="font-size:16px">arrow_back</span>
@@ -409,6 +528,7 @@
       <!-- Right Table of Contents -->
       <aside class="toc-rail" id="toc-rail">
         <div class="toc-rail__title">DI HALAMAN INI</div>
+        <a href="#gambaran-sesi" class="toc-rail__item">Gambaran Sesi</a>
         <a href="#pengantar" class="toc-rail__item active">Pengantar</a>
         <a href="#sintaks" class="toc-rail__item">Sintaks Dasar</a>
         <a href="#coba-sendiri" class="toc-rail__item">Contoh Coba Sendiri</a>
@@ -429,7 +549,8 @@
             </li>
           </ul>
         </div>
-      </aside>
+              <a href="#tugas-praktik" class="toc-rail__item">Tugas Praktik</a>
+</aside>
     </div>
   </main>
 

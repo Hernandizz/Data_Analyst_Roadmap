@@ -405,4 +405,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateToc();
   }
+
+  // ===== TUGAS PRAKTIK: SIMPAN PROGRES DI BROWSER =====
+  const taskBoxes = document.querySelectorAll('.task-check input[type="checkbox"]');
+  if (taskBoxes.length) {
+    const progressBar = document.getElementById('task-progress-bar');
+    const progressText = document.getElementById('task-progress-text');
+
+    const readStore = (key) => {
+      try { return window.localStorage.getItem(key); } catch (e) { return null; }
+    };
+    const writeStore = (key, value) => {
+      try { window.localStorage.setItem(key, value); } catch (e) { /* penyimpanan tidak tersedia */ }
+    };
+
+    const updateTaskProgress = () => {
+      let done = 0;
+      taskBoxes.forEach(box => { if (box.checked) done++; });
+      if (progressBar) progressBar.style.width = ((done / taskBoxes.length) * 100) + '%';
+      if (progressText) progressText.textContent = done + ' dari ' + taskBoxes.length + ' tugas selesai';
+      return done;
+    };
+
+    taskBoxes.forEach(box => {
+      const key = 'dataschool-task:' + box.dataset.task;
+      const card = box.closest('.task-card');
+      const saved = readStore(key) === '1';
+
+      box.checked = saved;
+      if (card) card.classList.toggle('is-done', saved);
+
+      box.addEventListener('change', () => {
+        writeStore(key, box.checked ? '1' : '0');
+        if (card) card.classList.toggle('is-done', box.checked);
+        const done = updateTaskProgress();
+        if (box.checked) {
+          showToast(done === taskBoxes.length
+            ? 'Semua tugas sesi ini selesai. Lanjut ke sesi berikutnya!'
+            : 'Tugas ditandai selesai. Progres tersimpan di browser ini.');
+        }
+      });
+    });
+
+    updateTaskProgress();
+  }
 });

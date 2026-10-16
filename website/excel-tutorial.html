@@ -149,11 +149,107 @@
 
           <!-- Main Content -->
           <div class="content-body">
+
+    <!-- Gambaran Sesi -->
+            <section class="session-brief" id="gambaran-sesi">
+              <div class="session-brief__head">
+                <span class="material-symbols-outlined session-brief__icon">assignment</span>
+                <div>
+                  <span class="session-brief__eyebrow">Gambaran Sesi</span>
+                  <h2 class="session-brief__title">Delapan fungsi inti untuk pelaporan</h2>
+                </div>
+              </div>
+              <p class="session-brief__intro">Setiap fungsi di halaman ini punya latihan kecilnya sendiri. Sesi ditutup dengan satu laporan penjualan utuh yang menggabungkan semuanya.</p>
+              <div class="session-brief__grid">
+                <div class="session-brief__item">
+                  <span class="material-symbols-outlined">category</span>
+                  <div>
+                    <span class="session-brief__label">Fokus Materi</span>
+                    <p>Agregasi (SUM/AVERAGE/MIN/MAX), IF & IFS, lookup (VLOOKUP/HLOOKUP/XLOOKUP), fungsi teks (CONCAT/UPPER/LOWER/PROPER/TRIM), dan DATEDIF.</p>
+                  </div>
+                </div>
+                <div class="session-brief__item">
+                  <span class="material-symbols-outlined">flag</span>
+                  <div>
+                    <span class="session-brief__label">Hasil Akhir</span>
+                    <p>Workbook "Laporan Penjualan" berisi sheet data, lookup, dan ringkasan.</p>
+                  </div>
+                </div>
+                <div class="session-brief__item">
+                  <span class="material-symbols-outlined">fact_check</span>
+                  <div>
+                    <span class="session-brief__label">Prasyarat</span>
+                    <p>Microsoft Excel, LibreOffice Calc, atau Google Sheets.</p>
+                  </div>
+                </div>
+                <div class="session-brief__item">
+                  <span class="material-symbols-outlined">schedule</span>
+                  <div>
+                    <span class="session-brief__label">Estimasi Waktu</span>
+                    <p>±30 menit membaca, ±60 menit mengerjakan tugas.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
             <div class="content-divider">
               <span class="material-symbols-outlined">grid_on</span>
               <h2>Latihan Fungsi Excel</h2>
               <p>Buat data latihan sendiri di Excel, lalu kerjakan soal pada tiap bagian di bawah</p>
             </div>
+
+            <article class="content-article" id="referensi-cepat">
+              <div class="article-content">
+                <p>Sebelum berlatih, simpan tabel ringkasan berikut sebagai rujukan cepat. Tujuh fungsi ini menutupi sebagian besar pekerjaan harian seorang Data Analyst di Excel.</p>
+                <div class="data-table-wrap">
+                  <table class="data-table">
+                    <thead>
+                      <tr>
+                        <th>Fungsi</th>
+                        <th>Kegunaan</th>
+                        <th>Contoh Penulisan</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><code>SUM / AVERAGE / MIN / MAX</code></td>
+                        <td>Menjumlahkan, merata-rata, dan mencari nilai terkecil/terbesar</td>
+                        <td><code>=SUM(B2:B100)</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>IF</code></td>
+                        <td>Logika kondisional sederhana</td>
+                        <td><code>=IF(B2&gt;=80,"Lulus","Tidak")</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>VLOOKUP / XLOOKUP</code></td>
+                        <td>Mengambil data dari tabel referensi</td>
+                        <td><code>=XLOOKUP(A2,Produk!A:A,Produk!C:C)</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>CONCAT</code></td>
+                        <td>Menggabungkan beberapa teks/kolom</td>
+                        <td><code>=CONCAT(A2," - ",B2)</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>UPPER / LOWER / PROPER</code></td>
+                        <td>Menyeragamkan kapitalisasi teks</td>
+                        <td><code>=PROPER(A2)</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>TRIM</code></td>
+                        <td>Menghapus spasi berlebih di awal/akhir teks</td>
+                        <td><code>=TRIM(A2)</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>DATEDIF</code></td>
+                        <td>Menghitung selisih antara dua tanggal</td>
+                        <td><code>=DATEDIF(A2,B2,"M")</code></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </article>
 
             <article class="content-article" id="excel-sum">
               <div class="article-header">
@@ -301,7 +397,83 @@
             </article>
 
             <!-- Nav Footer -->
-            <div class="content-nav-footer">
+                <!-- Tugas Praktik -->
+            <section class="task-section" id="tugas-praktik">
+              <div class="session-brief__head">
+                <span class="material-symbols-outlined session-brief__icon">task_alt</span>
+                <div>
+                  <span class="session-brief__eyebrow">Tugas Praktik</span>
+                  <h2 class="session-brief__title">Susun Laporan Penjualan Satu Workbook</h2>
+                </div>
+              </div>
+              <p class="session-brief__intro">Buat satu workbook dengan tiga sheet, lalu isi berurutan. Tugas ini melatih alur kerja reporting yang nyata: data → lookup → ringkasan.</p>
+              <div class="task-progress">
+                <span class="task-progress__track"><span class="task-progress__bar" id="task-progress-bar"></span></span>
+                <span class="task-progress__text" id="task-progress-text">0 dari 3 tugas selesai</span>
+              </div>
+              <ol class="task-list">
+              <li class="task-card">
+                <span class="task-card__num">1</span>
+                <div class="task-card__body">
+                  <h3 class="task-card__title">Rancang Dataset Latihan</h3>
+                  <p class="task-card__desc">Data rapi dengan nama kolom konsisten memudahkan semua langkah berikutnya.</p>
+                  <ul class="task-card__steps">
+                    <li>Buat sheet Data: 100 baris berisi tanggal, kode produk, qty, harga, dan wilayah.</li>
+                    <li>Buat sheet Produk: kode, nama, kategori.</li>
+                    <li>Buat sheet Target: target penjualan per wilayah.</li>
+                  </ul>
+                  <div class="task-card__result">
+                    <span class="material-symbols-outlined">flag</span>
+                    <span><strong>Hasil yang dikumpulkan:</strong> Workbook dengan 3 sheet dan nama kolom yang konsisten.</span>
+                  </div>
+                  <label class="task-check">
+                    <input type="checkbox" data-task="excel-tutorial-1">
+                    <span>Tandai tugas ini selesai</span>
+                  </label>
+                </div>
+              </li>
+              <li class="task-card">
+                <span class="task-card__num">2</span>
+                <div class="task-card__body">
+                  <h3 class="task-card__title">Lookup & Rapikan Teks</h3>
+                  <p class="task-card__desc">Gabungkan dataset dengan menghindari kesalahan referensi.</p>
+                  <ul class="task-card__steps">
+                    <li>Ambil nama dan kategori produk ke sheet Data memakai XLOOKUP.</li>
+                    <li>Ulangi dengan VLOOKUP, lalu bandingkan hasil keduanya.</li>
+                    <li>Bersihkan nama produk memakai TRIM + PROPER.</li>
+                  </ul>
+                  <div class="task-card__result">
+                    <span class="material-symbols-outlined">flag</span>
+                    <span><strong>Hasil yang dikumpulkan:</strong> Kolom lookup terisi tanpa #N/A + catatan perbedaan XLOOKUP vs VLOOKUP.</span>
+                  </div>
+                  <label class="task-check">
+                    <input type="checkbox" data-task="excel-tutorial-2">
+                    <span>Tandai tugas ini selesai</span>
+                  </label>
+                </div>
+              </li>
+              <li class="task-card">
+                <span class="task-card__num">3</span>
+                <div class="task-card__body">
+                  <h3 class="task-card__title">Laporan Ringkas</h3>
+                  <p class="task-card__desc">Ubah data detail menjadi angka yang dibaca manajemen.</p>
+                  <ul class="task-card__steps">
+                    <li>Hitung penjualan per wilayah memakai SUMIFS.</li>
+                    <li>Beri label capaian terhadap target memakai IF atau IFS.</li>
+                    <li>Hitung lama hari transaksi dengan DATEDIF.</li>
+                  </ul>
+                  <div class="task-card__result">
+                    <span class="material-symbols-outlined">flag</span>
+                    <span><strong>Hasil yang dikumpulkan:</strong> Mini laporan per wilayah + satu grafik batang (opsional).</span>
+                  </div>
+                  <label class="task-check">
+                    <input type="checkbox" data-task="excel-tutorial-3">
+                    <span>Tandai tugas ini selesai</span>
+                  </label>
+                </div>
+              </li>
+              </ol>
+            </section><div class="content-nav-footer">
               <a href="powerbi-tutorial.html" class="content-nav-footer__link content-nav-footer__link--prev">
                 <span class="material-symbols-outlined">arrow_back</span>
                 <div>
@@ -320,6 +492,7 @@
           </div>
           <aside class="toc-rail" id="toc-rail">
             <div class="toc-rail__title">DI HALAMAN INI</div>
+            <a href="#gambaran-sesi" class="toc-rail__item">Gambaran Sesi</a>
             <a href="#excel-sum" class="toc-rail__item active">SUM, AVERAGE, MIN, MAX</a>
             <a href="#excel-if" class="toc-rail__item">IF Function</a>
             <a href="#excel-lookup" class="toc-rail__item">VLOOKUP, HLOOKUP &amp; XLOOKUP</a>
@@ -327,7 +500,8 @@
             <a href="#excel-text" class="toc-rail__item">UPPER, LOWER, PROPER</a>
             <a href="#excel-trim" class="toc-rail__item">TRIM</a>
             <a href="#excel-datedif" class="toc-rail__item">DATEDIF</a>
-          </aside>
+                      <a href="#tugas-praktik" class="toc-rail__item">Tugas Praktik</a>
+</aside>
         </div>
       </div>
     </section>
